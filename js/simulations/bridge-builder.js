@@ -2641,8 +2641,8 @@ startMission() {
               <span id="mission-timer-display" style="font-family:monospace; font-size:0.92rem; font-weight:900;">17:00</span>
             </div>
 
-            <button id="btn-blueprint-home" class="btn btn-subtle" style="font-size:0.74rem; font-weight:800; padding:0.35rem 0.75rem; border-radius:18px; border:1px solid rgba(255,255,255,0.2); color:#f8fafc; background:rgba(255,255,255,0.08); cursor:pointer; display:none; align-items:center; gap:0.35rem; transition:all 0.2s;" title="Exit simulation and return to homepage">
-              <span>🏠</span> <span>Homepage</span>
+            <button id="btn-blueprint-home" class="btn btn-subtle" style="font-size:0.74rem; font-weight:800; padding:0.35rem 0.75rem; border-radius:18px; border:1px solid rgba(255,255,255,0.2); color:#f8fafc; background:rgba(255,255,255,0.08); cursor:pointer; display:none; align-items:center; gap:0.35rem; transition:all 0.2s;" title="Exit simulation and return to Mission Hub">
+              <span>🏠</span> <span>Mission Hub</span>
             </button>
 
             <button id="btn-top-view-design" class="btn btn-subtle" style="font-size:0.74rem; font-weight:800; padding:0.35rem 0.75rem; border-radius:18px; border:1px solid rgba(56,189,248,0.4); color:#38bdf8; background:rgba(56,189,248,0.12); cursor:pointer;" title="View your saved bridge design">
@@ -5708,9 +5708,12 @@ enterPostEvaluationMode() {
   const btnTopViewDesign = document.getElementById("btn-top-view-design");
   if (btnTopViewDesign) btnTopViewDesign.style.display = "inline-flex";
 
-  // KEEP & SHOW Homepage button when coming back to blueprint
+  // KEEP & SHOW Mission Hub button when coming back to blueprint
   const btnBlueprintHome = document.getElementById("btn-blueprint-home");
-  if (btnBlueprintHome) btnBlueprintHome.style.display = "inline-flex";
+  if (btnBlueprintHome) {
+    btnBlueprintHome.style.display = "inline-flex";
+    btnBlueprintHome.innerHTML = "<span>🏠</span> <span>Mission Hub</span>";
+  }
 
   // REMOVE all other buttons & badges:
   const idsToRemove = [
