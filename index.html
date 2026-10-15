@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUPERHUMAN SOCIETY — Systems Thinking Simulations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/simulations.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="navbar">
+    <div class="brand" id="nav-brand">
+      <div class="brand-icon">⚡</div>
+      <div class="brand-title">
+        <span>SUPERHUMAN SOCIETY</span>
+        <span class="sub">First Principles Thinking Engine</span>
+      </div>
+    </div>
+
+    <div class="nav-actions">
+      <button id="audio-toggle-btn" class="btn btn-subtle">
+        🔊 Sound FX: ON
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Showcase Container -->
+  <main class="container">
+    
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1 class="hero-headline">
+        <span class="hero-title-primary">Teach kids how to think,</span>
+        <span class="hero-title-accent">one crisis at a time.</span>
+      </h1>
+      <p class="lead">
+        The Superhuman Society digital is a lab of interactive video-game simulations built on 4 cognitive criteria, 10 revolutionary teaching methods, and 5 curriculum domains. Every mission moves a student from Apply → Analyze → Design → Evaluate — and then hands them back to The Superhuman Society physical build lab.
+      </p>
+
+      <!-- 4 Core Criteria Section -->
+      <div class="criteria-section">
+        <div class="criteria-grid" id="criteria-grid">
+          <!-- Rendered by JS: 4 criteria cards with names and descriptions -->
+        </div>
+      </div>
+
+      <!-- Two Primary Action Buttons -->
+      <div class="hero-actions-bar">
+        <button id="btn-explore-missions" class="btn btn-primary btn-cta">
+          <span class="btn-icon">🧭</span> Explore Missions
+        </button>
+        <button id="btn-our-domains" class="btn btn-subtle btn-cta">
+          <span class="btn-icon">🌐</span> Our Domains
+        </button>
+      </div>
+    </section>
+
+    <!-- Dynamic Exploration Area (Explore Missions OR Our Domains) -->
+    <section id="interactive-exploration-container" class="interactive-exploration-area">
+      <!-- Injected dynamically by app.js -->
+    </section>
+
+  </main>
+
+  <!-- Fullscreen Simulation Cockpit Viewport -->
+  <div id="simulation-viewport">
+    <div class="sim-cockpit-bar">
+      <div class="sim-cockpit-left">
+        <button id="exit-sim-cockpit-btn" class="btn btn-subtle" style="font-size:0.8rem;">
+          🏠 Homepage
+        </button>
+        <div>
+          <div id="cockpit-sim-domain" style="font-size:0.68rem; text-transform:uppercase; color:var(--accent-cyan); font-weight:700; letter-spacing:0.06em;">DOMAIN 1: BIO-TECH</div>
+          <h2 id="cockpit-sim-title" style="font-size:1.15rem; font-weight:800; color:#fff; line-height:1.2;">Simulation Active</h2>
+        </div>
+      </div>
+
+      <div class="sim-cockpit-right">
+        <!-- 50% Physical Lab Brief Button (Removed as requested) -->
+      </div>
+    </div>
+
+    <!-- Active Simulation Canvas & Split Area -->
+    <div class="sim-cockpit-stage" id="sim-stage-container">
+      <!-- Dynamically mounted by simulation classes -->
+    </div>
+  </div>
+
+  <!-- Curriculum Matrix Modal -->
+  <div class="modal-overlay" id="curriculum-modal">
+    <div class="modal-container">
+      <button class="modal-close-btn" aria-label="Close">✕</button>
+      <div class="badge-pill">FOUNDATIONAL PEDAGOGICAL BLUEPRINT</div>
+      <h2 class="modal-title">Curriculum Architecture Matrix</h2>
+      <p class="modal-subtitle">The deep structure behind every scenario: high-order cognition, ethical dilemmas, domain mastery, and physical project translation.</p>
+      <div id="curriculum-modal-body">
+        <!-- Injected by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 50% Physical Lab Model Modal -->
+  <div class="modal-overlay" id="physical-modal">
+    <div class="modal-container">
+      <button class="modal-close-btn" aria-label="Close">✕</button>
+      <h2 class="modal-title">The 50% Physical Build Model</h2>
+      <p class="modal-subtitle">Classroom hardware and lab projects designed to complete the digital-to-physical learning loop.</p>
+      <div id="physical-modal-body">
+        <!-- Injected by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Load bundled script (zero-CORS, works via both http:// and file://) -->
+  <script src="js/bundle.js?v=1791880000"></script>
+</body>
+</html>

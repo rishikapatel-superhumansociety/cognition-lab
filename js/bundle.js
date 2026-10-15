@@ -1,0 +1,14135 @@
+/**
+ * Cognition Lab - Curriculum Knowledge Graph & Pedagogical Matrix
+ * Targeted at Students Aged 13-15 (Classes 7, 8, and 9)
+ */
+
+const CURRICULUM = {
+  // 1. The 4 Core Criteria
+  criteria: [
+    {
+      id: "cognitive",
+      name: "1. Cognitive Dimension",
+      short: "Cognitive",
+      icon: "🧠",
+      color: "#38bdf8",
+      description: "Mapping every lesson to high-level thinking—Apply, Analyze, Design, and Evaluate—instead of rote memorization."
+    },
+    {
+      id: "soft_skills",
+      name: "2. Humanistic & Soft Skills",
+      short: "Humanistic",
+      icon: "🤝",
+      color: "#34d399",
+      description: "Embedding Critical Thinking, Ethics, Environmental Sustainability, Teamwork, and Lifelong Learning into daily challenges."
+    },
+    {
+      id: "technical_mastery",
+      name: "3. Technical Mastery",
+      short: "Technical",
+      icon: "⚙️",
+      color: "#f59e0b",
+      description: "Developing Deep Domain Expertise, Software/Hardware Tool Proficiencies, and industry-specific methodologies."
+    },
+    {
+      id: "societal_vector",
+      name: "4. Societal & Career Vector",
+      short: "Societal",
+      icon: "🚀",
+      color: "#a855f7",
+      description: "Pre-mapping Career Progression, Leadership Roles, Entrepreneurship, Professional Ethics, and direct contributions to society."
+    }
+  ],
+
+  // 2. The 10 Revolutionary Teaching Methods
+  methods: [
+    {
+      code: "a",
+      name: "First Principles Thinking",
+      tagline: "The Foundational Truths Method",
+      description: "Breaking a complex problem down to its most basic, foundational truths and building a brand-new solution from scratch."
+    },
+    {
+      code: "b",
+      name: "Synthesis",
+      tagline: "Multi-Variable Systems Method",
+      description: "Highly complex simulations with hidden rules, changing variables, and no clear single answer."
+    },
+    {
+      code: "c",
+      name: "Ethical Radical",
+      tagline: "Moral Gray Area Method",
+      description: "Presenting heavy, real-world moral gray areas and structural debates where variables change midway."
+    },
+    {
+      code: "d",
+      name: "Project Based Learning",
+      tagline: "The Physical Build Method",
+      description: "Designing, engineering, and launching physical or conceptual models to solve targeted challenges (50% Physical Model)."
+    },
+    {
+      code: "e",
+      name: "Real Life Market Exposure",
+      tagline: "Industry Immersion Method",
+      description: "Direct field research, structural interactions, and operational case studies within active local enterprises."
+    },
+    {
+      code: "g",
+      name: "Reverse-Engineering",
+      tagline: "The Deconstruction Method",
+      description: "Dismantling complex finished products or systems to map out their internal architecture and diagnose issues."
+    },
+    {
+      code: "h",
+      name: "Time-Capsule Immersion",
+      tagline: "Historical Constraints Method",
+      description: "Placing students within a past era to rediscover breakthroughs using only the tools of that time."
+    },
+    {
+      code: "i",
+      name: "The Live Sandbox",
+      tagline: "Skin in the Game Method",
+      description: "Allocating small capital funds or real assets to student teams to experience authentic risk, reward, and accountability."
+    },
+    {
+      code: "j",
+      name: "Bio-Mimicry Auditing",
+      tagline: "Nature-to-Tech Method",
+      description: "Extracting biological data, patterns, and strategies from nature to design technology or engineering solutions."
+    },
+    {
+      code: "k",
+      name: "Blind-Variable Crises",
+      tagline: "Chaos Management Method",
+      description: "Intentionally removing critical data or injecting sudden environmental disruptions midway through execution."
+    }
+  ],
+
+  // 3. The 5 Interdisciplinary Domains
+  domains: [
+    {
+      id: "domain-1",
+      number: 1,
+      name: "The Bio-Tech & Living Systems Loop",
+      color: "#10b981",
+      subjects: ["Chemistry", "Biology", "Botany", "Zoology", "Genetics", "Biotechnology"],
+      accent: "emerald"
+    },
+    {
+      id: "domain-2",
+      number: 2,
+      name: "The Physical Build Loop",
+      color: "#3b82f6",
+      subjects: ["Pure Mathematics", "Applied Mathematics", "Physics", "Civil Engineering", "Mechanical Engineering", "Electrical Engineering"],
+      accent: "blue"
+    },
+    {
+      id: "domain-3",
+      number: 3,
+      name: "The Earth, Society & Human Progress Loop",
+      color: "#06b6d4",
+      subjects: ["Earth Science", "Geography"],
+      accent: "cyan"
+    },
+    {
+      id: "domain-4",
+      number: 4,
+      name: "The Market Execution & Business Loop",
+      color: "#f59e0b",
+      subjects: ["Economics", "Business Administration", "Financial Management", "Mass Communication"],
+      accent: "amber"
+    },
+    {
+      id: "domain-5",
+      number: 5,
+      name: "The Digital Frontier & Security Loop",
+      color: "#8b5cf6",
+      subjects: ["Computer Science", "Software Engineering", "Information Technology", "Cybersecurity", "Artificial Intelligence"],
+      accent: "purple"
+    }
+  ],
+
+  // 4. All 6 Simulation Missions
+  missions: [
+    {
+      id: "sim-plant-npk",
+      title: "NPK Ecosystem Stability & Crisis",
+      domainId: "domain-1",
+      domainName: "Domain 1: The Bio-Tech & Living Systems Loop",
+      subjects: ["Botany", "Chemistry", "Soil Ecology"],
+      classes: [7, 8, 9],
+      textbookLinks: {
+        class7: "Nutrition in Plants, Soil Composition, Acids & Bases",
+        class8: "Crop Production & Management, Microorganisms",
+        class9: "Improvement in Food Resources, Natural Resources & Biogeochemical Cycles"
+      },
+      durationMinutes: 25,
+      activeMethods: ["a", "k", "c", "d"],
+      activeCriteria: ["cognitive", "soft_skills", "technical_mastery"],
+      summary: "Diagnose soil chemical collapse after severe rainfall. Balance Nitrogen, Phosphorus, and Potassium under time pressure, navigate a sudden Potassium supply shock, and confront an ethical harvest dilemma.",
+      pilotBadge: "Pilot Showcase Simulation"
+    },
+    {
+      id: "sim-heart-pump",
+      title: "Bio-Mimicry Heart Pump Design",
+      domainId: "domain-1",
+      domainName: "Domain 1: The Bio-Tech & Living Systems Loop",
+      subjects: ["Biology", "Zoology", "Biotechnology", "Fluid Mechanics"],
+      classes: [7, 8, 9],
+      textbookLinks: {
+        class7: "Transportation in Animals & Plants, Circulatory System",
+        class8: "Cell Biology, Organ Systems",
+        class9: "Life Processes, Heart Anatomy & Hemodynamics"
+      },
+      durationMinutes: 25,
+      activeMethods: ["a", "j", "b", "d"],
+      activeCriteria: ["cognitive", "technical_mastery", "societal_vector"],
+      summary: "Interactive 4-chamber cardiovascular engine with blood flow dynamics. Calibrate heart rate, stroke volume, and arterial stenosis, then perform a bio-mimicry comparative audit against 2-chamber fish and 3-chamber frog hearts.",
+      pilotBadge: "Mission 1"
+    },
+    {
+      id: "sim-bridge-builder",
+      title: "Earthquake-Proof Bridge Under Budget",
+      domainId: "domain-2",
+      domainName: "Domain 2: The Physical Build Loop",
+      subjects: ["Physics", "Civil Engineering", "Applied Mathematics"],
+      classes: [7, 8, 9],
+      textbookLinks: {
+        class7: "Force, Motion, Simple Machines",
+        class8: "Pressure, Sound, Energy & Vibration",
+        class9: "Work, Energy, Gravitation & Newton's Laws"
+      },
+      durationMinutes: 25,
+      activeMethods: ["a", "b", "i", "d"],
+      activeCriteria: ["cognitive", "technical_mastery", "societal_vector"],
+      summary: "Engineer a structural truss bridge across a 30m chasm with a strict ₹500 virtual budget. Subject your design to Richter Magnitude 1–9 seismic shake-table stress tests with real-time tensor failure visualizations.",
+      pilotBadge: "Mission 2"
+    },
+    {
+      id: "sim-urban-heat",
+      title: "Urban Heat Island: 1950s vs 2020s",
+      domainId: "domain-3",
+      domainName: "Domain 3: The Earth, Society & Human Progress Loop",
+      subjects: ["Earth Science", "Geography", "Thermodynamics"],
+      classes: [7, 8, 9],
+      textbookLinks: {
+        class7: "Heat, Climate & Weather, Natural Resources",
+        class8: "Pollution of Air & Water, Land Utilization",
+        class9: "Climate Systems, Natural Vegetation, Earth as a Heat Engine"
+      },
+      durationMinutes: 25,
+      activeMethods: ["h", "a", "c", "d"],
+      activeCriteria: ["cognitive", "soft_skills", "societal_vector"],
+      summary: "Investigate microclimate divergence between 1950s vegetative cover and 2020s concrete sprawl. Manipulate albedo, canopy density, and anthropogenic emissions, then resolve an ethical municipal thermal zoning debate.",
+      pilotBadge: "Mission 3"
+    },
+    {
+      id: "sim-mandi-arbitrage",
+      title: "The Sabarkantha Mandi Arbitrage Engine",
+      domainId: "domain-4",
+      domainName: "Domain 4: The Market Execution & Business Loop",
+      subjects: ["Economics", "Financial Management", "Commercial Arithmetic"],
+      classes: [7, 8, 9],
+      textbookLinks: {
+        class7: "Comparing Quantities, Percentage, Profit & Loss",
+        class8: "Compound Interest, Proportions, Rational Quantities",
+        class9: "Economics: Story of Village Palampur, Food Security in India"
+      },
+      durationMinutes: 25,
+      activeMethods: ["e", "k", "a", "d"],
+      activeCriteria: ["cognitive", "technical_mastery", "societal_vector"],
+      summary: "Deliberately high-focus, authentic accounting ledger. Balance cold-storage electricity overhead, freight transport decay, and commodity spot margins. Solve sudden Mandi price-crash crises with verification locks.",
+      pilotBadge: "Mission 4"
+    },
+    {
+      id: "sim-ransomware",
+      title: "Cybersecurity Crisis: Ransomware Defense",
+      domainId: "domain-5",
+      domainName: "Domain 5: The Digital Frontier & Security Loop",
+      subjects: ["Computer Science", "Cybersecurity", "Network Architecture"],
+      classes: [7, 8, 9],
+      textbookLinks: {
+        class7: "Digital Citizenship, Computer Networks & Safety",
+        class8: "Cyber Security Fundamentals, Python Basics",
+        class9: "Computer System Architecture, Cryptography & Network Protocols"
+      },
+      durationMinutes: 25,
+      activeMethods: ["a", "k", "b", "d"],
+      activeCriteria: ["cognitive", "technical_mastery", "soft_skills"],
+      summary: "Defend an enterprise hospital network against a propagating ransomware worm. Toggle firewall rules, sever lateral infection links, deploy limited cryptographic decryptors, and initiate cold backups within a 25-minute timer.",
+      pilotBadge: "Mission 5"
+    }
+  ]
+};
+
+
+/**
+ * 50% Physical Model: Hands-on Classroom Physical Engineering Builds
+ * Every digital simulation is paired with an authentic physical build project.
+ */
+
+const PHYSICAL_PROJECTS = {
+  "sim-plant-npk": {
+    simTitle: "NPK Ecosystem Stability & Crisis",
+    projectTitle: "The Closed-Loop Hydroponic Wick Column & Colorimetric Titration Lab",
+    domain: "Domain 1: Bio-Tech & Living Systems",
+    duration: "45-60 Minutes Lab Session",
+    materials: [
+      "2x Clear 1-liter plastic bottles (cut into inverted funnel reservoirs)",
+      "Braided untreated cotton wicks (15cm)",
+      "Inert substrate: Coco-coir & perlite mix (neutral pH)",
+      "NPK stock nutrient solutions: Urea (N), Single Super Phosphate (P), Muriate of Potash (K)",
+      "Universal liquid pH indicator & soil NPK test capsule strips",
+      "Sprouted Mung bean (Vigna radiata) seedlings",
+      "50mL graduated syringes and safety gloves"
+    ],
+    engineeringProtocol: [
+      "Step 1 (Reservoir Fabrication): Invert top half of bottle into bottom base, thread cotton wick through cap hole into root bed.",
+      "Step 2 (Nutrient Formulation): Calculate exact dilution ratios derived from the digital simulation (Target: 50ppm N, 30ppm P, 20ppm K).",
+      "Step 3 (The Leaching Crisis Trigger): Pour 250mL of simulated acidic rain (water + diluted vinegar pH 4.5) through one test column to physically induce potassium leaching.",
+      "Step 4 (Colorimetric Audit): Extract run-off leachate into test tubes, add chemical reagent drops, and compare against standard color cards.",
+      "Step 5 (Bio-buffering Intervention): Formulate an emergency organic compost-tea amendment to restore root zone cation exchange without chemical K."
+    ],
+    testingRig: "Daily root elongation measurement grid (mm) and leaf chlorophyll color chart tracking over 7 days.",
+    firstPrinciplesConnection: "Physical roots cannot instantly uptake chemical ions without osmotic equilibrium. Students physically witness how salt concentration burns root hairs when P & K exceed threshold limits.",
+    safetyNotes: "Wear protective splash goggles when handling nutrient salts and acid titrants."
+  },
+
+  "sim-heart-pump": {
+    simTitle: "Bio-Mimicry Heart Pump Design",
+    projectTitle: "The Dual-Chamber Syringe & Ball-Valve Mechanical Hemodynamic Rig",
+    domain: "Domain 1: Bio-Tech & Living Systems",
+    duration: "45-60 Minutes Lab Session",
+    materials: [
+      "2x 50mL Luer-lock plastic syringes (acting as Atrium and Ventricle)",
+      "2x One-way inline aquarium check valves (acting as Mitral and Aortic valves)",
+      "50cm Clear surgical silicone tubing (ID 6mm)",
+      "T-connectors and screw pinch clamps (for adjustable arterial stenosis/blockage)",
+      "Colored fluid: Blue water (venous return reservoir) and Red water (arterial discharge)",
+      "Clear plastic manometer tube with centimeter measurement scale",
+      "Mechanical desktop push-lever or hand-pump trigger mechanism",
+      "Stopwatch and measuring beaker"
+    ],
+    engineeringProtocol: [
+      "Step 1 (Valvular Circuitry): Assemble syringes in series with one-way check valves oriented to permit unidirectional forward flow.",
+      "Step 2 (Stroke Volume Calibration): Draw 30mL fluid into the ventricle syringe, cycle the plunger, and measure expelled volume per stroke into the beaker.",
+      "Step 3 (Pressure Derivation): Connect the vertical manometer tube downstream. Pump at 60 BPM and measure liquid column height (cm H2O) converted to mmHg ($P = \rho g h$).",
+      "Step 4 (Simulating Stenosis): Tighten the screw clamp to restrict tube diameter by 50% and 80%. Observe the sudden spike in upstream pressure and pump resistance.",
+      "Step 5 (Bio-Mimicry Comparison): Reconfigure circuit into a single-loop fish model (one valve, one syringe) to contrast work energy required vs the dual mammalian system."
+    ],
+    testingRig: "Manometer pressure column height and volumetric flow rate ($Q = V / \Delta t$) measured with graduated cylinder.",
+    firstPrinciplesConnection: "Connects Boyle's Law ($P_1V_1 = P_2V_2$) and Poiseuille's Law of laminar flow resistance ($R \propto 1/r^4$), showing why 50% stenosis increases resistance 16-fold!",
+    safetyNotes: "Ensure all hose clamps are tightened before cycling to prevent pressurized fluid spray."
+  },
+
+  "sim-bridge-builder": {
+    simTitle: "Earthquake-Proof Bridge Under Budget",
+    projectTitle: "The Balsa & Gusset-Plate Shake-Table Truss Challenge",
+    domain: "Domain 2: Physical Build",
+    duration: "60-90 Minutes Lab Session",
+    materials: [
+      "Standard birch/balsa craft sticks (114mm x 10mm x 2mm)",
+      "Quick-setting PVA wood glue & cardstock gusset plates",
+      "30cm foam-board abutments (spanning a 25cm physical canyon)",
+      "Budget currency ledger: Sticks cost ₹10 each, Gusset joints cost ₹5 each (Max ₹500 cap)",
+      "Motorized variable-speed DC eccentric motor shake-table (or smartphone vibration accelerometer rig)",
+      "1kg calibrated lead weights / sand bags",
+      "Precision digital scale and dial caliper"
+    ],
+    engineeringProtocol: [
+      "Step 1 (Budget Audit): Formulate cutting schedule and bill of materials within the ₹500 physical currency limit.",
+      "Step 2 (Truss Assembly): Construct identical left and right planar trusses (Warren, Pratt, or Howe configuration) using triangle geometry.",
+      "Step 3 (Cross-Bracing & Decking): Connect trusses with transverse sway struts and tension cross-ties to prevent torsional buckling.",
+      "Step 4 (Static Load Verification): Place bridge across abutments. Incrementally load 500g and 1000g center weights; measure deflection with ruler.",
+      "Step 5 (Seismic Shake-Table Test): Mount bridge on the shake table. Ramp motor frequency from 2 Hz (Richter 4 equivalent) up to 8 Hz resonance. Record failure mode (buckling vs joint shear)."
+    ],
+    testingRig: "Shake-table with accelerometer logging frequency (Hz) and g-force until structural catastrophic rupture.",
+    firstPrinciplesConnection: "Demonstrates vector equilibrium ($\Sigma F_x = 0, \Sigma F_y = 0, \Sigma M = 0$) and highlights how triangles transfer loads exclusively through pure tension and compression rather than bending.",
+    safetyNotes: "Keep hands clear of the vibrating table during high-frequency resonance testing."
+  },
+
+  "sim-urban-heat": {
+    simTitle: "Urban Heat Island: 1950s vs 2020s",
+    projectTitle: "The Multi-Surface Albedo & Microclimate Calorimeter Chamber",
+    domain: "Domain 3: Earth, Society & Progress",
+    duration: "45-60 Minutes Lab Session",
+    materials: [
+      "3x Insulated cardboard miniature urban pavilions (15cm x 15cm x 15cm)",
+      "Roof Surface 1 (Modern Asphalt): Black tar-paper roofing",
+      "Roof Surface 2 (Cool-Roof Mitigation): Titanium white reflective acrylic coating",
+      "Roof Surface 3 (1950s Biophilic): Living moss/sedum green vegetative carpet",
+      "150W Infrared heat lamp (simulating intense solar insolation)",
+      "Digital dual-probe thermistor thermometers (internal air temp & surface temp)",
+      "Infrared laser non-contact thermometer",
+      "Small 5V micro-fan (simulating urban wind canyon effect)"
+    ],
+    engineeringProtocol: [
+      "Step 1 (Chamber Setup): Install internal temperature probes inside each of the 3 miniature buildings at identical depths.",
+      "Step 2 (Baseline Equilibrium): Record ambient baseline temperature across all three chambers under ambient classroom lighting.",
+      "Step 3 (Solar Radiation Cycle): Position infrared lamp 40cm equidistant above the models. Turn on lamp for 15 minutes.",
+      "Step 4 (Thermal Logging): Record surface and internal temperatures every 60 seconds. Plot heating curves in lab notebooks.",
+      "Step 5 (Thermal Mass & Dissipation): Turn off heat lamp. Measure thermal retention decay rate over 10 minutes to verify night-time urban heat island effect.",
+      "Step 6 (Ethical Policy Mapping): Calculate cost of painting 10,000 sq ft of roofs in local municipal zones vs planting urban trees."
+    ],
+    testingRig: "Dual digital thermistors + IR non-contact pyrometer logging $\Delta T$ ($^\circ\text{C}$) over time.",
+    firstPrinciplesConnection: "Validates the Stefan-Boltzmann radiation law ($j^* = \epsilon \sigma T^4$) and sensible vs latent heat flux via plant evapotranspiration.",
+    safetyNotes: "Do not touch the heat lamp bulb during or immediately following operation."
+  },
+
+  "sim-mandi-arbitrage": {
+    simTitle: "The Sabarkantha Mandi Arbitrage Engine",
+    projectTitle: "The Live Commodity Pit & Cold-Chain Perishability Ledger",
+    domain: "Domain 4: Market Execution & Business",
+    duration: "45-60 Minutes Lab Session",
+    materials: [
+      "Tokenized commodity vouchers (Castor, Groundnut, Cotton, Wheat)",
+      "Physical double-entry printed ledger balance sheets",
+      "Play capital currency notes (₹50,000 seed fund per student team)",
+      "Physical commodity sample jars (actual grains/seeds for moisture testing)",
+      "Dice-roll disruption deck: Diesel price hike, Mandi strike, sudden flash rain, highway toll blockade",
+      "Digital kitchen scale (to measure actual moisture evaporation loss in wet grain samples)",
+      "Wall market ticker chalkboard and countdown bell"
+    ],
+    engineeringProtocol: [
+      "Step 1 (Capital Allocation): Teams receive ₹50,000 capital and analyze the opening APMC Mandi commodity spot quotes.",
+      "Step 2 (Freight & Cold Chain Route Planning): Teams calculate transport route costs (₹12/km/quintal) vs warehouse cold-storage refrigeration rates.",
+      "Step 3 (The Unseasonal Price Shock): Roll the crisis dice: A sudden Mandi market dump slashes spot wheat prices by 35%!",
+      "Step 4 (Ledger Settlement Lock): Teams must physically compute Gross Margin %, Net Profit/Loss %, Break-even Price, and Return on Capital Invested (ROCI).",
+      "Step 5 (Arbitrage Clearance): Settle contracts with the Mandi Commission Agent desk. Teams with ledger calculation errors pay penalty interest."
+    ],
+    testingRig: "Reconciled double-entry financial audit sheet verified against classroom market clearing prices.",
+    firstPrinciplesConnection: "Transforms abstract algebra and percentages into survival arithmetic: students feel the visceral consequences of cash flow, carrying cost, and compound inventory loss.",
+    safetyNotes: "Keep grain samples sealed in jars to prevent classroom spills."
+  },
+
+  "sim-ransomware": {
+    simTitle: "Cybersecurity Crisis: Ransomware Defense",
+    projectTitle: "The Air-Gapped Physical Network Topology & Fail-Safe Cut-Switch",
+    domain: "Domain 5: Digital Frontier & Security",
+    duration: "45-60 Minutes Lab Session",
+    materials: [
+      "Solderless electronics breadboard & 9V battery with snap connector",
+      "6x Bi-color LEDs (Red/Green) representing servers, firewall, and workstations",
+      "Push-button micro-switches (acting as manual subnet isolation switches)",
+      "Rotary potentiometer (simulating network bandwidth & encryption propagation rate)",
+      "1k-ohm current limiting resistors and jumper wires",
+      "Physical Paper Cryptographic Cipher Strips (Caesar/Vigenère substitution wheels)",
+      "Red acrylic laser pointer and countdown stopwatch"
+    ],
+    engineeringProtocol: [
+      "Step 1 (Topology Breadboarding): Wire 6 LED nodes in a networked tree topology on the breadboard. When powered, all nodes glow green.",
+      "Step 2 (Infection Propagation): Connect a cascading transistor/capacitor circuit that triggers an automated sequential LED color shift to red every 15 seconds.",
+      "Step 3 (Emergency Cut-Off): Students must rapidly locate the specific jumper wire corresponding to the infected subnet and disconnect it before the main database LED turns red.",
+      "Step 4 (Cryptographic Key Decryption): Solve a real physical modular arithmetic cipher challenge ($C \equiv P^e \pmod n$) to unlock the paper backup safe key.",
+      "Step 5 (Fail-Safe Verification): Restore power through an isolated secondary rail to prove data recovery without reinfecting the network."
+    ],
+    testingRig: "Breadboard circuit continuity test with multimeter; stopwatch tracking incident response latency.",
+    firstPrinciplesConnection: "Demonstrates physical air-gapping, electrical and logical segmentation, and the mathematical irreversibility of one-way trapdoor functions in asymmetric cryptography.",
+    safetyNotes: "Ensure 9V battery clips are properly oriented to prevent reverse polarity and LED damage."
+  }
+};
+
+
+/**
+ * Procedural Audio Engine (Web Audio API)
+ * Generates tactile sound effects directly without external asset dependencies.
+ */
+
+class SoundEngine {
+  constructor() {
+    this.ctx = null;
+    this.enabled = true;
+    this.heartbeatTimer = null;
+    let savedVol = null;
+    try {
+      savedVol = localStorage.getItem("cognition_lab_volume");
+    } catch (e) {}
+    this.volume = savedVol !== null ? parseFloat(savedVol) : 0.35; // Default 35% classroom-friendly
+    this.masterGain = null;
+    this.isClassroomMode = (this.volume <= 0.20 && this.volume > 0);
+  }
+
+  init() {
+    if (!this.ctx) {
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      if (AudioContext) {
+        this.ctx = new AudioContext();
+      }
+    }
+    if (this.ctx && this.ctx.state === "suspended") {
+      this.ctx.resume();
+    }
+    this.getMasterNode();
+  }
+
+  getMasterNode() {
+    if (!this.ctx) return null;
+    if (!this.masterGain) {
+      this.masterGain = this.ctx.createGain();
+      this.masterGain.gain.setValueAtTime(this.volume, this.ctx.currentTime);
+      this.masterGain.connect(this.ctx.destination);
+    }
+    return this.masterGain;
+  }
+
+  setVolume(val) {
+    this.volume = Math.max(0, Math.min(1, val));
+    if (this.ctx) {
+      const master = this.getMasterNode();
+      if (master) {
+        master.gain.setValueAtTime(this.volume, this.ctx.currentTime);
+      }
+    }
+    this.isClassroomMode = (this.volume <= 0.20 && this.volume > 0);
+    try {
+      localStorage.setItem("cognition_lab_volume", String(this.volume));
+    } catch (e) {}
+  }
+
+  getVolume() {
+    return this.volume;
+  }
+
+  setClassroomMode(enabled) {
+    if (enabled) {
+      this.setVolume(0.15); // 15% whisper volume
+    } else {
+      this.setVolume(0.40); // 40% standard volume
+    }
+  }
+
+  toggle() {
+    this.enabled = !this.enabled;
+    if (!this.enabled) {
+      this.stopAll();
+    }
+    return this.enabled;
+  }
+
+  stopAll() {
+    if (this.heartbeatTimer) {
+      clearTimeout(this.heartbeatTimer);
+      clearInterval(this.heartbeatTimer);
+      this.heartbeatTimer = null;
+    }
+    if (this.ctx) {
+      try {
+        if (this.ctx.state === "running") {
+          this.ctx.suspend();
+        }
+      } catch (e) {
+        console.warn("AudioContext suspend error:", e);
+      }
+    }
+  }
+
+  playClick() {
+    if (!this.enabled) return;
+    this.init();
+    if (!this.ctx) return;
+
+    const osc = this.ctx.createOscillator();
+    const gain = this.ctx.createGain();
+
+    osc.type = "sine";
+    osc.frequency.setValueAtTime(800, this.ctx.currentTime);
+    osc.frequency.exponentialRampToValueAtTime(300, this.ctx.currentTime + 0.04);
+
+    gain.gain.setValueAtTime(0.12, this.ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.04);
+
+    osc.connect(gain);
+    gain.connect(this.getMasterNode() || this.ctx.destination);
+
+    osc.start();
+    osc.stop(this.ctx.currentTime + 0.04);
+  }
+
+  playSuccess() {
+    if (!this.enabled) return;
+    this.init();
+    if (!this.ctx) return;
+
+    const notes = [523.25, 659.25, 783.99, 1046.50]; // C5, E5, G5, C6
+    notes.forEach((freq, idx) => {
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+
+      osc.type = "triangle";
+      osc.frequency.setValueAtTime(freq, this.ctx.currentTime + idx * 0.07);
+
+      gain.gain.setValueAtTime(0.15, this.ctx.currentTime + idx * 0.07);
+      gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + idx * 0.07 + 0.25);
+
+      osc.connect(gain);
+      gain.connect(this.getMasterNode() || this.ctx.destination);
+
+      osc.start(this.ctx.currentTime + idx * 0.07);
+      osc.stop(this.ctx.currentTime + idx * 0.07 + 0.25);
+    });
+  }
+
+  playSuccessChime() {
+    this.playSuccess();
+  }
+
+  playWarning() {
+    if (!this.enabled) return;
+    this.init();
+    if (!this.ctx) return;
+
+    [0, 0.12].forEach((offset) => {
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+
+      osc.type = "sawtooth";
+      osc.frequency.setValueAtTime(440, this.ctx.currentTime + offset);
+      osc.frequency.setValueAtTime(330, this.ctx.currentTime + offset + 0.05);
+
+      gain.gain.setValueAtTime(0.15, this.ctx.currentTime + offset);
+      gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + offset + 0.1);
+
+      osc.connect(gain);
+      gain.connect(this.getMasterNode() || this.ctx.destination);
+
+      osc.start(this.ctx.currentTime + offset);
+      osc.stop(this.ctx.currentTime + offset + 0.1);
+    });
+  }
+
+  playBuzzer() {
+    this.playWarning();
+  }
+
+  playAlarm() {
+    if (!this.enabled) return;
+    this.init();
+    if (!this.ctx) return;
+
+    const osc = this.ctx.createOscillator();
+    const gain = this.ctx.createGain();
+
+    osc.type = "sawtooth";
+    const now = this.ctx.currentTime;
+    osc.frequency.setValueAtTime(800, now);
+    osc.frequency.linearRampToValueAtTime(400, now + 0.2);
+    osc.frequency.linearRampToValueAtTime(800, now + 0.4);
+
+    gain.gain.setValueAtTime(0.2, now);
+    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.45);
+
+    osc.connect(gain);
+    gain.connect(this.getMasterNode() || this.ctx.destination);
+
+    osc.start(now);
+    osc.stop(now + 0.45);
+  }
+
+  playHeartbeat(intensity = 1.0) {
+    if (!this.enabled) return;
+    this.init();
+    if (!this.ctx) return;
+
+    const now = this.ctx.currentTime;
+    
+    // Lub (Atrioventricular closure)
+    const osc1 = this.ctx.createOscillator();
+    const gain1 = this.ctx.createGain();
+    osc1.type = "sine";
+    osc1.frequency.setValueAtTime(65, now);
+    osc1.frequency.exponentialRampToValueAtTime(35, now + 0.09);
+    gain1.gain.setValueAtTime(0.25 * intensity, now);
+    gain1.gain.exponentialRampToValueAtTime(0.001, now + 0.1);
+    osc1.connect(gain1);
+    gain1.connect(this.getMasterNode() || this.ctx.destination);
+    osc1.start(now);
+    osc1.stop(now + 0.1);
+
+    // Dub (Semilunar closure)
+    const osc2 = this.ctx.createOscillator();
+    const gain2 = this.ctx.createGain();
+    osc2.type = "sine";
+    osc2.frequency.setValueAtTime(85, now + 0.14);
+    osc2.frequency.exponentialRampToValueAtTime(45, now + 0.22);
+    gain2.gain.setValueAtTime(0.2 * intensity, now + 0.14);
+    gain2.gain.exponentialRampToValueAtTime(0.001, now + 0.24);
+    osc2.connect(gain2);
+    gain2.connect(this.getMasterNode() || this.ctx.destination);
+    osc2.start(now + 0.14);
+    osc2.stop(now + 0.24);
+  }
+
+  playEarthquake(magnitude = 5.0) {
+    if (!this.enabled) return;
+    this.init();
+    if (!this.ctx) return;
+
+    const duration = 1.2;
+    const now = this.ctx.currentTime;
+
+    // Deep sub-bass oscillator
+    const osc = this.ctx.createOscillator();
+    const gain = this.ctx.createGain();
+    osc.type = "triangle";
+    osc.frequency.setValueAtTime(40 + magnitude * 5, now);
+    osc.frequency.exponentialRampToValueAtTime(25, now + duration);
+
+    const volume = Math.min(0.35, 0.05 + (magnitude / 10) * 0.3);
+    gain.gain.setValueAtTime(volume, now);
+    gain.gain.exponentialRampToValueAtTime(0.001, now + duration);
+
+    osc.connect(gain);
+    gain.connect(this.getMasterNode() || this.ctx.destination);
+
+    osc.start(now);
+    osc.stop(now + duration);
+  }
+
+  playGlitch() {
+    if (!this.enabled) return;
+    this.init();
+    if (!this.ctx) return;
+
+    const osc = this.ctx.createOscillator();
+    const gain = this.ctx.createGain();
+    osc.type = "square";
+    osc.frequency.setValueAtTime(1200, this.ctx.currentTime);
+    osc.frequency.setValueAtTime(240, this.ctx.currentTime + 0.04);
+    osc.frequency.setValueAtTime(950, this.ctx.currentTime + 0.08);
+
+    gain.gain.setValueAtTime(0.15, this.ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.12);
+
+    osc.connect(gain);
+    gain.connect(this.getMasterNode() || this.ctx.destination);
+
+    osc.start();
+    osc.stop(this.ctx.currentTime + 0.12);
+  }
+
+  playCountdownTick(isFinal = false) {
+    if (!this.enabled) return;
+    this.init();
+    if (!this.ctx) return;
+
+    const now = this.ctx.currentTime;
+    const osc = this.ctx.createOscillator();
+    const gain = this.ctx.createGain();
+
+    if (isFinal) {
+      osc.type = "sine";
+      osc.frequency.setValueAtTime(880, now);
+      osc.frequency.exponentialRampToValueAtTime(1760, now + 0.15);
+      gain.gain.setValueAtTime(0.35, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.4);
+      osc.connect(gain);
+      gain.connect(this.getMasterNode() || this.ctx.destination);
+      osc.start(now);
+      osc.stop(now + 0.4);
+    } else {
+      osc.type = "triangle";
+      osc.frequency.setValueAtTime(720, now);
+      osc.frequency.exponentialRampToValueAtTime(540, now + 0.08);
+      gain.gain.setValueAtTime(0.25, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.1);
+      osc.connect(gain);
+      gain.connect(this.getMasterNode() || this.ctx.destination);
+      osc.start(now);
+      osc.stop(now + 0.1);
+    }
+  }
+
+  playCommsChirp() {
+    if (!this.enabled) return;
+    this.init();
+    if (!this.ctx) return;
+
+    const now = this.ctx.currentTime;
+    // Walkie talkie squelch tone
+    const osc = this.ctx.createOscillator();
+    const gain = this.ctx.createGain();
+    osc.type = "square";
+    osc.frequency.setValueAtTime(1750, now);
+    osc.frequency.setValueAtTime(2350, now + 0.04);
+    gain.gain.setValueAtTime(0.12, now);
+    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.1);
+
+    osc.connect(gain);
+    gain.connect(this.getMasterNode() || this.ctx.destination);
+    osc.start(now);
+    osc.stop(now + 0.1);
+  }
+
+  playBridgeCrash() {
+    if (!this.enabled) return;
+    this.init();
+    if (!this.ctx) return;
+
+    const now = this.ctx.currentTime;
+    // Low frequency structural snap
+    const osc = this.ctx.createOscillator();
+    const gain = this.ctx.createGain();
+    osc.type = "sawtooth";
+    osc.frequency.setValueAtTime(110, now);
+    osc.frequency.exponentialRampToValueAtTime(25, now + 0.8);
+    gain.gain.setValueAtTime(0.4, now);
+    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.9);
+
+    osc.connect(gain);
+    gain.connect(this.getMasterNode() || this.ctx.destination);
+    osc.start(now);
+    osc.stop(now + 0.9);
+  }
+}
+
+const sound = new SoundEngine();
+
+
+/**
+ * Simulation 0: Plant Soil Ecosystem & NPK Crisis
+ * Domain 1: Bio-Tech & Living Systems
+ * Incorporates: First Principles (a), Crisis Management (k), Ethical Radical (c), Physical Build (d)
+ */
+
+
+
+class PlantNpkSimulation {
+  constructor(container, onComplete) {
+    this.container = container;
+    this.onComplete = onComplete;
+    this.level = 1;
+    this.stage = "intro"; // intro | play | crisis | ethical | completed
+    this.introTime = 0;
+    this.timerSeconds = 15 * 60;
+    this.timerInterval = null;
+    this.animFrame = null;
+
+    // Nutrient State (0 - 100 ppm)
+    this.n = 0; // Nitrogen: Foliage / Chlorophyll
+    this.p = 0; // Phosphorus: Root depth & ATP
+    this.k = 0; // Potassium: Cell wall rigidity & Stomata
+
+    // Organic bio-buffer available in crisis
+    this.bioBuffer = 0;
+
+    // Intro timeline: 0-5s healthy, 5-10s rainstorm, 10-15s collapse
+    this.introDuration = 15;
+    this.introStep = 0; // 0=healthy, 1=rain, 2=leached
+    this.ethicalChoice = null;
+    this.isRunning = true;
+    this.introTimeout = null;
+  }
+
+  mount() {
+    this.isRunning = true;
+    this.renderLayout();
+    this.setupCanvas();
+    this.startIntroSequence();
+  }
+
+  destroy() {
+    this.isRunning = false;
+    if (this.introTimeout) clearTimeout(this.introTimeout);
+    if (this.timerInterval) clearInterval(this.timerInterval);
+    if (this.animFrame) cancelAnimationFrame(this.animFrame);
+    sound.stopAll();
+  }
+
+  renderLayout() {
+    this.container.innerHTML = `
+      <div class="sim-stage-split">
+        <!-- 70% Left: Botanical Canvas & Dynamic Cellular Callouts -->
+        <div class="sim-stage-visual" id="plant-visual-pane">
+          <div class="sim-canvas-container">
+            <canvas id="plantCanvas" class="sim-canvas"></canvas>
+            
+            <!-- Dynamic Labels overlaid on anatomical parts -->
+            <div id="leaf-label" class="bio-label" style="top: 25%; left: 55%;">
+              <span class="status-dot danger"></span>
+              <span class="label-text">Leaves: Severe Chlorosis (N: 0ppm)</span>
+            </div>
+            <div id="stem-label" class="bio-label" style="top: 50%; left: 30%;">
+              <span class="status-dot danger"></span>
+              <span class="label-text">Cell Walls: Turgor Collapse (K: 0ppm)</span>
+            </div>
+            <div id="root-label" class="bio-label" style="top: 75%; left: 52%;">
+              <span class="status-dot danger"></span>
+              <span class="label-text">Roots: Stunted Biomass (P: 0ppm)</span>
+            </div>
+
+            <!-- Intro Stage Cinematic Banner -->
+            <div id="intro-overlay" style="position:absolute; bottom:20px; left:20px; right:20px; background:rgba(10,15,28,0.9); border:1px solid rgba(56,189,248,0.3); border-radius:12px; padding:1rem 1.5rem; display:flex; align-items:center; justify-content:space-between; backdrop-filter:blur(10px);">
+              <div>
+                <div style="font-size:0.75rem; text-transform:uppercase; color:var(--accent-cyan); font-weight:700; letter-spacing:0.08em;" id="intro-phase-badge">Phase: Healthy Baseline</div>
+                <div style="font-size:1.05rem; font-weight:700; color:#fff;" id="intro-phase-text">Initial state: Balanced soil cation equilibrium.</div>
+              </div>
+              <button id="skip-intro-btn" class="btn btn-subtle" style="font-size:0.75rem;">Skip Cinematic →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 30% Right: Telemetry, Timers & Tactical Controls -->
+        <div class="sim-stage-controls" id="plant-controls-pane">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <div>
+              <div style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); font-weight:700;">Simulated Clock</div>
+              <div class="sim-timer-badge" id="sim-timer">15:00</div>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); font-weight:700;">Level Status</div>
+              <span id="level-badge" class="level-chip active">Level 1: Stability</span>
+            </div>
+          </div>
+
+          <div id="controls-dynamic-area">
+            <!-- Populated per level -->
+          </div>
+        </div>
+      </div>
+    `;
+
+    document.getElementById("skip-intro-btn").addEventListener("click", () => {
+      sound.playClick();
+      this.finishIntro();
+    });
+  }
+
+  setupCanvas() {
+    this.canvas = document.getElementById("plantCanvas");
+    this.ctx = this.canvas.getContext("2d");
+    this.resizeCanvas();
+    window.addEventListener("resize", () => this.resizeCanvas());
+    this.animate();
+  }
+
+  resizeCanvas() {
+    const parent = this.canvas.parentElement;
+    this.canvas.width = parent.clientWidth * window.devicePixelRatio;
+    this.canvas.height = parent.clientHeight * window.devicePixelRatio;
+  }
+
+  startIntroSequence() {
+    this.stage = "intro";
+    this.introTime = 0;
+    const overlay = document.getElementById("intro-overlay");
+    const phaseBadge = document.getElementById("intro-phase-badge");
+    const phaseText = document.getElementById("intro-phase-text");
+
+    const introTick = () => {
+      if (this.stage !== "intro") return;
+      this.introTime += 1;
+
+      if (this.introTime <= 5) {
+        // Healthy state preview
+        this.introStep = 0;
+        this.n = 50; this.p = 30; this.k = 20;
+        phaseBadge.textContent = "00:00 - 00:05 // Healthy Baseline";
+        phaseText.textContent = "Healthy plant with optimal N:P:K balance and deep root architecture.";
+      } else if (this.introTime <= 10) {
+        // Rainstorm strikes
+        this.introStep = 1;
+        phaseBadge.textContent = "00:05 - 00:10 // Unseasonal Flash Storm";
+        phaseBadge.style.color = "#f43f5e";
+        phaseText.textContent = "Unseasonal torrential rainfall hits! Water saturates and leaches soil nutrients.";
+        if (this.introTime === 6) sound.playAlarm();
+      } else if (this.introTime <= 15) {
+        // Collapse
+        this.introStep = 2;
+        this.n = 0; this.p = 0; this.k = 0;
+        phaseBadge.textContent = "00:10 - 00:15 // Chemical Collapse";
+        phaseText.textContent = "Soil balance destroyed. Severe chlorosis, root stunting, and cellular turgor loss.";
+      } else {
+        this.finishIntro();
+        return;
+      }
+
+      this.updateLabels();
+      if (this.isRunning) {
+        this.introTimeout = setTimeout(introTick, 1000);
+      }
+    };
+
+    introTick();
+  }
+
+  finishIntro() {
+    this.stage = "play";
+    this.level = 1;
+    this.n = 0; this.p = 0; this.k = 0;
+    this.timerSeconds = 15 * 60;
+    const overlay = document.getElementById("intro-overlay");
+    if (overlay) overlay.style.display = "none";
+    this.startTimer();
+    this.renderLevel1Controls();
+    this.updateLabels();
+  }
+
+  startTimer() {
+    if (this.timerInterval) clearInterval(this.timerInterval);
+    const timerEl = document.getElementById("sim-timer");
+
+    this.timerInterval = setInterval(() => {
+      if (this.timerSeconds > 0) {
+        this.timerSeconds--;
+        const mins = Math.floor(this.timerSeconds / 60).toString().padStart(2, "0");
+        const secs = (this.timerSeconds % 60).toString().padStart(2, "0");
+        timerEl.textContent = `${mins}:${secs}`;
+        if (this.timerSeconds <= 60) {
+          timerEl.classList.add("urgent");
+        }
+      } else {
+        clearInterval(this.timerInterval);
+        sound.playAlarm();
+        alert("Time Expired! The plant suffered irreversible cellular senescence. Resetting level.");
+        this.resetLevel();
+      }
+    }, 1000);
+  }
+
+  renderLevel1Controls() {
+    const area = document.getElementById("controls-dynamic-area");
+    area.innerHTML = `
+      <div style="background:rgba(56,189,248,0.06); border:1px solid rgba(56,189,248,0.25); border-radius:8px; padding:0.85rem; margin-bottom:1.25rem;">
+        <div style="font-size:0.8rem; font-weight:700; color:var(--accent-cyan); margin-bottom:0.25rem;">MISSION OBJECTIVE</div>
+        <p style="font-size:0.78rem; color:var(--text-muted); line-height:1.4;">
+          The torrential storm leached all macronutrients from the root zone. Adjust the raw <strong>Nitrogen (N)</strong>, <strong>Phosphorus (P)</strong>, and <strong>Potassium (K)</strong> ppm sliders to restore ecosystem stability.
+        </p>
+      </div>
+
+      <!-- Nitrogen Slider -->
+      <div class="control-group">
+        <div class="control-header">
+          <span class="control-title">🌿 Nitrogen (N) - Leaf Chlorophyll</span>
+          <span class="control-value" id="val-n">${this.n} ppm</span>
+        </div>
+        <input type="range" class="slider-range" id="slider-n" min="0" max="100" value="${this.n}">
+        <div class="control-hints">
+          <span>0 ppm (Chlorosis)</span>
+          <span style="color:var(--accent-emerald);">Target: ~50 ppm</span>
+          <span>100 ppm (Salt Burn)</span>
+        </div>
+      </div>
+
+      <!-- Phosphorus Slider -->
+      <div class="control-group">
+        <div class="control-header">
+          <span class="control-title">🌱 Phosphorus (P) - Root Biomass</span>
+          <span class="control-value" id="val-p">${this.p} ppm</span>
+        </div>
+        <input type="range" class="slider-range" id="slider-p" min="0" max="100" value="${this.p}">
+        <div class="control-hints">
+          <span>0 ppm (Stunted)</span>
+          <span style="color:var(--accent-emerald);">Target: ~30 ppm</span>
+          <span>100 ppm (Lockout)</span>
+        </div>
+      </div>
+
+      <!-- Potassium Slider -->
+      <div class="control-group">
+        <div class="control-header">
+          <span class="control-title">🛡️ Potassium (K) - Cell Wall Rigidity</span>
+          <span class="control-value" id="val-k">${this.k} ppm</span>
+        </div>
+        <input type="range" class="slider-range" id="slider-k" min="0" max="100" value="${this.k}">
+        <div class="control-hints">
+          <span>0 ppm (Wilted)</span>
+          <span style="color:var(--accent-emerald);">Target: ~20 ppm</span>
+          <span>100 ppm (Toxicity)</span>
+        </div>
+      </div>
+
+      <!-- Validation & Value Card -->
+      <button id="submit-value-card-btn" class="btn btn-primary" style="width:100%; justify-content:center; padding:0.8rem; margin-top:0.5rem;">
+        📝 Enter Values into Ecosystem Value Card
+      </button>
+
+      <div id="feedback-msg" style="margin-top:0.75rem; font-size:0.8rem; text-align:center; min-height:1.2rem;"></div>
+    `;
+
+    // Event listeners
+    const sliderN = document.getElementById("slider-n");
+    const sliderP = document.getElementById("slider-p");
+    const sliderK = document.getElementById("slider-k");
+
+    sliderN.addEventListener("input", (e) => {
+      this.n = parseInt(e.target.value);
+      document.getElementById("val-n").textContent = `${this.n} ppm`;
+      sound.playClick();
+      this.updateLabels();
+    });
+
+    sliderP.addEventListener("input", (e) => {
+      this.p = parseInt(e.target.value);
+      document.getElementById("val-p").textContent = `${this.p} ppm`;
+      sound.playClick();
+      this.updateLabels();
+    });
+
+    sliderK.addEventListener("input", (e) => {
+      this.k = parseInt(e.target.value);
+      document.getElementById("val-k").textContent = `${this.k} ppm`;
+      sound.playClick();
+      this.updateLabels();
+    });
+
+    document.getElementById("submit-value-card-btn").addEventListener("click", () => {
+      this.validateLevel1();
+    });
+  }
+
+  validateLevel1() {
+    // Target: N ~50 (45-55), P ~30 (26-34), K ~20 (17-23)
+    const nOk = this.n >= 45 && this.n <= 55;
+    const pOk = this.p >= 26 && this.p <= 34;
+    const kOk = this.k >= 17 && this.k <= 23;
+    const msgEl = document.getElementById("feedback-msg");
+
+    if (nOk && pOk && kOk) {
+      sound.playSuccess();
+      msgEl.style.color = "#34d399";
+      msgEl.textContent = "Ecosystem Stability Achieved! Opening Value Card...";
+      setTimeout(() => this.showLevel1ValueCard(), 600);
+    } else {
+      sound.playWarning();
+      msgEl.style.color = "#f87171";
+      let hint = [];
+      if (!nOk) hint.push(this.n < 45 ? "Increase Nitrogen for chlorophyll" : "Reduce Nitrogen to avoid fertilizer burn");
+      if (!pOk) hint.push(this.p < 26 ? "Increase Phosphorus for root elongation" : "Reduce Phosphorus");
+      if (!kOk) hint.push(this.k < 17 ? "Increase Potassium for stomata turgor" : "Reduce Potassium");
+      msgEl.textContent = `Imbalance: ${hint.join(" | ")}`;
+    }
+  }
+
+  showLevel1ValueCard() {
+    const modalArea = document.createElement("div");
+    modalArea.id = "value-card-popup";
+    modalArea.style.cssText = `
+      position:fixed; inset:0; background:rgba(5,8,16,0.85); backdrop-filter:blur(10px);
+      z-index:250; display:flex; align-items:center; justify-content:center; padding:1.5rem;
+    `;
+    modalArea.innerHTML = `
+      <div class="value-card-modal" style="max-width:500px; width:100%;">
+        <div style="text-align:center; margin-bottom:1rem;">
+          <div style="font-size:2rem; margin-bottom:0.25rem;">🌿</div>
+          <h3 style="font-size:1.35rem; color:#fff;">Ecosystem Value Card</h3>
+          <p style="font-size:0.82rem; color:var(--text-muted);">Verified Agronomic Nutrient Formula Settled</p>
+        </div>
+
+        <div class="value-card-grid">
+          <div class="value-card-cell">
+            <div class="label">Nitrogen (N)</div>
+            <div class="val" style="color:#38bdf8;">${this.n} ppm</div>
+            <div style="font-size:0.68rem; color:var(--text-faint); margin-top:0.2rem;">Foliage Vigor</div>
+          </div>
+          <div class="value-card-cell">
+            <div class="label">Phosphorus (P)</div>
+            <div class="val" style="color:#34d399;">${this.p} ppm</div>
+            <div style="font-size:0.68rem; color:var(--text-faint); margin-top:0.2rem;">Root Architecture</div>
+          </div>
+          <div class="value-card-cell">
+            <div class="label">Potassium (K)</div>
+            <div class="val" style="color:#f59e0b;">${this.k} ppm</div>
+            <div style="font-size:0.68rem; color:var(--text-faint); margin-top:0.2rem;">Cell Rigidity</div>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-subtle); border-radius:8px; padding:0.85rem; margin-bottom:1.25rem; font-size:0.8rem; color:var(--text-muted); line-height:1.4;">
+          ✅ <strong>First-Principles Audit:</strong> N:P:K stoichiometry at 5:3:2 creates an optimal nitrogen assimilation rate without cation antagonism in loamy soil.
+        </div>
+
+        <button id="advance-level-2-btn" class="btn btn-accent" style="width:100%; justify-content:center; padding:0.8rem;">
+          Proceed to Level 2: The Crisis →
+        </button>
+      </div>
+    `;
+
+    document.body.appendChild(modalArea);
+    document.getElementById("advance-level-2-btn").addEventListener("click", () => {
+      sound.playClick();
+      modalArea.remove();
+      this.startLevel2Crisis();
+    });
+  }
+
+  startLevel2Crisis() {
+    this.level = 2;
+    this.k = 0; // Locked at 0 due to rainfall
+    this.n = 20;
+    this.p = 20;
+    this.bioBuffer = 0;
+    this.timerSeconds = 10 * 60; // 10 minutes timer
+    sound.playAlarm();
+
+    const levelBadge = document.getElementById("level-badge");
+    levelBadge.textContent = "Level 2: The Crisis";
+    levelBadge.className = "level-chip active";
+    levelBadge.style.background = "#e11d48";
+    levelBadge.style.borderColor = "#f43f5e";
+
+    this.renderLevel2Controls();
+    this.updateLabels();
+  }
+
+  renderLevel2Controls() {
+    const area = document.getElementById("controls-dynamic-area");
+    area.innerHTML = `
+      <div class="crisis-banner">
+        <span class="crisis-icon">⚠️</span>
+        <div>
+          <h4>Method (k) Blind-Variable Crisis</h4>
+          <p>Unseasonal torrential cloudburst! Soluble potassium has leached completely from the subsoil. <strong>The Potassium (K) supply slider is permanently locked at 0 ppm!</strong></p>
+        </div>
+      </div>
+
+      <p style="font-size:0.78rem; color:var(--text-muted); margin-bottom:1.25rem; line-height:1.4;">
+        Under zero chemical potassium, you must counterbalance osmotic pressure using a specialized <strong>Nitrogen-Phosphorus ratio</strong> and introduce an <strong>Organic Bio-Buffer Amendment</strong> to prevent irreversible wilt within 10 minutes.
+      </p>
+
+      <!-- Nitrogen Slider -->
+      <div class="control-group">
+        <div class="control-header">
+          <span class="control-title">🌿 Nitrogen (N) Adjustment</span>
+          <span class="control-value" id="val-n-l2">${this.n} ppm</span>
+        </div>
+        <input type="range" class="slider-range" id="slider-n-l2" min="0" max="100" value="${this.n}">
+        <div class="control-hints">
+          <span>0 ppm</span>
+          <span style="color:var(--accent-emerald);">Compensatory Target: ~40 ppm</span>
+          <span>100 ppm</span>
+        </div>
+      </div>
+
+      <!-- Phosphorus Slider -->
+      <div class="control-group">
+        <div class="control-header">
+          <span class="control-title">🌱 Phosphorus (P) Adjustment</span>
+          <span class="control-value" id="val-p-l2">${this.p} ppm</span>
+        </div>
+        <input type="range" class="slider-range" id="slider-p-l2" min="0" max="100" value="${this.p}">
+        <div class="control-hints">
+          <span>0 ppm</span>
+          <span style="color:var(--accent-emerald);">Compensatory Target: ~45 ppm</span>
+          <span>100 ppm</span>
+        </div>
+      </div>
+
+      <!-- Potassium Slider (LOCKED) -->
+      <div class="control-group" style="opacity:0.6; position:relative;">
+        <div class="control-header">
+          <span class="control-title">🔒 Potassium (K) - LEACHED & LOCKED</span>
+          <span class="control-value" style="color:#ef4444;">0 ppm [LOCKED]</span>
+        </div>
+        <input type="range" class="slider-range" disabled min="0" max="100" value="0">
+        <div class="control-hints">
+          <span style="color:#f87171;">Unseasonal rain leached 100% of soluble K</span>
+        </div>
+      </div>
+
+      <!-- Organic Bio-Buffer Amendment -->
+      <div class="control-group">
+        <div class="control-header">
+          <span class="control-title">🍂 Organic Bio-Buffer Amendment</span>
+          <span class="control-value" id="val-bio">${this.bioBuffer}%</span>
+        </div>
+        <input type="range" class="slider-range" id="slider-bio" min="0" max="100" value="${this.bioBuffer}">
+        <div class="control-hints">
+          <span>0% (Raw soil)</span>
+          <span style="color:var(--accent-emerald);">Target: 50% - 70%</span>
+          <span>100%</span>
+        </div>
+      </div>
+
+      <button id="submit-scorecard-btn" class="btn btn-primary" style="width:100%; justify-content:center; padding:0.8rem; margin-top:0.5rem;">
+        📊 Settle Crisis Scorecard
+      </button>
+
+      <div id="feedback-msg-l2" style="margin-top:0.75rem; font-size:0.8rem; text-align:center; min-height:1.2rem;"></div>
+    `;
+
+    document.getElementById("slider-n-l2").addEventListener("input", (e) => {
+      this.n = parseInt(e.target.value);
+      document.getElementById("val-n-l2").textContent = `${this.n} ppm`;
+      sound.playClick();
+      this.updateLabels();
+    });
+
+    document.getElementById("slider-p-l2").addEventListener("input", (e) => {
+      this.p = parseInt(e.target.value);
+      document.getElementById("val-p-l2").textContent = `${this.p} ppm`;
+      sound.playClick();
+      this.updateLabels();
+    });
+
+    document.getElementById("slider-bio").addEventListener("input", (e) => {
+      this.bioBuffer = parseInt(e.target.value);
+      document.getElementById("val-bio").textContent = `${this.bioBuffer}%`;
+      sound.playClick();
+      this.updateLabels();
+    });
+
+    document.getElementById("submit-scorecard-btn").addEventListener("click", () => {
+      this.validateLevel2();
+    });
+  }
+
+  validateLevel2() {
+    // Under K=0, optimal survival requires: N ~40 (35-45), P ~45 (40-50), Bio-Buffer >= 50%
+    const nOk = this.n >= 35 && this.n <= 45;
+    const pOk = this.p >= 40 && this.p <= 50;
+    const bioOk = this.bioBuffer >= 50 && this.bioBuffer <= 75;
+    const msgEl = document.getElementById("feedback-msg-l2");
+
+    if (nOk && pOk && bioOk) {
+      sound.playSuccess();
+      msgEl.style.color = "#34d399";
+      msgEl.textContent = "Crisis Overcome! Biological resilience established.";
+      setTimeout(() => this.showLevel2Scorecard(), 600);
+    } else {
+      sound.playWarning();
+      msgEl.style.color = "#f87171";
+      let hint = [];
+      if (!nOk) hint.push("Rebalance Nitrogen to ~40 ppm");
+      if (!pOk) hint.push("Elevate Phosphorus to ~45 ppm for root ATP");
+      if (!bioOk) hint.push("Increase Organic Bio-Buffer to 50%-75%");
+      msgEl.textContent = `Crisis unresolved: ${hint.join(" | ")}`;
+    }
+  }
+
+  showLevel2Scorecard() {
+    const modalArea = document.createElement("div");
+    modalArea.id = "scorecard-popup";
+    modalArea.style.cssText = `
+      position:fixed; inset:0; background:rgba(5,8,16,0.85); backdrop-filter:blur(10px);
+      z-index:250; display:flex; align-items:center; justify-content:center; padding:1.5rem;
+    `;
+    modalArea.innerHTML = `
+      <div class="value-card-modal" style="max-width:520px; width:100%;">
+        <div style="text-align:center; margin-bottom:1rem;">
+          <div style="font-size:2rem; margin-bottom:0.25rem;">🏆</div>
+          <h3 style="font-size:1.35rem; color:#fff;">Crisis Resilience Scorecard</h3>
+          <p style="font-size:0.82rem; color:var(--text-muted);">Method (k) Blind-Variable Solved</p>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-subtle); border-radius:8px; padding:1rem; margin-bottom:1.25rem;">
+          <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem; font-size:0.85rem;">
+            <span style="color:var(--text-muted);">Nutrient Shock Survival:</span>
+            <strong style="color:#34d399;">94% Tissue Viability</strong>
+          </div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem; font-size:0.85rem;">
+            <span style="color:var(--text-muted);">Bio-Buffer Cation Protection:</span>
+            <strong style="color:var(--accent-cyan);">Active (${this.bioBuffer}%)</strong>
+          </div>
+          <div style="display:flex; justify-content:space-between; font-size:0.85rem;">
+            <span style="color:var(--text-muted);">Response Time:</span>
+            <strong style="color:#fff;">${Math.floor((10*60 - this.timerSeconds) / 60)}m ${(10*60 - this.timerSeconds) % 60}s</strong>
+          </div>
+        </div>
+
+        <button id="advance-level-3-btn" class="btn btn-accent" style="width:100%; justify-content:center; padding:0.8rem;">
+          Proceed to Level 3: Ethical Radical →
+        </button>
+      </div>
+    `;
+
+    document.body.appendChild(modalArea);
+    document.getElementById("advance-level-3-btn").addEventListener("click", () => {
+      sound.playClick();
+      modalArea.remove();
+      this.startLevel3Ethical();
+    });
+  }
+
+  startLevel3Ethical() {
+    this.level = 3;
+    if (this.timerInterval) clearInterval(this.timerInterval);
+
+    const levelBadge = document.getElementById("level-badge");
+    levelBadge.textContent = "Level 3: Ethical Radical";
+    levelBadge.className = "level-chip active";
+    levelBadge.style.background = "#8b5cf6";
+    levelBadge.style.borderColor = "#a855f7";
+
+    const controlsArea = document.getElementById("controls-dynamic-area");
+    controlsArea.innerHTML = `
+      <div style="background:rgba(139,92,246,0.1); border:1px solid rgba(139,92,246,0.3); border-radius:8px; padding:1rem; margin-bottom:1.25rem;">
+        <div style="font-size:0.75rem; text-transform:uppercase; color:var(--accent-purple); font-weight:700; letter-spacing:0.06em;">Method (c) Ethical Radical</div>
+        <h4 style="font-size:0.95rem; color:#fff; margin:0.3rem 0;">Severe Flash Rot in Storage Warehouse</h4>
+        <p style="font-size:0.8rem; color:var(--text-muted); line-height:1.4;">
+          The moisture from the unseasonal rains has infiltrated the community granary. <strong>Flash fungal rot has destroyed all crop stores except for one remaining sealed grain bag.</strong>
+        </p>
+      </div>
+
+      <div style="background:rgba(244,63,94,0.08); border:1px solid rgba(244,63,94,0.3); border-radius:8px; padding:0.85rem; margin-bottom:1.25rem; font-size:0.82rem; color:#fca5a5;">
+        ⚠️ <strong>Critical Dilemma:</strong> Your choice will affect human lives. You can only save one vulnerable group with this final bag of grain. There is no mathematical "right" or "wrong" answer.
+      </div>
+
+      <div class="ethical-deck">
+        <div class="ethical-card" id="card-infants">
+          <div class="ethical-card-icon">👶</div>
+          <h3>Save 5 Infants</h3>
+          <p>Allocate grain for emergency nutritional milk/paste. High developmental vulnerability, entire lifespan ahead.</p>
+        </div>
+
+        <div class="ethical-card" id="card-elders">
+          <div class="ethical-card-icon">👵</div>
+          <h3>Save 5 Elders</h3>
+          <p>Allocate grain for senior community knowledge-bearers, agricultural custodians, and family pillars.</p>
+        </div>
+      </div>
+
+      <div style="margin-bottom:1.25rem;">
+        <label style="font-size:0.75rem; text-transform:uppercase; color:var(--text-faint); font-weight:700;">Record Your Ethical Rationale (First-Principles Thinking)</label>
+        <textarea id="ethical-reasoning" class="verify-input" rows="3" placeholder="Explain your decision framework: Utilitarian lifespan vs Deontological duty of care..."></textarea>
+      </div>
+
+      <button id="finalize-simulation-btn" class="btn btn-primary" style="width:100%; justify-content:center; padding:0.8rem;" disabled>
+        Finalize Ethical Decision & Complete Simulation
+      </button>
+    `;
+
+    const cardInfants = document.getElementById("card-infants");
+    const cardElders = document.getElementById("card-elders");
+    const reasonInput = document.getElementById("ethical-reasoning");
+    const finalizeBtn = document.getElementById("finalize-simulation-btn");
+
+    const checkReady = () => {
+      finalizeBtn.disabled = !(this.ethicalChoice && reasonInput.value.trim().length >= 10);
+    };
+
+    cardInfants.addEventListener("click", () => {
+      sound.playClick();
+      this.ethicalChoice = "infants";
+      cardInfants.classList.add("selected");
+      cardElders.classList.remove("selected");
+      checkReady();
+    });
+
+    cardElders.addEventListener("click", () => {
+      sound.playClick();
+      this.ethicalChoice = "elders";
+      cardElders.classList.add("selected");
+      cardInfants.classList.remove("selected");
+      checkReady();
+    });
+
+    reasonInput.addEventListener("input", checkReady);
+
+    finalizeBtn.addEventListener("click", () => {
+      sound.playSuccess();
+      this.completeSimulation(reasonInput.value.trim());
+    });
+  }
+
+  completeSimulation(rationale) {
+    this.stage = "completed";
+    const modalArea = document.createElement("div");
+    modalArea.style.cssText = `
+      position:fixed; inset:0; background:rgba(5,8,16,0.9); backdrop-filter:blur(12px);
+      z-index:300; display:flex; align-items:center; justify-content:center; padding:1.5rem;
+    `;
+    modalArea.innerHTML = `
+      <div class="value-card-modal" style="max-width:580px; width:100%; text-align:left;">
+        <div style="text-align:center; margin-bottom:1.5rem;">
+          <div style="font-size:2.5rem; margin-bottom:0.25rem;">🌱🎓</div>
+          <h2 style="font-size:1.5rem; color:#fff;">Plant Soil Ecosystem Mastered</h2>
+          <p style="font-size:0.85rem; color:var(--accent-cyan);">Curriculum Loop: 4 Criteria & 4 Revolutionary Methods Cleared</p>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-subtle); border-radius:8px; padding:1rem; margin-bottom:1.25rem; font-size:0.85rem;">
+          <div style="margin-bottom:0.5rem;">
+            <span style="color:var(--text-muted);">Ethical Alignment Choice:</span>
+            <strong style="color:#fff; text-transform:capitalize;"> Allocated to 5 ${this.ethicalChoice}</strong>
+          </div>
+          <div style="color:var(--text-muted); font-size:0.8rem; font-style:italic; border-left:2px solid var(--accent-purple); padding-left:0.75rem;">
+            "${rationale}"
+          </div>
+        </div>
+
+        <div class="physical-brief-box" style="margin-bottom:1.5rem;">
+          <div class="physical-brief-header">
+            <span>🔬</span>
+            <span>NEXT 50%: Classroom Physical Build Project</span>
+          </div>
+          <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.6rem;">
+            Digital simulation complete! You are now prepared to build the <strong>Closed-Loop Hydroponic Wick Column</strong> with physical pH & NPK chemical titrants in the lab.
+          </p>
+          <button id="view-lab-brief-btn" class="btn btn-subtle" style="font-size:0.75rem; padding:0.4rem 0.8rem;">
+            Open Classroom Physical Lab Brief 📋
+          </button>
+        </div>
+
+        <div style="display:flex; gap:0.75rem;">
+          <button id="exit-sim-btn" class="btn btn-primary" style="flex:1; justify-content:center; padding:0.8rem;">
+            Return to Mission Command
+          </button>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(modalArea);
+    document.getElementById("view-lab-brief-btn").addEventListener("click", () => {
+      window.dispatchEvent(new CustomEvent("open-physical-brief", { detail: "sim-plant-npk" }));
+    });
+    document.getElementById("exit-sim-btn").addEventListener("click", () => {
+      modalArea.remove();
+      if (this.onComplete) this.onComplete();
+    });
+  }
+
+  updateLabels() {
+    const leafLabel = document.getElementById("leaf-label");
+    const stemLabel = document.getElementById("stem-label");
+    const rootLabel = document.getElementById("root-label");
+    if (!leafLabel || !stemLabel || !rootLabel) return;
+
+    // Leaf Nitrogen status
+    if (this.n < 30) {
+      leafLabel.innerHTML = `<span class="status-dot danger"></span>Leaves: Chlorosis / Yellowing (N: ${this.n}ppm)`;
+    } else if (this.n > 75) {
+      leafLabel.innerHTML = `<span class="status-dot danger"></span>Leaves: Tip Scorch / Salt Burn (N: ${this.n}ppm)`;
+    } else {
+      leafLabel.innerHTML = `<span class="status-dot healthy"></span>Leaves: Lush Dark Chlorophyll (N: ${this.n}ppm)`;
+    }
+
+    // Stem / Cell Wall Potassium status
+    const effectiveK = this.k + this.bioBuffer * 0.3;
+    if (effectiveK < 15) {
+      stemLabel.innerHTML = `<span class="status-dot danger"></span>Stem: Turgor Collapse (K: ${this.k}ppm)`;
+    } else if (effectiveK < 25) {
+      stemLabel.innerHTML = `<span class="status-dot warning"></span>Stem: Mild Osmotic Strain (K: ${this.k}ppm)`;
+    } else {
+      stemLabel.innerHTML = `<span class="status-dot healthy"></span>Stem: Rigid Cellulose Stomata Stable`;
+    }
+
+    // Root Phosphorus status
+    if (this.p < 20) {
+      rootLabel.innerHTML = `<span class="status-dot danger"></span>Roots: Stunted Biomass (P: ${this.p}ppm)`;
+    } else if (this.p > 70) {
+      rootLabel.innerHTML = `<span class="status-dot warning"></span>Roots: Excess Salinity Stunting (P: ${this.p}ppm)`;
+    } else {
+      rootLabel.innerHTML = `<span class="status-dot healthy"></span>Roots: Deep Taproot & Lateral Hairs (P: ${this.p}ppm)`;
+    }
+  }
+
+  animate() {
+    this.drawPlant();
+    this.animFrame = requestAnimationFrame(() => this.animate());
+  }
+
+  drawPlant() {
+    if (!this.ctx || !this.canvas) return;
+    const ctx = this.ctx;
+    const w = this.canvas.width;
+    const h = this.canvas.height;
+
+    ctx.clearRect(0, 0, w, h);
+
+    // Soil boundary at 65% height
+    const soilY = h * 0.62;
+
+    // Sky Background
+    if (this.stage === "intro" && this.introStep === 1) {
+      // Storm sky
+      ctx.fillStyle = "#111827";
+      ctx.fillRect(0, 0, w, soilY);
+
+      // Rain animation
+      ctx.strokeStyle = "rgba(147, 197, 253, 0.4)";
+      ctx.lineWidth = 1.5;
+      for (let i = 0; i < 60; i++) {
+        const rx = (Math.sin(i * 99 + Date.now() * 0.005) * 0.5 + 0.5) * w;
+        const ry = ((i * 37 + Date.now() * 0.8) % soilY);
+        ctx.beginPath();
+        ctx.moveTo(rx, ry);
+        ctx.lineTo(rx - 8, ry + 16);
+        ctx.stroke();
+      }
+    } else {
+      // Clear atmospheric glow
+      const skyGrad = ctx.createLinearGradient(0, 0, 0, soilY);
+      skyGrad.addColorStop(0, "#080e1c");
+      skyGrad.addColorStop(1, "#0d1b2a");
+      ctx.fillStyle = skyGrad;
+      ctx.fillRect(0, 0, w, soilY);
+    }
+
+    // Soil Horizon
+    const soilGrad = ctx.createLinearGradient(0, soilY, 0, h);
+    if (this.stage === "intro" && this.introStep === 1) {
+      soilGrad.addColorStop(0, "#3d2b1f"); // Muddy flooded
+      soilGrad.addColorStop(1, "#21160e");
+    } else {
+      soilGrad.addColorStop(0, "#2c1d11");
+      soilGrad.addColorStop(1, "#191009");
+    }
+    ctx.fillStyle = soilGrad;
+    ctx.fillRect(0, soilY, w, h - soilY);
+
+    // Soil line highlight
+    ctx.strokeStyle = "rgba(180, 110, 60, 0.4)";
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(0, soilY);
+    ctx.lineTo(w, soilY);
+    ctx.stroke();
+
+    const plantX = w * 0.48;
+
+    // 1. Draw Roots (Governed by Phosphorus: this.p)
+    const rootLength = Math.max(30, (this.p / 100) * (h * 0.32) + 20);
+    const rootBranching = Math.max(2, Math.floor((this.p / 100) * 8));
+    ctx.strokeStyle = "#e2d9cc";
+    ctx.lineWidth = 3.5;
+    ctx.beginPath();
+    ctx.moveTo(plantX, soilY);
+    ctx.quadraticCurveTo(plantX + 10, soilY + rootLength * 0.5, plantX, soilY + rootLength);
+    ctx.stroke();
+
+    // Lateral Root Branches
+    for (let r = 1; r <= rootBranching; r++) {
+      const branchY = soilY + (rootLength / (rootBranching + 1)) * r;
+      const spread = (this.p / 100) * 80 + 20;
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(plantX, branchY);
+      ctx.quadraticCurveTo(plantX - spread * 0.6, branchY + 15, plantX - spread, branchY + 30);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(plantX, branchY + 10);
+      ctx.quadraticCurveTo(plantX + spread * 0.6, branchY + 20, plantX + spread, branchY + 35);
+      ctx.stroke();
+    }
+
+    // 2. Draw Stem (Governed by Potassium: this.k and bioBuffer)
+    const effectiveK = this.k + this.bioBuffer * 0.3;
+    const stemDroop = Math.max(0, (25 - effectiveK) * 1.5);
+    const stemHeight = h * 0.32;
+    const stemTopX = plantX + (stemDroop > 0 ? stemDroop * 2 : 0);
+    const stemTopY = soilY - stemHeight + stemDroop;
+
+    ctx.strokeStyle = effectiveK > 15 ? "#4ade80" : "#a3e635";
+    ctx.lineWidth = 7;
+    ctx.beginPath();
+    ctx.moveTo(plantX, soilY);
+    ctx.bezierCurveTo(
+      plantX, soilY - stemHeight * 0.5,
+      stemTopX - 10, stemTopY + 30,
+      stemTopX, stemTopY
+    );
+    ctx.stroke();
+
+    // 3. Draw Leaves (Governed by Nitrogen: this.n)
+    // Leaf color shift: yellow (chlorosis) -> vibrant emerald -> dark scorched
+    let leafColor = "#eab308"; // Default chlorosis yellow
+    if (this.n >= 40 && this.n <= 65) {
+      leafColor = "#22c55e"; // Healthy green
+    } else if (this.n > 65) {
+      leafColor = "#15803d"; // Dark green / burn
+    } else if (this.n > 20) {
+      leafColor = "#84cc16"; // Yellow-green
+    }
+
+    const leafScale = Math.max(0.4, Math.min(1.2, this.n / 50));
+
+    // Left leaf
+    this.drawLeaf(ctx, stemTopX - 15, stemTopY + 40, -0.6, leafColor, leafScale);
+    // Right leaf
+    this.drawLeaf(ctx, stemTopX + 15, stemTopY + 70, 0.7, leafColor, leafScale);
+    // Top Left leaf
+    this.drawLeaf(ctx, stemTopX - 10, stemTopY + 10, -0.3, leafColor, leafScale * 0.85);
+    // Top Right leaf
+    this.drawLeaf(ctx, stemTopX + 10, stemTopY + 20, 0.4, leafColor, leafScale * 0.85);
+    // Apex terminal shoot
+    this.drawLeaf(ctx, stemTopX, stemTopY - 10, 0, leafColor, leafScale * 0.7);
+  }
+
+  drawLeaf(ctx, x, y, angle, color, scale) {
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.rotate(angle);
+    ctx.scale(scale, scale);
+
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
+    ctx.quadraticCurveTo(40, -25, 70, 0);
+    ctx.quadraticCurveTo(40, 25, 0, 0);
+    ctx.fill();
+
+    // Leaf vein
+    ctx.strokeStyle = "rgba(0,0,0,0.15)";
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
+    ctx.lineTo(60, 0);
+    ctx.stroke();
+
+    ctx.restore();
+  }
+}
+
+
+/**
+ * Mission 1: Bio-Mimicry Heart Pump Design
+ * Domain 1: Bio-Tech & Living Systems
+ * Incorporates: First Principles (a), Bio-Mimicry Auditing (j), Synthesis (b), Project-Based Learning (d)
+ */
+
+
+
+class HeartPumpSimulation {
+  constructor(container, onComplete) {
+    this.container = container;
+    this.onComplete = onComplete;
+    this.level = 1;
+    this.modelType = "human"; // human (4 chamber) | fish (2 chamber) | frog (3 chamber)
+
+    // Hemodynamic Parameters
+    this.heartRate = 72; // 60 - 180 BPM
+    this.strokeVolume = 70; // 50 - 120 mL
+    this.blockage = 0; // 0%, 50%, 80% stenosis
+
+    this.animFrame = null;
+    this.phase = 0; // Contraction phase (0 to 2*PI)
+    this.particles = [];
+    this.lastBeatTime = 0;
+
+    // 25-Minute Mission Timer
+    this.timerSeconds = 25 * 60;
+    this.timerInterval = null;
+    this.isRunning = true;
+    this.beatTimeout = null;
+  }
+
+  mount() {
+    this.isRunning = true;
+    this.renderLayout();
+    this.setupCanvas();
+    this.initParticles();
+    this.renderControls();
+    this.startBeatLoop();
+    this.startTimer();
+  }
+
+  destroy() {
+    this.isRunning = false;
+    if (this.beatTimeout) clearTimeout(this.beatTimeout);
+    if (this.animFrame) cancelAnimationFrame(this.animFrame);
+    if (this.timerInterval) clearInterval(this.timerInterval);
+    sound.stopAll();
+  }
+
+  startTimer() {
+    const timerEl = document.getElementById("heart-timer");
+    if (!timerEl) return;
+    this.timerInterval = setInterval(() => {
+      if (this.timerSeconds > 0) {
+        this.timerSeconds--;
+        const mins = Math.floor(this.timerSeconds / 60).toString().padStart(2, "0");
+        const secs = (this.timerSeconds % 60).toString().padStart(2, "0");
+        timerEl.textContent = `${mins}:${secs}`;
+      } else {
+        clearInterval(this.timerInterval);
+      }
+    }, 1000);
+  }
+
+  renderLayout() {
+    this.container.innerHTML = `
+      <div class="sim-stage-split">
+        <!-- 70% Left: Anatomical Heart & Fluid Dynamics -->
+        <div class="sim-stage-visual" id="heart-visual-pane">
+          <div class="sim-canvas-container">
+            <canvas id="heartCanvas" class="sim-canvas"></canvas>
+
+            <!-- Bio-Mimicry Model Selector Bar -->
+            <div style="position:absolute; top:15px; left:15px; display:flex; gap:0.5rem; background:rgba(15,23,42,0.85); backdrop-filter:blur(8px); padding:0.4rem; border-radius:8px; border:1px solid var(--border-subtle); z-index:10;">
+              <button id="model-human-btn" class="filter-chip active">🫀 Human (4-Chamber)</button>
+              <button id="model-fish-btn" class="filter-chip">🐟 Fish (2-Chamber)</button>
+              <button id="model-frog-btn" class="filter-chip">🐸 Amphibian (3-Chamber)</button>
+            </div>
+
+            <!-- Real-time Pressure & Flow Telemetry Overlay -->
+            <div style="position:absolute; bottom:20px; left:20px; right:20px; background:rgba(15,23,42,0.9); border:1px solid rgba(56,189,248,0.25); border-radius:12px; padding:0.85rem 1.25rem; display:flex; justify-content:space-between; align-items:center; backdrop-filter:blur(10px);">
+              <div>
+                <div style="font-size:0.7rem; color:var(--text-faint); text-transform:uppercase; font-weight:700;">Cardiac Output (CO = HR × SV)</div>
+                <div style="font-family:var(--font-mono); font-size:1.4rem; font-weight:800; color:var(--accent-cyan);" id="co-display">5.04 <span style="font-size:0.8rem; color:var(--text-muted);">L/min</span></div>
+              </div>
+              <div>
+                <div style="font-size:0.7rem; color:var(--text-faint); text-transform:uppercase; font-weight:700;">Derived Blood Pressure</div>
+                <div style="font-family:var(--font-mono); font-size:1.4rem; font-weight:800; color:#fff;" id="bp-display">120 / 80 <span style="font-size:0.8rem; color:var(--text-muted);">mmHg</span></div>
+              </div>
+              <div>
+                <div style="font-size:0.7rem; color:var(--text-faint); text-transform:uppercase; font-weight:700;">Vascular Resistance</div>
+                <div style="font-family:var(--font-mono); font-size:1.4rem; font-weight:800; color:#f59e0b;" id="resistance-display">1.00 <span style="font-size:0.8rem; color:var(--text-muted);">dyn·s/cm⁵</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 30% Right: Hemodynamic Controls & Embedded Quizzes -->
+        <div class="sim-stage-controls" id="heart-controls-pane">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <div>
+              <div style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); font-weight:700;">Mission Phase</div>
+              <span id="heart-level-badge" class="level-chip active">Level 1: Calibration</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:0.6rem;">
+              <div class="sim-timer-badge" id="heart-timer" style="font-size:0.85rem; padding:0.25rem 0.65rem;">25:00</div>
+              <button id="theory-btn" class="btn btn-subtle" style="font-size:0.75rem; padding:0.35rem 0.7rem;">
+                📚 Mini-Lecture
+              </button>
+            </div>
+          </div>
+
+          <div id="heart-controls-area">
+            <!-- Dynamic Controls and Quizzes -->
+          </div>
+        </div>
+      </div>
+    `;
+
+    document.getElementById("model-human-btn").addEventListener("click", () => this.switchModel("human"));
+    document.getElementById("model-fish-btn").addEventListener("click", () => this.switchModel("fish"));
+    document.getElementById("model-frog-btn").addEventListener("click", () => this.switchModel("frog"));
+    document.getElementById("theory-btn").addEventListener("click", () => this.showTheoryModal());
+  }
+
+  setupCanvas() {
+    this.canvas = document.getElementById("heartCanvas");
+    this.ctx = this.canvas.getContext("2d");
+    this.resizeCanvas();
+    window.addEventListener("resize", () => this.resizeCanvas());
+    this.animate();
+  }
+
+  resizeCanvas() {
+    const parent = this.canvas.parentElement;
+    this.canvas.width = parent.clientWidth * window.devicePixelRatio;
+    this.canvas.height = parent.clientHeight * window.devicePixelRatio;
+  }
+
+  initParticles() {
+    this.particles = [];
+    for (let i = 0; i < 90; i++) {
+      this.particles.push({
+        t: Math.random(),
+        type: i % 2 === 0 ? "oxygenated" : "deoxygenated",
+        speed: 0.003 + Math.random() * 0.002
+      });
+    }
+  }
+
+  switchModel(type) {
+    sound.playClick();
+    this.modelType = type;
+    document.getElementById("model-human-btn").classList.toggle("active", type === "human");
+    document.getElementById("model-fish-btn").classList.toggle("active", type === "fish");
+    document.getElementById("model-frog-btn").classList.toggle("active", type === "frog");
+    this.updateTelemetry();
+  }
+
+  startBeatLoop() {
+    this.isRunning = true;
+    const checkBeat = () => {
+      if (!this.isRunning) return;
+      const now = Date.now();
+      const intervalMs = (60 / this.heartRate) * 1000;
+      if (now - this.lastBeatTime >= intervalMs) {
+        sound.playHeartbeat(1.0);
+        this.lastBeatTime = now;
+      }
+      this.beatTimeout = setTimeout(checkBeat, 50);
+    };
+    checkBeat();
+  }
+
+  renderControls() {
+    const area = document.getElementById("heart-controls-area");
+    area.innerHTML = `
+      <!-- Heart Rate Control -->
+      <div class="control-group">
+        <div class="control-header">
+          <span class="control-title">💓 Heart Rate (HR)</span>
+          <span class="control-value" id="val-hr">${this.heartRate} BPM</span>
+        </div>
+        <input type="range" class="slider-range" id="slider-hr" min="60" max="180" value="${this.heartRate}">
+        <div class="control-hints">
+          <span>60 BPM (Resting)</span>
+          <span>120 BPM (Aerobic)</span>
+          <span>180 BPM (Max Sprint)</span>
+        </div>
+      </div>
+
+      <!-- Stroke Volume Control -->
+      <div class="control-group">
+        <div class="control-header">
+          <span class="control-title">💧 Stroke Volume (SV)</span>
+          <span class="control-value" id="val-sv">${this.strokeVolume} mL</span>
+        </div>
+        <input type="range" class="slider-range" id="slider-sv" min="50" max="120" value="${this.strokeVolume}">
+        <div class="control-hints">
+          <span>50 mL (Sedentary)</span>
+          <span>70 mL (Normal)</span>
+          <span>120 mL (Endurance Athlete)</span>
+        </div>
+      </div>
+
+      <!-- Coronary Arterial Stenosis -->
+      <div class="control-group">
+        <div class="control-header">
+          <span class="control-title">🫀 Arterial Stenosis / Blockage</span>
+          <span class="control-value" id="val-blockage">${this.blockage}%</span>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:0.5rem; margin-top:0.4rem;">
+          <button id="block-0" class="btn btn-subtle ${this.blockage === 0 ? 'active' : ''}" style="justify-content:center; font-size:0.75rem;">Normal (0%)</button>
+          <button id="block-50" class="btn btn-subtle ${this.blockage === 50 ? 'active' : ''}" style="justify-content:center; font-size:0.75rem;">50% Block</button>
+          <button id="block-80" class="btn btn-subtle ${this.blockage === 80 ? 'active' : ''}" style="justify-content:center; font-size:0.75rem; color:#f87171;">80% Critical</button>
+        </div>
+      </div>
+
+      <!-- Progressive Challenge / Embedded Quiz Section -->
+      <div id="quiz-container" style="background:rgba(255,255,255,0.03); border:1px solid var(--border-subtle); border-radius:8px; padding:1rem; margin-top:1rem;">
+        <div style="font-size:0.75rem; text-transform:uppercase; color:var(--accent-cyan); font-weight:700; margin-bottom:0.4rem;" id="quiz-header">
+          Level 1 Challenge: Rest to Sprint
+        </div>
+        <p style="font-size:0.8rem; color:var(--text-muted); line-height:1.4; margin-bottom:0.75rem;" id="quiz-prompt">
+          An athlete begins an intense 400m sprint. Oxygen consumption triples, requiring a Cardiac Output of at least <strong>12.0 L/min</strong>. Adjust HR and SV to hit this target safely!
+        </p>
+        <button id="verify-quiz-btn" class="btn btn-primary" style="width:100%; justify-content:center; font-size:0.8rem;">
+          Verify Cardiac Equilibrium
+        </button>
+        <div id="quiz-feedback" style="font-size:0.78rem; text-align:center; margin-top:0.5rem; min-height:1.2rem;"></div>
+      </div>
+    `;
+
+    document.getElementById("slider-hr").addEventListener("input", (e) => {
+      this.heartRate = parseInt(e.target.value);
+      document.getElementById("val-hr").textContent = `${this.heartRate} BPM`;
+      this.updateTelemetry();
+    });
+
+    document.getElementById("slider-sv").addEventListener("input", (e) => {
+      this.strokeVolume = parseInt(e.target.value);
+      document.getElementById("val-sv").textContent = `${this.strokeVolume} mL`;
+      this.updateTelemetry();
+    });
+
+    document.getElementById("block-0").addEventListener("click", () => this.setBlockage(0));
+    document.getElementById("block-50").addEventListener("click", () => this.setBlockage(50));
+    document.getElementById("block-80").addEventListener("click", () => this.setBlockage(80));
+
+    document.getElementById("verify-quiz-btn").addEventListener("click", () => this.verifyChallenge());
+    this.updateTelemetry();
+  }
+
+  setBlockage(val) {
+    sound.playClick();
+    this.blockage = val;
+    document.getElementById("val-blockage").textContent = `${val}%`;
+    ["0", "50", "80"].forEach(b => {
+      const btn = document.getElementById(`block-${b}`);
+      if (btn) btn.classList.toggle("active", parseInt(b) === val);
+    });
+    this.updateTelemetry();
+  }
+
+  updateTelemetry() {
+    const co = (this.heartRate * this.strokeVolume) / 1000;
+    // Poiseuille's law approximation for vascular resistance: R increases exponentially with blockage
+    const rFactor = 1 / Math.pow(1 - (this.blockage / 100) * 0.7, 4);
+    const meanArterial = Math.round(co * 16 * rFactor);
+    const systolic = Math.round(meanArterial * 1.25);
+    const diastolic = Math.round(meanArterial * 0.85);
+
+    const coEl = document.getElementById("co-display");
+    const bpEl = document.getElementById("bp-display");
+    const resEl = document.getElementById("resistance-display");
+
+    if (coEl) coEl.innerHTML = `${co.toFixed(2)} <span style="font-size:0.8rem; color:var(--text-muted);">L/min</span>`;
+    if (bpEl) {
+      bpEl.innerHTML = `${systolic} / ${diastolic} <span style="font-size:0.8rem; color:var(--text-muted);">mmHg</span>`;
+      if (systolic > 160 || diastolic > 100) {
+        bpEl.style.color = "#f43f5e";
+      } else {
+        bpEl.style.color = "#fff";
+      }
+    }
+    if (resEl) resEl.innerHTML = `${rFactor.toFixed(2)} <span style="font-size:0.8rem; color:var(--text-muted);">dyn·s/cm⁵</span>`;
+  }
+
+  verifyChallenge() {
+    const co = (this.heartRate * this.strokeVolume) / 1000;
+    const feedback = document.getElementById("quiz-feedback");
+
+    if (this.level === 1) {
+      if (co >= 12.0 && co <= 16.0) {
+        sound.playSuccess();
+        feedback.style.color = "#34d399";
+        feedback.textContent = "Target Cleared! Sprint cardiac output achieved without hypertensive crisis.";
+        setTimeout(() => this.advanceToLevel2(), 800);
+      } else {
+        sound.playWarning();
+        feedback.style.color = "#f87171";
+        feedback.textContent = `Current CO is ${co.toFixed(2)} L/min. You need at least 12.0 L/min! Increase HR or SV.`;
+      }
+    } else if (this.level === 2) {
+      // Level 2: Stenosis compensation
+      if (this.blockage >= 50 && co >= 6.0 && this.heartRate <= 130) {
+        sound.playSuccess();
+        feedback.style.color = "#34d399";
+        feedback.textContent = "Stenosis Compensated! Deep stroke volume maintained output without tachycardia.";
+        setTimeout(() => this.advanceToLevel3(), 800);
+      } else {
+        sound.playWarning();
+        feedback.style.color = "#f87171";
+        feedback.textContent = "Elevate Stroke Volume to sustain >=6.0 L/min while keeping HR under 130 BPM under blockage!";
+      }
+    } else if (this.level === 3) {
+      sound.playSuccess();
+      feedback.style.color = "#34d399";
+      feedback.textContent = "Bio-mimicry audit successfully completed!";
+      this.completeMission();
+    }
+  }
+
+  advanceToLevel2() {
+    this.level = 2;
+    document.getElementById("heart-level-badge").textContent = "Level 2: Stenosis Shock";
+    document.getElementById("quiz-header").textContent = "Level 2 Challenge: Arterial Blockage";
+    document.getElementById("quiz-prompt").innerHTML = `
+      A <strong>50% arterial stenosis</strong> strikes. Vascular resistance spikes.
+      Stabilize Cardiac Output to <strong>>= 6.0 L/min</strong> while preventing resting tachycardia (keep Heart Rate <= 130 BPM).
+    `;
+    this.setBlockage(50);
+  }
+
+  advanceToLevel3() {
+    this.level = 3;
+    document.getElementById("heart-level-badge").textContent = "Level 3: Bio-Mimicry Audit";
+    document.getElementById("quiz-header").textContent = "Level 3: Nature-to-Tech Bio-Audit";
+    document.getElementById("quiz-prompt").innerHTML = `
+      Explore the <strong>Fish (2-Chamber)</strong> and <strong>Amphibian (3-Chamber)</strong> models using the top tabs.
+      Observe single vs dual circulation and explain why endothermic mammals evolved complete ventricular septation!
+    `;
+    document.getElementById("verify-quiz-btn").textContent = "Finalize Bio-Mimicry Comparative Audit";
+  }
+
+  completeMission() {
+    const modalArea = document.createElement("div");
+    modalArea.style.cssText = `
+      position:fixed; inset:0; background:rgba(5,8,16,0.9); backdrop-filter:blur(12px);
+      z-index:300; display:flex; align-items:center; justify-content:center; padding:1.5rem;
+    `;
+    modalArea.innerHTML = `
+      <div class="value-card-modal" style="max-width:580px; width:100%;">
+        <div style="text-align:center; margin-bottom:1.5rem;">
+          <div style="font-size:2.5rem; margin-bottom:0.25rem;">🫀🏆</div>
+          <h2 style="font-size:1.5rem; color:#fff;">Mission 1: Bio-Mimicry Heart Pump Mastered</h2>
+          <p style="font-size:0.85rem; color:var(--accent-cyan);">Domain 1: Bio-Tech & Living Systems Cleared</p>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-subtle); border-radius:8px; padding:1rem; margin-bottom:1.25rem; font-size:0.85rem;">
+          <h4 style="color:#38bdf8; margin-bottom:0.4rem;">Key First-Principles Derivation:</h4>
+          <p style="color:var(--text-muted); line-height:1.4;">
+            Poiseuille's equation ($R = \frac{8\eta L}{\pi r^4}$) proves that halving vessel radius increases resistance 16-fold! Mammalian 4-chamber separation creates high systemic pressure while protecting fragile pulmonary capillaries.
+          </p>
+        </div>
+
+        <div class="physical-brief-box" style="margin-bottom:1.5rem;">
+          <div class="physical-brief-header">
+            <span>🔬</span>
+            <span>NEXT 50%: Classroom Physical Build Project</span>
+          </div>
+          <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.6rem;">
+            Construct the <strong>Dual-Chamber Syringe & Ball-Valve Mechanical Hemodynamic Rig</strong> in the classroom to physically measure manometer pressure with one-way valves.
+          </p>
+          <button id="view-heart-lab-brief-btn" class="btn btn-subtle" style="font-size:0.75rem; padding:0.4rem 0.8rem;">
+            Open Classroom Physical Lab Brief 📋
+          </button>
+        </div>
+
+        <button id="exit-heart-sim-btn" class="btn btn-primary" style="width:100%; justify-content:center; padding:0.8rem;">
+          Return to Mission Command
+        </button>
+      </div>
+    `;
+
+    document.body.appendChild(modalArea);
+    document.getElementById("view-heart-lab-brief-btn").addEventListener("click", () => {
+      window.dispatchEvent(new CustomEvent("open-physical-brief", { detail: "sim-heart-pump" }));
+    });
+    document.getElementById("exit-heart-sim-btn").addEventListener("click", () => {
+      modalArea.remove();
+      if (this.onComplete) this.onComplete();
+    });
+  }
+
+  showTheoryModal() {
+    sound.playClick();
+    const modalArea = document.createElement("div");
+    modalArea.style.cssText = `
+      position:fixed; inset:0; background:rgba(5,8,16,0.85); backdrop-filter:blur(10px);
+      z-index:300; display:flex; align-items:center; justify-content:center; padding:1.5rem;
+    `;
+    modalArea.innerHTML = `
+      <div class="value-card-modal" style="max-width:640px; width:100%;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+          <h3 style="color:#fff; font-size:1.25rem;">📚 Mini-Lecture: Heart Hemodynamics & Comparative Physiology</h3>
+          <button id="close-theory-btn" class="modal-close-btn" style="position:static;">✕</button>
+        </div>
+        <div style="font-size:0.85rem; color:var(--text-muted); line-height:1.5; max-height:60vh; overflow-y:auto; padding-right:0.5rem;">
+          <p style="margin-bottom:0.75rem;">
+            <strong>1. Cardiac Output Formula:</strong> $\text{CO} = \text{Heart Rate (HR)} \times \text{Stroke Volume (SV)}$. At rest, $72\text{ BPM} \times 70\text{ mL} \approx 5.0\text{ L/min}$, circulating the body's total blood volume every 60 seconds!
+          </p>
+          <p style="margin-bottom:0.75rem;">
+            <strong>2. Four Chambers & One-Way Check Valves:</strong> The Right Atrium and Ventricle handle oxygen-depleted venous return to the lungs. The Left Atrium and Ventricle pump oxygen-rich blood through the Aorta to muscles and brain. Valves prevent retrograde backflow.
+          </p>
+          <p style="margin-bottom:0.75rem;">
+            <strong>3. Bio-Mimicry Auditing:</strong>
+            <br>• <em>Fish (2 Chambers):</em> 1 atrium, 1 ventricle. Blood flows in a single loop through gills to body. Operates at low capillary pressure.
+            <br>• <em>Amphibians (3 Chambers):</em> 2 atria, 1 ventricle. Partial oxygenated/deoxygenated mixing. Adapted for cutaneous skin breathing.
+            <br>• <em>Mammals & Birds (4 Chambers):</em> Complete separation. Supports high metabolic rates and warm-blooded homeostasis.
+          </p>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(modalArea);
+    document.getElementById("close-theory-btn").addEventListener("click", () => modalArea.remove());
+  }
+
+  animate() {
+    this.drawHeart();
+    this.animFrame = requestAnimationFrame(() => this.animate());
+  }
+
+  drawHeart() {
+    if (!this.ctx || !this.canvas) return;
+    const ctx = this.ctx;
+    const w = this.canvas.width;
+    const h = this.canvas.height;
+
+    ctx.clearRect(0, 0, w, h);
+
+    // Dynamic contraction rhythm based on heartRate
+    const cycleSpeed = (this.heartRate / 60) * 0.08;
+    this.phase = (this.phase + cycleSpeed) % (Math.PI * 2);
+    const contract = Math.sin(this.phase) * 0.08 + 1.0; // 0.92 to 1.08 scale
+
+    const cx = w * 0.5;
+    const cy = h * 0.46;
+    const heartScale = Math.min(w, h) * 0.0022;
+
+    ctx.save();
+    ctx.translate(cx, cy);
+    ctx.scale(heartScale * contract, heartScale * contract);
+
+    if (this.modelType === "human") {
+      this.drawHumanHeart(ctx);
+    } else if (this.modelType === "fish") {
+      this.drawFishHeart(ctx);
+    } else {
+      this.drawFrogHeart(ctx);
+    }
+
+    ctx.restore();
+
+    // Draw animated blood flow particles
+    this.drawParticles(ctx, cx, cy, heartScale);
+  }
+
+  drawHumanHeart(ctx) {
+    // 4 Chamber Anatomical Representation
+    // Right Atrium (Blue deoxygenated)
+    ctx.fillStyle = "rgba(30, 58, 138, 0.75)";
+    ctx.strokeStyle = "#3b82f6";
+    ctx.lineWidth = 4;
+    ctx.beginPath();
+    ctx.ellipse(-70, -40, 55, 65, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.stroke();
+
+    // Right Ventricle (Blue)
+    ctx.fillStyle = "rgba(30, 58, 138, 0.85)";
+    ctx.beginPath();
+    ctx.ellipse(-60, 50, 60, 75, 0.2, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.stroke();
+
+    // Left Atrium (Red oxygenated)
+    ctx.fillStyle = "rgba(153, 27, 27, 0.75)";
+    ctx.strokeStyle = "#ef4444";
+    ctx.lineWidth = 4;
+    ctx.beginPath();
+    ctx.ellipse(70, -40, 55, 65, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.stroke();
+
+    // Left Ventricle (Thick muscular myocardium)
+    ctx.fillStyle = "rgba(153, 27, 27, 0.9)";
+    ctx.beginPath();
+    ctx.ellipse(60, 55, 65, 85, -0.2, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.stroke();
+
+    // Septum Wall
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.35)";
+    ctx.lineWidth = 6;
+    ctx.beginPath();
+    ctx.moveTo(0, -90);
+    ctx.lineTo(0, 140);
+    ctx.stroke();
+
+    // Aortic Arch
+    ctx.strokeStyle = "#f87171";
+    ctx.lineWidth = 16;
+    ctx.beginPath();
+    ctx.arc(0, -100, 50, Math.PI, 0);
+    ctx.stroke();
+
+    // Chamber Labels
+    ctx.fillStyle = "#fff";
+    ctx.font = "bold 13px sans-serif";
+    ctx.textAlign = "center";
+    ctx.fillText("Right Atrium (RA)", -70, -40);
+    ctx.fillText("Right Ventricle (RV)", -60, 55);
+    ctx.fillText("Left Atrium (LA)", 70, -40);
+    ctx.fillText("Left Ventricle (LV)", 60, 60);
+
+    // Stenosis Visual Overlay if active
+    if (this.blockage > 0) {
+      ctx.fillStyle = "rgba(245, 158, 11, 0.9)";
+      ctx.beginPath();
+      ctx.arc(40, -120, this.blockage * 0.15 + 4, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = "#000";
+      ctx.font = "bold 10px sans-serif";
+      ctx.fillText(`${this.blockage}%`, 40, -117);
+    }
+  }
+
+  drawFishHeart(ctx) {
+    // 2-Chamber Heart: 1 Atrium + 1 Ventricle (Single Circulation)
+    ctx.fillStyle = "rgba(30, 58, 138, 0.85)";
+    ctx.strokeStyle = "#38bdf8";
+    ctx.lineWidth = 4;
+
+    // Sinus Venosus & Atrium
+    ctx.beginPath();
+    ctx.ellipse(0, -60, 65, 50, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.stroke();
+
+    // Ventricle
+    ctx.fillStyle = "rgba(30, 58, 138, 0.95)";
+    ctx.beginPath();
+    ctx.ellipse(0, 45, 75, 60, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.stroke();
+
+    // Bulbus Arteriosus
+    ctx.strokeStyle = "#93c5fd";
+    ctx.lineWidth = 14;
+    ctx.beginPath();
+    ctx.moveTo(0, 105);
+    ctx.lineTo(0, 160);
+    ctx.stroke();
+
+    ctx.fillStyle = "#fff";
+    ctx.font = "bold 13px sans-serif";
+    ctx.textAlign = "center";
+    ctx.fillText("Fish Single Atrium (Venous)", 0, -60);
+    ctx.fillText("Fish Single Ventricle", 0, 50);
+    ctx.fillText("To Gill Capillaries →", 0, 185);
+  }
+
+  drawFrogHeart(ctx) {
+    // 3-Chamber Heart: 2 Atria + 1 Single Ventricle (Partial Mixing)
+    ctx.fillStyle = "rgba(30, 58, 138, 0.8)";
+    ctx.strokeStyle = "#3b82f6";
+    ctx.lineWidth = 4;
+    ctx.beginPath();
+    ctx.ellipse(-65, -50, 50, 55, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.fillStyle = "rgba(153, 27, 27, 0.8)";
+    ctx.strokeStyle = "#ef4444";
+    ctx.beginPath();
+    ctx.ellipse(65, -50, 50, 55, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.stroke();
+
+    // Single Ventricle (Purple mixed fluid)
+    ctx.fillStyle = "rgba(109, 40, 217, 0.85)";
+    ctx.strokeStyle = "#a855f7";
+    ctx.beginPath();
+    ctx.ellipse(0, 50, 85, 75, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.fillStyle = "#fff";
+    ctx.font = "bold 13px sans-serif";
+    ctx.textAlign = "center";
+    ctx.fillText("Right Atrium", -65, -50);
+    ctx.fillText("Left Atrium", 65, -50);
+    ctx.fillText("Single Ventricle (Mixed Blood)", 0, 55);
+  }
+
+  drawParticles(ctx, cx, cy, scale) {
+    const flowSpeedMultiplier = (this.heartRate / 70) * (1 - (this.blockage / 100) * 0.5);
+
+    this.particles.forEach(p => {
+      p.t = (p.t + p.speed * flowSpeedMultiplier) % 1;
+      
+      let px, py;
+      if (p.type === "oxygenated") {
+        // Red arterial loop
+        const angle = p.t * Math.PI * 2;
+        px = cx + Math.cos(angle) * 70 * scale + (scale * 30);
+        py = cy + Math.sin(angle) * 80 * scale;
+        ctx.fillStyle = "#ef4444";
+      } else {
+        // Blue venous loop
+        const angle = p.t * Math.PI * 2;
+        px = cx + Math.cos(angle) * 70 * scale - (scale * 30);
+        py = cy + Math.sin(angle) * 80 * scale;
+        ctx.fillStyle = "#38bdf8";
+      }
+
+      ctx.beginPath();
+      ctx.arc(px, py, 3.5, 0, Math.PI * 2);
+      ctx.fill();
+    });
+  }
+}
+
+
+
+
+const VIKRAM_VOICE_BASE64 = "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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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";
+
+/* =========================================================================
+ * SIMULATION_CONFIG: CENTRAL CONFIGURATION OBJECT
+ * Contains all material costs, weights, starting budget, vehicle test
+ * progression, structural analysis parameters, and 3 earthquake levels.
+ * ========================================================================= */
+const SIMULATION_CONFIG = {
+  budget: {
+    starting: 700 // Starting budget: ₹700 (Configurable)
+  },
+  materials: {
+    horizontal: { id: "horizontal", cost: 3, weight: 4, name: "Horizontal Wooden Member" },
+    vertical: { id: "vertical", cost: 3, weight: 4, name: "Vertical Wooden Member" },
+    diagonal: { id: "diagonal", cost: 3, weight: 4, name: "Diagonal Wooden Member" },
+    top_chord: { id: "top_chord", cost: 20, weight: 50, name: "Top Chord Beam" },
+    bottom_chord: { id: "bottom_chord", cost: 20, weight: 50, name: "Bottom Chord Beam" },
+    road_deck: { id: "road_deck", cost: 30, weight: 40, name: "Road Deck" },
+    joint: { id: "joint", cost: 2, weight: 1, name: "Joint Connector" }
+  },
+  structural: {
+    triangleBonus: 0.22,          // Stability bonus per closed triangle
+    maxTriangleBonus: 0.85,       // Cap so triangles award excellent truss design
+    referenceLength: 1.0,         // Standard grid unit length
+    longMemberPenalty: 0.25,      // Capacity reduction for longer spans
+    missingJointPenalty: 0.55,    // Joint capacity multiplier if connector screw is missing
+    jointBaseCapacity: 350,       // Base load capacity per joint
+    jointConnectorBonus: 550,     // Added capacity when grey screw joint connector is installed
+    memberBaseCapacity: {
+      horizontal: 550,
+      vertical: 650,
+      diagonal: 600,
+      top_chord: 1850,
+      bottom_chord: 1850
+    },
+    chordContinuousBonus: 0.35
+  },
+  vehicles: [
+    { id: "scooter", name: "Delivery Scooter", icon: "🛵", load: 100, simulationLoad: 100, speed: 0.0048 },
+    { id: "motorcycle", name: "Sport Motorcycle", icon: "🏍️", load: 200, simulationLoad: 200, speed: 0.0050 },
+    { id: "car", name: "Commuter Car", icon: "🚗", load: 500, simulationLoad: 500, speed: 0.0052 },
+    { id: "suv", name: "Heavy SUV", icon: "🚙", load: 750, simulationLoad: 750, speed: 0.0048 },
+    { id: "bus", name: "School Bus", icon: "🚌", load: 1200, simulationLoad: 1200, speed: 0.0042 },
+    { id: "truck", name: "Heavy Cargo Truck", icon: "🚚", load: 2000, simulationLoad: 2000, speed: 0.0035 },
+    { id: "transport", name: "Heavy Transport Truck", icon: "🚛", load: 3500, simulationLoad: 3500, speed: 0.0028 }
+  ],
+  earthquake: {
+    levels: [
+      { level: 1, name: "Gentle to Moderate Shake", icon: "🌱", demand: 0.15, durationMs: 4000, frequency: 1.6, amplitude: 7 },
+      { level: 2, name: "Strong Shake", icon: "⚡", demand: 0.35, durationMs: 4500, frequency: 2.8, amplitude: 14 },
+      { level: 3, name: "Severe Shake", icon: "🌋", demand: 0.60, durationMs: 5000, frequency: 4.2, amplitude: 22 }
+    ]
+  },
+  failure: {
+    memberStressThreshold: 1.0,
+    jointStressThreshold: 1.0,
+    lateralInstabilityLimit: 0.85
+  }
+};
+
+
+const MATERIAL_DATA_URIS = {
+  "horizontal": "data:image/jpeg;base64,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",
+  "vertical": "data:image/jpeg;base64,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",
+  "diagonal": "data:image/jpeg;base64,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",
+  "top_chord": "data:image/jpeg;base64,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",
+  "bottom_chord": "data:image/jpeg;base64,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",
+  "road_deck": "data:image/jpeg;base64,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",
+  "joint": "data:image/jpeg;base64,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"
+};
+
+const MATERIAL_CATALOG = {
+  horizontal: {
+    id: "horizontal",
+    name: SIMULATION_CONFIG.materials.horizontal.name,
+    price: SIMULATION_CONFIG.materials.horizontal.cost,
+    weight: SIMULATION_CONFIG.materials.horizontal.weight,
+    unit: "g",
+    category: "timber",
+    badge: "2 Adjacent Horizontal Dots",
+    description: "4-gram balsa timber strut connecting two adjacent horizontal dots for longitudinal truss stability.",
+    image: MATERIAL_DATA_URIS.horizontal,
+    allowedViews: ["left", "right", "front"],
+    ruleText: "Click 2 adjacent dots on the same row (side-by-side)."
+  },
+  vertical: {
+    id: "vertical",
+    name: SIMULATION_CONFIG.materials.vertical.name,
+    price: SIMULATION_CONFIG.materials.vertical.cost,
+    weight: SIMULATION_CONFIG.materials.vertical.weight,
+    unit: "g",
+    category: "timber",
+    badge: "2 Adjacent Vertical Dots",
+    description: "4-gram balsa timber post connecting two adjacent vertical dots to bear downward traffic and gravity load.",
+    image: MATERIAL_DATA_URIS.vertical,
+    allowedViews: ["left", "right", "front"],
+    ruleText: "Click 2 adjacent dots on the same column (one above the other)."
+  },
+  diagonal: {
+    id: "diagonal",
+    name: SIMULATION_CONFIG.materials.diagonal.name,
+    price: SIMULATION_CONFIG.materials.diagonal.cost,
+    weight: SIMULATION_CONFIG.materials.diagonal.weight,
+    unit: "g",
+    category: "timber",
+    badge: "2 Diagonal Dots",
+    description: "4-gram angled wooden strut connecting two diagonal dots for earthquake shear triangulation.",
+    image: MATERIAL_DATA_URIS.diagonal,
+    allowedViews: ["left", "right", "front"],
+    ruleText: "Click 2 dots positioned diagonally across a grid square."
+  },
+  top_chord: {
+    id: "top_chord",
+    name: SIMULATION_CONFIG.materials.top_chord.name,
+    price: SIMULATION_CONFIG.materials.top_chord.cost,
+    weight: SIMULATION_CONFIG.materials.top_chord.weight,
+    unit: "g",
+    category: "girder",
+    badge: "Rows 1, 2, 3, or 4 (Span 0–12)",
+    description: "50-gram heavy steel-blue continuous girder spanning dots 0 to 12 across top rows 1, 2, 3, or 4.",
+    image: MATERIAL_DATA_URIS.top_chord,
+    allowedViews: ["left", "right"],
+    ruleText: "Click any dot in Row 1, 2, 3, or 4 to install a continuous span from Dot 0 to Dot 12."
+  },
+  bottom_chord: {
+    id: "bottom_chord",
+    name: SIMULATION_CONFIG.materials.bottom_chord.name,
+    price: SIMULATION_CONFIG.materials.bottom_chord.cost,
+    weight: SIMULATION_CONFIG.materials.bottom_chord.weight,
+    unit: "g",
+    category: "girder",
+    badge: "Row 0 Deck Baseline (Span 0–12)",
+    description: "50-gram heavy steel-blue continuous girder spanning dots 0 to 12 across Row 0 (Deck Baseline).",
+    image: MATERIAL_DATA_URIS.bottom_chord,
+    allowedViews: ["left", "right"],
+    ruleText: "Click any dot in Row 0 (Deck Baseline) to install the continuous bottom tension chord."
+  },
+  road_deck: {
+    id: "road_deck",
+    name: SIMULATION_CONFIG.materials.road_deck.name,
+    price: SIMULATION_CONFIG.materials.road_deck.cost,
+    weight: SIMULATION_CONFIG.materials.road_deck.weight,
+    unit: "g",
+    category: "deck",
+    badge: "Front View (Whole Grid Overlay)",
+    description: "Complete modular asphalt roadway laid over the whole dot grid of front view, covering all rows, columns, and dots to provide a full traffic surface.",
+    image: MATERIAL_DATA_URIS.road_deck,
+    allowedViews: ["front", "left", "right"],
+    ruleText: "Click anywhere on the Front View dot grid to lay the complete road deck covering all rows and dots."
+  },
+  joint: {
+    id: "joint",
+    name: SIMULATION_CONFIG.materials.joint.name,
+    price: SIMULATION_CONFIG.materials.joint.cost,
+    weight: SIMULATION_CONFIG.materials.joint.weight,
+    unit: "g",
+    category: "screw",
+    badge: "Single Dot Fastener",
+    description: "1-gram industrial metallic grey screw fastener with washer securing truss intersections at individual dots.",
+    image: MATERIAL_DATA_URIS.joint,
+    allowedViews: ["left", "right", "front"],
+    ruleText: "Click any dot to fasten the truss intersection with a grey metallic screw."
+  }
+};
+
+
+/* =========================================================================
+ * BRIDGE DATA MODEL & LOCAL STORAGE PERSISTENCE
+ * ========================================================================= */
+class BridgeProject {
+  constructor(data = {}) {
+    this.projectId = data.projectId || `proj_${Date.now()}_${Math.random().toString(36).substr(2, 5)}`;
+    this.studentName = data.studentName || "";
+    this.teamName = data.teamName || "";
+    this.createdAt = data.createdAt || Date.now();
+    this.updatedAt = Date.now();
+
+    const startBudget = SIMULATION_CONFIG.budget.starting;
+    this.budget = {
+      startingBudget: startBudget,
+      totalCost: data.budget?.totalCost || 0,
+      remainingBudget: (data.budget?.remainingBudget !== undefined) ? data.budget.remainingBudget : startBudget
+    };
+
+    this.purchased = data.purchased || {
+      horizontal: 0,
+      vertical: 0,
+      diagonal: 0,
+      top_chord: 0,
+      bottom_chord: 0,
+      road_deck: 0,
+      joint: 0
+    };
+
+    this.placedElements = data.placedElements || {
+      left: [],
+      right: [],
+      front: []
+    };
+
+    this.savedDesigns = data.savedDesigns || [];
+    this.attempts = data.attempts || [];
+
+    this.analysis = data.analysis || {
+      connectivityStatus: "Disconnected",
+      structuralScore: 0,
+      staticCapacity: 0,
+      earthquakeResistance: 0,
+      criticalMember: null,
+      criticalJoint: null,
+      failureMode: null
+    };
+
+    this.testResults = data.testResults || {
+      vehicleTests: [],
+      maximumVehiclePassed: null,
+      failureVehicle: null,
+      earthquakeTests: [],
+      maximumEarthquakeLevel: null,
+      finalResults: null
+    };
+  }
+}
+
+class BridgeStorage {
+  static STORAGE_KEY = "cognition_lab_active_bridge_project";
+
+  static clearActiveProject() {
+    try {
+      localStorage.removeItem(BridgeStorage.STORAGE_KEY);
+    } catch (e) {}
+  }
+
+  static loadProject() {
+    try {
+      const saved = localStorage.getItem(BridgeStorage.STORAGE_KEY);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        return new BridgeProject(parsed);
+      }
+    } catch (e) {
+      console.warn("BridgeStorage load error:", e);
+    }
+    return new BridgeProject();
+  }
+
+  static saveProject(project) {
+    try {
+      project.updatedAt = Date.now();
+      localStorage.setItem(BridgeStorage.STORAGE_KEY, JSON.stringify(project));
+    } catch (e) {
+      console.warn("BridgeStorage save error:", e);
+    }
+  }
+
+  static createNewProject() {
+    try {
+      localStorage.removeItem(BridgeStorage.STORAGE_KEY);
+    } catch (e) {}
+    return new BridgeProject();
+  }
+
+  static VAULT_STORAGE_KEY = "cognition_lab_permanent_design_vault";
+
+  static getPermanentVault() {
+    try {
+      const data = localStorage.getItem(BridgeStorage.VAULT_STORAGE_KEY);
+      if (data) {
+        return JSON.parse(data);
+      }
+    } catch (e) {
+      console.warn("BridgeStorage vault load error:", e);
+    }
+    return [];
+  }
+
+  static saveToPermanentVault(snapshot) {
+    try {
+      const vault = BridgeStorage.getPermanentVault();
+      const idx = vault.findIndex(s => s.id === snapshot.id);
+      if (idx >= 0) {
+        vault[idx] = snapshot;
+      } else {
+        vault.push(snapshot);
+      }
+      localStorage.setItem(BridgeStorage.VAULT_STORAGE_KEY, JSON.stringify(vault));
+      return vault;
+    } catch (e) {
+      console.warn("BridgeStorage vault save error:", e);
+    }
+    return [];
+  }
+
+  static deleteFromPermanentVault(snapshotId) {
+    try {
+      let vault = BridgeStorage.getPermanentVault();
+      vault = vault.filter(s => s.id !== snapshotId);
+      localStorage.setItem(BridgeStorage.VAULT_STORAGE_KEY, JSON.stringify(vault));
+      return vault;
+    } catch (e) {
+      console.warn("BridgeStorage vault delete error:", e);
+    }
+    return [];
+  }
+
+  static clearPermanentVault() {
+    try {
+      localStorage.removeItem(BridgeStorage.VAULT_STORAGE_KEY);
+    } catch (e) {}
+    return [];
+  }
+
+  static deleteFromPermanentVault(snapshotId) {
+    try {
+      let vault = BridgeStorage.getPermanentVault();
+      vault = vault.filter(s => s.id !== snapshotId);
+      localStorage.setItem(BridgeStorage.VAULT_STORAGE_KEY, JSON.stringify(vault));
+      return vault;
+    } catch (e) {
+      console.warn("BridgeStorage vault delete error:", e);
+    }
+    return [];
+  }
+
+  static clearPermanentVault() {
+    try {
+      localStorage.removeItem(BridgeStorage.VAULT_STORAGE_KEY);
+    } catch (e) {}
+    return [];
+  }
+}
+
+/* =========================================================================
+ * BRIDGE VALIDATOR ENGINE
+ * Performs pre-test construction checks and provides educational feedback.
+ * ========================================================================= */
+class BridgeValidator {
+  static validate(project) {
+    const issues = [];
+    const highlightedNodes = new Set();
+    const highlightedMembers = new Set();
+
+    const placed = project.placedElements;
+    const sideMembers = (placed.left && placed.left.length > 0) ? placed.left : (placed.right || []);
+const frontElements = placed.front || [];
+
+    // Check identical designs on Left and Right views
+    const sidesMatch = BridgeStructuralAnalysis.areSidesMatching(project);
+    if (!sidesMatch) {
+      issues.push({
+        code: "ASYMMETRIC_SIDES",
+        severity: "error",
+        title: "Left and Right Sides Do Not Match",
+        message: "Both the right and left view of the bridge must have the same design on both views or the bridge fails and Level 2 does not start! Use 'Copy Left → Right' or ensure both sides are identical."
+      });
+    }
+
+    // 1. Road deck presence check
+    const hasRoadDeck = frontElements.some(e => e.type === "road_deck") || 
+      (placed.left || []).some(e => e.type === "road_deck") ||
+      (placed.right || []).some(e => e.type === "road_deck");
+
+    if (!hasRoadDeck) {
+      issues.push({
+        code: "NO_ROAD_DECK", severity: "warning",
+        title: "Missing Road Deck",
+        message: "Your bridge does not have a road deck! Open Front View and install the Road Deck so vehicles have a driving surface."
+      });
+    }
+
+    // 2. Budget check
+    if (project.budget.remainingBudget < 0) {
+      issues.push({
+        code: "OVER_BUDGET",
+        severity: "error",
+        title: "Budget Exceeded",
+        message: `You have spent ₹${project.budget.totalCost}, exceeding your ₹${SIMULATION_CONFIG.budget.starting} construction budget by ₹${Math.abs(project.budget.remainingBudget)}. Dismantle extra members to stay within budget.`
+      });
+    }
+
+    // Build Graph for side view
+    const adj = new Map();
+    const nodeCoords = new Map();
+    const addEdge = (u, v) => {
+      if (!adj.has(u)) adj.set(u, new Set());
+      if (!adj.has(v)) adj.set(v, new Set());
+      adj.get(u).add(v);
+      adj.get(v).add(u);
+    };
+
+    sideMembers.forEach(item => {
+      if (item.type === "horizontal" || item.type === "vertical" || item.type === "diagonal") {
+        const u = `${item.dotA.row}_${item.dotA.col}`;
+        const v = `${item.dotB.row}_${item.dotB.col}`;
+        nodeCoords.set(u, item.dotA);
+        nodeCoords.set(v, item.dotB);
+        addEdge(u, v);
+      } else if (item.type === "top_chord" || item.type === "bottom_chord") {
+        const r = item.type === "bottom_chord" ? 0 : item.row;
+        for (let col = 0; col < 12; col++) {
+          const u = `${r}_${col}`;
+          const v = `${r}_${col + 1}`;
+          nodeCoords.set(u, { row: r, col: col });
+          nodeCoords.set(v, { row: r, col: col + 1 });
+          addEdge(u, v);
+        }
+      }
+    });
+
+    const anchorA = "0_0";
+    const anchorB = "0_12";
+
+    // 3. Anchor A to Anchor B continuous path check (BFS)
+    let connectedToAnchorB = false;
+    const visited = new Set();
+    if (adj.has(anchorA)) {
+      const queue = [anchorA];
+      visited.add(anchorA);
+      while (queue.length > 0) {
+        const curr = queue.shift();
+        if (curr === anchorB) {
+          connectedToAnchorB = true;
+          break;
+        }
+        for (const nxt of adj.get(curr) || []) {
+          if (!visited.has(nxt)) {
+            visited.add(nxt);
+            queue.push(nxt);
+          }
+        }
+      }
+    }
+
+    if (!connectedToAnchorB) {
+      highlightedNodes.add("0_0");
+      highlightedNodes.add("0_12");
+      issues.push({
+        code: "DISCONNECTED_SUPPORTS", severity: "warning",
+        title: "Supports Disconnected",
+        message: "Your bridge does not yet create a continuous path between Anchor A (Himmatnagar) and Anchor B (Ahmedabad). Connect them with beams or chords!"
+      });
+    }
+
+    // 4. Dangling / 1-endpoint members check
+    sideMembers.forEach(item => {
+      if (item.type === "horizontal" || item.type === "vertical" || item.type === "diagonal") {
+        const u = `${item.dotA.row}_${item.dotA.col}`;
+        const v = `${item.dotB.row}_${item.dotB.col}`;
+        const degU = (adj.get(u) || []).size;
+        const degV = (adj.get(v) || []).size;
+
+        if (degU === 1 && u !== anchorA && u !== anchorB) {
+          highlightedNodes.add(u);
+          highlightedMembers.add(item.id);
+          issues.push({
+            code: "DANGLING_MEMBER",
+            severity: "warning",
+            title: "Dangling Member",
+            message: `A member ending at Row ${item.dotA.row}, Dot ${item.dotA.col} is attached at only one end and does not contribute to carrying load.`
+          });
+        }
+        if (degV === 1 && v !== anchorA && v !== anchorB) {
+          highlightedNodes.add(v);
+          highlightedMembers.add(item.id);
+          issues.push({
+            code: "DANGLING_MEMBER",
+            severity: "warning",
+            title: "Dangling Member",
+            message: `A member ending at Row ${item.dotB.row}, Dot ${item.dotB.col} is attached at only one end and does not contribute to carrying load.`
+          });
+        }
+      }
+    });
+
+    // 5. Joint rule: check intersections where >= 2 members meet without joint screw
+    const installedJoints = new Set();
+    sideMembers.forEach(item => {
+      if (item.type === "joint") {
+        const jr = item.dot ? item.dot.row : item.row;
+        const jc = item.dot ? item.dot.col : item.col;
+        if (jr !== undefined && jc !== undefined) {
+          installedJoints.add(`${jr}_${jc}`);
+        }
+      }
+    });
+
+    for (const [nodeKey, neighbors] of adj.entries()) {
+      if (neighbors.size >= 2 && !installedJoints.has(nodeKey) && nodeKey !== anchorA && nodeKey !== anchorB) {
+        highlightedNodes.add(nodeKey);
+        const [r, c] = nodeKey.split("_");
+        issues.push({
+          code: "MISSING_JOINT_CONNECTOR",
+          severity: "warning",
+          title: "Unsecured Structural Joint",
+          message: `At Row ${r}, Dot ${c}, ${neighbors.size} members meet but there is no screw connector! Adding a Joint Connector will secure this joint against earthquake collapse.`
+        });
+      }
+    }
+
+    const isValid = !issues.some(i => i.severity === "error");
+
+    return {
+      isValid,
+      issues,
+      highlightedNodes: Array.from(highlightedNodes),
+      highlightedMembers: Array.from(highlightedMembers),
+      graph: { adj, nodeCoords, installedJoints }
+    };
+  }
+}
+
+/* =========================================================================
+ * DETERMINISTIC STRUCTURAL ANALYSIS ENGINE
+ * Calculates graph triangulation, deterministic load-flow distribution,
+ * member & joint stress ratios, and progressive failure.
+ * ========================================================================= */
+class BridgeStructuralAnalysis {
+  static getPlacedElements(project) {
+    let placed = (project && project.placedElements) ? project.placedElements : null;
+    if (!placed && project && project.savedDesigns && project.savedDesigns.length > 0) {
+      placed = project.savedDesigns[project.savedDesigns.length - 1].placedElements;
+    }
+    if (!placed) placed = { left: [], right: [], front: [] };
+    return placed;
+  }
+
+  // Variable 1 — LOAD PATH SCORE
+  static calculateLoadPathScore(project) {
+    const placed = this.getPlacedElements(project);
+    const allMembers = [...(placed.left || []), ...(placed.right || []), ...(placed.front || [])];
+
+    // A bottom chord piece automatically creates this path
+    const hasBottomChord = allMembers.some(m => m.type === "bottom_chord");
+    if (hasBottomChord) return 1;
+
+    // Check if continuous chain of members links column 0 to column 12
+    const adj = new Map();
+    const addEdge = (u, v) => {
+      if (!adj.has(u)) adj.set(u, new Set());
+      if (!adj.has(v)) adj.set(v, new Set());
+      adj.get(u).add(v);
+      adj.get(v).add(u);
+    };
+
+    allMembers.forEach(m => {
+      if (m.type === "top_chord" || m.type === "bottom_chord") {
+        const r = m.type === "bottom_chord" ? 0 : m.row;
+        const start = m.colStart !== undefined ? m.colStart : 0;
+        const end = m.colEnd !== undefined ? m.colEnd : 12;
+        for (let c = start; c < end; c++) {
+          addEdge(`${r}_${c}`, `${r}_${c + 1}`);
+        }
+      } else if (m.dotA && m.dotB) {
+        addEdge(`${m.dotA.row}_${m.dotA.col}`, `${m.dotB.row}_${m.dotB.col}`);
+      }
+    });
+
+    const queue = [];
+    const visited = new Set();
+    for (const node of adj.keys()) {
+      const [r, c] = node.split("_").map(Number);
+      if (c === 0) {
+        queue.push(node);
+        visited.add(node);
+      }
+    }
+
+    while (queue.length > 0) {
+      const curr = queue.shift();
+      const [r, c] = curr.split("_").map(Number);
+      if (c === 12) return 1;
+      for (const next of (adj.get(curr) || [])) {
+        if (!visited.has(next)) {
+          visited.add(next);
+          queue.push(next);
+        }
+      }
+    }
+
+    return 0;
+  }
+
+  // Variable 2 — TRIANGULATION SCORE
+  static calculateTriangulationScore(project) {
+    const placed = this.getPlacedElements(project);
+    const allMembers = [...(placed.left || []), ...(placed.right || []), ...(placed.front || [])];
+    const diagonals = allMembers.filter(m => m.type === "diagonal");
+
+    const triangulatedPanels = [];
+    const untriangulatedPanels = [];
+
+    for (let panel = 1; panel <= 12; panel++) {
+      const colLeft = panel - 1;
+      const colRight = panel;
+
+      const hasDiagonal = diagonals.some(m => {
+        if (!m.dotA || !m.dotB) return false;
+        const isAdjacentCol = Math.abs(m.dotA.col - m.dotB.col) === 1;
+        const isAdjacentRow = Math.abs(m.dotA.row - m.dotB.row) >= 1;
+        const spansPanel = (
+          (m.dotA.col === colLeft && m.dotB.col === colRight) ||
+          (m.dotA.col === colRight && m.dotB.col === colLeft)
+        );
+        return isAdjacentCol && isAdjacentRow && spansPanel;
+      });
+
+      if (hasDiagonal) {
+        triangulatedPanels.push(panel);
+      } else {
+        untriangulatedPanels.push(panel);
+      }
+    }
+
+    const T = triangulatedPanels.length;
+    const triangulationScore = T / 12;
+
+    return {
+      T,
+      triangulationScore,
+      triangulatedPanels,
+      untriangulatedPanels
+    };
+  }
+
+  // Variable 3 — SECTION DEPTH SCORE
+  static calculateDepthScore(project) {
+    const placed = this.getPlacedElements(project);
+    const allMembers = [...(placed.left || []), ...(placed.right || []), ...(placed.front || [])];
+
+    let highestRow = 0;
+    for (const m of allMembers) {
+      if (m.type === "top_chord") {
+        if (m.row !== undefined && m.row > highestRow) highestRow = m.row;
+      }
+      if (m.row !== undefined && m.type !== "top_chord" && m.type !== "bottom_chord") {
+        if (m.row > highestRow) highestRow = m.row;
+      }
+      if (m.dotA && m.dotA.row !== undefined) {
+        if (m.dotA.row > highestRow) highestRow = m.dotA.row;
+      }
+      if (m.dotB && m.dotB.row !== undefined) {
+        if (m.dotB.row > highestRow) highestRow = m.dotB.row;
+      }
+    }
+
+    const depthScore = highestRow / 4.0;
+    return { highestRow, depthScore };
+  }
+
+  // Variable 4 — JOINT SCORE
+  static calculateJointScore(project) {
+    const placed = this.getPlacedElements(project);
+    const allMembers = [...(placed.left || []), ...(placed.right || []), ...(placed.front || [])];
+
+    // J = total number of joint connectors placed by the student
+    const joints = allMembers.filter(m => m.type === "joint");
+    const J = joints.length;
+
+    // Dots with 2 or more members meeting across the bridge
+    const dotDegree = new Map();
+    const addDot = (dot) => {
+      if (!dot || dot.row === undefined || dot.col === undefined) return;
+      const key = `${dot.row}_${dot.col}`;
+      dotDegree.set(key, (dotDegree.get(key) || 0) + 1);
+    };
+
+    allMembers.forEach(m => {
+      if (m.type === "joint") return;
+      if (m.type === "bottom_chord") {
+        for (let c = 0; c < 12; c++) {
+          addDot({ row: 0, col: c });
+          addDot({ row: 0, col: c + 1 });
+        }
+      } else if (m.type === "top_chord") {
+        const r = m.row !== undefined ? m.row : 3;
+        for (let c = 0; c < 12; c++) {
+          addDot({ row: r, col: c });
+          addDot({ row: r, col: c + 1 });
+        }
+      } else {
+        if (m.dotA) addDot(m.dotA);
+        if (m.dotB) addDot(m.dotB);
+      }
+    });
+
+    let dotsWith2Plus = 0;
+    dotDegree.forEach(deg => {
+      if (deg >= 2) dotsWith2Plus++;
+    });
+
+    const I = dotsWith2Plus;
+    let jointScore = 1.0;
+    if (I > 0) {
+      jointScore = Math.min(1.0, J / I);
+    }
+
+    return { J, I, jointScore };
+  }
+
+  // Calibration Engine for the 8 Reference Designs & Continuous Intermediate Interpolation
+  static calibrateCapacity(loadPathScore, rawCapacity) {
+    if (loadPathScore === 0) return 80;
+
+    const CALIBRATION_ANCHORS = [
+      { raw: 0.0,       target: 80.0 },   // Design 1 baseline: no height/diagonals
+      { raw: 350.0,     target: 150.0 },  // Design 2: bottom chord + 1 vertical (passes Scooter 100g, fails Motorcycle 200g)
+      { raw: 583.333,   target: 350.0 },  // Design 3: bottom chord + 1 diag + 1 vert (passes Motorcycle 200g, fails Car 500g)
+      { raw: 1050.0,    target: 620.0 },  // Design 4: bottom chord + 3 diags + 3 verts (passes Car 500g, fails SUV 750g)
+      { raw: 2366.667,  target: 950.0 },  // Design 5: bottom chord + 6 diags + verts row 2 + 4 joints (passes SUV 750g, fails Bus 1200g)
+      { raw: 3416.667,  target: 1600.0 }, // Design 6: bottom chord + top chord row 3 + 8 diags + verts row 3 + 15 joints (passes Bus 1200g, fails Cargo 2000g)
+      { raw: 4400.0,    target: 2700.0 }, // Design 7: bottom chord + top chord row 4 + 10 diags + verts row 4 + 20 joints (passes Cargo 2000g, fails Transport 3500g)
+      { raw: 4832.0,    target: 4200.0 }  // Design 8: full truss with all 12 bays braced + row 2 horiz + 30 joints (passes all 7 vehicles)
+    ];
+
+    if (rawCapacity <= CALIBRATION_ANCHORS[0].raw) {
+      return Math.round(CALIBRATION_ANCHORS[0].target);
+    }
+    const last = CALIBRATION_ANCHORS[CALIBRATION_ANCHORS.length - 1];
+    if (rawCapacity >= last.raw) {
+      const prev = CALIBRATION_ANCHORS[CALIBRATION_ANCHORS.length - 2];
+      const slope = (last.target - prev.target) / (last.raw - prev.raw);
+      return Math.round(last.target + (rawCapacity - last.raw) * slope);
+    }
+
+    for (let i = 0; i < CALIBRATION_ANCHORS.length - 1; i++) {
+      const p1 = CALIBRATION_ANCHORS[i];
+      const p2 = CALIBRATION_ANCHORS[i + 1];
+      if (rawCapacity >= p1.raw && rawCapacity <= p2.raw) {
+        const t = (rawCapacity - p1.raw) / (p2.raw - p1.raw);
+        return Math.round(p1.target + t * (p2.target - p1.target));
+      }
+    }
+    return Math.round(last.target);
+  }
+
+  // Capacity Calculation
+  static calculateCapacity(project) {
+    const loadPathScore = this.calculateLoadPathScore(project);
+    const { T, triangulationScore, triangulatedPanels, untriangulatedPanels } = this.calculateTriangulationScore(project);
+    const { highestRow, depthScore } = this.calculateDepthScore(project);
+    const { J, I, jointScore } = this.calculateJointScore(project);
+
+    let rawCapacity = 0;
+    let maxLoad = 0;
+
+    if (loadPathScore === 0) {
+      rawCapacity = 0;
+      maxLoad = 80;
+    } else {
+      rawCapacity = (triangulationScore * 2800) + (depthScore * 1400) + (jointScore * 800);
+      maxLoad = this.calibrateCapacity(loadPathScore, rawCapacity);
+    }
+
+return {
+      loadPathScore,
+      T,
+      triangulationScore,
+      highestRow,
+      depthScore,
+      J,
+      I,
+      jointScore,
+      rawCapacity,
+      maxLoad,
+      triangulatedPanels,
+      untriangulatedPanels
+    };
+  }
+
+// Calibrated Design Specifications (Designs 1 through 8)
+  static CALIBRATED_DESIGNS = {
+    1: {
+      designNumber: 1,
+      strength: 0,
+      weight: 8,
+      ratio: 0.00,
+      maxVehicleSupported: "None",
+      vehicleIcon: "🌉"
+    },
+    2: {
+      designNumber: 2,
+      strength: 150,
+      weight: 54,
+      ratio: 2.78,
+      maxVehicleSupported: "Delivery Scooter (100g)",
+      vehicleIcon: "🛵"
+    },
+    3: {
+      designNumber: 3,
+      strength: 350,
+      weight: 58,
+      ratio: 6.03,
+      maxVehicleSupported: "Sport Motorcycle (200g)",
+      vehicleIcon: "🏍️"
+    },
+    4: {
+      designNumber: 4,
+      strength: 620,
+      weight: 74,
+      ratio: 8.38,
+      maxVehicleSupported: "Commuter Car (500g)",
+      vehicleIcon: "🚗"
+    },
+    5: {
+      designNumber: 5,
+      strength: 950,
+      weight: 102,
+      ratio: 9.31,
+      maxVehicleSupported: "Heavy SUV (750g)",
+      vehicleIcon: "🚙"
+    },
+    6: {
+      designNumber: 6,
+      strength: 1600,
+      weight: 183,
+      ratio: 8.74,
+      maxVehicleSupported: "School Bus (1200g)",
+      vehicleIcon: "🚌"
+    },
+    7: {
+      designNumber: 7,
+      strength: 2700,
+      weight: 204,
+      ratio: 13.24,
+      maxVehicleSupported: "Heavy Cargo Truck (2000g)",
+      vehicleIcon: "🚚"
+    },
+    8: {
+      designNumber: 8,
+      strength: 4200,
+      weight: 290,
+      ratio: 14.48,
+      maxVehicleSupported: "Heavy Transport Truck (3500g)",
+      vehicleIcon: "🚛"
+    }
+  };
+
+  // Helper to compare left and right views for identical design
+  static areSidesMatching(project) {
+    const placed = this.getPlacedElements(project);
+    const left = placed.left || [];
+    const right = placed.right || [];
+
+    // If one side is empty while the other has items, they don't match
+    if ((left.length === 0 && right.length > 0) || (left.length > 0 && right.length === 0)) return false;
+    // If both are empty, they match (empty design)
+    if (left.length === 0 && right.length === 0) return true;
+
+    const getSig = (item) => {
+      if (!item) return "";
+      const type = item.type || "";
+      if (type === "top_chord" || type === "bottom_chord") {
+        const r = item.row !== undefined ? item.row : (type === "bottom_chord" ? 0 : 2);
+        const cs = item.colStart !== undefined ? item.colStart : 0;
+        const ce = item.colEnd !== undefined ? item.colEnd : 12;
+        return `${type}:${r}:${cs}-${ce}`;
+      }
+      if (type === "joint") {
+        const r = item.dot ? item.dot.row : (item.row !== undefined ? item.row : 0);
+        const c = item.dot ? item.dot.col : (item.col !== undefined ? item.col : 0);
+        return `joint:${c},${r}`;
+      }
+      if (type === "road_deck") {
+        const cs = item.colStart !== undefined ? item.colStart : 0;
+        const ce = item.colEnd !== undefined ? item.colEnd : 12;
+        return `road_deck:${cs}-${ce}`;
+      }
+      if (item.dotA && item.dotB) {
+        const a = item.dotA;
+        const b = item.dotB;
+        const p1 = (a.col < b.col || (a.col === b.col && a.row <= b.row)) ? a : b;
+        const p2 = (p1 === a) ? b : a;
+        return `${type}:${p1.col},${p1.row}-${p2.col},${p2.row}`;
+      }
+      return `${type}:${item.id || ""}`;
+    };
+
+    const leftSigs = left.map(getSig).sort();
+    const rightSigs = right.map(getSig).sort();
+
+    if (leftSigs.length !== rightSigs.length) return false;
+    for (let i = 0; i < leftSigs.length; i++) {
+      if (leftSigs[i] !== rightSigs[i]) return false;
+    }
+    return true;
+  }
+
+  // Classify bridge design into Designs 1 through 8
+  static classifyDesign(project) {
+    // Rule: Both right and left view of the bridge must have the same design on both views
+    const sidesMatch = this.areSidesMatching(project);
+    if (!sidesMatch) {
+      return {
+        designNumber: 1,
+        reason: "Left and Right views do not match (bridge fails)",
+        ...this.CALIBRATED_DESIGNS[1]
+      };
+    }
+
+    const placed = this.getPlacedElements(project);
+    const left = placed.left || [];
+    const right = placed.right || [];
+    const front = placed.front || [];
+    const all = [...left, ...right, ...front];
+
+    // Check road deck presence (in front, left, or right)
+    const hasRoadDeck = all.some(m => m.type === "road_deck");
+
+    // Check bottom chord presence
+    const hasBottomChord = left.some(m => m.type === "bottom_chord");
+
+    // Check load path continuity
+    const loadPathScore = this.calculateLoadPathScore(project);
+
+    // Count joint screws placed on the truss design
+    let jointCount = left.filter(m => m.type === "joint").length;
+    if (project.installedJoints && project.installedJoints.size > jointCount) {
+      jointCount = project.installedJoints.size;
+    }
+
+    // DESIGN 1:
+    // disconnected/ random structures or structures with 0 - 9 joint screws - no vehicle pass
+    if (loadPathScore === 0 || !hasBottomChord || !hasRoadDeck || jointCount < 10) {
+      return {
+        designNumber: 1,
+        reason: jointCount < 10 ? `Structures with ${jointCount} screws (< 10 screws)` : "Disconnected or missing bottom chord/road deck",
+        ...this.CALIBRATED_DESIGNS[1]
+      };
+    }
+
+    // Member types on side truss
+    const hasTopChord = left.some(m => m.type === "top_chord");
+    const verticals = left.filter(m => m.type === "vertical");
+    const horizontals = left.filter(m => m.type === "horizontal");
+    const diagonals = left.filter(m => m.type === "diagonal");
+
+    const hasVerticals = verticals.length > 0;
+    const hasHorizontals = horizontals.length > 0;
+    const hasDiagonals = diagonals.length > 0;
+
+    // Pattern check: diagonals making a pattern across panels
+    const { T } = this.calculateTriangulationScore(project);
+    const isPattern = (T >= 10 || diagonals.length >= 12);
+
+    // DESIGN 2: road deck + bottom chord + vertical structures + joint screws (10 or more than 10) - Delivery Scooter (100g)
+    if (!hasTopChord && hasVerticals && !hasDiagonals && !hasHorizontals) {
+      return { designNumber: 2, ...this.CALIBRATED_DESIGNS[2] };
+    }
+    if (!hasTopChord) {
+      return { designNumber: 2, ...this.CALIBRATED_DESIGNS[2] };
+    }
+
+    // Top chord is present from here on:
+    // DESIGN 8: road deck + bottom chord + top chord + vertical structures + diagonal structures + joint screws (10 or more than 10) (making a pattern) - Heavy Transport Truck (3500g)
+    if (hasVerticals && hasDiagonals && isPattern) {
+      return { designNumber: 8, ...this.CALIBRATED_DESIGNS[8] };
+    }
+
+    // DESIGN 7: road deck + bottom chord + top chord + vertical structures + diagonal structures + horizontal structures + joint screws (10 or more than 10) - Heavy Cargo Truck (2000g)
+    if (hasVerticals && hasDiagonals && hasHorizontals) {
+      return { designNumber: 7, ...this.CALIBRATED_DESIGNS[7] };
+    }
+
+    // DESIGN 6: road deck + bottom chord + top chord + vertical structures + diagonal structures + joint screws (10 or more than 10) - School Bus (1200g)
+    if (hasVerticals && hasDiagonals && !hasHorizontals) {
+      return { designNumber: 6, ...this.CALIBRATED_DESIGNS[6] };
+    }
+
+    // DESIGN 5: road deck + bottom chord + top chord + horizontal structures + diagonal structures + joint screws (10 or more than 10) - Heavy SUV (750g)
+    if (!hasVerticals && hasHorizontals && hasDiagonals) {
+      return { designNumber: 5, ...this.CALIBRATED_DESIGNS[5] };
+    }
+
+    // DESIGN 4: road deck + bottom chord + top chord + vertical structures + horizontal structures + joint screws (10 or more than 10) - Commuter Car (500g)
+    if (hasVerticals && hasHorizontals && !hasDiagonals) {
+      return { designNumber: 4, ...this.CALIBRATED_DESIGNS[4] };
+    }
+
+    // DESIGN 3: road deck + bottom chord + top chord + vertical structures + joint screws (10 or more than 10) - Sport Motorcycle (200g)
+    if (hasVerticals && !hasHorizontals && !hasDiagonals) {
+      return { designNumber: 3, ...this.CALIBRATED_DESIGNS[3] };
+    }
+
+    // Fallbacks
+    if (hasDiagonals) {
+      return { designNumber: 5, ...this.CALIBRATED_DESIGNS[5] };
+    }
+    if (hasHorizontals) {
+      return { designNumber: 4, ...this.CALIBRATED_DESIGNS[4] };
+    }
+
+    return { designNumber: 3, ...this.CALIBRATED_DESIGNS[3] };
+  }
+
+  // Calculate Strength (how much load in grams the bridge can take)
+  static calculateStrength(project) {
+    return this.classifyDesign(project).strength;
+  }
+
+  // Calculate Bridge Weight (total placed bridge material mass in grams)
+  static calculateWeight(project) {
+    return this.classifyDesign(project).weight;
+  }
+
+  // Calculate Strength-to-Weight Ratio
+  static calculateStrengthToWeightRatio(project) {
+    const classification = this.classifyDesign(project);
+    return {
+      designNumber: classification.designNumber,
+      strength: classification.strength,
+      weight: classification.weight,
+      ratio: classification.ratio,
+      maxVehicleSupported: classification.maxVehicleSupported,
+      vehicleIcon: classification.vehicleIcon
+    };
+  }
+
+  // Evaluate Vehicles List in Order
+  static evaluateVehicles(maxLoad, loadPathScore = 1) {
+    const vehicleWeights = [
+      { name: "Delivery Scooter", weight: 100 },
+      { name: "Sport Motorcycle", weight: 200 },
+      { name: "Commuter Car", weight: 500 },
+      { name: "Heavy SUV", weight: 750 },
+      { name: "School Bus", weight: 1200 },
+      { name: "Heavy Cargo Truck", weight: 2000 },
+      { name: "Heavy Transport Truck", weight: 3500 }
+    ];
+
+    let firstFailedVehicle = null;
+    const results = [];
+
+    for (const v of vehicleWeights) {
+      if (loadPathScore === 0) {
+        firstFailedVehicle = vehicleWeights[0];
+        results.push({ ...v, passed: false, deflection: 18.5 });
+        break;
+      }
+
+      if (v.weight <= maxLoad) {
+        const deflection = BridgeStructuralAnalysis.calculateDeflection(v.weight, maxLoad);
+        results.push({ ...v, passed: true, deflection });
+      } else {
+        if (!firstFailedVehicle) firstFailedVehicle = v;
+        results.push({ ...v, passed: false, deflection: 18.5 });
+        break;
+      }
+    }
+
+    return { results, firstFailedVehicle };
+  }
+
+  // Deflection in mm: (vehicle weight / maxLoad) * 18.5 rounded to 1 decimal place
+  static calculateDeflection(vehicleWeight, maxLoad) {
+    if (maxLoad <= 0) return 18.5;
+    const defl = (vehicleWeight / maxLoad) * 18.5;
+    return Number(defl.toFixed(1));
+  }
+
+  // REPORT TEXT: WHY IT HAPPENED
+  static generateWhyItHappenedText() {
+    return "";
+  }
+
+  // REPORT TEXT: HOW TO MAKE IT BETTER
+  static generateHowToMakeItBetterText() {
+    return "";
+  }
+
+
+  // Main entry point during vehicle simulation
+  static analyze(project, vehicleLoad = 100, vehiclePosCol = 6, brokenMemberIds = new Set()) {
+    const cap = this.calculateCapacity(project);
+    const { loadPathScore, T, triangulationScore, highestRow, depthScore, J, I, jointScore, rawCapacity, maxLoad, untriangulatedPanels } = cap;
+
+    const willFail = (loadPathScore === 0 || vehicleLoad > maxLoad);
+    const overallStress = maxLoad > 0 ? Math.round((vehicleLoad / maxLoad) * 100) / 100 : 2.0;
+    const deflectionMm = willFail ? 18.5 : this.calculateDeflection(vehicleLoad, maxLoad);
+
+    const vehiclesList = (typeof SIMULATION_CONFIG !== "undefined" && SIMULATION_CONFIG.vehicles) ? SIMULATION_CONFIG.vehicles : [];
+    const matchedVeh = vehiclesList.find(v => v.simulationLoad === vehicleLoad);
+    const vehicleName = matchedVeh ? matchedVeh.name : `Vehicle (${vehicleLoad}g)`;
+
+    const whyText = this.generateWhyItHappenedText(T, highestRow, J, I, maxLoad, vehicleName, vehicleLoad, loadPathScore);
+    const howToText = this.generateHowToMakeItBetterText(project, untriangulatedPanels);
+
+    const targetCol = Math.round(vehiclePosCol || 6);
+
+    const criticalMember = willFail ? {
+      id: `beam_col_${targetCol}`,
+      type: T > 0 ? "diagonal" : "horizontal",
+      stressRatio: overallStress,
+      description: `Critical bridge section at Column ${targetCol}`
+    } : null;
+
+    // Member stress visual maps
+    const memberStress = new Map();
+    const jointStress = new Map();
+    const placed = this.getPlacedElements(project);
+    const allPlaced = [...(placed.left || []), ...(placed.right || []), ...(placed.front || [])];
+
+    allPlaced.forEach(m => {
+      if (brokenMemberIds.has(m.id)) {
+        memberStress.set(m.id, 2.0);
+        return;
+      }
+      let dist = 6;
+      if (m.dotA && m.dotB) {
+        dist = Math.abs(((m.dotA.col + m.dotB.col) / 2) - targetCol);
+      }
+      const distFactor = Math.max(0.4, 1.0 - dist * 0.08);
+      memberStress.set(m.id, Math.round(overallStress * distFactor * 100) / 100);
+    });
+
+    for (let c = 0; c <= 12; c++) {
+      jointStress.set(`0_${c}`, Math.round(overallStress * 0.9 * 100) / 100);
+      jointStress.set(`1_${c}`, Math.round(overallStress * 0.75 * 100) / 100);
+      jointStress.set(`2_${c}`, Math.round(overallStress * 0.6 * 100) / 100);
+    }
+
+    return {
+      loadPathScore,
+      triangulationScore,
+      T,
+      highestRow,
+      depthScore,
+      J,
+      I,
+      jointScore,
+      rawCapacity,
+      maxLoad,
+      loadCapacityScore: maxLoad,
+      vehicleLoad,
+      targetCol,
+      memberStress,
+      jointStress,
+      maxMemberStressRatio: overallStress,
+      criticalMember,
+      criticalJoint: null,
+      overallStress,
+      willFail,
+      failureType: willFail ? "MEMBER" : "NONE",
+      deflectionMm,
+      verdictText: whyText,
+      whyText,
+      whyItHappenedText: whyText,
+      howToMakeItBetterText: howToText,
+      untriangulatedPanels,
+      isConnected: loadPathScore === 1
+    };
+  }
+
+  // Compatibility helpers
+  static calculateLoadCapacity(project) {
+    const cap = this.calculateCapacity(project);
+    return {
+      capacity: cap.maxLoad,
+      maxLoad: cap.maxLoad,
+      rawCapacity: cap.rawCapacity,
+      ...cap,
+      isConnected: cap.loadPathScore === 1
+    };
+  }
+
+  static getBeamBreakdown(project) {
+    const cap = this.calculateCapacity(project);
+    return {
+      ...cap,
+      isConnected: cap.loadPathScore === 1
+    };
+  }
+}
+
+
+
+class BridgeBuilderSimulation {
+  constructor(container, onComplete) {
+    this.container = container;
+    this.onComplete = onComplete;
+    this.isRunning = true;
+    this.phase = "video"; // video | engineer | notice | countdown | mission
+    this.currentView = "left"; // "left" | "right" | "front"
+
+    // Animation & Timers
+    this.animFrame = null;
+    this.startTime = null;
+    this.videoDuration = 8000; // 8 seconds
+    this.speechUtterance = null;
+    this.countdownTimer = null;
+    this.mouthInterval = null;
+    this.currentAudio = null;
+    this.debrisParticles = [];
+    this.dustParticles = [];
+
+    // Sound triggers during video
+    this.earthquakeSoundTriggered = false;
+    this.collapseSoundTriggered = false;
+
+    // Blueprint grid nodes
+    // Child Project Session & Material State (starts with empty dots for new challenge)
+    BridgeStorage.clearActiveProject();
+    this.project = new BridgeProject();
+    this.budget = this.project.budget.remainingBudget;
+    this.purchased = this.project.purchased;
+    this.placedElements = this.project.placedElements;
+
+this.activeTool = null; // null | 'horizontal' | 'vertical' | 'diagonal' | 'top_chord' | 'bottom_chord' | 'road_deck' | 'joint' | 'dismantle'
+this.selectedFirstDot = null;
+this.hoveredPlacedId = null;
+this.shopModalOpen = false;
+
+// Deterministic Simulation & Testing State
+this.isTestingActive = false;
+this.activeTestType = null; // null | 'vehicle' | 'earthquake'
+this.activeVehicleIndex = 0;
+this.vehicleAnimProgress = 0; // 0 to 1
+this.vehicleAnimState = "idle"; // "approaching" | "crossing" | "center_pause" | "exiting" | "passed" | "failed"
+this.vehiclePauseTimer = 0;
+this.currentDeflection = 0; // px
+this.stressedMembers = new Map(); // id -> ratio
+this.stressedJoints = new Map();
+this.criticalFailedComponent = null;
+this.progressiveBrokenMembers = new Set();
+this.earthquakeLevelIndex = 0;
+this.earthquakeTime = 0;
+this.earthquakeDisplacement = 0;
+this.validationHighlightNodes = new Set();
+this.validationHighlightMembers = new Set();
+
+    // 17-Minute Mission Timer State
+    this.missionTimerSeconds = 17 * 60; // 17 minutes = 1020 seconds
+    this.missionTimer = null;
+    this.hasSubmitted = false;
+    this.currentLevel = 1;
+    this.isLevel2AnimationActive = false;
+    this.level2AnimId = null;
+    this.currentLevel = 1;
+    this.isLevel2AnimationActive = false;
+    this.level2AnimId = null;
+    this.currentLevel = 1;
+    this.isLevel2AnimationActive = false;
+    this.level2AnimId = null;
+    this.undoStack = [];
+    this.redoStack = [];
+
+    this.gridDots = [];
+    this.hoveredDotIndex = null;
+  }
+
+  mount() {
+    this.isRunning = true;
+    this.renderStage();
+    this.startCinematicVideo();
+  }
+
+  destroy() {
+    this.isRunning = false;
+    if (this.animFrame) cancelAnimationFrame(this.animFrame);
+    if (this.level2AnimId) cancelAnimationFrame(this.level2AnimId);
+    this.isLevel2AnimationActive = false;
+    if (this.level2AnimId) cancelAnimationFrame(this.level2AnimId);
+    this.isLevel2AnimationActive = false;
+    if (this.level2AnimId) cancelAnimationFrame(this.level2AnimId);
+    this.isLevel2AnimationActive = false;
+    if (this.countdownTimer) clearInterval(this.countdownTimer);
+    if (this.missionTimer) clearInterval(this.missionTimer);
+    if (this.mouthInterval) clearInterval(this.mouthInterval);
+    if (this.currentAudio) {
+      this.currentAudio.pause();
+      this.currentAudio = null;
+    }
+    if (window.speechSynthesis) {
+      window.speechSynthesis.cancel();
+    }
+    sound.stopAll();
+    if (this.container) {
+      this.container.innerHTML = "";
+    }
+  }
+
+  renderStage() {
+    this.container.innerHTML = `
+      <div id="bridge-sim-root" style="position:relative; width:100%; height:100%; min-height:580px; background:#040711; overflow:hidden; font-family:var(--font-body, -apple-system, sans-serif); display:flex; flex-direction:column;">
+        <canvas id="bridge-cinematic-canvas" style="position:absolute; inset:0; width:100%; height:100%; display:block; z-index:1;"></canvas>
+        <div id="bridge-overlay-layer" style="position:absolute; inset:0; pointer-events:none; z-index:10; display:flex; align-items:center; justify-content:center;"></div>
+      </div>
+    `;
+  }
+
+  /* =========================================================================
+   * STEP 1: 8-SECOND REALISTIC ANIMATED VIDEO
+   * ========================================================================= */
+  startCinematicVideo() {
+    const canvas = document.getElementById("bridge-cinematic-canvas");
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+
+    const resizeCanvas = () => {
+      const rect = canvas.getBoundingClientRect();
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = rect.width * dpr;
+      canvas.height = rect.height * dpr;
+      if (ctx.resetTransform) {
+        ctx.resetTransform();
+      } else {
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+      }
+      ctx.scale(dpr, dpr);
+    };
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+
+    this.initParticles();
+    this.startTime = performance.now();
+    this.earthquakeSoundTriggered = false;
+    this.collapseSoundTriggered = false;
+
+    const overlay = document.getElementById("bridge-overlay-layer");
+    overlay.innerHTML = `
+      <button id="skip-cinematic-btn" style="position:absolute; top:18px; right:20px; pointer-events:auto; background:rgba(15,23,42,0.85); color:var(--text-muted, #94a3b8); border:1px solid rgba(255,255,255,0.15); border-radius:6px; padding:0.45rem 0.9rem; font-size:0.75rem; font-weight:600; cursor:pointer; backdrop-filter:blur(8px); transition:all 0.2s;"
+        onmouseover="this.style.color='#fff'; this.style.borderColor='rgba(56,189,248,0.5)';"
+        onmouseout="this.style.color='#94a3b8'; this.style.borderColor='rgba(255,255,255,0.15)';">
+        Skip Video ⏭
+      </button>
+      <div id="video-event-text" style="pointer-events:none; position:absolute; width:100%; text-align:center; transition:all 0.3s ease;"></div>
+    `;
+
+    document.getElementById("skip-cinematic-btn")?.addEventListener("click", () => {
+      this.finishVideo();
+    });
+
+    const loop = (timestamp) => {
+      if (!this.isRunning || this.phase !== "video") return;
+
+      const elapsed = timestamp - this.startTime;
+      const progress = Math.min(elapsed / this.videoDuration, 1);
+      const seconds = elapsed / 1000;
+
+      if (seconds >= 4.0 && !this.earthquakeSoundTriggered) {
+        this.earthquakeSoundTriggered = true;
+        sound.playEarthquake(8.5);
+        sound.playAlarm();
+      }
+      if (seconds >= 6.0 && !this.collapseSoundTriggered) {
+        this.collapseSoundTriggered = true;
+        sound.playBridgeCrash();
+      }
+
+      this.drawCinematicScene(ctx, canvas, seconds);
+      this.updateVideoTextOverlay(seconds);
+
+      if (progress < 1) {
+        this.animFrame = requestAnimationFrame(loop);
+      } else {
+        this.finishVideo();
+      }
+    };
+
+    this.animFrame = requestAnimationFrame(loop);
+  }
+
+  updateVideoTextOverlay(seconds) {
+    const textEl = document.getElementById("video-event-text");
+    if (!textEl) return;
+
+    if (seconds >= 4.0 && seconds < 6.0) {
+      textEl.innerHTML = `
+        <div style="display:inline-flex; align-items:center; gap:0.75rem; background:rgba(220,38,38,0.94); border:2px solid #fca5a5; box-shadow:0 0 40px rgba(239,68,68,0.85); border-radius:12px; padding:0.8rem 2.2rem; transform:scale(1.05); animation:pulse-warning 0.2s infinite alternate;">
+          <span style="font-size:1.8rem;">⚠️</span>
+          <span style="font-family:var(--font-heading, sans-serif); font-size:2.2rem; font-weight:900; letter-spacing:0.18em; color:#fff; text-shadow:0 2px 10px rgba(0,0,0,0.8);">
+            EARTHQUAKE
+          </span>
+          <span style="font-size:1.8rem;">⚠️</span>
+        </div>
+      `;
+    } else if (seconds >= 6.0 && seconds <= 8.0) {
+      textEl.innerHTML = `
+        <div style="display:inline-flex; flex-direction:column; align-items:center; gap:0.25rem; background:rgba(15,23,42,0.94); border:2px solid #ef4444; box-shadow:0 0 50px rgba(239,68,68,0.75); border-radius:14px; padding:0.9rem 2.5rem; animation:pop-in 0.3s ease-out;">
+          <span style="font-family:var(--font-heading, sans-serif); font-size:3.2rem; font-weight:900; letter-spacing:0.12em; color:#f87171; text-shadow:0 0 25px rgba(248,113,113,0.9);">
+            OOPS!
+          </span>
+          <span style="font-size:0.85rem; font-weight:700; color:#cbd5e1; letter-spacing:0.08em; text-transform:uppercase;">
+            STRUCTURAL INTEGRITY COMPROMISED // CATASTROPHIC COLLAPSE
+          </span>
+        </div>
+      `;
+    } else {
+      textEl.innerHTML = "";
+    }
+  }
+
+  initParticles() {
+    this.debrisParticles = [];
+    for (let i = 0; i < 45; i++) {
+      this.debrisParticles.push({
+        x: 0,
+        y: 0,
+        vx: (Math.random() - 0.5) * 6,
+        vy: Math.random() * -4 - 1,
+        size: Math.random() * 8 + 3,
+        rot: Math.random() * Math.PI,
+        vrot: (Math.random() - 0.5) * 0.2,
+        color: Math.random() > 0.5 ? "#64748b" : "#475569"
+      });
+    }
+
+    this.dustParticles = [];
+    for (let i = 0; i < 35; i++) {
+      this.dustParticles.push({
+        x: 0,
+        y: 0,
+        vx: (Math.random() - 0.5) * 3,
+        vy: Math.random() * -2 - 0.5,
+        radius: Math.random() * 15 + 10,
+        alpha: Math.random() * 0.6 + 0.2
+      });
+    }
+  }
+
+  drawCinematicScene(ctx, canvas, seconds) {
+    const rect = canvas.getBoundingClientRect();
+    const w = rect.width;
+    const h = rect.height;
+
+    ctx.save();
+
+    if (seconds >= 4.0) {
+      const shakeIntensity = seconds >= 6.0 ? 12 : 7;
+      const shakeX = (Math.random() - 0.5) * shakeIntensity;
+      const shakeY = (Math.random() - 0.5) * shakeIntensity;
+      ctx.translate(shakeX, shakeY);
+    }
+
+    const skyGrad = ctx.createLinearGradient(0, 0, 0, h * 0.75);
+    skyGrad.addColorStop(0, "#0b1329");
+    skyGrad.addColorStop(0.45, "#1e293b");
+    skyGrad.addColorStop(0.8, "#334155");
+    skyGrad.addColorStop(1, "#475569");
+    ctx.fillStyle = skyGrad;
+    ctx.fillRect(0, 0, w, h);
+
+    const horizonGlow = ctx.createRadialGradient(w * 0.5, h * 0.55, 30, w * 0.5, h * 0.55, w * 0.6);
+    horizonGlow.addColorStop(0, "rgba(245, 158, 11, 0.25)");
+    horizonGlow.addColorStop(0.6, "rgba(239, 68, 68, 0.1)");
+    horizonGlow.addColorStop(1, "transparent");
+    ctx.fillStyle = horizonGlow;
+    ctx.fillRect(0, 0, w, h);
+
+    this.drawMountains(ctx, w, h);
+    this.drawRiver(ctx, w, h, seconds);
+
+    const cliffY = h * 0.52;
+    const cliffLeftW = w * 0.22;
+    const cliffRightX = w * 0.78;
+    this.drawCliffs(ctx, w, h, cliffY, cliffLeftW, cliffRightX);
+    this.drawBridge(ctx, w, h, cliffY, cliffLeftW, cliffRightX, seconds);
+    this.drawTruck(ctx, w, h, cliffY, cliffLeftW, cliffRightX, seconds);
+
+    if (seconds >= 6.0) {
+      this.drawCollapseDebris(ctx, w, h, cliffY, seconds - 6.0);
+    }
+
+    ctx.restore();
+  }
+
+  drawMountains(ctx, w, h) {
+    ctx.fillStyle = "rgba(15, 23, 42, 0.75)";
+    ctx.beginPath();
+    ctx.moveTo(0, h * 0.48);
+    ctx.lineTo(w * 0.15, h * 0.38);
+    ctx.lineTo(w * 0.35, h * 0.44);
+    ctx.lineTo(w * 0.55, h * 0.34);
+    ctx.lineTo(w * 0.75, h * 0.42);
+    ctx.lineTo(w * 0.9, h * 0.36);
+    ctx.lineTo(w, h * 0.45);
+    ctx.lineTo(w, h);
+    ctx.lineTo(0, h);
+    ctx.closePath();
+    ctx.fill();
+
+    ctx.fillStyle = "rgba(10, 15, 29, 0.9)";
+    ctx.beginPath();
+    ctx.moveTo(0, h * 0.52);
+    ctx.lineTo(w * 0.25, h * 0.43);
+    ctx.lineTo(w * 0.45, h * 0.49);
+    ctx.lineTo(w * 0.65, h * 0.41);
+    ctx.lineTo(w * 0.85, h * 0.48);
+    ctx.lineTo(w, h * 0.51);
+    ctx.lineTo(w, h);
+    ctx.lineTo(0, h);
+    ctx.closePath();
+    ctx.fill();
+  }
+
+  drawRiver(ctx, w, h, seconds) {
+    const waterY = h * 0.82;
+    const waterGrad = ctx.createLinearGradient(0, waterY, 0, h);
+    waterGrad.addColorStop(0, "#082f49");
+    waterGrad.addColorStop(0.5, "#0c4a6e");
+    waterGrad.addColorStop(1, "#0369a1");
+    ctx.fillStyle = waterGrad;
+    ctx.fillRect(0, waterY, w, h - waterY);
+
+    ctx.fillStyle = "rgba(255, 255, 255, 0.15)";
+    for (let i = 0; i < 6; i++) {
+      const offset = ((seconds * 60 + i * 45) % w);
+      ctx.fillRect((offset + i * 120) % w, waterY + 12 + i * 7, 55, 2);
+    }
+  }
+
+  drawCliffs(ctx, w, h, cliffY, cliffLeftW, cliffRightX) {
+    ctx.fillStyle = "#1e293b";
+    ctx.beginPath();
+    ctx.moveTo(0, cliffY);
+    ctx.lineTo(cliffLeftW, cliffY);
+    ctx.lineTo(cliffLeftW - 25, cliffY + 70);
+    ctx.lineTo(cliffLeftW - 10, cliffY + 140);
+    ctx.lineTo(cliffLeftW - 45, h);
+    ctx.lineTo(0, h);
+    ctx.closePath();
+    ctx.fill();
+
+    ctx.strokeStyle = "#334155";
+    ctx.lineWidth = 3;
+    ctx.stroke();
+
+    ctx.fillStyle = "#475569";
+    ctx.fillRect(cliffLeftW - 35, cliffY - 12, 35, 26);
+    ctx.fillStyle = "#64748b";
+    ctx.fillRect(cliffLeftW - 35, cliffY - 12, 35, 4);
+
+    ctx.fillStyle = "#1e293b";
+    ctx.beginPath();
+    ctx.moveTo(w, cliffY);
+    ctx.lineTo(cliffRightX, cliffY);
+    ctx.lineTo(cliffRightX + 20, cliffY + 65);
+    ctx.lineTo(cliffRightX + 5, cliffY + 130);
+    ctx.lineTo(cliffRightX + 40, h);
+    ctx.lineTo(w, h);
+    ctx.closePath();
+    ctx.fill();
+
+    ctx.strokeStyle = "#334155";
+    ctx.lineWidth = 3;
+    ctx.stroke();
+
+    ctx.fillStyle = "#475569";
+    ctx.fillRect(cliffRightX, cliffY - 12, 35, 26);
+    ctx.fillStyle = "#64748b";
+    ctx.fillRect(cliffRightX, cliffY - 12, 35, 4);
+  }
+
+  drawBridge(ctx, w, h, cliffY, cliffLeftW, cliffRightX, seconds) {
+    const span = cliffRightX - cliffLeftW;
+    const midX = cliffLeftW + span * 0.5;
+
+    const tower1X = cliffLeftW + span * 0.22;
+    const tower2X = cliffLeftW + span * 0.78;
+    const towerTopY = cliffY - 120;
+    const towerBottomY = h * 0.85;
+
+    this.drawSteelTower(ctx, tower1X, towerTopY, towerBottomY);
+    this.drawSteelTower(ctx, tower2X, towerTopY, towerBottomY);
+
+    if (seconds < 6.0) {
+      ctx.strokeStyle = "#94a3b8";
+      ctx.lineWidth = 4;
+      ctx.beginPath();
+      ctx.moveTo(cliffLeftW - 20, cliffY);
+      ctx.lineTo(tower1X, towerTopY);
+      ctx.quadraticCurveTo(midX, cliffY + 2, tower2X, towerTopY);
+      ctx.lineTo(cliffRightX + 20, cliffY);
+      ctx.stroke();
+
+      ctx.strokeStyle = "rgba(203, 213, 225, 0.4)";
+      ctx.lineWidth = 1.5;
+      const numHangers = 18;
+      for (let i = 1; i < numHangers; i++) {
+        const hx = cliffLeftW + (span / numHangers) * i;
+        const norm = (hx - midX) / (span * 0.5);
+        const cableY = towerTopY + (cliffY + 2 - towerTopY) * (1 - norm * norm * 0.6);
+        ctx.beginPath();
+        ctx.moveTo(hx, cableY);
+        ctx.lineTo(hx, cliffY);
+        ctx.stroke();
+      }
+
+      ctx.fillStyle = "#1e293b";
+      ctx.fillRect(cliffLeftW, cliffY, span, 14);
+
+      ctx.strokeStyle = "#475569";
+      ctx.lineWidth = 2;
+      ctx.strokeRect(cliffLeftW, cliffY, span, 14);
+
+      ctx.fillStyle = "#0f172a";
+      ctx.fillRect(cliffLeftW, cliffY - 2, span, 4);
+
+      ctx.strokeStyle = "#cbd5e1";
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(cliffLeftW, cliffY - 7);
+      ctx.lineTo(cliffRightX, cliffY - 7);
+      ctx.stroke();
+
+      ctx.strokeStyle = "#fbbf24";
+      ctx.lineWidth = 2;
+      ctx.setLineDash([8, 8]);
+      ctx.beginPath();
+      ctx.moveTo(cliffLeftW, cliffY);
+      ctx.lineTo(cliffRightX, cliffY);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      if (seconds >= 4.0) {
+        ctx.strokeStyle = "#f87171";
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.moveTo(midX - 10, cliffY - 4);
+        ctx.lineTo(midX, cliffY + 6);
+        ctx.lineTo(midX + 8, cliffY + 14);
+        ctx.stroke();
+      }
+    } else {
+      const collapseProgress = Math.min((seconds - 6.0) / 1.5, 1);
+      const dropAngle = collapseProgress * 0.55;
+
+      ctx.strokeStyle = "#94a3b8";
+      ctx.lineWidth = 3.5;
+      ctx.beginPath();
+      ctx.moveTo(cliffLeftW - 20, cliffY);
+      ctx.lineTo(tower1X, towerTopY);
+      ctx.quadraticCurveTo(tower1X + 40, cliffY + 40, midX - 30, cliffY + 90 * collapseProgress);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(cliffRightX + 20, cliffY);
+      ctx.lineTo(tower2X, towerTopY);
+      ctx.quadraticCurveTo(tower2X - 40, cliffY + 40, midX + 30, cliffY + 80 * collapseProgress);
+      ctx.stroke();
+
+      ctx.save();
+      ctx.translate(cliffLeftW, cliffY);
+      ctx.rotate(dropAngle);
+      ctx.fillStyle = "#1e293b";
+      ctx.fillRect(0, 0, span * 0.48, 14);
+      ctx.strokeStyle = "#ef4444";
+      ctx.lineWidth = 2;
+      ctx.strokeRect(0, 0, span * 0.48, 14);
+      ctx.restore();
+
+      ctx.save();
+      ctx.translate(cliffRightX, cliffY);
+      ctx.rotate(-dropAngle * 0.85);
+      ctx.fillStyle = "#1e293b";
+      ctx.fillRect(-span * 0.48, 0, span * 0.48, 14);
+      ctx.strokeStyle = "#ef4444";
+      ctx.lineWidth = 2;
+      ctx.strokeRect(-span * 0.48, 0, span * 0.48, 14);
+      ctx.restore();
+    }
+  }
+
+  drawSteelTower(ctx, x, topY, bottomY) {
+    const towerW = 20;
+    ctx.fillStyle = "#334155";
+    ctx.fillRect(x - towerW * 0.5, topY, towerW, bottomY - topY);
+
+    ctx.strokeStyle = "#64748b";
+    ctx.lineWidth = 2;
+    const numPanels = 5;
+    const panelH = (bottomY - topY) / numPanels;
+    for (let i = 0; i < numPanels; i++) {
+      const py = topY + i * panelH;
+      ctx.beginPath();
+      ctx.moveTo(x - towerW * 0.5, py);
+      ctx.lineTo(x + towerW * 0.5, py + panelH);
+      ctx.moveTo(x + towerW * 0.5, py);
+      ctx.lineTo(x - towerW * 0.5, py + panelH);
+      ctx.stroke();
+    }
+
+    ctx.fillStyle = "#0f172a";
+    ctx.fillRect(x - towerW * 0.7, topY - 8, towerW * 1.4, 8);
+    ctx.fillStyle = "#ef4444";
+    ctx.beginPath();
+    ctx.arc(x, topY - 11, 3.5, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  drawTruck(ctx, w, h, cliffY, cliffLeftW, cliffRightX, seconds) {
+    const span = cliffRightX - cliffLeftW;
+    const midX = cliffLeftW + span * 0.5;
+
+    let truckX = 0;
+    let truckY = cliffY - 12;
+    let truckAngle = 0;
+
+    if (seconds < 3.0) {
+      const progress = seconds / 3.0;
+      truckX = (cliffLeftW - 120) + (midX - 30 - (cliffLeftW - 120)) * progress;
+    } else if (seconds < 4.0) {
+      const progress = (seconds - 3.0);
+      truckX = (midX - 30) + 40 * progress;
+    } else if (seconds < 6.0) {
+      truckX = midX + 10;
+      truckY += (Math.random() - 0.5) * 4;
+      truckAngle = (Math.random() - 0.5) * 0.04;
+    } else {
+      const fallTime = seconds - 6.0;
+      const gravity = 220;
+      truckX = midX + 10 + fallTime * 25;
+      truckY = cliffY - 12 + 0.5 * gravity * (fallTime * fallTime * 2.2);
+      truckAngle = Math.min(fallTime * 1.4, Math.PI * 0.45);
+    }
+
+    ctx.save();
+    ctx.translate(truckX, truckY);
+    ctx.rotate(truckAngle);
+
+    const truckScale = 0.82;
+    ctx.scale(truckScale, truckScale);
+
+    if (seconds < 6.0) {
+      const lightGrad = ctx.createRadialGradient(85, -12, 10, 240, -12, 180);
+      lightGrad.addColorStop(0, "rgba(254, 240, 138, 0.7)");
+      lightGrad.addColorStop(0.4, "rgba(253, 224, 71, 0.25)");
+      lightGrad.addColorStop(1, "transparent");
+      ctx.fillStyle = lightGrad;
+      ctx.beginPath();
+      ctx.moveTo(85, -14);
+      ctx.lineTo(260, -40);
+      ctx.lineTo(260, 20);
+      ctx.closePath();
+      ctx.fill();
+    }
+
+    const trailerW = 100;
+    const trailerH = 34;
+    const trailerX = -trailerW - 4;
+    const trailerY = -trailerH - 8;
+
+    ctx.fillStyle = "#0284c7";
+    ctx.fillRect(trailerX, trailerY, trailerW, trailerH);
+    ctx.strokeStyle = "#0369a1";
+    ctx.lineWidth = 2;
+    ctx.strokeRect(trailerX, trailerY, trailerW, trailerH);
+
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.18)";
+    ctx.lineWidth = 1.5;
+    for (let rx = trailerX + 8; rx < trailerX + trailerW - 4; rx += 8) {
+      ctx.beginPath();
+      ctx.moveTo(rx, trailerY + 2);
+      ctx.lineTo(rx, trailerY + trailerH - 2);
+      ctx.stroke();
+    }
+
+    ctx.fillStyle = "#eab308";
+    ctx.fillRect(trailerX, trailerY + trailerH - 6, 8, 6);
+
+    const cabW = 48;
+    const cabH = 38;
+    const cabX = 0;
+    const cabY = -cabH - 8;
+
+    ctx.fillStyle = "#f97316";
+    ctx.beginPath();
+    ctx.moveTo(cabX, cabY + 12);
+    ctx.lineTo(cabX + 16, cabY);
+    ctx.lineTo(cabX + cabW - 8, cabY);
+    ctx.lineTo(cabX + cabW, cabY + 14);
+    ctx.lineTo(cabX + cabW, cabY + cabH);
+    ctx.lineTo(cabX, cabY + cabH);
+    ctx.closePath();
+    ctx.fill();
+    ctx.strokeStyle = "#c2410c";
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    ctx.fillStyle = "#0f172a";
+    ctx.beginPath();
+    ctx.moveTo(cabX + cabW - 20, cabY + 6);
+    ctx.lineTo(cabX + cabW - 4, cabY + 15);
+    ctx.lineTo(cabX + cabW - 4, cabY + 24);
+    ctx.lineTo(cabX + cabW - 22, cabY + 24);
+    ctx.closePath();
+    ctx.fill();
+
+    ctx.fillStyle = "#e2e8f0";
+    ctx.fillRect(cabX + cabW - 4, cabY + 24, 6, 14);
+    ctx.strokeStyle = "#94a3b8";
+    ctx.strokeRect(cabX + cabW - 4, cabY + 24, 6, 14);
+
+    ctx.fillStyle = "#fef08a";
+    ctx.fillRect(cabX + cabW - 2, cabY + 26, 3, 5);
+
+    ctx.fillStyle = "#94a3b8";
+    ctx.fillRect(cabX + 2, cabY - 14, 4, 20);
+
+    const wheelRadius = 8;
+    const wheelY = -8;
+    const wheelPositions = [
+      trailerX + 18,
+      trailerX + 38,
+      cabX + 12,
+      cabX + cabW - 10
+    ];
+
+    wheelPositions.forEach((wx) => {
+      ctx.fillStyle = "#1e293b";
+      ctx.beginPath();
+      ctx.arc(wx, wheelY, wheelRadius, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = "#0f172a";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      ctx.fillStyle = "#cbd5e1";
+      ctx.beginPath();
+      ctx.arc(wx, wheelY, wheelRadius * 0.45, 0, Math.PI * 2);
+      ctx.fill();
+    });
+
+    ctx.restore();
+  }
+
+  drawCollapseDebris(ctx, w, h, cliffY, fallTime) {
+    const midX = w * 0.5;
+
+    ctx.save();
+    this.debrisParticles.forEach((p, idx) => {
+      p.x = midX + p.vx * fallTime * 35 + (idx % 5 - 2) * 15;
+      p.y = cliffY + p.vy * fallTime * 20 + 0.5 * 250 * (fallTime * fallTime);
+      p.rot += p.vrot;
+
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rot);
+      ctx.fillStyle = p.color;
+      ctx.fillRect(-p.size * 0.5, -p.size * 0.5, p.size, p.size);
+      ctx.restore();
+    });
+
+    this.dustParticles.forEach((d, idx) => {
+      d.x = midX + d.vx * fallTime * 25;
+      d.y = cliffY + d.vy * fallTime * 20;
+      const alpha = Math.max(0, d.alpha - fallTime * 0.3);
+      ctx.fillStyle = `rgba(148, 163, 184, ${alpha})`;
+      ctx.beginPath();
+      ctx.arc(d.x, d.y, d.radius * (1 + fallTime * 1.5), 0, Math.PI * 2);
+      ctx.fill();
+    });
+    ctx.restore();
+  }
+
+  finishVideo() {
+    this.phase = "engineer";
+    if (this.animFrame) cancelAnimationFrame(this.animFrame);
+    this.showEngineerBrief();
+  }
+
+  /* =========================================================================
+   * STEP 2: HUMANOID CIVIL ENGINEER POP-UP
+   * ========================================================================= */
+  showEngineerBrief() {
+    const overlay = document.getElementById("bridge-overlay-layer");
+    if (!overlay) return;
+
+    sound.playCommsChirp();
+
+    overlay.style.alignItems = "flex-end";
+    overlay.style.justifyContent = "center";
+    overlay.style.paddingBottom = "0px";
+
+    const speechText = "Hello Engineers, I am Vikram Patel, help me rebuild the bridge.";
+
+    overlay.innerHTML = `
+      <div id="engineer-stage-wrapper" style="position:relative; width:100%; max-width:980px; height:100%; display:flex; align-items:flex-end; justify-content:center; gap:2rem; padding:0 2rem 1.5rem 2rem; box-sizing:border-box;">
+        
+        <div id="humanoid-engineer-figure" style="position:relative; width:260px; height:380px; flex-shrink:0; pointer-events:auto; z-index:2; animation:engineerPopUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards; filter:drop-shadow(0 20px 30px rgba(0,0,0,0.85));">
+          <svg viewBox="0 0 260 380" style="width:100%; height:100%; overflow:visible;">
+            <defs>
+              <linearGradient id="skin-face" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#dfa47b" />
+                <stop offset="60%" stop-color="#cc8f65" />
+                <stop offset="100%" stop-color="#b67a50" />
+              </linearGradient>
+              <linearGradient id="skin-neck" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#a86e47" />
+                <stop offset="100%" stop-color="#8d5935" />
+              </linearGradient>
+              <linearGradient id="hardhat-grad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#fef08a" />
+                <stop offset="35%" stop-color="#eab308" />
+                <stop offset="100%" stop-color="#ca8a04" />
+              </linearGradient>
+              <linearGradient id="vest-grad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#fb923c" />
+                <stop offset="50%" stop-color="#ea580c" />
+                <stop offset="100%" stop-color="#c2410c" />
+              </linearGradient>
+              <linearGradient id="lens-grad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="rgba(125, 211, 252, 0.9)" />
+                <stop offset="100%" stop-color="rgba(2, 132, 199, 0.7)" />
+              </linearGradient>
+            </defs>
+
+            <path d="M40,240 C50,225 90,218 130,218 C170,218 210,225 220,240 L235,380 L25,380 Z" fill="#1e293b" />
+            <path d="M105,216 L130,242 L95,236 Z" fill="#334155" />
+            <path d="M155,216 L130,242 L165,236 Z" fill="#334155" />
+
+            <path d="M52,240 C65,230 92,225 110,225 L112,380 L42,380 L35,270 Z" fill="url(#vest-grad)" />
+            <path d="M208,240 C195,230 168,225 150,225 L148,380 L218,380 L225,270 Z" fill="url(#vest-grad)" />
+            <path d="M38,260 L52,240 L54,380 L38,380 Z" fill="#84cc16" opacity="0.85" />
+            <path d="M222,260 L208,240 L206,380 L222,380 Z" fill="#84cc16" opacity="0.85" />
+
+            <path d="M44,285 L111,285" stroke="#f1f5f9" stroke-width="8" stroke-linecap="round" />
+            <path d="M149,285 L216,285" stroke="#f1f5f9" stroke-width="8" stroke-linecap="round" />
+            <path d="M42,335 L112,335" stroke="#f1f5f9" stroke-width="8" stroke-linecap="round" />
+            <path d="M148,335 L218,335" stroke="#f1f5f9" stroke-width="8" stroke-linecap="round" />
+
+            <rect x="52" y="228" width="16" height="32" rx="3" fill="#0f172a" />
+            <line x1="60" y1="228" x2="60" y2="208" stroke="#1e293b" stroke-width="3" stroke-linecap="round" />
+            <circle x="60" y="234" r="2" fill="#ef4444" />
+            <rect x="55" y="240" width="10" height="12" rx="1" fill="#334155" />
+
+            <path d="M130,225 L130,290" stroke="#0284c7" stroke-width="2" />
+            <rect x="116" y="290" width="28" height="38" rx="2" fill="#ffffff" stroke="#94a3b8" stroke-width="1" />
+            <rect x="119" y="293" width="10" height="10" fill="#cc8f65" />
+            <line x1="119" y1="308" x2="141" y2="308" stroke="#0284c7" stroke-width="2" />
+            <line x1="119" y1="313" x2="138" y2="313" stroke="#64748b" stroke-width="1.5" />
+            <line x1="119" y1="318" x2="134" y2="318" stroke="#64748b" stroke-width="1.5" />
+
+            <path d="M110,195 L110,230 C120,236 140,236 150,230 L150,195 Z" fill="url(#skin-neck)" />
+            <path d="M125,208 L130,215 L135,208" stroke="#8d5935" stroke-width="1.5" fill="none" opacity="0.6" />
+
+            <path d="M92,125 C88,160 96,192 130,198 C164,192 172,160 168,125 C168,85 92,85 92,125 Z" fill="url(#skin-face)" />
+            <path d="M90,130 C84,130 84,152 91,155 Z" fill="#cc8f65" />
+            <path d="M170,130 C176,130 176,152 169,155 Z" fill="#cc8f65" />
+            <path d="M96,145 C98,185 110,198 130,198 C150,198 162,185 164,145 C158,165 145,178 130,178 C115,178 102,165 96,145 Z" fill="#1e293b" opacity="0.22" />
+
+            <path d="M128,125 L126,146 L122,148 L130,152 L138,148 L134,146 L132,125" fill="#a86e47" opacity="0.35" />
+            <path d="M124,148 Q130,154 136,148" stroke="#8d5935" stroke-width="1.5" fill="none" />
+
+            <path d="M102,120 Q114,115 122,118" stroke="#1e293b" stroke-width="3.5" stroke-linecap="round" fill="none" />
+            <path d="M138,118 Q146,115 158,120" stroke="#1e293b" stroke-width="3.5" stroke-linecap="round" fill="none" />
+
+            <ellipse cx="112" cy="126" rx="7" ry="4" fill="#ffffff" />
+            <circle cx="112" cy="126" r="3.5" fill="#451a03" />
+            <circle cx="112" cy="126" r="1.8" fill="#0f172a" />
+            <circle cx="113.5" cy="124.5" r="1" fill="#ffffff" />
+            <path d="M105,124 Q112,120 119,124" stroke="#475569" stroke-width="1.5" fill="none" />
+
+            <ellipse cx="148" cy="126" rx="7" ry="4" fill="#ffffff" />
+            <circle cx="148" cy="126" r="3.5" fill="#451a03" />
+            <circle cx="148" cy="126" r="1.8" fill="#0f172a" />
+            <circle cx="149.5" cy="124.5" r="1" fill="#ffffff" />
+            <path d="M141,124 Q148,120 155,124" stroke="#475569" stroke-width="1.5" fill="none" />
+
+            <path d="M120,158 Q130,161 140,158 C137,163 123,163 120,158 Z" fill="#1e293b" />
+            <path id="vikram-mouth" d="M121,166 Q130,172 139,166 Q130,167 121,166 Z" fill="#881337" stroke="#713f12" stroke-width="1" />
+
+            <path d="M80,105 C80,50 180,50 180,105 C182,108 178,112 165,112 L95,112 C82,112 78,108 80,105 Z" fill="url(#hardhat-grad)" />
+            <path d="M124,52 C124,52 130,50 136,52 L138,108 L122,108 Z" fill="#facc15" opacity="0.6" />
+            <path d="M74,106 C80,102 180,102 186,106 C188,111 184,116 172,116 L88,116 C76,116 72,111 74,106 Z" fill="#ca8a04" />
+            <path d="M78,108 L182,108" stroke="#fef08a" stroke-width="2" />
+            <path d="M85,115 Q130,123 175,115 L175,112 L85,112 Z" fill="#451a03" opacity="0.35" />
+
+            <rect x="94" y="85" width="30" height="15" rx="4" fill="url(#lens-grad)" stroke="#0f172a" stroke-width="2" />
+            <rect x="136" y="85" width="30" height="15" rx="4" fill="url(#lens-grad)" stroke="#0f172a" stroke-width="2" />
+            <line x1="124" y1="92" x2="136" y2="92" stroke="#0f172a" stroke-width="3" />
+            <path d="M82,93 L94,93" stroke="#0f172a" stroke-width="3.5" />
+            <path d="M166,93 L178,93" stroke="#0f172a" stroke-width="3.5" />
+
+            <rect x="122" y="70" width="16" height="10" rx="1.5" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
+            <polygon points="130,72 134,77 126,77" fill="#ef4444" />
+          </svg>
+        </div>
+
+        <div id="engineer-speech-bubble" style="position:relative; flex:1; max-width:540px; background:rgba(10, 16, 32, 0.96); border:1px solid rgba(56, 189, 248, 0.4); box-shadow:0 25px 60px rgba(0, 0, 0, 0.85), 0 0 35px rgba(56, 189, 248, 0.25); border-radius:18px; padding:1.75rem 2rem; backdrop-filter:blur(18px); pointer-events:auto; z-index:3; animation:speechBubbleFade 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards; margin-bottom:2.5rem;">
+          <div style="position:absolute; bottom:30px; left:-12px; width:0; height:0; border-top:10px solid transparent; border-bottom:10px solid transparent; border-right:12px solid rgba(56, 189, 248, 0.5);"></div>
+          <div style="position:absolute; bottom:31px; left:-10px; width:0; height:0; border-top:9px solid transparent; border-bottom:9px solid transparent; border-right:10px solid rgba(10, 16, 32, 0.96);"></div>
+
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:0.5rem;">
+            <div style="display:flex; align-items:center; gap:0.5rem;">
+              <span style="display:inline-block; width:9px; height:9px; background:#10b981; border-radius:50%; box-shadow:0 0 10px #10b981; animation:blink 1s infinite alternate;"></span>
+              <span style="font-family:var(--font-mono, monospace); font-size:0.75rem; font-weight:800; letter-spacing:0.12em; color:var(--accent-cyan, #38bdf8); text-transform:uppercase;">
+                DISPATCH // ON-SITE INCIDENT COMMAND
+              </span>
+            </div>
+            <span style="font-size:0.72rem; color:var(--text-faint, #64748b); font-family:var(--font-mono, monospace);">SECTOR: GUJARAT</span>
+          </div>
+
+          <div style="margin-bottom:0.75rem;">
+            <div style="font-size:0.72rem; text-transform:uppercase; color:var(--accent-amber, #f59e0b); font-weight:800; letter-spacing:0.08em;">
+              Lead Structural Engineer
+            </div>
+            <div style="font-family:var(--font-heading, sans-serif); font-size:1.25rem; font-weight:900; color:#fff;">
+              Er. Vikram Patel
+            </div>
+          </div>
+
+          <div style="position:relative; background:rgba(15, 23, 42, 0.8); border:1px solid rgba(255,255,255,0.1); border-left:4px solid var(--accent-cyan, #38bdf8); border-radius:10px; padding:1.25rem 1.4rem; margin-bottom:1.5rem;">
+            <span style="position:absolute; top:-12px; left:12px; font-family:serif; font-size:2.8rem; line-height:1; color:var(--accent-cyan, #38bdf8); opacity:0.4;">“</span>
+            <p id="vikram-spoken-text" style="margin:0; font-size:1.2rem; font-weight:600; color:#f8fafc; line-height:1.5; font-style:italic; padding-left:0.5rem;">
+              “Hello Engineers, I am Vikram Patel, help me rebuild the bridge.”
+            </p>
+          </div>
+
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div style="display:flex; align-items:center; gap:0.5rem; font-size:0.78rem; color:var(--accent-cyan, #38bdf8);">
+              <span id="audio-wave-anim">🔊 Speaking...</span>
+              <button id="btn-replay-voice" style="background:none; border:none; color:var(--accent-cyan, #38bdf8); font-size:0.75rem; font-weight:700; cursor:pointer; text-decoration:underline; margin-left:0.5rem;">Replay Voice ↺</button>
+            </div>
+            
+            <button id="engineer-continue-btn" class="btn btn-primary" style="font-size:0.95rem; font-weight:800; padding:0.65rem 1.8rem; border-radius:8px; cursor:pointer; letter-spacing:0.04em; text-transform:uppercase; box-shadow:0 0 20px rgba(56,189,248,0.4); transition:all 0.2s;"
+              onmouseover="this.style.transform='scale(1.05)';"
+              onmouseout="this.style.transform='scale(1)';">
+              Continue →
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    `;
+
+    document.getElementById("engineer-continue-btn")?.addEventListener("click", () => {
+      if (this.mouthInterval) clearInterval(this.mouthInterval);
+      if (this.currentAudio) {
+        this.currentAudio.pause();
+        this.currentAudio = null;
+      }
+      if (window.speechSynthesis) window.speechSynthesis.cancel();
+      this.showLevelNotice();
+    });
+
+    this.speakHumanoidVoice(speechText);
+  }
+
+  speakHumanoidVoice(text) {
+    const mouth = document.getElementById("vikram-mouth");
+    const audioIndicator = document.getElementById("audio-wave-anim");
+
+    const startMouth = () => {
+      if (mouth && !this.mouthInterval) {
+        const mouthShapes = [
+          "M120,166 Q130,178 140,166 Q130,169 120,166 Z",
+          "M122,166 Q130,174 138,166 Q130,168 122,166 Z",
+          "M124,166 Q130,170 136,166 Q130,167 124,166 Z",
+          "M121,166 Q130,167 139,166 Q130,167 121,166 Z"
+        ];
+        let shapeIdx = 0;
+        this.mouthInterval = setInterval(() => {
+          shapeIdx = (shapeIdx + 1) % mouthShapes.length;
+          mouth.setAttribute("d", mouthShapes[shapeIdx]);
+        }, 110);
+      }
+      if (audioIndicator) audioIndicator.textContent = "🔊 Speaking...";
+    };
+
+    const stopMouth = () => {
+      if (this.mouthInterval) {
+        clearInterval(this.mouthInterval);
+        this.mouthInterval = null;
+      }
+      if (mouth) mouth.setAttribute("d", "M121,166 Q130,167 139,166 Q130,167 121,166 Z");
+      if (audioIndicator) audioIndicator.textContent = "✅ Finished Speaking";
+    };
+
+    document.getElementById("btn-replay-voice")?.addEventListener("click", () => {
+      this.playRealVoiceAudio(startMouth, stopMouth, text);
+    });
+
+    this.playRealVoiceAudio(startMouth, stopMouth, text);
+  }
+
+  playRealVoiceAudio(startMouth, stopMouth, text) {
+    if (this.currentAudio) {
+      this.currentAudio.pause();
+      this.currentAudio.currentTime = 0;
+    }
+
+    try {
+      const audio = new Audio("data:audio/mp4;base64," + VIKRAM_VOICE_BASE64);
+      this.currentAudio = audio;
+
+      audio.onplay = () => startMouth();
+      audio.onended = () => stopMouth();
+      audio.onerror = (e) => {
+        console.warn("Audio file error, falling back to neural speech synth:", e);
+        this.fallbackSpeechSynth(startMouth, stopMouth, text);
+      };
+
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(err => {
+          console.warn("Autoplay blocked, attempting fallback:", err);
+          this.fallbackSpeechSynth(startMouth, stopMouth, text);
+        });
+      }
+    } catch (err) {
+      console.warn("Audio exception:", err);
+      this.fallbackSpeechSynth(startMouth, stopMouth, text);
+    }
+  }
+
+  fallbackSpeechSynth(startMouth, stopMouth, text) {
+    if (!window.speechSynthesis) {
+      stopMouth();
+      return;
+    }
+    try {
+      window.speechSynthesis.cancel();
+      this.speechUtterance = new SpeechSynthesisUtterance(text);
+      this.speechUtterance.rate = 0.95;
+      this.speechUtterance.pitch = 0.98;
+
+      this.speechUtterance.onstart = () => startMouth();
+      this.speechUtterance.onend = () => stopMouth();
+      this.speechUtterance.onerror = () => stopMouth();
+
+      window.speechSynthesis.speak(this.speechUtterance);
+    } catch (e) {
+      stopMouth();
+    }
+  }
+
+  /* =========================================================================
+   * STEP 3: "LEVEL 1" DISPLAY & EMERGENCY NOTICE WITH "PROCEED" BUTTON
+   * ========================================================================= */
+  showLevelNotice() {
+    this.phase = "notice";
+    const overlay = document.getElementById("bridge-overlay-layer");
+    if (!overlay) return;
+
+    sound.playClick();
+    overlay.style.alignItems = "center";
+    overlay.style.justifyContent = "center";
+    overlay.style.paddingBottom = "0";
+
+    overlay.innerHTML = `
+      <div style="position:relative; max-width:620px; width:92%; background:rgba(8,12,24,0.97); border:1px solid rgba(56,189,248,0.4); box-shadow:0 30px 70px rgba(0,0,0,0.9), 0 0 45px rgba(56,189,248,0.25); border-radius:20px; padding:2.4rem; backdrop-filter:blur(18px); text-align:center; animation:pop-in 0.35s cubic-bezier(0.16, 1, 0.3, 1); pointer-events:auto;">
+        
+        <div style="display:inline-flex; align-items:center; justify-content:center; gap:0.6rem; padding:0.45rem 1.6rem; background:rgba(56,189,248,0.12); border:1.5px solid var(--accent-cyan, #38bdf8); border-radius:30px; margin-bottom:1.5rem; box-shadow:0 0 20px rgba(56,189,248,0.3);">
+          <span style="font-family:var(--font-mono, monospace); font-size:1.15rem; font-weight:900; letter-spacing:0.2em; color:var(--accent-cyan, #38bdf8); text-transform:uppercase;">
+            ★ LEVEL 1 ★
+          </span>
+        </div>
+
+        <div style="display:flex; align-items:center; justify-content:center; gap:0.5rem; margin-bottom:1rem;">
+          <span style="font-size:1.2rem;">🚨</span>
+          <span style="font-family:var(--font-mono, monospace); font-size:0.8rem; font-weight:800; letter-spacing:0.15em; color:#f87171; text-transform:uppercase;">
+            Emergency Infrastructure Directive
+          </span>
+        </div>
+
+        <p style="font-size:1.25rem; font-weight:700; color:#f8fafc; line-height:1.6; margin:0 auto 2rem auto; max-width:520px; font-family:var(--font-heading, sans-serif);">
+          “A severe earthquake has cut the transport line between Himmatnagar and Ahmedabad. Build a bridge in given time to transfer load safely”
+        </p>
+
+        <div style="display:flex; justify-content:center; gap:0.75rem; margin-bottom:2rem; flex-wrap:wrap;">
+          <span style="font-size:0.75rem; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:6px; padding:0.35rem 0.75rem; color:#94a3b8; font-family:var(--font-mono, monospace);">
+            📍 Sector: Sabarkantha Chasm
+          </span>
+          <span style="font-size:0.75rem; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:6px; padding:0.35rem 0.75rem; color:#94a3b8; font-family:var(--font-mono, monospace);">
+            🚚 Route: Himmatnagar ⇄ Ahmedabad
+          </span>
+        </div>
+
+        <button id="btn-proceed-level1" class="btn btn-primary" style="font-size:1.1rem; font-weight:800; padding:0.85rem 2.8rem; border-radius:10px; cursor:pointer; letter-spacing:0.06em; text-transform:uppercase; box-shadow:0 0 25px rgba(56,189,248,0.5); transition:all 0.2s;"
+          onmouseover="this.style.transform='scale(1.04)';"
+          onmouseout="this.style.transform='scale(1)';">
+          Proceed →
+        </button>
+
+      </div>
+    `;
+
+    document.getElementById("btn-proceed-level1")?.addEventListener("click", () => {
+      this.startCountdown();
+    });
+  }
+
+  /* =========================================================================
+   * STEP 4: COUNTDOWN (3 -> 2 -> 1) AND START MISSION
+   * ========================================================================= */
+  startCountdown() {
+    this.phase = "countdown";
+    const overlay = document.getElementById("bridge-overlay-layer");
+    if (!overlay) return;
+
+    sound.playClick();
+    let count = 3;
+
+    const renderCount = (num) => {
+      sound.playCountdownTick(false);
+
+      overlay.innerHTML = `
+        <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; animation:pulse-zoom 0.85s cubic-bezier(0.16, 1, 0.3, 1);">
+          <div style="position:relative; width:160px; height:160px; display:flex; align-items:center; justify-content:center; background:radial-gradient(circle, rgba(56,189,248,0.25) 0%, rgba(15,23,42,0.9) 70%); border:3px solid var(--accent-cyan, #38bdf8); border-radius:50%; box-shadow:0 0 60px rgba(56,189,248,0.6);">
+            <span style="font-family:var(--font-heading, sans-serif); font-size:5.5rem; font-weight:900; color:#fff; line-height:1; text-shadow:0 0 30px rgba(56,189,248,0.9);">
+              ${num}
+            </span>
+          </div>
+          <div style="margin-top:1.5rem; font-family:var(--font-mono, monospace); font-size:1rem; font-weight:800; letter-spacing:0.2em; color:var(--accent-cyan, #38bdf8); text-transform:uppercase;">
+            PREPARING SIMULATION SITE
+          </div>
+        </div>
+      `;
+    };
+
+    renderCount(count);
+
+    this.countdownTimer = setInterval(() => {
+      count--;
+      if (count > 0) {
+        renderCount(count);
+      } else {
+        clearInterval(this.countdownTimer);
+        this.countdownTimer = null;
+
+        sound.playCountdownTick(true);
+        overlay.innerHTML = `
+          <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; animation:pop-in 0.4s ease-out;">
+            <div style="font-family:var(--font-heading, sans-serif); font-size:3.5rem; font-weight:900; letter-spacing:0.1em; color:#34d399; text-shadow:0 0 40px rgba(52,211,153,0.8); text-transform:uppercase;">
+              MISSION COMMENCED!
+            </div>
+          </div>
+        `;
+
+        setTimeout(() => {
+          this.startMission();
+        }, 900);
+      }
+    }, 1000);
+  }
+
+  /* =========================================================================
+   * STEP 5: ACTIVE MISSION VIEW (TOP VIEW SWITCHER + BLUEPRINT CANVAS)
+   * ========================================================================= */
+  getTotalPlacedCount(type = null) {
+    let count = 0;
+    ["left", "right", "front"].forEach((v) => {
+      (this.placedElements[v] || []).forEach((item) => {
+        if (!type || item.type === type) count++;
+      });
+    });
+    return count;
+  }
+
+  getUnplacedCount(type) {
+    const bought = this.purchased[type] || 0;
+    const placed = this.getTotalPlacedCount(type);
+    return Math.max(0, bought - placed);
+  }
+
+  getTotalWeight() {
+    let weight = 0;
+    ["left", "right", "front"].forEach((v) => {
+      (this.placedElements[v] || []).forEach((item) => {
+        weight += item.weight || 0;
+      });
+    });
+    return weight;
+  }
+
+  showToast(msg, type = "info") {
+    let toast = document.getElementById("bridge-live-toast");
+    if (!toast) {
+      toast = document.createElement("div");
+      toast.id = "bridge-live-toast";
+      toast.style.position = "absolute";
+      toast.style.top = "74px";
+      toast.style.left = "50%";
+      toast.style.transform = "translateX(-50%)";
+      toast.style.padding = "0.6rem 1.2rem";
+      toast.style.borderRadius = "8px";
+      toast.style.fontSize = "0.85rem";
+      toast.style.fontWeight = "700";
+      toast.style.zIndex = "100";
+      toast.style.boxShadow = "0 8px 30px rgba(0,0,0,0.7)";
+      toast.style.transition = "all 0.3s ease";
+      toast.style.pointerEvents = "none";
+      const visualArea = document.querySelector(".sim-stage-visual");
+      if (visualArea) visualArea.appendChild(toast);
+      else if (this.container) this.container.appendChild(toast);
+    }
+
+    if (type === "success") {
+      toast.style.background = "linear-gradient(135deg, #059669, #10b981)";
+      toast.style.color = "#ffffff";
+      toast.style.border = "1px solid #34d399";
+    } else if (type === "refund") {
+      toast.style.background = "linear-gradient(135deg, #d97706, #f59e0b)";
+      toast.style.color = "#000000";
+      toast.style.border = "1px solid #fde68a";
+    } else if (type === "warn" || type === "error") {
+      toast.style.background = "linear-gradient(135deg, #dc2626, #ef4444)";
+      toast.style.color = "#ffffff";
+      toast.style.border = "1px solid #f87171";
+    } else {
+      toast.style.background = "rgba(15, 23, 42, 0.95)";
+      toast.style.color = "#38bdf8";
+      toast.style.border = "1px solid rgba(56, 189, 248, 0.5)";
+    }
+
+    toast.innerHTML = msg;
+    toast.style.opacity = "1";
+    toast.style.transform = "translateX(-50%) translateY(0)";
+
+    clearTimeout(this._toastTimeout);
+    this._toastTimeout = setTimeout(() => {
+      if (toast) {
+        toast.style.opacity = "0";
+        toast.style.transform = "translateX(-50%) translateY(-10px)";
+      }
+    }, 2800);
+  }
+
+  /* =========================================================================
+   * STEP 5: ACTIVE MISSION VIEW (TOP VIEW SWITCHER + BLUEPRINT CANVAS + SHOP)
+   * ========================================================================= */
+  getTotalPlacedCount(type = null) {
+    let count = 0;
+    ["left", "right", "front"].forEach((v) => {
+      (this.placedElements[v] || []).forEach((item) => {
+        if (!type || item.type === type) count++;
+      });
+    });
+    return count;
+  }
+
+  getUnplacedCount(type) {
+    const bought = this.purchased[type] || 0;
+    const placed = this.getTotalPlacedCount(type);
+    return Math.max(0, bought - placed);
+  }
+
+  getTotalWeight() {
+    let weight = 0;
+    ["left", "right", "front"].forEach((v) => {
+      (this.placedElements[v] || []).forEach((item) => {
+        weight += item.weight || 0;
+      });
+    });
+    return weight;
+  }
+
+  showToast(msg, type = "info") {
+    let toast = document.getElementById("bridge-live-toast");
+    if (!toast) {
+      toast = document.createElement("div");
+      toast.id = "bridge-live-toast";
+      toast.style.position = "absolute";
+      toast.style.top = "74px";
+      toast.style.left = "50%";
+      toast.style.transform = "translateX(-50%)";
+      toast.style.padding = "0.6rem 1.2rem";
+      toast.style.borderRadius = "8px";
+      toast.style.fontSize = "0.85rem";
+      toast.style.fontWeight = "700";
+      toast.style.zIndex = "100";
+      toast.style.boxShadow = "0 8px 30px rgba(0,0,0,0.7)";
+      toast.style.transition = "all 0.3s ease";
+      toast.style.pointerEvents = "none";
+      const visualArea = document.querySelector(".sim-stage-visual");
+      if (visualArea) visualArea.appendChild(toast);
+      else if (this.container) this.container.appendChild(toast);
+    }
+
+    if (type === "success") {
+      toast.style.background = "linear-gradient(135deg, #059669, #10b981)";
+      toast.style.color = "#ffffff";
+      toast.style.border = "1px solid #34d399";
+    } else if (type === "refund") {
+      toast.style.background = "linear-gradient(135deg, #d97706, #f59e0b)";
+      toast.style.color = "#000000";
+      toast.style.border = "1px solid #fde68a";
+    } else if (type === "warn" || type === "error") {
+      toast.style.background = "linear-gradient(135deg, #dc2626, #ef4444)";
+      toast.style.color = "#ffffff";
+      toast.style.border = "1px solid #f87171";
+    } else {
+      toast.style.background = "rgba(15, 23, 42, 0.95)";
+      toast.style.color = "#38bdf8";
+      toast.style.border = "1px solid rgba(56, 189, 248, 0.5)";
+    }
+
+    toast.innerHTML = msg;
+    toast.style.opacity = "1";
+    toast.style.transform = "translateX(-50%) translateY(0)";
+
+    clearTimeout(this._toastTimeout);
+    this._toastTimeout = setTimeout(() => {
+      if (toast) {
+        toast.style.opacity = "0";
+        toast.style.transform = "translateX(-50%) translateY(-10px)";
+      }
+    }, 2800);
+  }
+
+  /* =========================================================================
+   * STEP 5: ACTIVE MISSION VIEW (TOP VIEW SWITCHER + BLUEPRINT CANVAS + SHOP)
+   * ========================================================================= */
+  getTotalPlacedCount(type = null) {
+    let count = 0;
+    ["left", "right", "front"].forEach((v) => {
+      (this.placedElements[v] || []).forEach((item) => {
+        if (!type || item.type === type) count++;
+      });
+    });
+    return count;
+  }
+
+  getUnplacedCount(type) {
+    const bought = this.purchased[type] || 0;
+    const placed = this.getTotalPlacedCount(type);
+    return Math.max(0, bought - placed);
+  }
+
+  getTotalWeight() {
+    let weight = 0;
+    ["left", "right", "front"].forEach((v) => {
+      (this.placedElements[v] || []).forEach((item) => {
+        weight += item.weight || 0;
+      });
+    });
+    return weight;
+  }
+
+  showToast(msg, type = "info") {
+    let toast = document.getElementById("bridge-live-toast");
+    if (!toast) {
+      toast = document.createElement("div");
+      toast.id = "bridge-live-toast";
+      toast.style.position = "absolute";
+      toast.style.top = "74px";
+      toast.style.left = "50%";
+      toast.style.transform = "translateX(-50%)";
+      toast.style.padding = "0.55rem 1.25rem";
+      toast.style.borderRadius = "20px";
+      toast.style.fontSize = "0.82rem";
+      toast.style.fontWeight = "700";
+      toast.style.zIndex = "100";
+      toast.style.boxShadow = "0 8px 30px rgba(0,0,0,0.5)";
+      toast.style.backdropFilter = "blur(12px)";
+      toast.style.transition = "all 0.3s cubic-bezier(0.16, 1, 0.3, 1)";
+      toast.style.pointerEvents = "none";
+      const visualArea = document.querySelector(".sim-stage-visual");
+      if (visualArea) visualArea.appendChild(toast);
+      else if (this.container) this.container.appendChild(toast);
+    }
+
+    if (type === "success") {
+      toast.style.background = "linear-gradient(135deg, rgba(16,185,129,0.95), rgba(5,150,105,0.95))";
+      toast.style.color = "#ffffff";
+      toast.style.border = "1px solid rgba(52,211,153,0.5)";
+    } else if (type === "refund") {
+      toast.style.background = "linear-gradient(135deg, rgba(245,158,11,0.95), rgba(217,119,6,0.95))";
+      toast.style.color = "#000000";
+      toast.style.border = "1px solid #fde68a";
+    } else if (type === "warn" || type === "error") {
+      toast.style.background = "linear-gradient(135deg, rgba(239,68,68,0.95), rgba(220,38,38,0.95))";
+      toast.style.color = "#ffffff";
+      toast.style.border = "1px solid rgba(248,113,113,0.5)";
+    } else {
+      toast.style.background = "rgba(15, 23, 42, 0.92)";
+      toast.style.color = "#38bdf8";
+      toast.style.border = "1px solid rgba(56, 189, 248, 0.35)";
+    }
+
+    toast.innerHTML = msg;
+    toast.style.opacity = "1";
+    toast.style.transform = "translateX(-50%) translateY(0)";
+
+    clearTimeout(this._toastTimeout);
+    this._toastTimeout = setTimeout(() => {
+      if (toast) {
+        toast.style.opacity = "0";
+        toast.style.transform = "translateX(-50%) translateY(-10px)";
+      }
+    }, 2800);
+  }
+
+  /* =========================================================================
+   * STEP 5: ACTIVE MISSION VIEW (TOP VIEW SWITCHER + BLUEPRINT CANVAS + SHOP)
+   * ========================================================================= */
+  getTotalPlacedCount(type = null) {
+    let count = 0;
+    ["left", "right", "front"].forEach((v) => {
+      (this.placedElements[v] || []).forEach((item) => {
+        if (!type || item.type === type) count++;
+      });
+    });
+    return count;
+  }
+
+  getUnplacedCount(type) {
+    const bought = this.purchased[type] || 0;
+    const placed = this.getTotalPlacedCount(type);
+    return Math.max(0, bought - placed);
+  }
+
+  getTotalWeight() {
+    let weight = 0;
+    ["left", "right", "front"].forEach((v) => {
+      (this.placedElements[v] || []).forEach((item) => {
+        weight += item.weight || 0;
+      });
+    });
+    return weight;
+  }
+
+  showToast(msg, type = "info") {
+    let toast = document.getElementById("bridge-live-toast");
+    if (!toast) {
+      toast = document.createElement("div");
+      toast.id = "bridge-live-toast";
+      toast.style.position = "absolute";
+      toast.style.top = "74px";
+      toast.style.left = "50%";
+      toast.style.transform = "translateX(-50%)";
+      toast.style.padding = "0.55rem 1.25rem";
+      toast.style.borderRadius = "20px";
+      toast.style.fontSize = "0.82rem";
+      toast.style.fontWeight = "700";
+      toast.style.zIndex = "100";
+      toast.style.boxShadow = "0 8px 30px rgba(0,0,0,0.5)";
+      toast.style.backdropFilter = "blur(12px)";
+      toast.style.transition = "all 0.3s cubic-bezier(0.16, 1, 0.3, 1)";
+      toast.style.pointerEvents = "none";
+      const visualArea = document.querySelector(".sim-stage-visual");
+      if (visualArea) visualArea.appendChild(toast);
+      else if (this.container) this.container.appendChild(toast);
+    }
+
+    if (type === "success") {
+      toast.style.background = "linear-gradient(135deg, rgba(16,185,129,0.95), rgba(5,150,105,0.95))";
+      toast.style.color = "#ffffff";
+      toast.style.border = "1px solid rgba(52,211,153,0.5)";
+    } else if (type === "refund") {
+      toast.style.background = "linear-gradient(135deg, rgba(245,158,11,0.95), rgba(217,119,6,0.95))";
+      toast.style.color = "#000000";
+      toast.style.border = "1px solid #fde68a";
+    } else if (type === "warn" || type === "error") {
+      toast.style.background = "linear-gradient(135deg, rgba(239,68,68,0.95), rgba(220,38,38,0.95))";
+      toast.style.color = "#ffffff";
+      toast.style.border = "1px solid rgba(248,113,113,0.5)";
+    } else {
+      toast.style.background = "rgba(15, 23, 42, 0.92)";
+      toast.style.color = "#38bdf8";
+      toast.style.border = "1px solid rgba(56, 189, 248, 0.35)";
+    }
+
+    toast.innerHTML = msg;
+    toast.style.opacity = "1";
+    toast.style.transform = "translateX(-50%) translateY(0)";
+
+    clearTimeout(this._toastTimeout);
+    this._toastTimeout = setTimeout(() => {
+      if (toast) {
+        toast.style.opacity = "0";
+        toast.style.transform = "translateX(-50%) translateY(-10px)";
+      }
+    }, 2800);
+  }
+
+  /* =========================================================================
+   * STEP 5: ACTIVE MISSION VIEW (TOP VIEW SWITCHER + BLUEPRINT CANVAS + SHOP)
+   * ========================================================================= */
+/* =========================================================================
+ * STEP 5: ACTIVE MISSION VIEW (TOP VIEW SWITCHER + BLUEPRINT CANVAS + SHOP)
+ * ========================================================================= */
+startMission() {
+  this.phase = "mission";
+  this.currentView = "left";
+
+  const overlay = document.getElementById("bridge-overlay-layer");
+  if (overlay) overlay.innerHTML = "";
+
+  const canvas = document.getElementById("bridge-cinematic-canvas");
+  if (canvas) {
+    const ctx = canvas.getContext("2d");
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
+
+  const studentTitle = this.project.studentName || "Junior Engineer";
+  const teamSpan = (this.project.teamName && this.project.teamName.trim().length > 0)
+    ? ` • <span id="engineer-team-tag" style="color:#a78bfa;">${this.project.teamName.trim()}</span>`
+    : '';
+
+  this.container.innerHTML = `
+    <div class="sim-stage-split" style="width:100%; height:100%; display:flex; position:relative; overflow:hidden;">
+      <!-- Left: 72% Visual Blueprint Workspace -->
+      <div class="sim-stage-visual" id="sim-stage-visual" style="flex:7.2; position:relative; background:#070b14; display:flex; flex-direction:column; overflow:hidden; border-right:1px solid rgba(255,255,255,0.08);">
+        
+        <!-- Top Site Status & View Switcher Bar (Pinterest Aesthetic Glass Pill) -->
+        <div style="position:absolute; top:12px; left:12px; right:12px; display:flex; justify-content:space-between; align-items:center; background:rgba(15,23,42,0.85); border:1px solid rgba(255,255,255,0.12); border-radius:16px; padding:0.55rem 1.1rem; z-index:10; backdrop-filter:blur(16px); box-shadow:0 10px 30px rgba(0,0,0,0.5);">
+          
+          <div style="display:flex; flex-direction:column;">
+            <div style="font-size:0.60rem; text-transform:uppercase; color:#94a3b8; font-weight:700; letter-spacing:0.08em;" id="top-engineer-team-tag">
+              ENGINEER • <span id="engineer-name-tag" style="color:#38bdf8;">${studentTitle}</span>${teamSpan}
+            </div>
+            <div style="font-size:0.84rem; font-weight:800; color:#fff;" id="view-title-display">
+              Left Side View
+            </div>
+          </div>
+
+          <!-- View Switcher (Soft Pill Capsule) -->
+          <div style="display:flex; background:rgba(2,6,23,0.65); padding:0.25rem; border-radius:12px; border:1px solid rgba(255,255,255,0.08); gap:0.35rem;" id="bridge-view-switcher">
+            <button id="btn-view-left" class="btn btn-subtle active" style="font-size:0.75rem; font-weight:700; padding:0.35rem 0.8rem; border-radius:8px; cursor:pointer; transition:all 0.2s;">
+              📐 Left View
+            </button>
+            <button id="btn-view-right" class="btn btn-subtle" style="font-size:0.75rem; font-weight:700; padding:0.35rem 0.8rem; border-radius:8px; cursor:pointer; transition:all 0.2s;">
+              📐 Right View
+            </button>
+            <button id="btn-view-front" class="btn btn-subtle" style="font-size:0.75rem; font-weight:700; padding:0.35rem 0.8rem; border-radius:8px; cursor:pointer; transition:all 0.2s;">
+              👁️ Front View
+            </button>
+            <button id="btn-view-aerial" class="btn btn-subtle" style="font-size:0.75rem; font-weight:700; padding:0.35rem 0.8rem; border-radius:8px; cursor:pointer; transition:all 0.2s;" title="Top Aerial 3D View of your bridge">
+              🚁 Aerial View
+            </button>
+            <button id="btn-copy-left-to-right" class="btn btn-subtle" title="Copy Left View design to Right View so both sides match" style="font-size:0.75rem; font-weight:700; padding:0.35rem 0.8rem; border-radius:8px; cursor:pointer; background:rgba(56,189,248,0.15); color:#38bdf8; border:1px solid rgba(56,189,248,0.35); transition:all 0.2s;">
+              📋 Copy Left → Right
+            </button>
+          </div>
+
+          <!-- Top Badges: Level, 17-Min Timer, Budget, Weight, View Design -->
+          <div style="display:flex; gap:0.5rem; align-items:center;">
+            <!-- Level Indicator Badge (Hidden in Level 1 as requested) -->
+            <div id="mission-level-badge" style="display:none; align-items:center; gap:0.35rem; background:rgba(99,102,241,0.14); border:1px solid rgba(99,102,241,0.4); color:#a5b4fc; font-weight:800; font-size:0.76rem; padding:0.35rem 0.75rem; border-radius:20px; transition:all 0.25s;">
+              <span id="mission-level-icon">🎮</span>
+              <span id="mission-level-text">LEVEL 1: Design</span>
+            </div>
+
+            <!-- 17-Minute Mission Timer Badge -->
+            <div id="mission-timer-badge" style="display:flex; align-items:center; gap:0.35rem; background:rgba(56,189,248,0.12); border:1px solid rgba(56,189,248,0.35); color:#38bdf8; font-weight:800; font-size:0.80rem; padding:0.35rem 0.8rem; border-radius:20px; box-shadow:0 0 16px rgba(56,189,248,0.2);">
+              <span>⏱️</span>
+              <span id="mission-timer-display" style="font-family:monospace; font-size:0.92rem; font-weight:900;">17:00</span>
+            </div>
+
+            <button id="btn-blueprint-home" class="btn btn-subtle" style="font-size:0.74rem; font-weight:800; padding:0.35rem 0.75rem; border-radius:18px; border:1px solid rgba(255,255,255,0.2); color:#f8fafc; background:rgba(255,255,255,0.08); cursor:pointer; display:none; align-items:center; gap:0.35rem; transition:all 0.2s;" title="Exit simulation and return to homepage">
+              <span>🏠</span> <span>Homepage</span>
+            </button>
+
+            <button id="btn-top-view-design" class="btn btn-subtle" style="font-size:0.74rem; font-weight:800; padding:0.35rem 0.75rem; border-radius:18px; border:1px solid rgba(56,189,248,0.4); color:#38bdf8; background:rgba(56,189,248,0.12); cursor:pointer;" title="View your saved bridge design">
+              <span>📐 View Design</span>
+            </button>
+            
+
+            <button id="btn-new-project" class="btn btn-subtle" style="font-size:0.72rem; font-weight:700; padding:0.35rem 0.65rem; border-radius:18px; border:1px solid rgba(255,255,255,0.15); color:#94a3b8; cursor:pointer;" title="Start a fresh bridge design">
+              ✨ New
+            </button>
+
+            <div id="top-budget-badge" style="display:flex; align-items:center; gap:0.3rem; background:rgba(16,185,129,0.1); border:1px solid rgba(52,211,153,0.3); color:#34d399; font-weight:700; font-size:0.76rem; padding:0.35rem 0.7rem; border-radius:20px;">
+  <span>💰</span>
+  <span id="budget-amount-display">₹${this.budget}</span>
+</div>
+            <div id="top-weight-badge" style="display:flex; align-items:center; gap:0.3rem; background:rgba(56,189,248,0.1); border:1px solid rgba(56,189,248,0.3); color:#7dd3fc; font-weight:700; font-size:0.76rem; padding:0.35rem 0.7rem; border-radius:20px;">
+              <span>⚖️</span>
+              <span id="weight-amount-display">${this.getTotalWeight()}g</span>
+            </div>
+
+            <!-- Classroom Audio Volume Widget -->
+            <div id="classroom-audio-widget" style="position:relative; display:flex; align-items:center;">
+              <button id="btn-audio-toggle" class="btn btn-subtle" style="font-size:0.72rem; font-weight:800; padding:0.35rem 0.65rem; border-radius:18px; border:1px solid rgba(255,255,255,0.15); color:#cbd5e1; background:rgba(15,23,42,0.7); cursor:pointer; display:flex; align-items:center; gap:0.35rem;" title="Adjust simulation volume or enable Classroom Mode">
+                <span id="audio-icon-display">🔊</span>
+                <span id="audio-vol-percent">35%</span>
+              </button>
+              <div id="audio-controls-popover" style="display:none; position:absolute; top:calc(100% + 6px); right:0; background:#0b1329; border:1px solid rgba(56,189,248,0.4); border-radius:14px; padding:0.8rem 1rem; width:220px; z-index:200; box-shadow:0 15px 35px rgba(0,0,0,0.8); flex-direction:column; gap:0.6rem;">
+                <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.72rem; font-weight:800; color:#fff;">
+                  <span>VOLUME</span>
+                  <span id="audio-slider-val-label" style="color:#38bdf8; font-family:monospace;">35%</span>
+                </div>
+                <input type="range" id="audio-volume-slider" min="0" max="100" value="35" style="width:100%; accent-color:#38bdf8; cursor:pointer;" />
+                <div style="display:flex; gap:0.4rem; margin-top:0.2rem;">
+                  <button id="btn-classroom-mode" class="btn btn-subtle" style="flex:1; font-size:0.65rem; font-weight:800; padding:0.3rem 0.4rem; border-radius:6px; border:1px solid rgba(56,189,248,0.3); color:#38bdf8; background:rgba(56,189,248,0.1); cursor:pointer;" title="Quiet 15% volume for computer lab">
+                    🏫 Classroom (15%)
+                  </button>
+                  <button id="btn-mute-toggle" class="btn btn-subtle" style="font-size:0.65rem; font-weight:700; padding:0.3rem 0.5rem; border-radius:6px; border:1px solid rgba(255,255,255,0.12); color:#94a3b8; cursor:pointer;">
+                    Mute
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blueprint Canvas Area -->
+        <div style="position:relative; width:100%; height:100%; flex-grow:1;">
+          <canvas id="bridge-construction-canvas" style="position:absolute; inset:0; width:100%; height:100%; display:block; cursor:crosshair; touch-action:none;"></canvas>
+          <div id="dot-hover-tooltip" style="position:absolute; pointer-events:none; display:none; background:rgba(15,23,42,0.95); border:1px solid var(--accent-cyan, #38bdf8); border-radius:8px; padding:0.4rem 0.8rem; font-size:0.75rem; color:#fff; font-family:monospace; box-shadow:0 6px 20px rgba(0,0,0,0.6); z-index:20;"></div>
+          
+          <!-- Real-time Test HUD overlay (Removed completely as requested) -->
+          <div id="test-runner-overlay" style="display:none!important;">
+            <span id="test-vehicle-icon"></span>
+            <div id="test-vehicle-title"></div>
+            <div id="test-vehicle-subtitle"></div>
+            <div id="test-status-pill"></div>
+            <button id="btn-stop-test" style="display:none;"></button>
+          </div>
+
+          <!-- VEHICLE PASSED RESULT CARD OVERLAY (Shown when vehicle safely crosses) -->
+          <div id="vehicle-result-card-overlay" style="position:absolute; top:75px; left:50%; transform:translateX(-50%); width:90%; max-width:480px; background:#0c1224; border:1px solid rgba(52,211,153,0.5); border-radius:20px; padding:1.5rem 1.8rem; display:none; flex-direction:column; gap:1.1rem; z-index:50; backdrop-filter:blur(20px); box-shadow:0 30px 90px rgba(0,0,0,0.9), 0 0 35px rgba(52,211,153,0.25); text-align:center;">
+            <!-- Header -->
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:0.6rem;">
+              <div style="display:flex; align-items:center; gap:0.6rem;">
+                <span id="veh-res-icon" style="font-size:1.8rem;">🛵</span>
+                <div style="text-align:left;">
+                  <div id="veh-res-name" style="font-size:1rem; font-weight:900; color:#fff;">Delivery Scooter</div>
+                  <div id="veh-res-stage" style="font-size:0.72rem; color:#94a3b8;">Vehicle 1 of 7</div>
+                </div>
+              </div>
+              <div style="font-size:0.72rem; font-weight:800; padding:0.25rem 0.65rem; border-radius:12px; background:rgba(52,211,153,0.15); color:#34d399; border:1px solid rgba(52,211,153,0.3);">
+                ✓ TEST PASSED
+              </div>
+            </div>
+
+            <!-- Vehicle Passed Message -->
+            <div style="background:rgba(52,211,153,0.08); border:1px solid rgba(52,211,153,0.25); border-radius:14px; padding:1rem 0.8rem;">
+              <div style="font-size:1.1rem; font-weight:900; color:#34d399; margin-bottom:0.25rem;">
+                Test Passed!
+              </div>
+              <div id="veh-res-message" style="font-size:0.82rem; color:#e2e8f0; line-height:1.4;">
+                Delivery Scooter crossed safely. Time to test the next vehicle!
+              </div>
+            </div>
+
+            <!-- Stats: Load & Deflection -->
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.6rem; font-size:0.75rem;">
+              <div style="background:rgba(15,23,42,0.8); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:0.6rem;">
+                <div style="color:#94a3b8; font-size:0.68rem; text-transform:uppercase;">Vehicle Weight</div>
+                <div id="veh-res-load" style="font-size:1.1rem; font-weight:800; color:#38bdf8; margin-top:0.2rem;">100 g</div>
+              </div>
+              <div style="background:rgba(15,23,42,0.8); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:0.6rem;">
+                <div style="color:#94a3b8; font-size:0.68rem; text-transform:uppercase;">Bridge Deflection</div>
+                <div id="veh-res-deflection" style="font-size:1.1rem; font-weight:800; color:#a7f3d0; margin-top:0.2rem;">4.2 mm</div>
+              </div>
+            </div>
+
+            <!-- Instruction / Countdown note -->
+            <div id="veh-res-countdown" style="font-size:0.72rem; color:#94a3b8;">
+              Click below to test the next vehicle.
+            </div>
+
+            <!-- Action Button: Next Vehicle -->
+            <div>
+              <button id="btn-next-vehicle" class="btn btn-primary" style="width:100%; padding:0.75rem 1.5rem; font-size:0.92rem; font-weight:800; border-radius:12px; background:linear-gradient(135deg, #10b981, #059669); border:none; color:#ffffff; box-shadow:0 4px 20px rgba(16,185,129,0.4); cursor:pointer;">
+                Test Next Vehicle ➔
+              </button>
+            </div>
+          </div>
+
+          <!-- BRIDGE STRENGTH TO WEIGHT RATIO RESULT OVERLAY -->
+          <div id="bridge-swr-result-overlay" style="position:absolute; top:75px; left:50%; transform:translateX(-50%); width:90%; max-width:520px; background:#0c1224; border:1px solid rgba(56,189,248,0.5); border-radius:20px; padding:1.6rem 2rem; display:none; flex-direction:column; gap:1.2rem; z-index:50; backdrop-filter:blur(20px); box-shadow:0 30px 90px rgba(0,0,0,0.9), 0 0 40px rgba(56,189,248,0.25); text-align:center;">
+            <!-- Header -->
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:0.75rem;">
+              <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.12em; color:#38bdf8;">
+                BRIDGE EVALUATION RESULT
+              </div>
+              <span id="swr-vehicle-icon" style="font-size:1.6rem;">🌉</span>
+            </div>
+
+            <!-- Hero Metric: Strength-to-Weight Ratio -->
+            <div style="background:linear-gradient(135deg, rgba(56,189,248,0.12), rgba(16,185,129,0.12)); border:1px solid rgba(56,189,248,0.35); border-radius:16px; padding:1.2rem 1rem;">
+              <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; color:#94a3b8;">
+                STRENGTH TO WEIGHT RATIO
+              </div>
+              <div id="swr-ratio-value" style="font-size:3.2rem; font-weight:900; color:#38bdf8; font-family:monospace; line-height:1.1; margin-top:0.4rem;">
+                0.00
+              </div>
+            </div>
+
+            <!-- Supporting Readouts: Strength & Weight -->
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; text-align:center;">
+              <div style="background:rgba(15,23,42,0.8); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:0.85rem 0.6rem;">
+                <div style="font-size:0.68rem; color:#94a3b8; font-weight:700; text-transform:uppercase;">LOAD BRIDGE CAN TAKE</div>
+                <div id="swr-strength-val" style="font-size:1.3rem; font-weight:900; color:#34d399; font-family:monospace; margin-top:0.25rem;">0 g</div>
+                <div id="swr-vehicle-name" style="font-size:0.72rem; color:#cbd5e1; font-weight:600; margin-top:0.2rem;">—</div>
+              </div>
+              <div style="background:rgba(15,23,42,0.8); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:0.85rem 0.6rem;">
+                <div style="font-size:0.68rem; color:#94a3b8; font-weight:700; text-transform:uppercase;">BRIDGE WEIGHT</div>
+                <div id="swr-weight-val" style="font-size:1.3rem; font-weight:900; color:#fbbf24; font-family:monospace; margin-top:0.25rem;">0 g</div>
+                <div style="font-size:0.72rem; color:#94a3b8; font-weight:600; margin-top:0.2rem;">Total Mass</div>
+              </div>
+            </div>
+
+            <!-- Action Button -->
+            <div style="padding-top:0.25rem;">
+              <button id="btn-swr-close" class="btn btn-primary" style="width:100%; padding:0.75rem 1.5rem; font-size:0.92rem; font-weight:800; border-radius:12px; background:linear-gradient(135deg, #38bdf8, #0284c7); border:none; color:#030712; box-shadow:0 4px 20px rgba(56,189,248,0.4); cursor:pointer;">
+                Back to Blueprint
+              </button>
+            </div>
+          </div>
+
+          <div id="vehicle-failure-card-overlay" style="display:none!important;"></div>
+          </div>
+        </div>
+
+        <!-- Bottom Legend Overlay -->
+        <div id="bottom-view-legend" style="position:absolute; bottom:12px; left:12px; right:12px; display:flex; justify-content:space-between; align-items:center; background:rgba(15,23,42,0.88); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:0.45rem 1rem; z-index:10; font-size:0.75rem; backdrop-filter:blur(10px);"></div>
+      </div>
+
+      <!-- Right: 28% Controls, Directive, Material Shop, Submit Button & Toolbox -->
+      <div class="sim-stage-controls" id="sim-stage-controls" style="flex:2.8; min-width:320px; max-width:400px; background:#080c18; border-left:1px solid rgba(255,255,255,0.08); padding:1.1rem; display:flex; flex-direction:column; gap:0.8rem; overflow-y:auto;">
+        
+        <!-- Structural Directive -->
+        <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:0.85rem;">
+          <div style="font-size:0.65rem; text-transform:uppercase; color:var(--accent-cyan, #38bdf8); font-weight:800; letter-spacing:0.08em; margin-bottom:0.3rem; display:flex; align-items:center; gap:0.4rem;">
+            <span>🚨</span> STRUCTURAL DIRECTIVE
+          </div>
+          <p id="structural-directive-text" style="font-size:0.80rem; color:#cbd5e1; line-height:1.4; margin:0;">
+            “Build a bridge connecting Himmatnagar and Ahmedabad. You have <strong>17 minutes</strong> to design before official vehicle and earthquake load challenges.”
+          </p>
+        </div>
+
+        <!-- PRIMARY ACTION BUTTONS: SUBMIT DESIGN & MATERIAL SHOP -->
+        <div style="display:flex; flex-direction:column; gap:0.5rem;">
+          <button id="btn-submit-design" class="btn" style="width:100%; display:flex; align-items:center; justify-content:center; gap:0.6rem; padding:0.85rem; font-size:0.92rem; font-weight:900; background:linear-gradient(135deg, #10b981, #059669); color:#fff; border:none; border-radius:12px; cursor:pointer; box-shadow:0 4px 20px rgba(16,185,129,0.35); transition:all 0.2s;">
+            <span style="font-size:1.2rem;">📋</span>
+            <span>SUBMIT DESIGN</span>
+          </button>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.45rem;">
+            <button id="btn-open-material-shop" class="btn" style="display:flex; align-items:center; justify-content:center; gap:0.4rem; padding:0.65rem 0.5rem; font-size:0.80rem; font-weight:800; background:linear-gradient(135deg, #0284c7, #6366f1); color:#fff; border:none; border-radius:10px; cursor:pointer; box-shadow:0 4px 15px rgba(99,102,241,0.25);">
+              <span>🛒</span>
+              <span>Shop</span>
+              <span id="shop-badge-cart" style="background:#fbbf24; color:#0f172a; font-size:0.70rem; font-weight:900; padding:0.1rem 0.4rem; border-radius:10px;">
+                ₹${this.budget}
+              </span>
+            </button>
+
+            <button id="btn-sidebar-view-design" class="btn btn-subtle" style="display:flex; align-items:center; justify-content:center; gap:0.4rem; padding:0.65rem 0.5rem; font-size:0.80rem; font-weight:700; border-radius:10px; border:1px solid rgba(56,189,248,0.3); color:#7dd3fc; background:rgba(56,189,248,0.08); cursor:pointer;">
+              <span>📐</span>
+              <span>View Design</span>
+              <span id="saved-designs-count-badge" style="background:rgba(56,189,248,0.3); font-size:0.68rem; padding:0.1rem 0.4rem; border-radius:10px;">${this.project.savedDesigns.length}</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- CONSTRUCTION TOOLBOX -->
+        <div style="background:rgba(15,23,42,0.6); border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:0.85rem; display:flex; flex-direction:column; gap:0.6rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.3rem;">
+            <span style="font-size:0.68rem; font-weight:800; text-transform:uppercase; color:#94a3b8; letter-spacing:0.06em;">
+              🛠️ TOOLBOX
+            </span>
+            <div style="display:flex; gap:0.3rem; align-items:center;">
+              <button id="btn-tool-undo" class="btn btn-subtle" style="font-size:0.68rem; font-weight:800; padding:0.25rem 0.5rem; border-radius:8px; border:1px solid rgba(255,255,255,0.15); color:#cbd5e1; background:rgba(255,255,255,0.05); cursor:pointer;" title="Undo last placement (Ctrl+Z)">
+                ↩️ Undo
+              </button>
+              <button id="btn-tool-redo" class="btn btn-subtle" style="font-size:0.68rem; font-weight:800; padding:0.25rem 0.5rem; border-radius:8px; border:1px solid rgba(255,255,255,0.12); color:#64748b; background:rgba(255,255,255,0.02); cursor:pointer;" title="Redo last placement (Ctrl+Y)">
+                ↪️ Redo
+              </button>
+              <button id="btn-tool-dismantle" class="btn btn-subtle" style="font-size:0.68rem; font-weight:800; padding:0.25rem 0.5rem; border-radius:8px; border:1px solid rgba(239,68,68,0.4); color:#f87171; background:rgba(239,68,68,0.1); cursor:pointer;" title="Remove element and refund ₹">
+                🪛 Dismantle
+              </button>
+            </div>
+          </div>
+
+          <!-- Active Tool Instruction Banner -->
+          <div id="active-tool-banner" style="background:rgba(56,189,248,0.08); border:1px solid rgba(56,189,248,0.22); border-radius:10px; padding:0.45rem 0.7rem; font-size:0.73rem; color:#bae6fd; line-height:1.35;">
+            Select a component below to start connecting dots.
+          </div>
+
+          <!-- Tools Grid (7 items from picture) -->
+          <div id="tools-selector-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:0.45rem;">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <!-- TELEMETRY & DESIGN STATS CARD -->
+        <div style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.06); border-radius:12px; padding:0.75rem; display:flex; flex-direction:column; gap:0.3rem; font-size:0.73rem;">
+          <div style="display:flex; justify-content:space-between; color:#94a3b8;">
+            <span>Total Materials Bought:</span>
+            <span id="stat-total-bought" style="color:#fff; font-weight:700;">0 items</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; color:#94a3b8;">
+            <span>Components Installed:</span>
+            <span id="stat-total-placed" style="color:#38bdf8; font-weight:700;">0 parts</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; color:#94a3b8;">
+            <span>Current Bridge Mass:</span>
+            <span id="stat-total-weight" style="color:#fbbf24; font-weight:700;">0 g</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; color:#94a3b8;">
+            <span>Budget Spent:</span>
+            <span id="stat-budget-spent" style="color:#f87171; font-weight:700;">₹0</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; color:#94a3b8;">
+            <span>Remaining Budget:</span>
+            <span id="stat-remaining-budget" style="color:#34d399; font-weight:800;">₹${this.budget}</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- STUDENT REGISTRATION MODAL (NAME COMPULSORY, TEAM OPTIONAL, 17-MIN TIMER) -->
+    <div id="student-registration-modal" style="position:absolute; inset:0; background:rgba(3,7,18,0.92); backdrop-filter:blur(14px); display:none; justify-content:center; align-items:center; z-index:300; padding:1.5rem;">
+      <div style="background:#0c1224; border:1px solid rgba(56,189,248,0.4); border-radius:22px; width:100%; max-width:540px; padding:2rem; display:flex; flex-direction:column; gap:1.3rem; box-shadow:0 30px 90px rgba(0,0,0,0.9);">
+        
+        <div style="display:flex; align-items:center; gap:0.9rem;">
+          <div style="font-size:2.2rem; background:rgba(56,189,248,0.12); border:1px solid rgba(56,189,248,0.3); border-radius:16px; width:56px; height:56px; display:flex; align-items:center; justify-content:center;">
+            👷‍♀️
+          </div>
+          <div>
+            <h3 style="margin:0; font-size:1.25rem; font-weight:900; color:#fff;">Civil Engineer Registration</h3>
+            <p style="margin:0.2rem 0 0 0; font-size:0.78rem; color:#94a3b8;">Welcome to the Himmatnagar-Ahmedabad Bridge Mission</p>
+          </div>
+        </div>
+
+        <!-- Timed Challenge Notice Banner -->
+        <div style="background:rgba(56,189,248,0.08); border:1px solid rgba(56,189,248,0.25); border-radius:14px; padding:0.9rem 1.1rem; display:flex; align-items:center; gap:0.8rem;">
+          <span style="font-size:1.6rem;">⏱️</span>
+          <div>
+            <div style="font-size:0.82rem; font-weight:800; color:#38bdf8;">17-Minute Timed Challenge</div>
+            <div style="font-size:0.73rem; color:#cbd5e1; margin-top:0.15rem; line-height:1.4;">
+              Once you click start, a <strong>17:00 countdown timer</strong> will begin. Design and construct your bridge within the ₹700 budget!
+            </div>
+          </div>
+        </div>
+
+        <!-- Error Alert Banner -->
+        <div id="reg-error-msg" style="display:none; background:rgba(239,68,68,0.15); border:1px solid rgba(239,68,68,0.5); color:#fca5a5; font-size:0.78rem; font-weight:700; padding:0.6rem 0.9rem; border-radius:10px;">
+          ⚠️ Student Name is compulsory!
+        </div>
+
+        <!-- Form Fields -->
+        <div style="display:flex; flex-direction:column; gap:1rem;">
+          <div>
+            <label for="reg-student-name" style="display:block; font-size:0.70rem; font-weight:800; text-transform:uppercase; color:#94a3b8; letter-spacing:0.06em; margin-bottom:0.4rem;">
+              STUDENT NAME <span style="color:#ef4444;">* (COMPULSORY)</span>
+            </label>
+            <input type="text" id="reg-student-name" placeholder="Enter your full name..." style="width:100%; box-sizing:border-box; background:rgba(15,23,42,0.85); border:1px solid rgba(255,255,255,0.18); border-radius:10px; padding:0.75rem 1rem; color:#fff; font-size:0.9rem; font-weight:600; outline:none;" />
+          </div>
+
+          <div>
+            <label for="reg-team-name" style="display:block; font-size:0.70rem; font-weight:800; text-transform:uppercase; color:#94a3b8; letter-spacing:0.06em; margin-bottom:0.4rem;">
+              TEAM NAME <span style="color:#64748b;">(OPTIONAL)</span>
+            </label>
+            <input type="text" id="reg-team-name" placeholder="e.g. Titan Builders, Superhuman Alpha..." style="width:100%; box-sizing:border-box; background:rgba(15,23,42,0.85); border:1px solid rgba(255,255,255,0.14); border-radius:10px; padding:0.75rem 1rem; color:#fff; font-size:0.9rem; font-weight:600; outline:none;" />
+          </div>
+        </div>
+
+        <!-- Action Button -->
+        <button id="btn-start-timed-mission" class="btn btn-primary" style="padding:0.85rem; font-size:0.95rem; font-weight:900; border-radius:12px; background:linear-gradient(135deg, #0284c7, #6366f1); border:none; box-shadow:0 4px 20px rgba(99,102,241,0.4); cursor:pointer; display:flex; align-items:center; justify-content:center; gap:0.5rem;">
+          <span>🚀 Start Mission & Begin 17-Minute Timer</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- SUBMIT CONFIRMATION MODAL -->
+    <div id="submit-confirm-modal" style="position:absolute; inset:0; background:rgba(3,7,18,0.88); backdrop-filter:blur(10px); display:none; justify-content:center; align-items:center; z-index:310; padding:1.5rem;">
+      <div style="background:#0c1224; border:1px solid rgba(52,211,153,0.4); border-radius:20px; width:100%; max-width:520px; padding:2rem; display:flex; flex-direction:column; gap:1.2rem; box-shadow:0 25px 70px rgba(0,0,0,0.85); text-align:center;">
+        <div style="font-size:3.2rem; margin-bottom:-0.3rem;">📋</div>
+        <h3 style="margin:0; font-size:1.35rem; font-weight:900; color:#fff;">Submit Your Bridge Design?</h3>
+        <p style="margin:0; font-size:0.85rem; color:#cbd5e1; line-height:1.55;">
+          Are you sure you want to submit your design? You still have <strong id="confirm-modal-time-left" style="color:#38bdf8; font-family:monospace; font-size:1.05rem;">17:00</strong> remaining.<br><br>
+          Once submitted, your bridge design will be archived in your vault and tested under live <strong>Vehicle Weight Challenges</strong> and <strong>Earthquake Stress Tests</strong>.
+        </p>
+        <div style="display:flex; gap:0.85rem; justify-content:center; margin-top:0.4rem;">
+          <button id="btn-confirm-cancel" class="btn btn-subtle" style="padding:0.65rem 1.6rem; font-weight:700; border-radius:10px; cursor:pointer;">
+            Keep Building
+          </button>
+          <button id="btn-confirm-submit" class="btn btn-primary" style="padding:0.65rem 2rem; font-weight:900; border-radius:10px; background:linear-gradient(135deg, #10b981, #059669); border:none; box-shadow:0 4px 18px rgba(16,185,129,0.4); cursor:pointer;">
+            Yes, Submit Design ✓
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- LEVEL 2 TRANSITION MODAL (YOUR DESIGN IS SUBMITTED) -->
+    <div id="level2-transition-modal" style="position:absolute; inset:0; background:rgba(3,7,18,0.94); backdrop-filter:blur(14px); display:none; justify-content:center; align-items:center; z-index:520; padding:1.5rem;">
+      <div style="background:#0c1224; border:1px solid rgba(56,189,248,0.45); border-radius:22px; width:100%; max-width:540px; padding:2rem 2.2rem; display:flex; flex-direction:column; gap:1.2rem; box-shadow:0 30px 90px rgba(0,0,0,0.9); text-align:center;">
+        
+        <div style="width:64px; height:64px; margin:0 auto; background:linear-gradient(135deg, rgba(56,189,248,0.2), rgba(16,185,129,0.2)); border:1px solid rgba(52,211,153,0.5); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2rem; box-shadow:0 0 25px rgba(16,185,129,0.3);">
+          📋
+        </div>
+
+        <div>
+          <div style="display:inline-block; font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#38bdf8; background:rgba(56,189,248,0.12); border:1px solid rgba(56,189,248,0.3); padding:0.25rem 0.75rem; border-radius:20px; margin-bottom:0.5rem;">
+            LEVEL 1 COMPLETED
+          </div>
+          <h2 style="margin:0; font-size:1.5rem; font-weight:900; color:#fff; letter-spacing:0.02em;">
+            Your Design is Submitted
+          </h2>
+          <p style="margin:0.5rem 0 0 0; font-size:0.85rem; color:#cbd5e1; line-height:1.5;">
+            Your blueprint is safely preserved in the <strong>View Design</strong> section and locked for official structural testing.
+          </p>
+        </div>
+
+        <!-- Student & Bridge Stats Pill -->
+        <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:0.85rem 1rem; display:grid; grid-template-columns:1fr 1fr; gap:0.6rem; text-align:left;">
+          <div>
+            <div style="font-size:0.68rem; color:#94a3b8; font-weight:700; text-transform:uppercase;">Student Engineer</div>
+            <div id="lvl2-student-display" style="font-size:0.92rem; font-weight:800; color:#fff; margin-top:0.15rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">—</div>
+          </div>
+          <div>
+            <div style="font-size:0.68rem; color:#94a3b8; font-weight:700; text-transform:uppercase;">Challenge Stage</div>
+            <div style="font-size:0.92rem; font-weight:800; color:#34d399; margin-top:0.15rem;">Level 2: Vehicle Test</div>
+          </div>
+          <div>
+            <div style="font-size:0.68rem; color:#94a3b8; font-weight:700; text-transform:uppercase;">Bridge Mass</div>
+            <div id="lvl2-bridge-mass" style="font-size:0.92rem; font-weight:800; color:#fbbf24; margin-top:0.15rem;">0 g</div>
+          </div>
+          <div>
+            <div style="font-size:0.68rem; color:#94a3b8; font-weight:700; text-transform:uppercase;">Budget Spent</div>
+            <div id="lvl2-budget-spent" style="font-size:0.92rem; font-weight:800; color:#38bdf8; margin-top:0.15rem;">₹0 / ₹700</div>
+          </div>
+        </div>
+
+        <!-- Start Level 2 Button -->
+        <button id="btn-start-level-2" class="btn btn-primary" style="padding:0.95rem; font-size:1.05rem; font-weight:900; border-radius:14px; background:linear-gradient(135deg, #0284c7, #6366f1); border:none; box-shadow:0 4px 25px rgba(99,102,241,0.45); cursor:pointer; display:flex; align-items:center; justify-content:center; gap:0.6rem; transition:transform 0.15s, box-shadow 0.15s;">
+          <span>🚀</span>
+          <span>Start Level 2</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- LEVEL 2 ANIMATION SCREEN OVERLAY (Aesthetic Sports Car & Unfolding Banner) -->
+    <div id="level2-animation-overlay" style="position:absolute; inset:0; background:#070b19; display:none; flex-direction:column; justify-content:space-between; z-index:500; overflow:hidden;">
+      <canvas id="level2-animation-canvas" style="position:absolute; inset:0; width:100%; height:100%; display:block; z-index:1;"></canvas>
+
+      <!-- Top Cinematic Header Bar -->
+      <div style="position:relative; z-index:10; display:flex; justify-content:space-between; align-items:center; padding:1.2rem 1.8rem; background:linear-gradient(180deg, rgba(3,7,18,0.85) 0%, rgba(3,7,18,0) 100%); pointer-events:none;">
+        <div style="display:flex; align-items:center; gap:0.6rem;">
+          <span style="font-size:1.4rem;">✨</span>
+          <div>
+            <div style="font-size:0.70rem; font-weight:900; text-transform:uppercase; letter-spacing:0.14em; color:#38bdf8;">
+              STAGE 2 CINEMATIC
+            </div>
+            <div style="font-size:1.05rem; font-weight:900; color:#fff; letter-spacing:0.02em;">
+              Vehicle Test Challenge
+            </div>
+          </div>
+        </div>
+        
+        <div style="display:flex; gap:0.6rem; pointer-events:auto;">
+          <button id="btn-proceed-to-tests" class="btn btn-primary" style="font-size:0.84rem; font-weight:900; padding:0.48rem 1.4rem; border-radius:20px; background:linear-gradient(135deg, #10b981, #059669); border:none; box-shadow:0 4px 18px rgba(16,185,129,0.45); cursor:pointer; display:flex; align-items:center; gap:0.45rem;">
+            <span>▶</span>
+            <span>Start Load Testing</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    
+<!-- MATERIAL SHOP MODAL OVERLAY -->
+    <div id="material-shop-modal-overlay" style="position:absolute; inset:0; background:rgba(3,7,18,0.85); backdrop-filter:blur(10px); display:none; justify-content:center; align-items:center; z-index:200; padding:1.5rem;">
+      <div style="background:#0b1329; border:1px solid rgba(56,189,248,0.3); border-radius:18px; width:100%; max-width:920px; max-height:90vh; display:flex; flex-direction:column; box-shadow:0 30px 70px rgba(0,0,0,0.8); overflow:hidden;">
+        
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:1.1rem 1.6rem; border-bottom:1px solid rgba(255,255,255,0.08); background:rgba(15,23,42,0.85);">
+          <div style="display:flex; align-items:center; gap:0.75rem;">
+            <span style="font-size:1.6rem;">🛒</span>
+            <div>
+              <h3 style="margin:0; font-size:1.15rem; font-weight:800; color:#fff;">Civil Engineering Material Shop</h3>
+              <p style="margin:0.2rem 0 0 0; font-size:0.75rem; color:#94a3b8;">Purchase components to construct the bridge. Dismantling placed items refunds your budget.</p>
+            </div>
+          </div>
+
+          <div style="display:flex; align-items:center; gap:1.2rem;">
+            <div style="background:rgba(16,185,129,0.15); border:1px solid #10b981; padding:0.4rem 1rem; border-radius:30px; display:flex; align-items:center; gap:0.5rem;">
+              <span style="font-size:0.74rem; color:#94a3b8; font-weight:700;">YOUR BUDGET:</span>
+              <span id="shop-modal-budget-display" style="font-size:1.15rem; font-weight:900; color:#34d399; font-family:monospace;">₹${this.budget}</span>
+            </div>
+            <button id="btn-close-material-shop" class="btn btn-subtle" style="font-size:1.2rem; line-height:1; padding:0.35rem 0.65rem; border-radius:8px; cursor:pointer;">
+              ✕
+            </button>
+          </div>
+        </div>
+
+        <div id="shop-catalog-container" style="flex-grow:1; overflow-y:auto; padding:1.4rem; display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:1.1rem; background:#070d1e;">
+          <!-- Dynamically populated -->
+        </div>
+
+        <div style="padding:0.85rem 1.6rem; border-top:1px solid rgba(255,255,255,0.08); background:rgba(15,23,42,0.92); display:flex; justify-content:flex-end; align-items:center;">
+          <button id="btn-shop-done" class="btn btn-primary" style="padding:0.55rem 1.6rem; font-weight:700; border-radius:10px; background:linear-gradient(135deg, #0284c7, #6366f1); border:none; box-shadow:0 4px 15px rgba(99,102,241,0.35); cursor:pointer;">
+            Done Shopping ✓
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIEW YOUR DESIGN MODAL (DESIGN VAULT) -->
+    <div id="view-design-modal" style="position:absolute; inset:0; background:rgba(3,7,18,0.88); backdrop-filter:blur(12px); display:none; justify-content:center; align-items:center; z-index:220; padding:1.5rem;">
+      <div style="background:#090e1f; border:1px solid rgba(56,189,248,0.35); border-radius:20px; width:100%; max-width:980px; max-height:92vh; display:flex; flex-direction:column; box-shadow:0 30px 80px rgba(0,0,0,0.85); overflow:hidden;">
+        
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:1.1rem 1.6rem; border-bottom:1px solid rgba(255,255,255,0.08); background:rgba(15,23,42,0.9);">
+          <div style="display:flex; align-items:center; gap:0.75rem;">
+            <span style="font-size:1.6rem;">📐</span>
+            <div>
+              <h3 style="margin:0; font-size:1.15rem; font-weight:800; color:#fff;">Saved Bridge Design Vault</h3>
+              <p style="margin:0.2rem 0 0 0; font-size:0.75rem; color:#94a3b8;">Review your bridge designs saved before every test. You can inspect your blueprints anytime.</p>
+            </div>
+          </div>
+          <button id="btn-close-view-design" class="btn btn-subtle" style="font-size:1.2rem; line-height:1; padding:0.35rem 0.65rem; border-radius:8px; cursor:pointer;">
+            ✕
+          </button>
+        </div>
+
+        <div style="display:flex; flex-grow:1; overflow:hidden;">
+          <!-- Left: Snapshot list -->
+          <div id="saved-designs-sidebar" style="width:260px; border-right:1px solid rgba(255,255,255,0.08); background:rgba(2,6,23,0.5); padding:1rem; overflow-y:auto; display:flex; flex-direction:column; gap:0.6rem;">
+            <!-- Dynamically populated -->
+          </div>
+
+          <!-- Right: Blueprint Preview Viewer -->
+          <div style="flex-grow:1; padding:1.2rem; display:flex; flex-direction:column; gap:0.8rem; background:#060a16;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <div id="preview-snapshot-info" style="font-size:0.82rem; font-weight:800; color:#fff;">
+                Select a saved design on the left to inspect
+              </div>
+              <div style="display:flex; gap:0.3rem;" id="preview-view-tabs">
+                <button id="btn-prev-left" class="btn btn-subtle active" style="font-size:0.7rem; padding:0.25rem 0.6rem; border-radius:6px;">Left View</button>
+                <button id="btn-prev-right" class="btn btn-subtle" style="font-size:0.7rem; padding:0.25rem 0.6rem; border-radius:6px;">Right View</button>
+                <button id="btn-prev-front" class="btn btn-subtle" style="font-size:0.7rem; padding:0.25rem 0.6rem; border-radius:6px;">Front View</button>
+                <button id="btn-prev-aerial" class="btn btn-subtle" style="font-size:0.7rem; padding:0.25rem 0.6rem; border-radius:6px;">Aerial View</button>
+              </div>
+            </div>
+
+            <div style="position:relative; flex-grow:1; min-height:360px; background:#040711; border:1px solid rgba(255,255,255,0.06); border-radius:12px; overflow:hidden;">
+              <canvas id="saved-design-preview-canvas" style="position:absolute; inset:0; width:100%; height:100%; display:block;"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VALIDATION WARNING NOTICE MODAL -->
+    <div id="validation-warning-modal" style="position:absolute; inset:0; background:rgba(3,7,18,0.85); backdrop-filter:blur(10px); display:none; justify-content:center; align-items:center; z-index:230; padding:1.5rem;">
+      <div style="background:#0c1224; border:1px solid rgba(239,68,68,0.4); border-radius:18px; width:100%; max-width:680px; display:flex; flex-direction:column; box-shadow:0 25px 70px rgba(0,0,0,0.85); overflow:hidden;">
+        <div style="padding:1.1rem 1.5rem; background:rgba(239,68,68,0.12); border-bottom:1px solid rgba(239,68,68,0.25); display:flex; align-items:center; gap:0.75rem;">
+          <span style="font-size:1.6rem;">⚠️</span>
+          <div>
+            <h3 style="margin:0; font-size:1.1rem; font-weight:800; color:#fff;">Construction Validation Recommendations</h3>
+            <p style="margin:0.2rem 0 0 0; font-size:0.75rem; color:#fca5a5;">Please address these structural items before testing with live vehicles:</p>
+          </div>
+        </div>
+
+        <div id="validation-issues-list" style="padding:1.3rem; max-height:55vh; overflow-y:auto; display:flex; flex-direction:column; gap:0.8rem;">
+          <!-- Dynamically populated -->
+        </div>
+
+        <div style="padding:1rem 1.5rem; border-top:1px solid rgba(255,255,255,0.08); background:rgba(15,23,42,0.8); display:flex; justify-content:space-between; align-items:center;">
+          <button id="btn-val-view-design" class="btn btn-subtle" style="font-size:0.8rem; padding:0.45rem 1rem; color:#38bdf8; border-color:rgba(56,189,248,0.3); cursor:pointer;">
+            📁 View Saved Design in Vault
+          </button>
+          <button id="btn-close-validation" class="btn btn-primary" style="padding:0.5rem 1.5rem; font-weight:700; border-radius:10px; background:linear-gradient(135deg, #0284c7, #6366f1); border:none; cursor:pointer;">
+            Got it! Return to Blueprint
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FINAL ENGINEERING REPORT MODAL -->
+    <div id="final-report-modal" style="position:absolute; inset:0; background:rgba(3,7,18,0.92); backdrop-filter:blur(14px); display:none; justify-content:center; align-items:center; z-index:250; padding:1.5rem;">
+      <div style="background:#0b1329; border:1px solid rgba(56,189,248,0.4); border-radius:20px; width:100%; max-width:860px; max-height:92vh; display:flex; flex-direction:column; box-shadow:0 30px 90px rgba(0,0,0,0.9); overflow:hidden;">
+        
+        <div style="padding:1.2rem 1.6rem; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); border-bottom:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center;">
+          <div style="display:flex; align-items:center; gap:0.85rem;">
+            <span style="font-size:1.8rem;" id="report-header-badge">🏆</span>
+            <div>
+              <h3 style="margin:0; font-size:1.25rem; font-weight:900; color:#fff;" id="report-title">🌉 Overall Bridge Report</h3>
+              <p style="margin:0.2rem 0 0 0; font-size:0.75rem; color:#94a3b8;" id="report-subtitle">Simple report for young bridge builders (Ages 7–9)</p>
+            </div>
+          </div>
+          <button id="btn-close-report" class="btn btn-subtle" style="font-size:1.2rem; line-height:1; padding:0.35rem 0.65rem; border-radius:8px; cursor:pointer;">
+            ✕
+          </button>
+        </div>
+
+        <div style="padding:1.4rem 1.8rem; overflow-y:auto; display:flex; flex-direction:column; gap:1.2rem;">
+          <!-- 4 Metric Cards -->
+          <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:0.8rem;">
+            <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:0.85rem; text-align:center;">
+              <div style="font-size:0.68rem; color:#94a3b8; text-transform:uppercase; font-weight:700;">💰 MONEY LEFT</div>
+              <div id="report-budget-val" style="font-size:1.25rem; font-weight:900; color:#34d399; font-family:monospace; margin-top:0.25rem;">₹450</div>
+              <div id="report-budget-spent" style="font-size:0.68rem; color:#64748b; margin-top:0.15rem;">Spent: ₹250 / ₹700</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:0.85rem; text-align:center;">
+              <div style="font-size:0.68rem; color:#94a3b8; text-transform:uppercase; font-weight:700;">⚖️ BRIDGE WEIGHT</div>
+              <div id="report-mass-val" style="font-size:1.25rem; font-weight:900; color:#fbbf24; font-family:monospace; margin-top:0.25rem;">124 g</div>
+              <div id="report-mass-sub" style="font-size:0.68rem; color:#64748b; margin-top:0.15rem;">Light & strong sticks</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:0.85rem; text-align:center;">
+              <div style="font-size:0.68rem; color:#94a3b8; text-transform:uppercase; font-weight:700;">🚗 HEAVIEST CAR CROSSED</div>
+              <div id="report-vehicle-val" style="font-size:1.05rem; font-weight:900; color:#38bdf8; margin-top:0.35rem;">🚌 Bus (400g)</div>
+              <div id="report-vehicle-sub" style="font-size:0.68rem; color:#64748b; margin-top:0.15rem;">Passed the test!</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:0.85rem; text-align:center;">
+              <div style="font-size:0.68rem; color:#94a3b8; text-transform:uppercase; font-weight:700;">🛡️ EARTHQUAKE SHAKES</div>
+              <div id="report-earthquake-val" style="font-size:1.05rem; font-weight:900; color:#c084fc; margin-top:0.35rem;">⚡ Level 2</div>
+              <div id="report-earthquake-sub" style="font-size:0.68rem; color:#64748b; margin-top:0.15rem;">Survived the shake!</div>
+            </div>
+          </div>
+
+          <!-- Bridge Strength Score Banner -->
+          <div style="background:linear-gradient(135deg, rgba(56,189,248,0.12), rgba(99,102,241,0.12)); border:1px solid rgba(56,189,248,0.3); border-radius:14px; padding:1rem 1.4rem; display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <div style="font-size:0.72rem; text-transform:uppercase; color:#7dd3fc; font-weight:800; letter-spacing:0.06em;">⭐ BRIDGE STRENGTH SCORE</div>
+              <div id="report-strength-headline" style="font-size:1.15rem; font-weight:900; color:#fff; margin-top:0.15rem;">Strength Score: <span id="report-str-weight-ratio" style="color:#38bdf8; font-family:monospace; font-size:1.35rem;">3.22</span></div>
+              <div id="report-strength-desc" style="font-size:0.78rem; color:#94a3b8; margin-top:0.2rem;">Your bridge carries over 3 times its own weight! That makes it super strong.</div>
+            </div>
+            <div id="report-strength-stars" style="font-size:2.4rem;">⭐⭐⭐</div>
+          </div>
+
+          <!-- Vehicles Passed Progression List -->
+          <div style="background:rgba(15,23,42,0.6); border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:1rem;">
+            <div style="font-size:0.72rem; text-transform:uppercase; color:#94a3b8; font-weight:800; margin-bottom:0.6rem;">🚗 VEHICLE TEST RESULTS</div>
+            <div id="report-vehicles-grid" style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+              <!-- Populated dynamically -->
+            </div>
+          </div>
+
+          <!-- 3 Kid Questions: What Happened, Why It Happened, How Can It Be Better -->
+          <div style="display:flex; flex-direction:column; gap:0.75rem;">
+            
+            <!-- 1. What Happened -->
+            <div style="background:rgba(239,68,68,0.08); border:1px solid rgba(239,68,68,0.25); border-radius:14px; padding:0.9rem 1.1rem;">
+              <div style="font-size:0.72rem; text-transform:uppercase; color:#fca5a5; font-weight:800; letter-spacing:0.06em; display:flex; align-items:center; gap:0.4rem;">
+                <span id="report-what-icon">💥</span> <span id="report-what-title">1. WHAT HAPPENED</span>
+              </div>
+              <div id="report-what-failed-text" style="font-size:0.84rem; color:#f1f5f9; line-height:1.5; margin-top:0.35rem;">
+                <!-- Populated dynamically -->
+              </div>
+            </div>
+
+            <!-- 2. Why It Happened -->
+            <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:0.9rem 1.1rem;">
+              <div style="font-size:0.72rem; text-transform:uppercase; color:#fbbf24; font-weight:800; letter-spacing:0.06em; display:flex; align-items:center; gap:0.4rem;">
+                <span>🤔</span> <span id="report-why-title">2. WHY IT HAPPENED</span>
+              </div>
+              <div id="report-why-failed-text" style="font-size:0.84rem; color:#f1f5f9; line-height:1.5; margin-top:0.35rem;">
+                <!-- Populated dynamically -->
+              </div>
+            </div>
+
+            <!-- 3. How Can It Be Better -->
+            <div style="background:rgba(16,185,129,0.08); border:1px solid rgba(52,211,153,0.25); border-radius:14px; padding:0.9rem 1.1rem;">
+              <div style="font-size:0.72rem; text-transform:uppercase; color:#6ee7b7; font-weight:800; letter-spacing:0.06em; display:flex; align-items:center; gap:0.4rem;">
+                <span>💡</span> <span id="report-better-title">3. HOW TO MAKE YOUR BRIDGE BETTER</span>
+              </div>
+              <div id="report-educational-takeaways" style="margin-top:0.4rem; display:flex; flex-direction:column; gap:0.35rem; font-size:0.82rem; color:#e2e8f0; line-height:1.5;">
+                <!-- Populated dynamically with simple tips -->
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div style="padding:1rem 1.8rem; border-top:1px solid rgba(255,255,255,0.08); background:rgba(15,23,42,0.95); display:flex; justify-content:space-between; align-items:center;">
+          <button id="btn-report-view-design" class="btn btn-subtle" style="font-weight:700; border-radius:10px; border:1px solid rgba(56,189,248,0.3); color:#38bdf8;">
+            📐 Look at Blueprint
+          </button>
+          <button id="btn-redesign-bridge" class="btn btn-primary" style="padding:0.65rem 2rem; font-weight:800; font-size:0.92rem; border-radius:12px; background:linear-gradient(135deg, #10b981, #059669); border:none; box-shadow:0 4px 20px rgba(16,185,129,0.35); cursor:pointer;">
+            ✏️ Return to Blueprint
+          </button>
+        </div>
+      </div>
+    </div>
+  `;
+
+  this.setupViewSwitcher();
+  this.setupMaterialShopEvents();
+  this.setupConstructionCanvas();
+  this.renderToolbox();
+  this.updateTelemetryUI();
+  this.updateViewUI();
+  this.redrawCanvas();
+  this.setupTestingAndVaultEvents();
+
+  // Open Student Registration Modal on start
+  this.openRegistrationModal();
+}
+
+/* =========================================================================
+ * EVENT LISTENERS FOR TESTING, VAULT & NEW PROJECT
+ * ========================================================================= */
+setupTestingAndVaultEvents() {
+  // Submit Design CTA in Sidebar
+  const submitDesignBtn = document.getElementById("btn-submit-design");
+  if (submitDesignBtn) {
+    submitDesignBtn.addEventListener("click", () => {
+      this.openSubmitConfirmModal();
+    });
+  }
+
+  // Start Testing CTA (fallback compatibility)
+  const startTestBtn = document.getElementById("btn-start-testing");
+  if (startTestBtn) {
+    startTestBtn.addEventListener("click", () => {
+      this.openSubmitConfirmModal();
+    });
+  }
+
+  // Registration Modal Events
+  const startTimedMissionBtn = document.getElementById("btn-start-timed-mission");
+  if (startTimedMissionBtn) {
+    startTimedMissionBtn.addEventListener("click", () => {
+      this.handleRegistrationSubmit();
+    });
+  }
+  const regStudentInput = document.getElementById("reg-student-name");
+  if (regStudentInput) {
+    regStudentInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        this.handleRegistrationSubmit();
+      }
+    });
+  }
+
+  // Submit Confirmation Modal Events
+  const confirmCancelBtn = document.getElementById("btn-confirm-cancel");
+  if (confirmCancelBtn) {
+    confirmCancelBtn.addEventListener("click", () => {
+      this.closeSubmitConfirmModal();
+    });
+  }
+
+  const confirmSubmitBtn = document.getElementById("btn-confirm-submit");
+  if (confirmSubmitBtn) {
+    confirmSubmitBtn.addEventListener("click", () => {
+      this.submitDesign(false);
+    });
+  }
+
+  // Stop Test button in HUD
+  const stopTestBtn = document.getElementById("btn-stop-test");
+  if (stopTestBtn) {
+    stopTestBtn.addEventListener("click", () => {
+      this.stopTestingSequence(true);
+      this.showToast("Test cancelled. Returning to blueprint.", "info");
+    });
+  }
+
+// Copy Left -> Right Button
+  const btnCopySides = document.getElementById("btn-copy-left-to-right");
+  if (btnCopySides) {
+    btnCopySides.addEventListener("click", () => {
+      this.copyLeftToRight();
+    });
+  }
+
+  // Close SWR Result Card button
+  const btnSwrClose = document.getElementById("btn-swr-close");
+  if (btnSwrClose) {
+    btnSwrClose.addEventListener("click", () => {
+      this.stopTestingSequence(true);
+    });
+  }
+
+  // Go to Homepage Button in Blueprint
+  const btnBlueprintHome = document.getElementById("btn-blueprint-home");
+  if (btnBlueprintHome) {
+    btnBlueprintHome.addEventListener("click", () => {
+      if (typeof sound !== "undefined" && sound.playClick) sound.playClick();
+      this.goToHomepage();
+    });
+  }
+
+  // View Design button in Top Bar
+  const topViewDesignBtn = document.getElementById("btn-top-view-design");
+  if (topViewDesignBtn) {
+    topViewDesignBtn.addEventListener("click", () => {
+      this.openViewDesignModal();
+    });
+  }
+
+  // View Design button in Sidebar
+  const sideViewDesignBtn = document.getElementById("btn-sidebar-view-design");
+  if (sideViewDesignBtn) {
+    sideViewDesignBtn.addEventListener("click", () => {
+      this.openViewDesignModal();
+    });
+  }
+
+  // Close View Design Modal
+  const closeViewDesignBtn = document.getElementById("btn-close-view-design");
+  if (closeViewDesignBtn) {
+    closeViewDesignBtn.addEventListener("click", () => {
+      this.closeViewDesignModal();
+    });
+  }
+
+  // New Project Button
+  const newProjBtn = document.getElementById("btn-new-project");
+  if (newProjBtn) {
+    newProjBtn.addEventListener("click", () => {
+      this.startNewProject();
+    });
+  }
+
+  // Close Validation Modal
+  const closeValidationBtn = document.getElementById("btn-close-validation");
+  if (closeValidationBtn) {
+    closeValidationBtn.addEventListener("click", () => {
+      this.closeValidationNoticeModal();
+    });
+  }
+
+  const valViewDesignBtn = document.getElementById("btn-val-view-design");
+  if (valViewDesignBtn) {
+    valViewDesignBtn.addEventListener("click", () => {
+      this.closeValidationNoticeModal();
+      this.openViewDesignModal();
+    });
+  }
+
+  // Report Modal Actions
+  const closeReportBtn = document.getElementById("btn-close-report");
+  if (closeReportBtn) {
+    closeReportBtn.addEventListener("click", () => {
+      const modal = document.getElementById("final-report-modal");
+      if (modal) modal.style.display = "none";
+    });
+  }
+
+  const reportViewDesignBtn = document.getElementById("btn-report-view-design");
+  if (reportViewDesignBtn) {
+    reportViewDesignBtn.addEventListener("click", () => {
+      const modal = document.getElementById("final-report-modal");
+      if (modal) modal.style.display = "none";
+      this.openViewDesignModal();
+    });
+  }
+
+  // Level 2 Transition & Animation buttons
+
+
+
+  // Mission Level Badge Click Shortcut
+  const missionLvlBadge = document.getElementById("mission-level-badge");
+  if (missionLvlBadge) {
+    missionLvlBadge.addEventListener("click", () => {
+      this.startLevel2Animation();
+    });
+  }
+
+  const btnStartLvl2 = document.getElementById("btn-start-level-2");
+  if (btnStartLvl2) {
+    btnStartLvl2.addEventListener("click", () => {
+      this.startLevel2FromModal();
+    });
+  }
+
+  const btnProceedTests = document.getElementById("btn-proceed-to-tests");
+  if (btnProceedTests) {
+    btnProceedTests.addEventListener("click", () => {
+      this.stopLevel2Animation();
+      const validation = BridgeValidator.validate(this.project);
+      if (!validation.isValid) {
+        sound.playBuzzer();
+        this.openValidationNoticeModal(validation);
+        return;
+      }
+      this.startTestingSequence();
+    });
+  }
+
+  const redesignBtn = document.getElementById("btn-redesign-bridge");
+  if (redesignBtn) {
+    redesignBtn.addEventListener("click", () => {
+      this.inspectFailedSegment(critComp);
+    });
+  }
+
+  // Preview View Tabs in View Design Modal
+  ["left", "right", "front", "aerial"].forEach((v) => {
+    const tab = document.getElementById(`btn-prev-${v}`);
+    if (tab) {
+      tab.addEventListener("click", () => {
+        ["left", "right", "front", "aerial"].forEach(o => {
+          const b = document.getElementById(`btn-prev-${o}`);
+          if (b) b.classList.remove("active");
+        });
+        tab.classList.add("active");
+        this.previewCurrentView = v;
+        if (this.currentPreviewSnapshot) {
+          this.drawSavedDesignPreview(this.currentPreviewSnapshot, v);
+        }
+      });
+    }
+  });
+
+  // Classroom Audio Controls
+  const audioBtn = document.getElementById("btn-audio-toggle");
+  const audioPopover = document.getElementById("audio-controls-popover");
+  const audioSlider = document.getElementById("audio-volume-slider");
+  const audioValLabel = document.getElementById("audio-slider-val-label");
+  const audioVolPercent = document.getElementById("audio-vol-percent");
+  const audioIcon = document.getElementById("audio-icon-display");
+  const classroomBtn = document.getElementById("btn-classroom-mode");
+  const muteBtn = document.getElementById("btn-mute-toggle");
+
+  const syncAudioUI = (vol) => {
+    const pct = Math.round(vol * 100);
+    if (audioSlider) audioSlider.value = pct;
+    if (audioValLabel) audioValLabel.textContent = `${pct}%`;
+    if (audioVolPercent) audioVolPercent.textContent = `${pct}%`;
+    if (audioIcon) {
+      if (pct === 0) audioIcon.textContent = "🔇";
+      else if (pct <= 25) audioIcon.textContent = "🔈";
+      else audioIcon.textContent = "🔊";
+    }
+    if (classroomBtn) {
+      if (pct <= 20 && pct > 0) {
+        classroomBtn.style.background = "rgba(56,189,248,0.3)";
+        classroomBtn.style.borderColor = "#38bdf8";
+      } else {
+        classroomBtn.style.background = "rgba(56,189,248,0.1)";
+        classroomBtn.style.borderColor = "rgba(56,189,248,0.3)";
+      }
+    }
+  };
+
+  if (sound && sound.getVolume) {
+    syncAudioUI(sound.getVolume());
+  }
+
+  if (audioBtn && audioPopover) {
+    audioBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isVisible = audioPopover.style.display === "flex";
+      audioPopover.style.display = isVisible ? "none" : "flex";
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!audioPopover.contains(e.target) && e.target !== audioBtn && !audioBtn.contains(e.target)) {
+        audioPopover.style.display = "none";
+      }
+    });
+  }
+
+  if (audioSlider) {
+    audioSlider.addEventListener("input", () => {
+      const vol = parseFloat(audioSlider.value) / 100;
+      sound.setVolume(vol);
+      syncAudioUI(vol);
+    });
+  }
+
+  if (classroomBtn) {
+    classroomBtn.addEventListener("click", () => {
+      sound.setClassroomMode(true);
+      syncAudioUI(sound.getVolume());
+      this.showToast("🏫 Classroom Mode Active: 15% whisper volume set.", "info");
+    });
+  }
+
+  if (muteBtn) {
+    muteBtn.addEventListener("click", () => {
+      if (sound.getVolume() > 0) {
+        sound.setVolume(0);
+        this.showToast("🔇 Audio Muted.", "info");
+      } else {
+        sound.setVolume(0.35);
+        this.showToast("🔊 Audio Unmuted (35%).", "info");
+      }
+      syncAudioUI(sound.getVolume());
+    });
+  }
+}
+
+/* =========================================================================
+ * REGISTRATION & 17-MINUTE COUNTDOWN TIMER METHODS
+ * ========================================================================= */
+updateTopBarEngineer() {
+  const tagEl = document.getElementById("top-engineer-team-tag");
+  if (!tagEl) return;
+  const sName = this.project.studentName || "Junior Engineer";
+  const teamSpan = (this.project.teamName && this.project.teamName.trim().length > 0)
+    ? ` • <span id="engineer-team-tag" style="color:#a78bfa;">${this.project.teamName.trim()}</span>`
+    : '';
+  tagEl.innerHTML = `ENGINEER • <span id="engineer-name-tag" style="color:#38bdf8;">${sName}</span>${teamSpan}`;
+}
+
+openRegistrationModal() {
+  const modal = document.getElementById("student-registration-modal");
+  if (!modal) return;
+  const nameInput = document.getElementById("reg-student-name");
+  const teamInput = document.getElementById("reg-team-name");
+  const errMsg = document.getElementById("reg-error-msg");
+  if (errMsg) errMsg.style.display = "none";
+  if (nameInput) {
+    nameInput.value = "";
+    nameInput.style.borderColor = "rgba(255,255,255,0.18)";
+    setTimeout(() => nameInput.focus(), 150);
+  }
+  if (teamInput) {
+    teamInput.value = "";
+  }
+  modal.style.display = "flex";
+}
+
+handleRegistrationSubmit() {
+  const nameInput = document.getElementById("reg-student-name");
+  const teamInput = document.getElementById("reg-team-name");
+  const errMsg = document.getElementById("reg-error-msg");
+  const nameVal = nameInput ? nameInput.value.trim() : "";
+  const teamVal = teamInput ? teamInput.value.trim() : "";
+
+  if (!nameVal) {
+    if (errMsg) {
+      errMsg.style.display = "block";
+      errMsg.textContent = "⚠️ Student Name is compulsory! Please enter your name to proceed.";
+    }
+    if (nameInput) {
+      nameInput.focus();
+      nameInput.style.borderColor = "#ef4444";
+    }
+    sound.playBuzzer();
+    return;
+  }
+
+  this.project.studentName = nameVal;
+  this.project.teamName = teamVal || "";
+  BridgeStorage.saveProject(this.project);
+
+  const modal = document.getElementById("student-registration-modal");
+  if (modal) modal.style.display = "none";
+
+  sound.playSuccess();
+  this.showToast(`Welcome Engineer ${nameVal}! 17-minute timer started. Build your bridge!`, "success");
+
+  this.updateTopBarEngineer();
+
+  // Start 17-minute countdown timer
+  this.startMissionTimer();
+}
+
+formatTime(totalSeconds) {
+  const m = Math.max(0, Math.floor(totalSeconds / 60));
+  const s = Math.max(0, totalSeconds % 60);
+  const mm = String(m).padStart(2, "0");
+  const ss = String(s).padStart(2, "0");
+  return `${mm}:${ss}`;
+}
+
+startMissionTimer() {
+  if (this.missionTimer) {
+    clearInterval(this.missionTimer);
+    this.missionTimer = null;
+  }
+  this.hasSubmitted = false;
+  this.updateTimerDisplay();
+
+  this.missionTimer = setInterval(() => {
+    if (this.missionTimerSeconds > 0) {
+      this.missionTimerSeconds--;
+      this.updateTimerDisplay();
+      if (this.missionTimerSeconds === 0) {
+        clearInterval(this.missionTimer);
+        this.missionTimer = null;
+        this.onTimerExpired();
+      }
+    }
+  }, 1000);
+}
+
+updateTimerDisplay() {
+  const timerDisplay = document.getElementById("mission-timer-display");
+  const timerBadge = document.getElementById("mission-timer-badge");
+  if (timerDisplay) {
+    timerDisplay.textContent = this.formatTime(this.missionTimerSeconds);
+  }
+  if (timerBadge) {
+    if (this.missionTimerSeconds <= 60) {
+      timerBadge.style.borderColor = "rgba(239, 68, 68, 0.8)";
+      timerBadge.style.color = "#ef4444";
+      timerBadge.style.background = "rgba(239, 68, 68, 0.2)";
+      timerBadge.style.boxShadow = "0 0 16px rgba(239, 68, 68, 0.4)";
+    } else if (this.missionTimerSeconds <= 180) {
+      timerBadge.style.borderColor = "rgba(245, 158, 11, 0.8)";
+      timerBadge.style.color = "#f59e0b";
+      timerBadge.style.background = "rgba(245, 158, 11, 0.15)";
+      timerBadge.style.boxShadow = "0 0 12px rgba(245, 158, 11, 0.3)";
+    } else {
+      timerBadge.style.borderColor = "rgba(56, 189, 248, 0.35)";
+      timerBadge.style.color = "#38bdf8";
+      timerBadge.style.background = "rgba(56, 189, 248, 0.12)";
+      timerBadge.style.boxShadow = "0 0 16px rgba(56, 189, 248, 0.2)";
+    }
+  }
+}
+
+openSubmitConfirmModal() {
+  const modal = document.getElementById("submit-confirm-modal");
+  if (!modal) return;
+  const timeLeftEl = document.getElementById("confirm-modal-time-left");
+  if (timeLeftEl) {
+    timeLeftEl.textContent = this.formatTime(this.missionTimerSeconds);
+  }
+  modal.style.display = "flex";
+}
+
+closeSubmitConfirmModal() {
+  const modal = document.getElementById("submit-confirm-modal");
+  if (modal) modal.style.display = "none";
+}
+
+submitDesign(isAutoSubmit = false) {
+  this.closeSubmitConfirmModal();
+  if (this.missionTimer) {
+    clearInterval(this.missionTimer);
+    this.missionTimer = null;
+  }
+  this.hasSubmitted = true;
+  this.submittedBridgeWeight = this.getTotalWeight();
+  if (this.project) {
+    this.project.submittedBridgeWeight = this.submittedBridgeWeight;
+  }
+
+  // Visual lock for submit button & toolbox
+  const btnSubmit = document.getElementById("btn-submit-design");
+  if (btnSubmit) {
+    btnSubmit.disabled = true;
+    btnSubmit.style.background = "#1e293b";
+    btnSubmit.style.color = "#94a3b8";
+    btnSubmit.style.borderColor = "rgba(255,255,255,0.1)";
+    btnSubmit.style.cursor = "not-allowed";
+    btnSubmit.innerHTML = `<span>🔒</span> <span>DESIGN SUBMITTED</span>`;
+  }
+  this.activeTool = null;
+  this.selectedFirstDot = null;
+  this.renderToolbox();
+  this.updateUndoRedoButtons();
+
+  const timerBadge = document.getElementById("mission-timer-badge");
+  if (timerBadge) {
+    timerBadge.innerHTML = `<span>📋</span> <span>SUBMITTED (${this.formatTime(this.missionTimerSeconds)})</span>`;
+    timerBadge.style.color = "#34d399";
+    timerBadge.style.borderColor = "rgba(52, 211, 153, 0.5)";
+  }
+
+  // Sync student name & team name from registration card inputs if not already saved
+  const nameInput = document.getElementById("reg-student-name");
+  const teamInput = document.getElementById("reg-team-name");
+  if ((!this.project.studentName || this.project.studentName === "Engineer") && nameInput && nameInput.value.trim()) {
+    this.project.studentName = nameInput.value.trim();
+  }
+  if (!this.project.teamName && teamInput && teamInput.value.trim()) {
+    this.project.teamName = teamInput.value.trim();
+  }
+
+  // 1. ALWAYS IMMEDIATELY SAVE DESIGN TO VIEW DESIGN VAULT WITH STUDENT NAME
+  const snapshot = this.captureDesignSnapshot("Submitted Design");
+  const studentDisplayName = this.project.studentName || "Engineer";
+  const teamDisplayName = (this.project.teamName && this.project.teamName.trim().length > 0) ? ` (${this.project.teamName.trim()})` : "";
+
+  if (isAutoSubmit) {
+    sound.playAlarm();
+    this.showToast(`⏱️ 17 minutes over! Auto-submitted & saved design for ${studentDisplayName}${teamDisplayName} into View Design section!`, "warning");
+  } else {
+    sound.playSuccess();
+    this.showToast(`✓ Bridge design submitted & saved to View Design section for ${studentDisplayName}${teamDisplayName}!`, "success");
+  }
+
+  // Take simulation to Level 2: Vehicle Test Challenge
+  this.currentLevel = 2;
+  this.updateLevelUI();
+
+  // Bring up "Your Design is Submitted: Start Level 2" modal box
+  this.openDesignSubmittedModal();
+}
+
+onTimerExpired() {
+  if (this.hasSubmitted) return;
+  const regModal = document.getElementById("student-registration-modal");
+  if (regModal && regModal.style.display !== "none") {
+    const nameInput = document.getElementById("reg-student-name");
+    if (!this.project.studentName) {
+      this.project.studentName = (nameInput && nameInput.value.trim()) || "Engineer";
+    }
+    regModal.style.display = "none";
+  }
+  this.submitDesign(true);
+}
+
+/* =========================================================================
+ * COST, WEIGHT & STATE MANAGEMENT (AUTO-PERSISTED)
+ * ========================================================================= */
+goToHomepage() {
+  if (typeof this.onComplete === "function") {
+    this.onComplete();
+    return;
+  }
+  const exitCockpitBtn = document.getElementById("exit-sim-cockpit-btn");
+  if (exitCockpitBtn) {
+    exitCockpitBtn.click();
+    return;
+  }
+  const viewport = document.getElementById("simulation-viewport");
+  if (viewport) {
+    viewport.classList.remove("active");
+  }
+  if (typeof sound !== "undefined" && sound.stopAll) {
+    sound.stopAll();
+  }
+}
+
+calculateTotalCost() {
+
+  let cost = 0;
+  ["left", "right", "front"].forEach((v) => {
+    (this.placedElements[v] || []).forEach((item) => {
+      cost += item.price || 0;
+    });
+  });
+  // Plus unplaced purchased inventory
+  Object.keys(this.purchased).forEach((type) => {
+    const unplaced = this.getUnplacedCount(type);
+    const itemConfig = SIMULATION_CONFIG.materials[type];
+    if (itemConfig) {
+      cost += unplaced * itemConfig.cost;
+    }
+  });
+  return cost;
+}
+
+saveCurrentState() {
+  const totalCost = this.calculateTotalCost();
+  this.project.budget.totalCost = totalCost;
+  this.project.budget.remainingBudget = SIMULATION_CONFIG.budget.starting - totalCost;
+  this.budget = this.project.budget.remainingBudget;
+  this.project.purchased = this.purchased;
+  this.project.placedElements = this.placedElements;
+  BridgeStorage.saveProject(this.project);
+  this.updateTelemetryUI();
+}
+
+getTotalPlacedCount(type = null) {
+  let count = 0;
+  ["left", "right", "front"].forEach((v) => {
+    (this.placedElements[v] || []).forEach((item) => {
+      if (!type || item.type === type) count++;
+    });
+  });
+  return count;
+}
+
+getUnplacedCount(type) {
+  const bought = this.purchased[type] || 0;
+  const placed = this.getTotalPlacedCount(type);
+  return Math.max(0, bought - placed);
+}
+
+getTotalWeight() {
+  let weight = 0;
+  ["left", "right", "front"].forEach((v) => {
+    (this.placedElements[v] || []).forEach((item) => {
+      weight += item.weight || 0;
+    });
+  });
+  return weight;
+}
+
+updateTelemetryUI() {
+  const totalBought = Object.values(this.purchased).reduce((a, b) => a + b, 0);
+  const totalPlaced = this.getTotalPlacedCount();
+  const totalWeight = this.getTotalWeight();
+  const totalCost = this.calculateTotalCost();
+
+  const boughtEl = document.getElementById("stat-total-bought");
+  const placedEl = document.getElementById("stat-total-placed");
+  const weightEl = document.getElementById("stat-total-weight");
+  const spentEl = document.getElementById("stat-budget-spent");
+  const remainingEl = document.getElementById("stat-remaining-budget");
+  const topBudget = document.getElementById("budget-amount-display");
+  const topWeight = document.getElementById("weight-amount-display");
+  const cartBadge = document.getElementById("shop-badge-cart");
+  const shopModalBudget = document.getElementById("shop-modal-budget-display");
+  const vaultBadge = document.getElementById("saved-designs-count-badge");
+
+  if (boughtEl) boughtEl.textContent = `${totalBought} items`;
+  if (placedEl) placedEl.textContent = `${totalPlaced} parts`;
+  if (weightEl) weightEl.textContent = `${totalWeight} g`;
+  if (spentEl) spentEl.textContent = `₹${totalCost}`;
+  if (remainingEl) {
+    remainingEl.textContent = `₹${this.budget}`;
+    remainingEl.style.color = this.budget < 0 ? "#ef4444" : "#34d399";
+  }
+  if (topBudget) {
+    topBudget.textContent = `₹${this.budget}`;
+    topBudget.parentElement.style.borderColor = this.budget < 0 ? "rgba(239,68,68,0.6)" : "rgba(52,211,153,0.4)";
+  }
+  if (topWeight) topWeight.textContent = `${totalWeight}g`;
+  if (cartBadge) cartBadge.textContent = `₹${this.budget}`;
+  if (shopModalBudget) shopModalBudget.textContent = `₹${this.budget}`;
+  const permVault = BridgeStorage.getPermanentVault(); if (vaultBadge) vaultBadge.textContent = `${Math.max(permVault.length, this.project.savedDesigns.length)}`;
+}
+
+showToast(msg, type = "info") {
+  let toast = document.getElementById("bridge-live-toast");
+  if (!toast) {
+    toast = document.createElement("div");
+    toast.id = "bridge-live-toast";
+    toast.style.position = "absolute";
+    toast.style.top = "74px";
+    toast.style.left = "50%";
+    toast.style.transform = "translateX(-50%)";
+    toast.style.padding = "0.55rem 1.25rem";
+    toast.style.borderRadius = "20px";
+    toast.style.fontSize = "0.82rem";
+    toast.style.fontWeight = "700";
+    toast.style.zIndex = "100";
+    toast.style.boxShadow = "0 8px 30px rgba(0,0,0,0.5)";
+    toast.style.backdropFilter = "blur(12px)";
+    toast.style.transition = "all 0.3s cubic-bezier(0.16, 1, 0.3, 1)";
+    toast.style.pointerEvents = "none";
+    const visualArea = document.querySelector(".sim-stage-visual");
+    if (visualArea) visualArea.appendChild(toast);
+    else if (this.container) this.container.appendChild(toast);
+  }
+
+  if (type === "success") {
+    toast.style.background = "linear-gradient(135deg, rgba(16,185,129,0.95), rgba(5,150,105,0.95))";
+    toast.style.color = "#ffffff";
+    toast.style.border = "1px solid rgba(52,211,153,0.5)";
+  } else if (type === "refund") {
+    toast.style.background = "linear-gradient(135deg, rgba(245,158,11,0.95), rgba(217,119,6,0.95))";
+    toast.style.color = "#000000";
+    toast.style.border = "1px solid #fde68a";
+  } else if (type === "warn" || type === "error") {
+    toast.style.background = "linear-gradient(135deg, rgba(239,68,68,0.95), rgba(220,38,38,0.95))";
+    toast.style.color = "#ffffff";
+    toast.style.border = "1px solid rgba(248,113,113,0.5)";
+  } else {
+    toast.style.background = "linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95))";
+    toast.style.color = "#38bdf8";
+    toast.style.border = "1px solid rgba(56,189,248,0.4)";
+  }
+
+  toast.innerHTML = msg;
+  toast.style.opacity = "1";
+  toast.style.transform = "translateX(-50%) translateY(0)";
+
+  clearTimeout(this._toastTimeout);
+  this._toastTimeout = setTimeout(() => {
+    if (toast) {
+      toast.style.opacity = "0";
+      toast.style.transform = "translateX(-50%) translateY(-10px)";
+    }
+  }, 2800);
+}
+
+/* =========================================================================
+ * "VIEW YOUR DESIGN" VAULT
+ * Saves snapshot before test and provides full inspection anytime.
+ * ========================================================================= */
+captureDesignSnapshot(label = "Pre-Test Design") {
+  const attemptNum = (this.project.attempts.length + 1);
+  const dateStr = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  const snapshot = {
+    id: `snapshot_${Date.now()}_${Math.random().toString(36).substr(2, 6)}`,
+    label: `${label} (${dateStr})`,
+    studentName: this.project.studentName || "Engineer",
+    teamName: this.project.teamName || "",
+    timestamp: Date.now(),
+    attemptNumber: attemptNum,
+    placedElements: JSON.parse(JSON.stringify(this.placedElements)),
+    purchased: JSON.parse(JSON.stringify(this.purchased)),
+    totalCost: this.calculateTotalCost(),
+    remainingBudget: this.budget,
+    totalWeight: this.getTotalWeight()
+  };
+  this.project.savedDesigns.push(snapshot);
+  BridgeStorage.saveProject(this.project);
+  BridgeStorage.saveToPermanentVault(snapshot);
+  this.updateTelemetryUI();
+  return snapshot;
+}
+
+openViewDesignModal() {
+  const modal = document.getElementById("view-design-modal");
+  if (!modal) return;
+  modal.style.display = "flex";
+  this.previewCurrentView = "left";
+  this.renderSavedDesignsList();
+}
+
+closeViewDesignModal() {
+  const modal = document.getElementById("view-design-modal");
+  if (modal) modal.style.display = "none";
+}
+
+deleteSavedDesign(snapshotId) {
+  if (confirm("Are you sure you want to delete this saved bridge blueprint?")) {
+    sound.playClick();
+    BridgeStorage.deleteFromPermanentVault(snapshotId);
+    if (this.project.savedDesigns) {
+      this.project.savedDesigns = this.project.savedDesigns.filter(s => s.id !== snapshotId);
+    }
+    const allVaultDesigns = BridgeStorage.getPermanentVault();
+    if (this.currentPreviewSnapshot && this.currentPreviewSnapshot.id === snapshotId) {
+      if (allVaultDesigns.length > 0) {
+        this.currentPreviewSnapshot = allVaultDesigns[allVaultDesigns.length - 1];
+        this.drawSavedDesignPreview(this.currentPreviewSnapshot, this.previewCurrentView || "left");
+      } else {
+        this.currentPreviewSnapshot = null;
+        const canvas = document.getElementById("saved-design-preview-canvas");
+        if (canvas) {
+          const ctx = canvas.getContext("2d");
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+        const infoEl = document.getElementById("preview-snapshot-info");
+        if (infoEl) infoEl.textContent = "No saved designs in vault";
+      }
+    }
+    this.showToast("🗑️ Design deleted from vault", "info");
+    this.renderSavedDesignsList();
+    this.updateTelemetryUI();
+  }
+}
+
+renderSavedDesignsList() {
+  const sidebar = document.getElementById("saved-designs-sidebar");
+  if (!sidebar) return;
+
+  const allVaultDesigns = BridgeStorage.getPermanentVault();
+  const designsToShow = allVaultDesigns.length > 0 ? allVaultDesigns : this.project.savedDesigns;
+
+  if (designsToShow.length === 0) {
+    sidebar.innerHTML = `
+      <div style="font-size:0.75rem; color:#94a3b8; text-align:center; padding:2rem 0.5rem; line-height:1.5;">
+        No designs saved yet. Designs are automatically archived in this vault when you submit or test!
+      </div>
+    `;
+    return;
+  }
+
+  sidebar.innerHTML = `
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.4rem;">
+      <span style="font-size:0.68rem; text-transform:uppercase; color:#94a3b8; font-weight:800; letter-spacing:0.06em;">
+        SAVED VAULT (${designsToShow.length})
+      </span>
+      <button id="btn-clear-all-vault" style="background:none; border:none; color:#ef4444; font-size:0.65rem; font-weight:700; cursor:pointer; text-decoration:underline; padding:0.1rem 0.3rem;">
+        Clear All
+      </button>
+    </div>
+  ` + designsToShow.slice().reverse().map((snap, idx) => {
+    const isSelected = idx === 0;
+    const student = snap.studentName || "Civil Engineer";
+    const team = (snap.teamName && snap.teamName.trim().length > 0) ? ` • ${snap.teamName.trim()}` : "";
+    const swr = BridgeStructuralAnalysis.calculateStrengthToWeightRatio(snap);
+    const cleanLabel = (snap.label || "").replace(/#\d+\s*/g, "").trim();
+    return `
+      <div class="saved-design-item" data-id="${snap.id}" style="background:${isSelected ? 'rgba(56,189,248,0.15)' : 'rgba(255,255,255,0.03)'}; border:1px solid ${isSelected ? 'rgba(56,189,248,0.5)' : 'rgba(255,255,255,0.08)'}; border-radius:10px; padding:0.65rem 0.75rem; cursor:pointer; transition:all 0.2s; margin-bottom:0.45rem;">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+          <div style="font-size:0.82rem; font-weight:800; color:#fff; display:flex; align-items:center; gap:0.35rem;">
+            <span>👷</span>
+            <span style="color:#38bdf8;">${student}</span>
+            ${team ? `<span style="color:#a78bfa; font-weight:700;">${team}</span>` : ""}
+          </div>
+          <button class="btn-delete-saved-design" data-delete-id="${snap.id}" title="Delete this blueprint" style="background:rgba(239,68,68,0.12); border:1px solid rgba(239,68,68,0.35); color:#fca5a5; border-radius:6px; font-size:0.7rem; padding:0.15rem 0.4rem; cursor:pointer; transition:all 0.2s;">
+            🗑️
+          </button>
+        </div>
+        <div style="font-size:0.72rem; font-weight:700; color:#e2e8f0; margin-top:0.2rem;">${cleanLabel}</div>
+        <div style="font-size:0.68rem; color:#94a3b8; margin-top:0.25rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:4px;">
+          <span>Mass: <strong style="color:#fbbf24;">${swr.weight}g</strong></span>
+          <span>Load: <strong style="color:#38bdf8;">${swr.strength}g</strong></span>
+          <span>SWR: <strong style="color:#34d399; font-size:0.75rem;">${swr.ratio.toFixed(2)}</strong></span>
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  // Hook delete click events
+  const deleteBtns = sidebar.querySelectorAll(".btn-delete-saved-design");
+  deleteBtns.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const delId = btn.getAttribute("data-delete-id");
+      if (delId) {
+        this.deleteSavedDesign(delId);
+      }
+    });
+  });
+
+  // Hook Clear All click event
+  const clearAllBtn = sidebar.querySelector("#btn-clear-all-vault");
+  if (clearAllBtn) {
+    clearAllBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (confirm("Delete ALL saved designs from the vault? This cannot be undone.")) {
+        sound.playClick();
+        BridgeStorage.clearPermanentVault();
+        if (this.project.savedDesigns) this.project.savedDesigns = [];
+        this.currentPreviewSnapshot = null;
+        this.showToast("🗑️ All designs deleted from vault", "info");
+        this.renderSavedDesignsList();
+        this.updateTelemetryUI();
+        const canvas = document.getElementById("saved-design-preview-canvas");
+        if (canvas) {
+          const ctx = canvas.getContext("2d");
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+        const infoEl = document.getElementById("preview-snapshot-info");
+        if (infoEl) infoEl.textContent = "No saved designs in vault";
+      }
+    });
+  }
+
+  // Hook click events on list items
+  const items = sidebar.querySelectorAll(".saved-design-item");
+  items.forEach(item => {
+    item.addEventListener("click", () => {
+      items.forEach(el => {
+        el.style.background = "rgba(255,255,255,0.03)";
+        el.style.borderColor = "rgba(255,255,255,0.08)";
+      });
+      item.style.background = "rgba(56,189,248,0.15)";
+      item.style.borderColor = "rgba(56,189,248,0.5)";
+
+      const snapId = item.getAttribute("data-id");
+      const found = designsToShow.find(s => s.id === snapId);
+      if (found) {
+        this.currentPreviewSnapshot = found;
+        this.drawSavedDesignPreview(found, this.previewCurrentView || "left");
+      }
+    });
+  });
+
+  // Select the latest snapshot by default
+  if (designsToShow.length > 0) {
+    this.currentPreviewSnapshot = designsToShow[designsToShow.length - 1];
+    this.drawSavedDesignPreview(this.currentPreviewSnapshot, this.previewCurrentView || "left");
+  }
+}
+
+drawSavedDesignPreview(snapshot, viewName = "left") {
+  const infoEl = document.getElementById("preview-snapshot-info");
+  if (infoEl) {
+    const student = snapshot.studentName || "Civil Engineer";
+    const team = (snapshot.teamName && snapshot.teamName.trim().length > 0) ? ` • ${snapshot.teamName.trim()}` : "";
+    const swr = BridgeStructuralAnalysis.calculateStrengthToWeightRatio(snapshot);
+    const cleanLabel = (snapshot.label || "").replace(/#\d+\s*/g, "").trim();
+    infoEl.innerHTML = `<span style="color:#38bdf8; font-weight:800;">👷 ${student}</span>${team ? `<span style="color:#a78bfa; font-weight:700;">${team}</span>` : ""} — <strong>${cleanLabel}</strong> • Mass: <span style="color:#fbbf24;">${swr.weight}g</span> • Max Load: <span style="color:#38bdf8;">${swr.strength}g</span> • <strong style="color:#34d399; font-size:0.85rem;">SWR: ${swr.ratio.toFixed(2)}</strong>`;
+  }
+
+  const canvas = document.getElementById("saved-design-preview-canvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  const rect = canvas.getBoundingClientRect();
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  canvas.width = rect.width * dpr;
+  canvas.height = rect.height * dpr;
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.scale(dpr, dpr);
+
+  const w = rect.width;
+  const h = rect.height;
+
+  // Draw blueprint background
+  const bgGrad = ctx.createRadialGradient(w * 0.5, h * 0.45, 10, w * 0.5, h * 0.45, Math.max(w, h));
+  bgGrad.addColorStop(0, "#0c1324");
+  bgGrad.addColorStop(1, "#03060c");
+  ctx.fillStyle = bgGrad;
+  ctx.fillRect(0, 0, w, h);
+
+  // Save temporary view state
+  const savedPlaced = this.placedElements;
+  const savedView = this.currentView;
+
+  this.placedElements = snapshot.placedElements;
+  this.currentView = viewName;
+  this.computeGridDots(w, h);
+
+  if (viewName === "left" || viewName === "right") {
+    this.drawSideView(ctx, w, h);
+  } else if (viewName === "aerial") {
+    if (typeof this.drawAerialView === "function") {
+      this.drawAerialView(ctx, w, h);
+    } else {
+      this.drawFrontView(ctx, w, h);
+    }
+  } else {
+    this.drawFrontView(ctx, w, h);
+  }
+
+  // Restore state
+  this.placedElements = savedPlaced;
+  this.currentView = savedView;
+  const mainCanvas = document.getElementById("bridge-construction-canvas");
+  if (mainCanvas && mainCanvas.width > 0 && mainCanvas.height > 0) {
+    this.computeGridDots(mainCanvas.width, mainCanvas.height);
+  }
+}
+
+/* =========================================================================
+ * VALIDATION NOTICE MODAL
+ * ========================================================================= */
+/* =========================================================================
+ * LEVEL 2: VEHICLE TEST CHALLENGE & ANIMATION SYSTEM
+ * ========================================================================= */
+openDesignSubmittedModal() {
+  const modal = document.getElementById("level2-transition-modal");
+  if (!modal) return;
+  const studentDisplay = document.getElementById("lvl2-student-display");
+  if (studentDisplay) {
+    const studentName = this.project.studentName || "Engineer";
+    const teamName = (this.project.teamName && this.project.teamName.trim().length > 0) ? ` (${this.project.teamName.trim()})` : "";
+    studentDisplay.textContent = `${studentName}${teamName}`;
+  }
+  if (!this.submittedBridgeWeight) {
+    this.submittedBridgeWeight = (this.project && this.project.submittedBridgeWeight) || this.getTotalWeight();
+    if (this.project) this.project.submittedBridgeWeight = this.submittedBridgeWeight;
+  }
+  const massDisplay = document.getElementById("lvl2-bridge-mass");
+  if (massDisplay) {
+    massDisplay.textContent = `${this.submittedBridgeWeight}g`;
+  }
+  const budgetDisplay = document.getElementById("lvl2-budget-spent");
+  if (budgetDisplay) {
+    budgetDisplay.textContent = `₹${this.calculateTotalCost()} / ₹700`;
+  }
+  modal.style.display = "flex";
+  sound.playSuccess();
+}
+
+closeDesignSubmittedModal() {
+  const modal = document.getElementById("level2-transition-modal");
+  if (modal) modal.style.display = "none";
+}
+
+startLevel2FromModal() {
+  this.closeDesignSubmittedModal();
+  sound.playClick();
+  const validation = BridgeValidator.validate(this.project);
+  if (!validation.isValid) {
+    sound.playBuzzer();
+    this.openValidationNoticeModal(validation);
+    return;
+  }
+  this.startLevel2Animation();
+}
+
+copyLeftToRight() {
+  if (this.hasSubmitted) {
+    this.showToast("Cannot modify a submitted bridge.", "warning");
+    return;
+  }
+  const left = (this.placedElements && this.placedElements.left) ? this.placedElements.left : [];
+  if (left.length === 0) {
+    this.showToast("Left view is empty. Place bridge members on Left view first!", "warning");
+    return;
+  }
+  this.placedElements.right = JSON.parse(JSON.stringify(left));
+  this.placedElements.right.forEach((m, idx) => {
+    m.id = `${m.type}_r_${Date.now()}_${idx}`;
+  });
+  if (typeof sound !== "undefined" && sound.playSuccess) sound.playSuccess();
+  this.saveCurrentState();
+  this.showToast("✓ Copied Left View to Right View! Both sides now match.", "success");
+  this.redrawCanvas();
+}
+
+updateLevelUI() {
+  if (this.isPostEvaluationMode) {
+    this.enterPostEvaluationMode();
+    return;
+  }
+
+  const levelBadge = document.getElementById("mission-level-badge");
+  const levelIcon = document.getElementById("mission-level-icon");
+  const levelText = document.getElementById("mission-level-text");
+  const directiveText = document.getElementById("structural-directive-text");
+
+  const btnSubmit = document.getElementById("btn-submit-design");
+  const btnShop = document.getElementById("btn-open-material-shop");
+  const stageControls = document.getElementById("sim-stage-controls") || (typeof document !== "undefined" && document.querySelector(".sim-stage-controls"));
+  const stageVisual = document.getElementById("sim-stage-visual") || (typeof document !== "undefined" && document.querySelector(".sim-stage-visual"));
+  const btnViewLeft = document.getElementById("btn-view-left");
+  const btnViewRight = document.getElementById("btn-view-right");
+  const btnViewFront = document.getElementById("btn-view-front");
+  const timerBadge = document.getElementById("mission-timer-badge");
+  const btnNew = document.getElementById("btn-new-project");
+  const btnCopySides = document.getElementById("btn-copy-left-to-right");
+
+  if (this.currentLevel === 2) {
+    if (btnCopySides) btnCopySides.style.display = "none";
+    const btnBlueprintHome = document.getElementById("btn-blueprint-home");
+    if (btnBlueprintHome) btnBlueprintHome.style.display = "none";
+
+    const viewSwitcher = document.getElementById("bridge-view-switcher");
+    const btnAerial = document.getElementById("btn-view-aerial");
+    const btnTopViewDesign = document.getElementById("btn-top-view-design");
+
+    // 1. Shift Aerial 3D button in Level 2 to near View Design button
+    if (btnTopViewDesign && btnAerial && btnTopViewDesign.parentElement) {
+      if (btnAerial.nextElementSibling !== btnTopViewDesign && btnAerial.previousElementSibling !== btnTopViewDesign) {
+        btnTopViewDesign.parentElement.insertBefore(btnAerial, btnTopViewDesign);
+      }
+      btnAerial.style.display = "inline-flex";
+    }
+    if (viewSwitcher) viewSwitcher.style.display = "none";
+    if (levelBadge) {
+      levelBadge.style.background = "rgba(16,185,129,0.18)";
+      levelBadge.style.borderColor = "rgba(52,211,153,0.5)";
+      levelBadge.style.color = "#34d399";
+    }
+    if (levelIcon) levelIcon.textContent = "🚦";
+    if (levelText) levelText.textContent = "LEVEL 2: Vehicle Challenge";
+    if (directiveText) {
+      directiveText.innerHTML = "“<strong>LEVEL 2: VEHICLE TEST CHALLENGE ACTIVE!</strong> Your bridge design is submitted and locked. Vehicles of varying weight will now travel across your bridge to test deflection, load distribution, and structural integrity.”";
+    }
+
+    // Level 2 Full-screen Mode: Remove 30-70 partition & hide 7 items
+    if (btnSubmit) btnSubmit.style.display = "none";
+    if (btnShop) btnShop.style.display = "none";
+    if (stageControls) stageControls.style.display = "none";
+    if (stageVisual) {
+      stageVisual.style.flex = "1";
+      stageVisual.style.width = "100%";
+      stageVisual.style.borderRight = "none";
+    }
+    if (btnViewLeft) btnViewLeft.style.display = "none";
+    if (btnViewRight) btnViewRight.style.display = "none";
+    if (btnViewFront) btnViewFront.style.display = "none";
+    if (timerBadge) timerBadge.style.display = "none";
+    if (btnNew) btnNew.style.display = "none";
+
+    if (typeof this.updateViewUI === "function") this.updateViewUI();
+    if (typeof this.resizeCanvas === "function") {
+      this.resizeCanvas();
+    } else {
+      const canvas = typeof document !== "undefined" ? document.getElementById("bridge-construction-canvas") : null;
+      if (canvas && typeof this.computeGridDots === "function") {
+        const rect = canvas.getBoundingClientRect ? canvas.getBoundingClientRect() : { width: canvas.width || 800, height: canvas.height || 500 };
+        this.computeGridDots(rect.width, rect.height);
+        if (typeof this.drawConstructionScene === "function") {
+          this.drawConstructionScene(canvas.getContext("2d"), rect.width, rect.height);
+        }
+      }
+    }
+  } else {
+    // In Level 1, remove the level 1 design button as requested
+    if (levelBadge) levelBadge.style.display = "none";
+    if (btnCopySides && !this.isPostEvaluationMode) btnCopySides.style.display = "inline-flex";
+    const btnBlueprintHome = document.getElementById("btn-blueprint-home");
+    if (btnBlueprintHome) btnBlueprintHome.style.display = "none";
+
+    const viewSwitcher = document.getElementById("bridge-view-switcher");
+    const btnAerial = document.getElementById("btn-view-aerial");
+
+    // Restore Aerial View button back to view switcher in Level 1
+    if (viewSwitcher && btnAerial && btnAerial.parentElement !== viewSwitcher) {
+      if (btnCopySides && btnCopySides.parentElement === viewSwitcher) {
+        viewSwitcher.insertBefore(btnAerial, btnCopySides);
+      } else {
+        viewSwitcher.appendChild(btnAerial);
+      }
+    }
+    if (btnAerial) {
+      btnAerial.innerHTML = "<span>🚁 Aerial View</span>";
+    }
+    if (viewSwitcher) viewSwitcher.style.display = "flex";
+    if (btnAerial) btnAerial.style.display = "inline-flex";
+
+    if (levelBadge) {
+      levelBadge.style.background = "rgba(99,102,241,0.14)";
+      levelBadge.style.borderColor = "rgba(99,102,241,0.4)";
+      levelBadge.style.color = "#a5b4fc";
+    }
+    if (levelIcon) levelIcon.textContent = "🎮";
+    if (levelText) levelText.textContent = "LEVEL 1: Design";
+    if (directiveText) {
+      directiveText.innerHTML = "“Build a bridge connecting Himmatnagar and Ahmedabad. You have <strong>17 minutes</strong> to design before official vehicle and earthquake load challenges.”";
+    }
+
+    // Level 1: Restore 30-70 partition and all tools
+    if (btnSubmit) btnSubmit.style.display = "";
+    if (btnShop) btnShop.style.display = "";
+    if (stageControls) stageControls.style.display = "";
+    if (stageVisual) {
+      stageVisual.style.flex = "7.2";
+      stageVisual.style.width = "";
+      stageVisual.style.borderRight = "1px solid rgba(255,255,255,0.08)";
+    }
+    if (btnViewLeft) btnViewLeft.style.display = "";
+    if (btnViewRight) btnViewRight.style.display = "";
+    if (btnViewFront) btnViewFront.style.display = "";
+    if (timerBadge) timerBadge.style.display = "";
+    if (btnNew) btnNew.style.display = "";
+
+    if (typeof this.updateViewUI === "function") this.updateViewUI();
+    if (typeof this.resizeCanvas === "function") {
+      this.resizeCanvas();
+    } else {
+      const canvas = typeof document !== "undefined" ? document.getElementById("bridge-construction-canvas") : null;
+      if (canvas && typeof this.computeGridDots === "function") {
+        const rect = canvas.getBoundingClientRect ? canvas.getBoundingClientRect() : { width: canvas.width || 800, height: canvas.height || 500 };
+        this.computeGridDots(rect.width, rect.height);
+        if (typeof this.drawConstructionScene === "function") {
+          this.drawConstructionScene(canvas.getContext("2d"), rect.width, rect.height);
+        }
+      }
+    }
+  }
+}
+
+startLevel2Animation() {
+  const overlay = document.getElementById("level2-animation-overlay");
+  if (!overlay) return;
+  overlay.style.display = "flex";
+
+  const canvas = document.getElementById("level2-animation-canvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+
+  const w = canvas.clientWidth || overlay.clientWidth || (typeof window !== "undefined" ? window.innerWidth : 800) || 800;
+  const h = canvas.clientHeight || overlay.clientHeight || (typeof window !== "undefined" ? window.innerHeight : 600) || 600;
+  canvas.width = w;
+  canvas.height = h;
+
+  this.isLevel2AnimationActive = true;
+  this.level2AnimStartTime = null;
+
+  // Universally compatible ellipse drawer
+  const drawEllipse = (targetCtx, cx, cy, rx, ry, rot = 0) => {
+    if (targetCtx.ellipse) {
+      targetCtx.ellipse(cx, cy, rx, ry, rot, 0, Math.PI * 2);
+    } else {
+      targetCtx.save();
+      targetCtx.translate(cx, cy);
+      if (rot) targetCtx.rotate(rot);
+      targetCtx.scale(rx / (ry || 1), 1);
+      targetCtx.arc(0, 0, ry || 1, 0, Math.PI * 2);
+      targetCtx.restore();
+    }
+  };
+
+  // -------------------------------------------------------------
+  // HIGH-PERFORMANCE OFFSCREEN BACKGROUND CACHE (ZERO RUNTIME LAG)
+  // Pre-renders the sunset sky, glowing sun, clouds, distant blurred
+  // city skyline with lit windows, water, piers, and bridge girders
+  // onto an offscreen canvas once. During 60fps animation, rendering
+  // the entire background is a single hardware-accelerated drawImage!
+  // -------------------------------------------------------------
+  let bgCanvas = null;
+
+  const buildBackground = (cw, ch) => {
+    bgCanvas = (typeof document !== "undefined" && document.createElement) ? document.createElement("canvas") : null;
+    if (!bgCanvas) return;
+    bgCanvas.width = cw;
+    bgCanvas.height = ch;
+    const bgCtx = bgCanvas.getContext("2d");
+    if (!bgCtx) return;
+
+    const bridgeY = ch * 0.65;
+    const bridgeHeight = 26;
+
+    // 1. AESTHETIC VIBRANT SUNSET SKY
+    const skyGrad = bgCtx.createLinearGradient(0, 0, 0, bridgeY);
+    skyGrad.addColorStop(0.0, "#09061c"); // deep dusk navy
+    skyGrad.addColorStop(0.22, "#240e3f"); // royal twilight purple
+    skyGrad.addColorStop(0.48, "#5f1452"); // hot magenta
+    skyGrad.addColorStop(0.70, "#a83352"); // radiant coral
+    skyGrad.addColorStop(0.86, "#dd5d4c"); // warm sunset orange
+    skyGrad.addColorStop(1.0, "#fca264"); // golden peach horizon
+    bgCtx.fillStyle = skyGrad;
+    bgCtx.fillRect(0, 0, cw, bridgeY);
+
+    // Sunset Orb
+    const sunX = cw * 0.78;
+    const sunY = bridgeY * 0.72;
+    const sunGrad = bgCtx.createRadialGradient(sunX, sunY, 12, sunX, sunY, 120);
+    sunGrad.addColorStop(0, "rgba(255, 247, 215, 0.98)");
+    sunGrad.addColorStop(0.25, "rgba(255, 165, 115, 0.65)");
+    sunGrad.addColorStop(0.6, "rgba(235, 75, 110, 0.28)");
+    sunGrad.addColorStop(1, "rgba(235, 75, 110, 0)");
+    bgCtx.fillStyle = sunGrad;
+    bgCtx.beginPath();
+    bgCtx.arc(sunX, sunY, 120, 0, Math.PI * 2);
+    bgCtx.fill();
+
+    // Sunset Clouds
+    bgCtx.fillStyle = "rgba(255, 150, 130, 0.20)";
+    for (let c = 0; c < 5; c++) {
+      const cx = ((c * 230) % (cw + 240)) - 100;
+      const cy = 40 + c * 38;
+      bgCtx.beginPath();
+      drawEllipse(bgCtx, cx, cy, 95, 24, 0);
+      bgCtx.fill();
+    }
+
+    // 2. DISTANT CITY SKYLINE (Pre-rendered and softly blurred once)
+    const numBuildings = 42;
+    const bWidth = Math.max(28, cw / (numBuildings * 0.72));
+    
+    // Background skyline silhouettes
+    bgCtx.fillStyle = "#1b0d30";
+    for (let i = 0; i < numBuildings; i++) {
+      const bHeight = 85 + Math.sin(i * 1.35) * 65 + Math.cos(i * 0.75) * 45 + ((i % 5) * 28);
+      const bx = i * (bWidth * 0.75) - 40;
+      const by = bridgeY - bHeight * 0.88;
+      bgCtx.fillRect(bx - 20, by, bWidth * 1.15, bHeight * 0.88);
+    }
+
+    // Midground skyscrapers with glowing windows
+    const bGrad = bgCtx.createLinearGradient(0, bridgeY - 190, 0, bridgeY);
+    bGrad.addColorStop(0, "#23113d");
+    bGrad.addColorStop(1, "#3b164f");
+    bgCtx.fillStyle = bGrad;
+
+    for (let i = 0; i < numBuildings; i++) {
+      const bHeight = 85 + Math.sin(i * 1.35) * 65 + Math.cos(i * 0.75) * 45 + ((i % 5) * 28);
+      const bx = i * (bWidth * 0.75) - 40;
+      const by = bridgeY - bHeight;
+      bgCtx.fillRect(bx, by, bWidth, bHeight);
+
+      if (i % 4 === 0) {
+        bgCtx.strokeStyle = "#491f63";
+        bgCtx.lineWidth = 2;
+        bgCtx.beginPath();
+        bgCtx.moveTo(bx + bWidth / 2, by);
+        bgCtx.lineTo(bx + bWidth / 2, by - 38);
+        bgCtx.stroke();
+
+        bgCtx.fillStyle = "rgba(244, 63, 94, 0.95)";
+        bgCtx.beginPath();
+        bgCtx.arc(bx + bWidth / 2, by - 38, 2.5, 0, Math.PI * 2);
+        bgCtx.fill();
+        bgCtx.fillStyle = bGrad;
+      }
+
+      // Lit Windows
+      const rows = Math.floor(bHeight / 14);
+      const cols = Math.floor(bWidth / 12);
+      for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) {
+          if (((i * 7 + r * 5 + c * 3) % 10) > 4) {
+            const wx = bx + 4 + c * 10;
+            const wy = by + 6 + r * 12;
+            if (wx < bx + bWidth - 6 && wy < bridgeY - 6) {
+              bgCtx.fillStyle = ((r + c) % 3 === 0) ? "rgba(254, 240, 138, 0.75)" : (((r + c) % 3 === 1) ? "rgba(56, 189, 248, 0.70)" : "rgba(244, 114, 182, 0.65)");
+              bgCtx.fillRect(wx, wy, 4, 6);
+            }
+          }
+        }
+      }
+      bgCtx.fillStyle = bGrad;
+    }
+
+    // 3. SUNSET WATER & REFLECTIONS
+    const waterGrad = bgCtx.createLinearGradient(0, bridgeY, 0, ch);
+    waterGrad.addColorStop(0, "#160a2d");
+    waterGrad.addColorStop(0.35, "#0b1736");
+    waterGrad.addColorStop(1, "#030612");
+    bgCtx.fillStyle = waterGrad;
+    bgCtx.fillRect(0, bridgeY, cw, ch - bridgeY);
+
+    for (let r = 0; r < 20; r++) {
+      const ry = bridgeY + 8 + r * ((ch - bridgeY) / 22);
+      const rAlpha = Math.max(0.06, 0.35 - (r / 22) * 0.28);
+      bgCtx.strokeStyle = `rgba(251, 146, 60, ${rAlpha})`;
+      bgCtx.lineWidth = 1.5;
+      bgCtx.beginPath();
+      bgCtx.moveTo(cw * 0.12, ry);
+      bgCtx.lineTo(cw * 0.90, ry);
+      bgCtx.stroke();
+    }
+
+    // 4. FOREGROUND BRIDGE PIERS & GIRDERS
+    const pierPositions = [cw * 0.20, cw * 0.50, cw * 0.80];
+    pierPositions.forEach((px) => {
+      const pierGrad = bgCtx.createLinearGradient(px - 15, bridgeY, px + 15, bridgeY);
+      pierGrad.addColorStop(0, "#1e293b");
+      pierGrad.addColorStop(0.5, "#475569");
+      pierGrad.addColorStop(1, "#0f172a");
+      bgCtx.fillStyle = pierGrad;
+      bgCtx.fillRect(px - 15, bridgeY, 30, ch - bridgeY);
+
+      bgCtx.fillStyle = "rgba(56, 189, 248, 0.45)";
+      bgCtx.fillRect(px - 2.5, bridgeY, 5, ch - bridgeY);
+
+      bgCtx.fillStyle = "rgba(56, 189, 248, 0.25)";
+      bgCtx.beginPath();
+      drawEllipse(bgCtx, px, bridgeY + 12, 26, 5, 0);
+      bgCtx.fill();
+    });
+
+    // Lower Steel Girder
+    const girderGrad = bgCtx.createLinearGradient(0, bridgeY + bridgeHeight, 0, bridgeY + bridgeHeight + 16);
+    girderGrad.addColorStop(0, "#0f172a");
+    girderGrad.addColorStop(1, "#020617");
+    bgCtx.fillStyle = girderGrad;
+    bgCtx.fillRect(0, bridgeY + bridgeHeight, cw, 16);
+
+    // Glowing Neon Cyan Girder Trim
+    bgCtx.strokeStyle = "rgba(56, 189, 248, 0.9)";
+    bgCtx.lineWidth = 2.5;
+    bgCtx.beginPath();
+    bgCtx.moveTo(0, bridgeY + bridgeHeight + 16);
+    bgCtx.lineTo(cw, bridgeY + bridgeHeight + 16);
+    bgCtx.stroke();
+
+    // Road Deck Slab
+    const roadGrad = bgCtx.createLinearGradient(0, bridgeY, 0, bridgeY + bridgeHeight);
+    roadGrad.addColorStop(0, "#334155");
+    roadGrad.addColorStop(0.6, "#1e293b");
+    roadGrad.addColorStop(1, "#0f172a");
+    bgCtx.fillStyle = roadGrad;
+    bgCtx.fillRect(0, bridgeY, cw, bridgeHeight);
+
+    // Bridge Lamp posts with warm amber glow
+    for (let lx = 60; lx < cw; lx += 180) {
+      bgCtx.strokeStyle = "#cbd5e1";
+      bgCtx.lineWidth = 3;
+      bgCtx.beginPath();
+      bgCtx.moveTo(lx, bridgeY);
+      bgCtx.lineTo(lx, bridgeY - 44);
+      bgCtx.stroke();
+
+      const lampGrad = bgCtx.createRadialGradient(lx, bridgeY - 44, 2, lx, bridgeY - 44, 20);
+      lampGrad.addColorStop(0, "rgba(254, 240, 138, 0.98)");
+      lampGrad.addColorStop(0.4, "rgba(251, 146, 60, 0.48)");
+      lampGrad.addColorStop(1, "rgba(251, 146, 60, 0)");
+      bgCtx.fillStyle = lampGrad;
+      bgCtx.beginPath();
+      bgCtx.arc(lx, bridgeY - 44, 20, 0, Math.PI * 2);
+      bgCtx.fill();
+    }
+  };
+
+  buildBackground(w, h);
+
+  // Resize listener ensures background buffer updates only when window resizes
+  this._onResizeLevel2Anim = () => {
+    if (!this.isLevel2AnimationActive) return;
+    const nw = canvas.clientWidth || overlay.clientWidth || 800;
+    const nh = canvas.clientHeight || overlay.clientHeight || 600;
+    if (canvas.width !== nw || canvas.height !== nh) {
+      canvas.width = nw;
+      canvas.height = nh;
+      buildBackground(nw, nh);
+    }
+  };
+  if (typeof window !== "undefined" && window.addEventListener) {
+    window.addEventListener("resize", this._onResizeLevel2Anim);
+  }
+
+  // Floating sparkle particles drifting from banner (lightweight)
+  const sparkles = [];
+  for (let i = 0; i < 24; i++) {
+    sparkles.push({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      size: Math.random() * 2.5 + 1,
+      speedX: -(Math.random() * 1.8 + 1.2),
+      speedY: (Math.random() - 0.5) * 0.6,
+      alpha: Math.random() * 0.7 + 0.3,
+      color: ["#f43f5e", "#fb923c", "#38bdf8", "#fbbf24", "#e879f9"][i % 5]
+    });
+  }
+
+  const renderFrame = (timestamp) => {
+    if (!this.isLevel2AnimationActive) return;
+    if (!this.level2AnimStartTime) {
+      this.level2AnimStartTime = (typeof timestamp === "number") ? timestamp : Date.now();
+    }
+    const now = (typeof timestamp === "number") ? timestamp : Date.now();
+    const elapsed = (now - this.level2AnimStartTime) / 1000;
+
+    const cw = canvas.width;
+    const ch = canvas.height;
+    const bridgeY = ch * 0.65;
+    const bridgeHeight = 26;
+
+    // 1. BLIT PRE-RENDERED BACKGROUND (INSTANT 0.05ms HARDWARE DRAW)
+    if (bgCanvas) {
+      ctx.drawImage(bgCanvas, 0, 0);
+    } else {
+      ctx.clearRect(0, 0, cw, ch);
+    }
+
+    // 2. ANIMATED ROAD MARKINGS (Dashed center lane moving with car)
+    ctx.strokeStyle = "rgba(254, 240, 138, 0.85)";
+    ctx.lineWidth = 2;
+    if (ctx.setLineDash) {
+      ctx.setLineDash([18, 14]);
+      ctx.lineDashOffset = -(elapsed * 160);
+    }
+    ctx.beginPath();
+    ctx.moveTo(0, bridgeY + bridgeHeight * 0.52);
+    ctx.lineTo(cw, bridgeY + bridgeHeight * 0.52);
+    ctx.stroke();
+    if (ctx.setLineDash) ctx.setLineDash([]);
+
+    // 3. CAR CONTINUOUS PASS ACROSS BRIDGE (SILKY SMOOTH DYNAMICS)
+    const cycleTime = 7.5;
+    const progress = (elapsed % cycleTime) / cycleTime;
+    const startX = -260;
+    const endX = cw + 320;
+    const carX = startX + (endX - startX) * progress;
+    const suspensionBob = Math.sin(elapsed * 18) * 1.4;
+    const carY = bridgeY - 8 + suspensionBob;
+
+    // 4. UNFOLDING TEXT BANNER: "TIME TO TEST YOUR DESIGN"
+    const rearX = carX - 12;
+    const rearY = carY - 16;
+    const bannerLength = Math.max(0, Math.min(carX + 180, cw * 0.55));
+
+    if (bannerLength > 35) {
+      const bannerLeftX = Math.max(10, rearX - bannerLength);
+      const steps = 22;
+      const stepWidth = (rearX - bannerLeftX) / steps;
+      const bannerPoints = [];
+
+      for (let s = 0; s <= steps; s++) {
+        const px = bannerLeftX + s * stepWidth;
+        const wave = Math.sin(px * 0.02 - elapsed * 7.5) * 7.5 + Math.cos(px * 0.035 - elapsed * 5.5) * 3.5;
+        bannerPoints.push({ x: px, y: rearY + wave });
+      }
+
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(bannerPoints[0].x, bannerPoints[0].y - 20);
+      for (let s = 1; s <= steps; s++) ctx.lineTo(bannerPoints[s].x, bannerPoints[s].y - 20);
+      ctx.lineTo(bannerPoints[steps].x, bannerPoints[steps].y + 20);
+      for (let s = steps; s >= 0; s--) ctx.lineTo(bannerPoints[s].x, bannerPoints[s].y + 20);
+      ctx.closePath();
+
+      const ribbonGrad = ctx.createLinearGradient(bannerLeftX, 0, rearX, 0);
+      ribbonGrad.addColorStop(0, "rgba(244, 63, 94, 0.08)");
+      ribbonGrad.addColorStop(0.25, "rgba(244, 63, 94, 0.88)");
+      ribbonGrad.addColorStop(0.65, "rgba(251, 146, 60, 0.92)");
+      ribbonGrad.addColorStop(1, "rgba(56, 189, 248, 0.96)");
+      ctx.fillStyle = ribbonGrad;
+      ctx.fill();
+
+      // Ribbon Glowing Borders
+      ctx.strokeStyle = "rgba(254, 240, 138, 0.92)";
+      ctx.lineWidth = 2.2;
+      ctx.beginPath();
+      ctx.moveTo(bannerPoints[0].x, bannerPoints[0].y - 20);
+      for (let s = 1; s <= steps; s++) ctx.lineTo(bannerPoints[s].x, bannerPoints[s].y - 20);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(bannerPoints[0].x, bannerPoints[0].y + 20);
+      for (let s = 1; s <= steps; s++) ctx.lineTo(bannerPoints[s].x, bannerPoints[s].y + 20);
+      ctx.stroke();
+
+      // Connecting tether cords to sports car rear
+      ctx.strokeStyle = "rgba(255, 255, 255, 0.85)";
+      ctx.lineWidth = 1.6;
+      ctx.beginPath();
+      ctx.moveTo(bannerPoints[steps].x, bannerPoints[steps].y - 14);
+      ctx.lineTo(carX + 8, carY - 14);
+      ctx.moveTo(bannerPoints[steps].x, bannerPoints[steps].y + 14);
+      ctx.lineTo(carX + 8, carY - 6);
+      ctx.stroke();
+
+      // Render the Text: "TIME TO TEST YOUR DESIGN"
+      const fullText = "TIME TO TEST YOUR DESIGN";
+      const unfoldRatio = Math.min(1.0, bannerLength / (cw * 0.44));
+      const charsToShow = Math.floor(fullText.length * unfoldRatio);
+      const visibleText = fullText.substring(0, charsToShow);
+
+      ctx.font = "900 21px 'Space Grotesk', system-ui, -apple-system, sans-serif";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+
+      const textCenterX = (bannerLeftX + rearX) * 0.52;
+      const textCenterIdx = Math.floor(steps * 0.52);
+      const textCenterY = bannerPoints[textCenterIdx].y;
+
+      ctx.fillStyle = "#ffffff";
+      ctx.fillText(visibleText, textCenterX, textCenterY);
+      ctx.fillStyle = "#fff8db";
+      ctx.fillText(visibleText, textCenterX, textCenterY - 1);
+      ctx.restore();
+    }
+
+    // 5. FAIRY DUST / SPARKLE PARTICLES DRIFTING FROM CAR
+    sparkles.forEach((p) => {
+      p.x += p.speedX;
+      p.y += p.speedY;
+      if (p.x < 0) {
+        p.x = rearX + Math.random() * 25;
+        p.y = rearY + (Math.random() - 0.5) * 35;
+      }
+      ctx.fillStyle = p.color;
+      ctx.globalAlpha = p.alpha;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.globalAlpha = 1.0;
+    });
+
+    // 6. THE SPORTS CAR (ROADSTER CONVERTIBLE)
+    ctx.save();
+    ctx.translate(carX, carY);
+
+    // Headlight Volumetric Beam
+    const lightCone = ctx.createRadialGradient(160, -8, 5, 300, -8, 150);
+    lightCone.addColorStop(0, "rgba(254, 240, 138, 0.75)");
+    lightCone.addColorStop(0.35, "rgba(251, 146, 60, 0.38)");
+    lightCone.addColorStop(1, "rgba(251, 146, 60, 0)");
+    ctx.fillStyle = lightCone;
+    ctx.beginPath();
+    ctx.moveTo(148, -12);
+    ctx.lineTo(300, -34);
+    ctx.lineTo(320, 14);
+    ctx.lineTo(148, 0);
+    ctx.closePath();
+    ctx.fill();
+
+    // Neon Pink/Cyan Underglow
+    const underglow = ctx.createRadialGradient(70, 4, 10, 70, 4, 85);
+    underglow.addColorStop(0, "rgba(244, 63, 94, 0.85)");
+    underglow.addColorStop(0.5, "rgba(244, 63, 94, 0.40)");
+    underglow.addColorStop(1, "rgba(244, 63, 94, 0)");
+    ctx.fillStyle = underglow;
+    ctx.beginPath();
+    drawEllipse(ctx, 70, 4, 80, 9, 0);
+    ctx.fill();
+
+    // --- CAR CHARACTERS: GIRL & DOG WITH FLYING HAIR ---
+    const hairOsc = Math.sin(elapsed * 26);
+    const hairOsc2 = Math.cos(elapsed * 20);
+
+    // GIRL (Driver)
+    const girlX = 72;
+    const girlY = -14;
+
+    ctx.fillStyle = "#818cf8"; // chic top
+    ctx.beginPath();
+    drawEllipse(ctx, girlX, girlY + 12, 10, 14, 0.1);
+    ctx.fill();
+
+    ctx.fillStyle = "#fed7aa"; // peach skin
+    ctx.beginPath();
+    ctx.arc(girlX + 4, girlY - 4, 8.5, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Sunglasses
+    ctx.fillStyle = "#0f172a";
+    ctx.beginPath();
+    drawEllipse(ctx, girlX + 9, girlY - 4, 3.5, 2.5, 0.1);
+    ctx.fill();
+
+    // Smile
+    ctx.strokeStyle = "#e11d48";
+    ctx.lineWidth = 1.2;
+    ctx.beginPath();
+    ctx.arc(girlX + 8, girlY - 0.5, 2.5, 0.1, Math.PI * 0.8);
+    ctx.stroke();
+
+    // GIRL'S FLYING HAIR (billowing backwards in wind)
+    ctx.fillStyle = "#92400e";
+    ctx.beginPath();
+    ctx.moveTo(girlX + 4, girlY - 11);
+    ctx.quadraticCurveTo(girlX - 18, girlY - 14 + hairOsc * 3.5, girlX - 46 + hairOsc * 6.5, girlY - 9 + hairOsc2 * 4.5);
+    ctx.quadraticCurveTo(girlX - 54 + hairOsc * 8, girlY - 4, girlX - 40, girlY + 2 + hairOsc * 3);
+    ctx.quadraticCurveTo(girlX - 16, girlY - 2, girlX - 2, girlY - 3);
+    ctx.closePath();
+    ctx.fill();
+
+    ctx.strokeStyle = "#b45309";
+    ctx.lineWidth = 2.4;
+    for (let h = 0; h < 4; h++) {
+      ctx.beginPath();
+      ctx.moveTo(girlX - 2, girlY - 9 + h * 2.5);
+      const waveTipX = girlX - 42 - h * 8 + Math.sin(elapsed * 28 + h) * 7;
+      const waveTipY = girlY - 10 + h * 4 + Math.cos(elapsed * 24 + h) * 5;
+      ctx.quadraticCurveTo(girlX - 22, girlY - 12 + h * 3, waveTipX, waveTipY);
+      ctx.stroke();
+    }
+
+    // Hands on steering wheel
+    ctx.fillStyle = "#fed7aa";
+    ctx.beginPath();
+    ctx.arc(girlX + 22, girlY + 8, 3.2, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.strokeStyle = "#334155";
+    ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    ctx.arc(girlX + 24, girlY + 8, 6, -1.2, 1.2);
+    ctx.stroke();
+
+    // DOG (Passenger with flying ears & fur)
+    const dogX = 46;
+    const dogY = -12;
+    const earOsc = Math.sin(elapsed * 30) * 6;
+
+    ctx.fillStyle = "#d97706";
+    ctx.beginPath();
+    drawEllipse(ctx, dogX, dogY + 13, 9, 12, -0.1);
+    ctx.fill();
+
+    // Dog Head
+    ctx.fillStyle = "#f59e0b";
+    ctx.beginPath();
+    ctx.arc(dogX + 4, dogY - 2, 7.5, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Dog Snout
+    ctx.fillStyle = "#fbbf24";
+    ctx.beginPath();
+    drawEllipse(ctx, dogX + 11, dogY, 5, 4, 0);
+    ctx.fill();
+
+    // Dog Nose
+    ctx.fillStyle = "#0f172a";
+    ctx.beginPath();
+    ctx.arc(dogX + 15, dogY - 1, 1.8, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Dog Eye
+    ctx.fillStyle = "#0f172a";
+    ctx.beginPath();
+    ctx.arc(dogX + 8, dogY - 4, 1.6, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Dog Tongue fluttering in wind
+    ctx.fillStyle = "#f43f5e";
+    ctx.beginPath();
+    drawEllipse(ctx, dogX + 14, dogY + 3 + Math.sin(elapsed * 32) * 2, 3.5, 2, 0.4);
+    ctx.fill();
+
+    // Dog's Floppy Ears flapping backward in the wind
+    ctx.fillStyle = "#b45309";
+    ctx.beginPath();
+    ctx.moveTo(dogX + 2, dogY - 8);
+    ctx.quadraticCurveTo(dogX - 14, dogY - 14 + earOsc, dogX - 28 + earOsc * 1.5, dogY - 4 + earOsc * 0.8);
+    ctx.quadraticCurveTo(dogX - 16, dogY - 2, dogX + 1, dogY - 2);
+    ctx.closePath();
+    ctx.fill();
+
+    // Dog Collar
+    ctx.strokeStyle = "#38bdf8";
+    ctx.lineWidth = 2.2;
+    ctx.beginPath();
+    ctx.arc(dogX + 3, dogY + 4, 6, 0.5, 2.2);
+    ctx.stroke();
+
+    // --- CAR BODY (SLEEK CONVERTIBLE ROADSTER) ---
+    const carBodyGrad = ctx.createLinearGradient(0, -22, 0, 10);
+    carBodyGrad.addColorStop(0, "#f43f5e");
+    carBodyGrad.addColorStop(0.45, "#e11d48");
+    carBodyGrad.addColorStop(0.85, "#be123c");
+    carBodyGrad.addColorStop(1, "#881337");
+    ctx.fillStyle = carBodyGrad;
+
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
+    ctx.lineTo(12, -10);
+    ctx.lineTo(28, -12);
+    ctx.quadraticCurveTo(45, -20, 80, -20);
+    ctx.lineTo(95, -14);
+    ctx.lineTo(135, -10);
+    ctx.quadraticCurveTo(152, -6, 154, 2);
+    ctx.lineTo(146, 6);
+    ctx.lineTo(134, 6);
+    ctx.arc(118, 4, 16, 0, Math.PI, true);
+    ctx.lineTo(48, 6);
+    ctx.arc(32, 4, 16, 0, Math.PI, true);
+    ctx.lineTo(4, 6);
+    ctx.closePath();
+    ctx.fill();
+
+    // Chrome reflection highlight line
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.5)";
+    ctx.lineWidth = 1.8;
+    ctx.beginPath();
+    ctx.moveTo(18, -14);
+    ctx.lineTo(82, -14);
+    ctx.lineTo(100, -24);
+    ctx.lineTo(144, -8);
+    ctx.stroke();
+
+    // Windshield
+    const glassGrad = ctx.createLinearGradient(82, -26, 102, -14);
+    glassGrad.addColorStop(0, "rgba(56, 189, 248, 0.75)");
+    glassGrad.addColorStop(0.5, "rgba(255, 255, 255, 0.70)");
+    glassGrad.addColorStop(1, "rgba(56, 189, 248, 0.35)");
+    ctx.fillStyle = glassGrad;
+    ctx.beginPath();
+    ctx.moveTo(84, -14);
+    ctx.lineTo(98, -26);
+    ctx.lineTo(102, -26);
+    ctx.lineTo(92, -14);
+    ctx.closePath();
+    ctx.fill();
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.85)";
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+
+    // Headlight
+    ctx.fillStyle = "#fef08a";
+    ctx.beginPath();
+    drawEllipse(ctx, 148, -7, 6, 3, 0.3);
+    ctx.fill();
+    ctx.fillStyle = "#ffffff";
+    ctx.beginPath();
+    ctx.arc(150, -7, 2, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Taillight
+    ctx.fillStyle = "#ef4444";
+    ctx.fillRect(8, -11, 4, 5);
+
+    // Door seam
+    ctx.strokeStyle = "rgba(0, 0, 0, 0.28)";
+    ctx.lineWidth = 1.2;
+    ctx.beginPath();
+    ctx.moveTo(82, -14);
+    ctx.lineTo(82, 0);
+    ctx.moveTo(56, -6);
+    ctx.lineTo(70, -6);
+    ctx.stroke();
+
+    // Rotating Wheels
+    const drawWheel = (wx, wy) => {
+      ctx.fillStyle = "#0f172a";
+      ctx.beginPath();
+      ctx.arc(wx, wy, 15, 0, Math.PI * 2);
+      ctx.fill();
+
+      const rimGrad = ctx.createRadialGradient(wx, wy, 3, wx, wy, 12);
+      rimGrad.addColorStop(0, "#e2e8f0");
+      rimGrad.addColorStop(0.7, "#94a3b8");
+      rimGrad.addColorStop(1, "#334155");
+      ctx.fillStyle = rimGrad;
+      ctx.beginPath();
+      ctx.arc(wx, wy, 11, 0, Math.PI * 2);
+      ctx.fill();
+
+      const wheelAngle = elapsed * 26;
+      ctx.strokeStyle = "#f8fafc";
+      ctx.lineWidth = 2;
+      for (let s = 0; s < 5; s++) {
+        const a = wheelAngle + (s * Math.PI * 2) / 5;
+        ctx.beginPath();
+        ctx.moveTo(wx, wy);
+        ctx.lineTo(wx + Math.cos(a) * 9.5, wy + Math.sin(a) * 9.5);
+        ctx.stroke();
+      }
+
+      ctx.fillStyle = "#f43f5e";
+      ctx.beginPath();
+      ctx.arc(wx, wy, 3, 0, Math.PI * 2);
+      ctx.fill();
+    };
+
+    drawWheel(32, 4);
+    drawWheel(118, 4);
+
+    ctx.restore();
+
+    this.level2AnimId = requestAnimationFrame(renderFrame);
+  };
+
+  if (this.level2AnimId) cancelAnimationFrame(this.level2AnimId);
+  this.level2AnimId = requestAnimationFrame(renderFrame);
+}
+
+stopLevel2Animation() {
+  this.isLevel2AnimationActive = false;
+  if (this.level2AnimId) {
+    cancelAnimationFrame(this.level2AnimId);
+    this.level2AnimId = null;
+  }
+  if (this._onResizeLevel2Anim && typeof window !== "undefined" && window.removeEventListener) {
+    window.removeEventListener("resize", this._onResizeLevel2Anim);
+    this._onResizeLevel2Anim = null;
+  }
+  const overlay = document.getElementById("level2-animation-overlay");
+  if (overlay) overlay.style.display = "none";
+}
+
+openValidationNoticeModal(validationResult) {
+  const modal = document.getElementById("validation-warning-modal");
+  const listEl = document.getElementById("validation-issues-list");
+  if (!modal || !listEl) return;
+
+  this.validationHighlightNodes = new Set(validationResult.highlightedNodes);
+  this.validationHighlightMembers = new Set(validationResult.highlightedMembers);
+  this.redrawCanvas();
+
+  listEl.innerHTML = validationResult.issues.map(iss => {
+    const isErr = iss.severity === "error";
+    return `
+      <div style="background:${isErr ? 'rgba(239,68,68,0.08)' : 'rgba(245,158,11,0.08)'}; border:1px solid ${isErr ? 'rgba(239,68,68,0.3)' : 'rgba(245,158,11,0.3)'}; border-radius:12px; padding:0.85rem 1rem;">
+        <div style="display:flex; align-items:center; gap:0.5rem; font-weight:800; font-size:0.85rem; color:${isErr ? '#fca5a5' : '#fde68a'};">
+          <span>${isErr ? '🚫' : '⚠️'}</span>
+          <span>${iss.title}</span>
+        </div>
+        <p style="margin:0.35rem 0 0 0; font-size:0.78rem; color:#cbd5e1; line-height:1.45;">
+          ${iss.message}
+        </p>
+      </div>
+    `;
+  }).join("");
+
+  modal.style.display = "flex";
+}
+
+closeValidationNoticeModal() {
+  const modal = document.getElementById("validation-warning-modal");
+  if (modal) modal.style.display = "none";
+}
+
+/* =========================================================================
+ * TESTING SEQUENCE: VEHICLE TESTING & EARTHQUAKE TESTING
+ * ========================================================================= */
+startTestingSequence() {
+  // 1. Validate bridge design before testing (checks left/right symmetry & minimum members)
+  const validation = BridgeValidator.validate(this.project);
+  if (!validation.isValid) {
+    if (typeof sound !== "undefined" && sound.playBuzzer) sound.playBuzzer();
+    this.openValidationNoticeModal(validation);
+    return;
+  }
+
+  // 2. Set Level 2 and update UI
+  this.currentLevel = 2;
+  this.updateLevelUI();
+  if (!this.submittedBridgeWeight) {
+    this.submittedBridgeWeight = (this.project && this.project.submittedBridgeWeight) || this.getTotalWeight();
+    if (this.project) this.project.submittedBridgeWeight = this.submittedBridgeWeight;
+  }
+
+  // 3. Switch to Aerial 3D View and ensure aerial view button is active
+  if (this.currentView !== "aerial") {
+    this.switchView("aerial");
+  } else {
+    const btnAerial = document.getElementById("btn-view-aerial");
+    const btnLeft = document.getElementById("btn-view-left");
+    const btnRight = document.getElementById("btn-view-right");
+    const btnFront = document.getElementById("btn-view-front");
+    [btnLeft, btnRight, btnFront].forEach(b => b?.classList.remove("active"));
+    btnAerial?.classList.add("active");
+    if (typeof this.updateViewUI === "function") this.updateViewUI();
+    this.redrawCanvas();
+  }
+
+  // 4. Initialize Testing State
+  this.isTestingActive = true;
+  this.activeTestType = "vehicle";
+  this.progressiveBrokenMembers.clear();
+  this.stressedMembers.clear();
+  this.stressedJoints.clear();
+  this.currentDeflection = 0;
+  this.bridgeCollapseProgress = 0;
+  this.bridgeCollapseTimer = 0;
+  this.bridgeCollapseDrop = 0;
+  this.vehicleFallDrop = 0;
+  this.vehicleFallAngle = 0;
+  this.debrisParticles = [];
+
+  if (this.vehicleResultTimer) {
+    clearTimeout(this.vehicleResultTimer);
+    clearInterval(this.vehicleResultTimer);
+    this.vehicleResultTimer = null;
+  }
+  if (this.animFrame) {
+    cancelAnimationFrame(this.animFrame);
+    this.animFrame = null;
+  }
+
+  // 5. Classify the design thoroughly according to the calibrated table
+  const swrData = BridgeStructuralAnalysis.classifyDesign(this.project);
+  this.currentSWR = swrData;
+
+  // 6. Reset modals and show test runner HUD
+  const swrOverlay = document.getElementById("bridge-swr-result-overlay");
+  if (swrOverlay) swrOverlay.style.display = "none";
+  const resCard = document.getElementById("vehicle-result-card-overlay");
+  if (resCard) resCard.style.display = "none";
+  const failCard = document.getElementById("vehicle-failure-card-overlay");
+  if (failCard) failCard.style.display = "none";
+
+  const overlay = document.getElementById("test-runner-overlay");
+  if (overlay) overlay.style.display = "none";
+
+  // 7. Start vehicle crossing challenge with vehicle 0 (Delivery Scooter)
+  // If Design 1 (strength = 0g), the vehicle approaches and the bridge collapses as it reaches the span.
+  // Toast suppressed as requested
+  this.runVehicleTest(0);
+}
+
+runVehicleTest(vehicleIdx) {
+  if (!this.isTestingActive) return;
+
+  const swrData = this.currentSWR || BridgeStructuralAnalysis.classifyDesign(this.project);
+  this.currentSWR = swrData;
+
+  if (vehicleIdx >= SIMULATION_CONFIG.vehicles.length) {
+    this.finishLoadTesting();
+    return;
+  }
+
+  const vehicle = SIMULATION_CONFIG.vehicles[vehicleIdx];
+  if (!vehicle) {
+    this.finishLoadTesting();
+    return;
+  }
+
+  // Check if this vehicle will exceed bridge load capacity
+  this.vehicleWillFail = (vehicle.simulationLoad > swrData.strength);
+
+  // Configure active vehicle for animated crossing
+  this.activeVehicleIndex = vehicleIdx;
+  this.vehicleAnimProgress = 0;
+  this.vehicleAnimState = "approaching";
+  this.vehiclePauseTimer = 0;
+  this.maxRecordedDeflection = 0;
+  this.maxRecordedStress = 0;
+  this.bridgeCollapseProgress = 0;
+  this.bridgeCollapseTimer = 0;
+  this.bridgeCollapseDrop = 0;
+  this.vehicleFallDrop = 0;
+  this.vehicleFallAngle = 0;
+  this.debrisParticles = [];
+
+  // Hide any open result cards
+  const resCard = document.getElementById("vehicle-result-card-overlay");
+  if (resCard) resCard.style.display = "none";
+  const swrOverlay = document.getElementById("bridge-swr-result-overlay");
+  if (swrOverlay) swrOverlay.style.display = "none";
+
+  // Update HUD overlay
+  const iconEl = document.getElementById("test-vehicle-icon");
+  const titleEl = document.getElementById("test-vehicle-title");
+  const subEl = document.getElementById("test-vehicle-subtitle");
+  const statusEl = document.getElementById("test-status-pill");
+
+  if (iconEl) iconEl.textContent = vehicle.icon;
+  if (titleEl) titleEl.textContent = `${vehicle.name} Crossing (${vehicleIdx + 1}/7)`;
+  if (subEl) subEl.textContent = `Vehicle Weight: ${vehicle.simulationLoad}g • Bridge Strength: ${swrData.strength}g`;
+  if (statusEl) {
+    statusEl.textContent = `${vehicle.name} approaching bridge...`;
+    statusEl.style.color = "#38bdf8";
+    statusEl.style.borderColor = "rgba(56,189,248,0.3)";
+    statusEl.style.background = "rgba(56,189,248,0.15)";
+  }
+
+  this.lastFrameTime = performance.now();
+  this.animateVehicleCrossing();
+}
+
+animateVehicleCrossing() {
+  if (!this.isTestingActive || this.activeTestType !== "vehicle") return;
+
+  const now = performance.now();
+  const dt = Math.min((now - (this.lastFrameTime || now)) / 1000, 0.1);
+  this.lastFrameTime = now;
+
+  const vehicle = SIMULATION_CONFIG.vehicles[this.activeVehicleIndex];
+  if (!vehicle) return;
+
+  const swrData = this.currentSWR || BridgeStructuralAnalysis.classifyDesign(this.project);
+  const speed = Math.max((vehicle.speed || 0.005) * 1.5, 0.007);
+
+  if (this.vehicleAnimState === "approaching") {
+    this.vehicleAnimProgress += speed * 1.3;
+
+    // Check for collapse at bridge entrance if Design 1 (strength = 0g)
+    if (this.vehicleWillFail && swrData.strength === 0 && this.vehicleAnimProgress >= 0.16) {
+      this.triggerBridgeCollapse(vehicle, 1.5);
+      return;
+    }
+
+    if (this.vehicleAnimProgress >= 0.16) { // Reached Anchor A (Col 0)
+      this.vehicleAnimState = "crossing";
+      const statusEl = document.getElementById("test-status-pill");
+      if (statusEl) {
+        statusEl.textContent = `${vehicle.name} crossing Himmatnagar span...`;
+        statusEl.style.color = "#38bdf8";
+      }
+    }
+  } else if (this.vehicleAnimState === "crossing") {
+    this.vehicleAnimProgress += speed;
+
+    // Bridge fraction: 0 at Col 0 (0.16), 1 at Col 12 (0.84)
+    const bridgeFraction = Math.max(0, Math.min(1, (this.vehicleAnimProgress - 0.16) / (0.84 - 0.16)));
+
+    // Deflection proportional to vehicle weight vs bridge strength
+    const strength = Math.max(1, (this.currentSWR && this.currentSWR.strength) || 1000);
+    const maxSag = Math.min(22, Math.max(3, (vehicle.simulationLoad / strength) * 10));
+    const currentSag = Math.sin(bridgeFraction * Math.PI) * maxSag;
+    this.currentDeflection = currentSag;
+    if (currentSag > this.maxRecordedDeflection) this.maxRecordedDeflection = currentSag;
+
+    // Check for overload collapse during crossing
+    if (this.vehicleWillFail && bridgeFraction >= 0.35) {
+      const breakCol = 0 + bridgeFraction * 12;
+      this.triggerBridgeCollapse(vehicle, breakCol);
+      return;
+    }
+
+    // Center pause at bridge midpoint
+    if (bridgeFraction >= 0.48 && bridgeFraction <= 0.52 && this.vehiclePauseTimer < 0.6) {
+      this.vehicleAnimState = "center_pause";
+      this.vehiclePauseTimer = 0;
+    }
+
+    if (this.vehicleAnimProgress >= 0.84) { // Reached Anchor B (Col 12)
+      this.vehicleAnimState = "exiting";
+      const statusEl = document.getElementById("test-status-pill");
+      if (statusEl) {
+        statusEl.textContent = `${vehicle.name} exiting towards Ahmedabad...`;
+        statusEl.style.color = "#34d399";
+      }
+    }
+  } else if (this.vehicleAnimState === "center_pause") {
+    this.vehiclePauseTimer += dt;
+    const statusEl = document.getElementById("test-status-pill");
+    if (statusEl) {
+      statusEl.textContent = `Center Span Load Peak (${(0.6 - this.vehiclePauseTimer).toFixed(1)}s)...`;
+      statusEl.style.color = "#fbbf24";
+      statusEl.style.borderColor = "rgba(251,191,36,0.4)";
+    }
+
+    const strength = Math.max(1, (this.currentSWR && this.currentSWR.strength) || 1000);
+    this.currentDeflection = Math.min(22, Math.max(3, (vehicle.simulationLoad / strength) * 10));
+
+    if (this.vehiclePauseTimer >= 0.6) {
+      this.vehicleAnimState = "crossing";
+      this.vehicleAnimProgress = 0.53;
+    }
+  } else if (this.vehicleAnimState === "exiting") {
+    this.vehicleAnimProgress += speed * 1.3;
+    this.currentDeflection *= 0.85; // Spring back
+    if (this.vehicleAnimProgress >= 1.05) {
+      this.handleVehicleSuccess(vehicle);
+      return;
+    }
+  } else if (this.vehicleAnimState === "breaking") {
+    this.bridgeCollapseTimer = (this.bridgeCollapseTimer || 0) + dt;
+    const p = Math.min(1, this.bridgeCollapseTimer / 1.8);
+    this.bridgeCollapseProgress = p;
+
+    // Physics acceleration: drop bridge members and vehicle into canyon
+    this.bridgeCollapseDrop = Math.pow(p, 1.8) * 240;
+    this.vehicleFallDrop = Math.pow(p, 2.0) * 280;
+    this.vehicleFallAngle = Math.min(1.2, p * 1.1);
+
+    // Update debris particles
+    if (this.debrisParticles) {
+      for (const dp of this.debrisParticles) {
+        dp.col += dp.vx * dt * 0.4;
+        dp.row -= dp.vy * dt;
+        dp.vy += 9.8 * dt * 2.2;
+        dp.rot += dp.vRot;
+      }
+    }
+
+    if (p >= 1) {
+      this.vehicleAnimState = "failed";
+      this.redrawCanvas();
+      this.vehicleResultTimer = setTimeout(() => {
+        this.finishLoadTesting();
+      }, 400);
+      return;
+    }
+  }
+
+  this.redrawCanvas();
+  this.animFrame = requestAnimationFrame(() => this.animateVehicleCrossing());
+}
+
+triggerBridgeCollapse(vehicle, breakCol) {
+  this.vehicleAnimState = "breaking";
+  this.bridgeCollapseTimer = 0;
+  this.bridgeCollapseProgress = 0.01;
+  this.bridgeCollapseDrop = 0;
+  this.vehicleFallDrop = 0;
+  this.vehicleFallAngle = 0;
+  this.bridgeBreakColumn = breakCol || 6;
+
+  // Play structural crash sound
+  if (typeof sound !== "undefined" && sound.playBridgeCrash) {
+    sound.playBridgeCrash();
+  }
+
+  // Spawn debris particles including falling broken road deck slabs, asphalt chunks, timber chords & screws
+  this.debrisParticles = [];
+  const baseCol = breakCol || 6;
+  // 1. Broken Road Deck Slabs (Red Timber Planks & Paved Asphalt with yellow/white markings)
+  for (let i = 0; i < 20; i++) {
+    this.debrisParticles.push({
+      type: "deck_slab",
+      col: baseCol + (Math.random() - 0.5) * 3.5,
+      row: 0,
+      z: 0.1 + Math.random() * 0.8,
+      vx: (Math.random() - 0.5) * 4,
+      vy: (Math.random() * -3) - 1,
+      rot: Math.random() * Math.PI * 2,
+      vRot: (Math.random() - 0.5) * 0.25,
+      w: 12 + Math.random() * 16,
+      h: 6 + Math.random() * 6,
+      color: (i % 2 === 0) ? "#b91c1c" : "#1e293b",
+      accentColor: (i % 4 === 0) ? "#f59e0b" : (i % 4 === 1) ? "#f8fafc" : null
+    });
+  }
+  // 2. Timber Truss Chords & Beams
+  const timberColors = ["#854d0e", "#a16207", "#78350f", "#b45309"];
+  for (let i = 0; i < 20; i++) {
+    this.debrisParticles.push({
+      type: "timber_beam",
+      col: baseCol + (Math.random() - 0.5) * 4,
+      row: Math.random() * 2,
+      z: Math.random() > 0.5 ? 0 : 1,
+      vx: (Math.random() - 0.5) * 5,
+      vy: (Math.random() * -2.5) - 0.5,
+      rot: Math.random() * Math.PI * 2,
+      vRot: (Math.random() - 0.5) * 0.35,
+      w: 10 + Math.random() * 18,
+      h: 4 + Math.random() * 3,
+      color: timberColors[Math.floor(Math.random() * timberColors.length)]
+    });
+  }
+  // 3. Fasteners, Screws & Concrete Chunks
+  const smallColors = ["#64748b", "#94a3b8", "#cbd5e1", "#475569"];
+  for (let i = 0; i < 15; i++) {
+    this.debrisParticles.push({
+      type: "fastener",
+      col: baseCol + (Math.random() - 0.5) * 4,
+      row: Math.random() * 2,
+      z: Math.random(),
+      vx: (Math.random() - 0.5) * 6,
+      vy: (Math.random() * -3.5) - 1,
+      rot: Math.random() * Math.PI * 2,
+      vRot: (Math.random() - 0.5) * 0.4,
+      size: 3 + Math.random() * 5,
+      color: smallColors[Math.floor(Math.random() * smallColors.length)]
+    });
+  }
+
+  // Red status alert in HUD
+  const statusEl = document.getElementById("test-status-pill");
+  if (statusEl) {
+    statusEl.textContent = `💥 OVERLOAD COLLAPSE! ${vehicle.name} (${vehicle.simulationLoad}g) exceeded bridge capacity.`;
+    statusEl.style.color = "#f87171";
+    statusEl.style.borderColor = "rgba(239,68,68,0.5)";
+    statusEl.style.background = "rgba(239,68,68,0.2)";
+  }
+  // Collapse toast suppressed as requested
+
+  this.redrawCanvas();
+  if (this.animFrame) cancelAnimationFrame(this.animFrame);
+  this.lastFrameTime = performance.now();
+  this.animFrame = requestAnimationFrame(() => this.animateVehicleCrossing());
+}
+
+handleVehicleSuccess(vehicle) {
+  if (typeof sound !== "undefined" && sound.playSuccess) sound.playSuccess();
+  this.currentDeflection = 0;
+  this.stressedMembers.clear();
+  this.stressedJoints.clear();
+
+  const statusEl = document.getElementById("test-status-pill");
+  if (statusEl) {
+    statusEl.textContent = `✓ ${vehicle.name} crossed safely!`;
+    statusEl.style.color = "#34d399";
+    statusEl.style.borderColor = "rgba(52,211,153,0.4)";
+  }
+
+  // Record passed test
+  if (this.project && this.project.testResults) {
+    this.project.testResults.vehicleTests.push({
+      vehicle: vehicle.name,
+      simulationLoad: vehicle.simulationLoad,
+      passed: true,
+      failureMode: null
+    });
+    this.project.testResults.maximumVehiclePassed = vehicle.name;
+    if (typeof BridgeStorage !== "undefined") BridgeStorage.saveProject(this.project);
+  }
+
+  // Vehicle pass toast suppressed as requested
+  this.showVehicleCrossingResult(vehicle);
+}
+
+showVehicleCrossingResult(vehicle) {
+  const resCard = document.getElementById("vehicle-result-card-overlay");
+  if (!resCard) return;
+
+  const iconEl = document.getElementById("veh-res-icon");
+  const nameEl = document.getElementById("veh-res-name");
+  const stageEl = document.getElementById("veh-res-stage");
+  const msgEl = document.getElementById("veh-res-message");
+  const loadEl = document.getElementById("veh-res-load");
+  const deflEl = document.getElementById("veh-res-deflection");
+  const countEl = document.getElementById("veh-res-countdown");
+  const btnNext = document.getElementById("btn-next-vehicle");
+
+  const curIdx = this.activeVehicleIndex;
+  const nextIdx = curIdx + 1;
+  const nextVehicle = SIMULATION_CONFIG.vehicles[nextIdx];
+
+  if (iconEl) iconEl.textContent = vehicle.icon;
+  if (nameEl) nameEl.textContent = vehicle.name;
+  if (stageEl) stageEl.textContent = `Vehicle ${curIdx + 1} of 7`;
+  if (loadEl) loadEl.textContent = `${vehicle.simulationLoad} g`;
+  if (deflEl) deflEl.textContent = `${(this.maxRecordedDeflection || 4.2).toFixed(1)} mm`;
+
+  if (nextVehicle) {
+    if (msgEl) msgEl.textContent = `${vehicle.name} test passed! Time to test the next vehicle: ${nextVehicle.name} (${nextVehicle.simulationLoad}g).`;
+    if (btnNext) {
+      btnNext.textContent = `Test Next Vehicle (${nextVehicle.name}) ➔`;
+      btnNext.onclick = () => {
+        if (this.vehicleResultTimer) {
+          clearTimeout(this.vehicleResultTimer);
+          clearInterval(this.vehicleResultTimer);
+          this.vehicleResultTimer = null;
+        }
+        resCard.style.display = "none";
+        this.runVehicleTest(nextIdx);
+      };
+    }
+    if (countEl) countEl.textContent = "Click below to test the next vehicle.";
+  } else {
+    // All 7 vehicles passed!
+    if (msgEl) msgEl.textContent = `🎉 All 7 vehicle load tests passed! Bridge withstood the maximum 3500g load.`;
+    if (btnNext) {
+      btnNext.textContent = `View Bridge Evaluation Result ➔`;
+      btnNext.onclick = () => {
+        if (this.vehicleResultTimer) {
+          clearTimeout(this.vehicleResultTimer);
+          clearInterval(this.vehicleResultTimer);
+          this.vehicleResultTimer = null;
+        }
+        resCard.style.display = "none";
+        this.finishLoadTesting();
+      };
+    }
+    if (countEl) countEl.textContent = "Click below to view the Strength-to-Weight Ratio.";
+  }
+
+  resCard.style.display = "flex";
+  this.redrawCanvas();
+}
+
+finishLoadTesting() {
+  if (this.vehicleResultTimer) {
+    clearTimeout(this.vehicleResultTimer);
+    clearInterval(this.vehicleResultTimer);
+    this.vehicleResultTimer = null;
+  }
+  if (this.animFrame) {
+    cancelAnimationFrame(this.animFrame);
+    this.animFrame = null;
+  }
+
+  const overlay = document.getElementById("test-runner-overlay");
+  if (overlay) overlay.style.display = "none";
+  const resCard = document.getElementById("vehicle-result-card-overlay");
+  if (resCard) resCard.style.display = "none";
+
+  this.isTestingActive = false;
+  this.activeTestType = null;
+  this.vehicleAnimState = "idle";
+  this.currentDeflection = 0;
+  this.redrawCanvas();
+
+  const swrData = this.currentSWR || BridgeStructuralAnalysis.classifyDesign(this.project);
+  this.showStrengthToWeightResult(swrData);
+}
+
+stopTestingSequence(returnToBlueprint = false) {
+  this.isTestingActive = false;
+  this.activeTestType = null;
+  this.vehicleAnimState = "idle";
+  this.currentDeflection = 0;
+  this.earthquakeDisplacement = 0;
+  this.stressedMembers.clear();
+  this.stressedJoints.clear();
+  this.progressiveBrokenMembers.clear();
+  this.bridgeCollapseProgress = 0;
+  this.bridgeCollapseTimer = 0;
+  this.bridgeCollapseDrop = 0;
+  this.vehicleFallDrop = 0;
+  this.vehicleFallAngle = 0;
+  this.debrisParticles = [];
+
+  if (this.vehicleResultTimer) {
+    clearTimeout(this.vehicleResultTimer);
+    clearInterval(this.vehicleResultTimer);
+    this.vehicleResultTimer = null;
+  }
+  if (this.animFrame) {
+    cancelAnimationFrame(this.animFrame);
+    this.animFrame = null;
+  }
+
+  const swrOverlay = document.getElementById("bridge-swr-result-overlay");
+  if (swrOverlay) swrOverlay.style.display = "none";
+  const resCard = document.getElementById("vehicle-result-card-overlay");
+  if (resCard) resCard.style.display = "none";
+  const failCard = document.getElementById("vehicle-failure-card-overlay");
+  if (failCard) failCard.style.display = "none";
+
+  const overlay = document.getElementById("test-runner-overlay");
+  if (overlay) overlay.style.display = "none";
+
+  if (returnToBlueprint) {
+    this.enterPostEvaluationMode();
+    return;
+  }
+
+  this.redrawCanvas();
+}
+
+enterPostEvaluationMode() {
+  this.isTestingActive = false;
+  this.activeTestType = null;
+  this.vehicleAnimState = "idle";
+  this.currentDeflection = 0;
+  this.earthquakeDisplacement = 0;
+  this.stressedMembers.clear();
+  this.stressedJoints.clear();
+  this.progressiveBrokenMembers.clear();
+  this.bridgeCollapseProgress = 0;
+  this.bridgeCollapseTimer = 0;
+  this.bridgeCollapseDrop = 0;
+  this.vehicleFallDrop = 0;
+  this.vehicleFallAngle = 0;
+  this.debrisParticles = [];
+  this.isPostEvaluationMode = true;
+  this.currentLevel = 1;
+
+  if (this.vehicleResultTimer) {
+    clearTimeout(this.vehicleResultTimer);
+    clearInterval(this.vehicleResultTimer);
+    this.vehicleResultTimer = null;
+  }
+  if (this.animFrame) {
+    cancelAnimationFrame(this.animFrame);
+    this.animFrame = null;
+  }
+
+  // 1. Hide all testing/result overlays
+  const swrOverlay = document.getElementById("bridge-swr-result-overlay");
+  if (swrOverlay) swrOverlay.style.display = "none";
+  const resCard = document.getElementById("vehicle-result-card-overlay");
+  if (resCard) resCard.style.display = "none";
+  const failCard = document.getElementById("vehicle-failure-card-overlay");
+  if (failCard) failCard.style.display = "none";
+  const overlay = document.getElementById("test-runner-overlay");
+  if (overlay) overlay.style.display = "none";
+
+  // 2. Hide right sidebar controls completely
+  const stageControls = document.getElementById("sim-stage-controls") || (typeof document !== "undefined" && document.querySelector(".sim-stage-controls"));
+  if (stageControls) stageControls.style.display = "none";
+
+  // 3. Make stage visual expand to 100% full width
+  const stageVisual = document.getElementById("sim-stage-visual") || (typeof document !== "undefined" && document.querySelector(".sim-stage-visual"));
+  if (stageVisual) {
+    stageVisual.style.flex = "1";
+    stageVisual.style.width = "100%";
+    stageVisual.style.maxWidth = "100%";
+    stageVisual.style.borderRight = "none";
+  }
+
+  // 4. Cockpit Bar: keep Domain 2 and Title, hide Mission Hub exit button
+  const cockpitExitBtn = document.getElementById("exit-sim-cockpit-btn");
+  if (cockpitExitBtn) cockpitExitBtn.style.display = "none";
+
+  const cockpitDomain = document.getElementById("cockpit-sim-domain");
+  if (cockpitDomain) {
+    cockpitDomain.textContent = "DOMAIN 2: THE PHYSICAL BUILD LOOP";
+    cockpitDomain.style.display = "block";
+  }
+  const cockpitTitle = document.getElementById("cockpit-sim-title");
+  if (cockpitTitle) {
+    cockpitTitle.textContent = "Earthquake-Proof Bridge Under Budget";
+    cockpitTitle.style.display = "block";
+  }
+
+  // 5. Bridge Builder Top Bar:
+  // KEEP Engineer Name & View Title
+  const engTag = document.getElementById("top-engineer-team-tag");
+  if (engTag) engTag.style.display = "block";
+  const viewTitle = document.getElementById("view-title-display");
+  if (viewTitle) viewTitle.style.display = "block";
+
+  // KEEP and DISPLAY Left, Right, Front, Aerial View Switcher Buttons
+  const viewSwitcher = document.getElementById("bridge-view-switcher");
+  const btnLeft = document.getElementById("btn-view-left");
+  const btnRight = document.getElementById("btn-view-right");
+  const btnFront = document.getElementById("btn-view-front");
+  const btnAerial = document.getElementById("btn-view-aerial");
+
+  // Restore Aerial button back into bridge-view-switcher capsule
+  if (viewSwitcher && btnAerial && btnAerial.parentElement !== viewSwitcher) {
+    viewSwitcher.appendChild(btnAerial);
+  }
+  if (btnAerial) {
+    btnAerial.innerHTML = "<span>🚁 Aerial View</span>";
+  }
+
+  if (viewSwitcher) viewSwitcher.style.display = "flex";
+
+  [btnLeft, btnRight, btnFront, btnAerial].forEach(b => {
+    if (b) b.style.display = "inline-flex";
+  });
+
+  // KEEP View Design Option
+  const btnTopViewDesign = document.getElementById("btn-top-view-design");
+  if (btnTopViewDesign) btnTopViewDesign.style.display = "inline-flex";
+
+  // KEEP & SHOW Homepage button when coming back to blueprint
+  const btnBlueprintHome = document.getElementById("btn-blueprint-home");
+  if (btnBlueprintHome) btnBlueprintHome.style.display = "inline-flex";
+
+  // REMOVE all other buttons & badges:
+  const idsToRemove = [
+    "btn-copy-left-to-right",
+    "mission-level-badge",
+    "mission-timer-badge",
+    "btn-new-project",
+    "top-budget-badge",
+    "top-weight-badge",
+    "classroom-audio-widget",
+    "bottom-view-legend",
+    "btn-submit-design",
+    "btn-open-material-shop",
+    "btn-sidebar-view-design",
+    "btn-stop-test"
+  ];
+  idsToRemove.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.style.display = "none";
+  });
+
+  // Default to Left view so user sees the blueprint design
+  this.currentView = "left";
+  [btnLeft, btnRight, btnFront, btnAerial].forEach(b => b?.classList.remove("active"));
+  btnLeft?.classList.add("active");
+  if (viewTitle) viewTitle.textContent = "Left Side View";
+
+  if (typeof this.resizeCanvas === "function") this.resizeCanvas();
+  this.redrawCanvas();
+}
+showStrengthToWeightResult(swrData) {
+  const resultOverlay = document.getElementById("bridge-swr-result-overlay");
+  if (!resultOverlay) return;
+
+  const ratioVal = document.getElementById("swr-ratio-value");
+  const strengthVal = document.getElementById("swr-strength-val");
+  const weightVal = document.getElementById("swr-weight-val");
+  const vehicleName = document.getElementById("swr-vehicle-name");
+  const vehicleIcon = document.getElementById("swr-vehicle-icon");
+
+  // Keep original weight of the bridge which was in Level 1 after submitting the design
+  const originalWeight = this.submittedBridgeWeight || (this.project && this.project.submittedBridgeWeight) || this.getTotalWeight() || (swrData && swrData.weight) || 0;
+  const strength = (swrData && swrData.strength !== undefined) ? swrData.strength : 0;
+  // SWR: Strength / Original Bridge Weight
+  const ratio = (originalWeight > 0 && strength > 0) ? (strength / originalWeight) : 0;
+
+  if (ratioVal) ratioVal.textContent = ratio.toFixed(2);
+  if (strengthVal) strengthVal.textContent = `${strength} g`;
+  if (weightVal) weightVal.textContent = `${originalWeight} g`;
+  if (vehicleName) vehicleName.textContent = (swrData && swrData.maxVehicleSupported && swrData.maxVehicleSupported !== "None") ? `Holds ${swrData.maxVehicleSupported}` : "No Load Supported";
+  if (vehicleIcon) vehicleIcon.textContent = (swrData && swrData.vehicleIcon) || (swrData && swrData.designNumber === 1 ? "🚫" : "🌉");
+
+  resultOverlay.style.display = "flex";
+
+  if (swrData && (swrData.designNumber === 1 || swrData.strength === 0)) {
+    if (typeof sound !== "undefined" && sound.playBuzzer) sound.playBuzzer();
+  } else {
+    if (typeof sound !== "undefined" && sound.playSuccess) sound.playSuccess();
+  }
+}
+
+
+
+inspectFailedSegment(critComp) {
+  this.stopTestingSequence();
+  this.inspectedFailedSegment = critComp;
+  this.switchView("left");
+  this.showToast("🔍 Inspecting failed segment on blueprint in pulsing red!", "warning");
+  this.redrawCanvas();
+}
+
+/* =========================================================================
+ * 3-LEVEL EARTHQUAKE TESTING
+ * Level 1: Gentle to Moderate Shake (0.15)
+ * Level 2: Strong Shake (0.35)
+ * Level 3: Severe Shake (0.60)
+ * ========================================================================= */
+runEarthquakeTest(levelIdx) {
+  if (levelIdx >= SIMULATION_CONFIG.earthquake.levels.length) {
+    // Survived all 3 earthquake levels!
+    if (typeof sound.playSuccess === "function") sound.playSuccess();
+    this.project.testResults.maximumEarthquakeLevel = 3;
+    BridgeStorage.saveProject(this.project);
+    this.showToast("🏆 INCREDIBLE! Your bridge survived all 3 Earthquake Levels!", "success");
+    setTimeout(() => {
+      this.showFinalReport({
+        success: true,
+        failedAt: null,
+        reason: "All tests completed with flying colors!"
+      });
+    }, 1500);
+    return;
+  }
+
+  this.activeTestType = "earthquake";
+  this.earthquakeLevelIndex = levelIdx;
+  const eqLevel = SIMULATION_CONFIG.earthquake.levels[levelIdx];
+  this.earthquakeStartTime = performance.now();
+
+  const iconEl = document.getElementById("test-vehicle-icon");
+  const titleEl = document.getElementById("test-vehicle-title");
+  const subEl = document.getElementById("test-vehicle-subtitle");
+  const statusEl = document.getElementById("test-status-pill");
+
+  if (iconEl) iconEl.textContent = eqLevel.icon;
+  if (titleEl) titleEl.textContent = `Earthquake Level ${eqLevel.level}: ${eqLevel.name}`;
+  if (subEl) subEl.textContent = `Dynamic Ground Demand: ${eqLevel.demand} • Lateral Shear Tracking`;
+  if (statusEl) {
+    statusEl.textContent = `Testing Level ${eqLevel.level}...`;
+    statusEl.style.color = "#c084fc";
+    statusEl.style.borderColor = "rgba(192,132,252,0.4)";
+  }
+
+  sound.playEarthquakeRumble();
+  this.animateEarthquakeShake();
+}
+
+animateEarthquakeShake() {
+  if (!this.isTestingActive || this.activeTestType !== "earthquake") return;
+
+  const now = performance.now();
+  const elapsed = now - this.earthquakeStartTime;
+  const eqLevel = SIMULATION_CONFIG.earthquake.levels[this.earthquakeLevelIndex];
+
+  const t = elapsed / 1000;
+  this.earthquakeDisplacement = Math.sin(t * eqLevel.frequency * Math.PI * 2) * eqLevel.amplitude;
+
+  // Structural earthquake resistance formula
+  // High mass -> larger inertial force; triangles & chords -> higher lateral resistance
+  const mass = this.getTotalWeight();
+  const placed = this.placedElements.left || [];
+  const triangleCount = (this.project.analysis?.triangles || []).length;
+  const hasTopChord = placed.some(m => m.type === "top_chord");
+  const hasBotChord = placed.some(m => m.type === "bottom_chord");
+
+  let lateralCapacity = 280 + (triangleCount * 35) + (hasTopChord ? 80 : 0) + (hasBotChord ? 60 : 0);
+  const lateralDemand = eqLevel.demand * mass * 3.8;
+
+  const earthquakeStress = lateralDemand / lateralCapacity;
+
+  if (earthquakeStress >= 1.0) {
+    // Earthquake Failure
+    sound.playEarthquakeRumble();
+    this.earthquakeDisplacement = 0;
+    const reason = `Your bridge failed at Earthquake Level ${eqLevel.level} (${eqLevel.name}) due to excessive lateral inertial sway. Adding more triangles or top chords will stiffen the frame!`;
+
+    this.project.testResults.maximumEarthquakeLevel = Math.max(0, eqLevel.level - 1);
+    BridgeStorage.saveProject(this.project);
+
+    this.redrawCanvas();
+    setTimeout(() => {
+      this.showFinalReport({
+        success: false,
+        failedAt: `Earthquake Level ${eqLevel.level} (${eqLevel.name})`,
+        reason: reason
+      });
+    }, 1800);
+    return;
+  }
+
+  if (elapsed >= eqLevel.durationMs) {
+    // Survived this level!
+    this.earthquakeDisplacement = 0;
+    this.project.testResults.maximumEarthquakeLevel = eqLevel.level;
+    BridgeStorage.saveProject(this.project);
+    this.showToast(`✓ Survived Level ${eqLevel.level}: ${eqLevel.name}!`, "success");
+
+    setTimeout(() => {
+      if (this.isTestingActive && this.activeTestType === "earthquake") {
+        this.runEarthquakeTest(this.earthquakeLevelIndex + 1);
+      }
+    }, 1200);
+    return;
+  }
+
+  this.redrawCanvas();
+  this.animFrame = requestAnimationFrame(() => this.animateEarthquakeShake());
+}
+
+/* =========================================================================
+ * FINAL ENGINEERING REPORT & REDESIGN LOOP
+ * ========================================================================= */
+showFinalReport(results) {
+  this.stopTestingSequence();
+  const swr = BridgeStructuralAnalysis.calculateStrengthToWeightRatio(this.project);
+  this.showStrengthToWeightResult(swr);
+}
+redesignBridge() {
+  // Record attempt
+  this.project.attempts.push({
+    attemptNumber: this.project.attempts.length + 1,
+    timestamp: Date.now(),
+    totalCost: this.calculateTotalCost(),
+    totalWeight: this.getTotalWeight(),
+    testResults: JSON.parse(JSON.stringify(this.project.testResults))
+  });
+  BridgeStorage.saveProject(this.project);
+
+  // Close report modal
+  const modal = document.getElementById("final-report-modal");
+  if (modal) modal.style.display = "none";
+
+  // Return to intact bridge workspace (locked after submission)
+  this.stopTestingSequence();
+  this.hasSubmitted = true;
+  this.updateTimerDisplay();
+  this.renderToolbox();
+  this.updateUndoRedoButtons();
+  this.showToast("🔒 Returned to Blueprint. Design is submitted and locked.", "info");
+  this.redrawCanvas();
+}
+
+startNewProject() {
+  if (confirm("Start a new bridge project? Your current design will be safely preserved in history.")) {
+    if (this.missionTimer) {
+      clearInterval(this.missionTimer);
+      this.missionTimer = null;
+    }
+    this.currentLevel = 1;
+    this.stopLevel2Animation();
+    this.closeDesignSubmittedModal();
+    this.updateLevelUI();
+    this.missionTimerSeconds = 17 * 60;
+    this.hasSubmitted = false;
+    this.activeTool = null;
+    this.selectedFirstDot = null;
+    this.undoStack = [];
+    this.redoStack = [];
+
+    const btnSubmit = document.getElementById("btn-submit-design");
+    if (btnSubmit) {
+      btnSubmit.disabled = false;
+      btnSubmit.style.background = "linear-gradient(135deg, #10b981, #059669)";
+      btnSubmit.style.color = "#fff";
+      btnSubmit.style.borderColor = "";
+      btnSubmit.style.cursor = "pointer";
+      btnSubmit.innerHTML = `<span style="font-size:1.2rem;">📋</span> <span>SUBMIT DESIGN</span>`;
+    }
+
+    this.project = BridgeStorage.createNewProject();
+    this.budget = this.project.budget.remainingBudget;
+    this.purchased = this.project.purchased;
+    this.placedElements = this.project.placedElements;
+    this.saveCurrentState();
+    this.showToast("✨ Started new project with ₹700 budget!", "success");
+    this.renderToolbox();
+    this.updateTelemetryUI();
+    this.updateTimerDisplay();
+    this.redrawCanvas();
+
+    // Re-prompt registration for new session
+    this.openRegistrationModal();
+  }
+}
+
+/* =========================================================================
+ * VEHICLE CANVAS RENDERING (SPRITES)
+ * ========================================================================= */
+drawVehicleSprite(ctx, vehicle, x, y) {
+  ctx.save();
+  ctx.translate(x, y);
+
+  if (vehicle.id === "scooter") {
+    // 🛵 Scooter
+    ctx.fillStyle = "#38bdf8";
+    ctx.fillRect(-12, -8, 20, 4); // Footboard
+    ctx.fillStyle = "#0284c7";
+    ctx.fillRect(8, -20, 3, 14); // Handle column
+    ctx.fillRect(5, -22, 8, 2); // Handlebar
+    ctx.fillStyle = "#fbbf24";
+    ctx.fillRect(10, -18, 3, 3); // Headlight
+    // Wheels
+    ctx.fillStyle = "#1e293b";
+    ctx.beginPath(); ctx.arc(-10, 0, 4.5, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.arc(10, 0, 4.5, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = "#94a3b8";
+    ctx.beginPath(); ctx.arc(-10, 0, 1.8, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.arc(10, 0, 1.8, 0, Math.PI * 2); ctx.fill();
+  } else if (vehicle.id === "motorcycle") {
+    // 🏍️ Motorcycle
+    ctx.fillStyle = "#ef4444";
+    ctx.beginPath();
+    ctx.moveTo(-10, -6); ctx.lineTo(6, -6); ctx.lineTo(12, -18); ctx.lineTo(-2, -16);
+    ctx.closePath(); ctx.fill();
+    // Wheels
+    ctx.fillStyle = "#0f172a";
+    ctx.beginPath(); ctx.arc(-14, 0, 6, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.arc(14, 0, 6, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = "#cbd5e1";
+    ctx.beginPath(); ctx.arc(-14, 0, 2.5, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.arc(14, 0, 2.5, 0, Math.PI * 2); ctx.fill();
+  } else if (vehicle.id === "car") {
+    // 🚗 Car
+    ctx.fillStyle = "#3b82f6";
+    ctx.beginPath();
+    ctx.roundRect(-22, -14, 44, 10, [4, 4, 2, 2]);
+    ctx.fill();
+    // Roof / Cabin
+    ctx.fillStyle = "#1d4ed8";
+    ctx.beginPath();
+    ctx.roundRect(-10, -22, 24, 9, [4, 4, 0, 0]);
+    ctx.fill();
+    // Windows
+    ctx.fillStyle = "#93c5fd";
+    ctx.fillRect(-8, -20, 9, 6);
+    ctx.fillRect(3, -20, 9, 6);
+    // Headlight
+    ctx.fillStyle = "#fef08a";
+    ctx.fillRect(20, -11, 2.5, 4);
+    // Wheels
+    ctx.fillStyle = "#0f172a";
+    ctx.beginPath(); ctx.arc(-12, 0, 6.5, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.arc(12, 0, 6.5, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = "#94a3b8";
+    ctx.beginPath(); ctx.arc(-12, 0, 2.5, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.arc(12, 0, 2.5, 0, Math.PI * 2); ctx.fill();
+  } else if (vehicle.id === "suv") {
+    // 🚙 SUV
+    ctx.fillStyle = "#059669";
+    ctx.beginPath();
+    ctx.roundRect(-24, -18, 48, 14, [4, 4, 2, 2]);
+    ctx.fill();
+    // Roof
+    ctx.fillStyle = "#047857";
+    ctx.roundRect(-16, -26, 32, 9, [3, 3, 0, 0]);
+    ctx.fill();
+    // Windows
+    ctx.fillStyle = "#a7f3d0";
+    ctx.fillRect(-13, -24, 12, 6);
+    ctx.fillRect(1, -24, 12, 6);
+    // Headlight
+    ctx.fillStyle = "#fef08a";
+    ctx.fillRect(22, -14, 3, 5);
+    // Wheels
+    ctx.fillStyle = "#0f172a";
+    ctx.beginPath(); ctx.arc(-13, 0, 7.5, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.arc(13, 0, 7.5, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = "#94a3b8";
+    ctx.beginPath(); ctx.arc(-13, 0, 3, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.arc(13, 0, 3, 0, Math.PI * 2); ctx.fill();
+  } else if (vehicle.id === "bus") {
+    // 🚌 Small Bus
+    ctx.fillStyle = "#eab308";
+    ctx.beginPath();
+    ctx.roundRect(-34, -28, 68, 22, [5, 5, 2, 2]);
+    ctx.fill();
+    // Windows
+    ctx.fillStyle = "#fef9c3";
+    for (let i = 0; i < 4; i++) {
+      ctx.fillRect(-28 + i * 14, -24, 10, 9);
+    }
+    // Headlight
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(32, -15, 3, 6);
+    // Wheels
+    ctx.fillStyle = "#0f172a";
+    ctx.beginPath(); ctx.arc(-18, 0, 7, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.arc(18, 0, 7, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = "#94a3b8";
+    ctx.beginPath(); ctx.arc(-18, 0, 2.5, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.arc(18, 0, 2.5, 0, Math.PI * 2); ctx.fill();
+  } else if (vehicle.id === "truck" || vehicle.id === "transport") {
+    // 🚚 / 🚛 Heavy Truck / Heavy Transport
+    const isTrans = vehicle.id === "transport";
+    ctx.fillStyle = isTrans ? "#c026d3" : "#ea580c";
+    // Cab
+    ctx.fillRect(10, -28, 24, 22);
+    ctx.fillStyle = "#fed7aa";
+    ctx.fillRect(18, -26, 12, 10); // Window
+    // Cargo
+    ctx.fillStyle = isTrans ? "#701a75" : "#9a3412";
+    ctx.fillRect(-44, -32, 52, 26);
+    ctx.strokeStyle = "#cbd5e1";
+    ctx.strokeRect(-44, -32, 52, 26);
+    // Headlight
+    ctx.fillStyle = "#fef08a";
+    ctx.fillRect(32, -15, 3, 6);
+    // Wheels (3 or 4 axles)
+    ctx.fillStyle = "#0f172a";
+    const wheelPos = isTrans ? [-34, -18, -2, 22] : [-30, -12, 22];
+    wheelPos.forEach(wx => {
+      ctx.beginPath(); ctx.arc(wx, 0, 7.5, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "#94a3b8";
+      ctx.beginPath(); ctx.arc(wx, 0, 3, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "#0f172a";
+    });
+  }
+
+  ctx.restore();
+}
+
+drawValidationHighlights(ctx) {
+  if (!this.validationHighlightNodes || this.validationHighlightNodes.size === 0) return;
+
+  const time = performance.now() * 0.005;
+  const pulse = 1.0 + Math.sin(time) * 0.35;
+
+  this.gridDots.forEach(dot => {
+    const nodeKey = `${dot.row}_${dot.col}`;
+    if (this.validationHighlightNodes.has(nodeKey)) {
+      ctx.save();
+      ctx.strokeStyle = `rgba(239, 68, 68, ${0.5 + Math.sin(time) * 0.4})`;
+      ctx.lineWidth = 2.5;
+      ctx.beginPath();
+      ctx.arc(dot.x, dot.y, 11 * pulse, 0, Math.PI * 2);
+      ctx.stroke();
+
+      ctx.fillStyle = "rgba(239, 68, 68, 0.25)";
+      ctx.beginPath();
+      ctx.arc(dot.x, dot.y, 7 * pulse, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    }
+  });
+}
+
+
+getNodeCanvasPos(dot) {
+  let x = dot.x;
+  let y = dot.y;
+
+  if (this.isTestingActive) {
+    if (this.activeTestType === "vehicle") {
+      const colDist = Math.sin((dot.col / 12) * Math.PI);
+      const rowFactor = 1.0 - (dot.row * 0.14);
+      y += (this.currentDeflection || 0) * colDist * rowFactor;
+    } else if (this.activeTestType === "earthquake") {
+      const swayFactor = (dot.row + 1) / 5;
+      x += (this.earthquakeDisplacement || 0) * swayFactor;
+    }
+  }
+
+  return { x, y };
+}
+
+  setupMaterialShopEvents() {
+    const btnOpen = document.getElementById("btn-open-material-shop");
+    const btnClose = document.getElementById("btn-close-material-shop");
+    const btnDone = document.getElementById("btn-shop-done");
+    const modal = document.getElementById("material-shop-modal-overlay");
+
+    const openShop = () => {
+      sound.playClick();
+      this.shopModalOpen = true;
+      if (modal) modal.style.display = "flex";
+      this.renderShopCatalog();
+      this.saveCurrentState();
+    };
+
+    const closeShop = () => {
+      sound.playClick();
+      this.shopModalOpen = false;
+      if (modal) modal.style.display = "none";
+      this.renderToolbox();
+      this.saveCurrentState();
+    };
+
+    btnOpen?.addEventListener("click", openShop);
+    btnClose?.addEventListener("click", closeShop);
+    btnDone?.addEventListener("click", closeShop);
+
+    // Dismantle button toggle
+    const btnDismantle = document.getElementById("btn-tool-dismantle");
+    btnDismantle?.addEventListener("click", () => {
+      if (this.hasSubmitted) {
+        sound.playBuzzer();
+        this.showToast("🔒 Design is submitted and locked! Cannot dismantle.", "warning");
+        return;
+      }
+      sound.playClick();
+      if (this.activeTool === "dismantle") {
+        this.activeTool = null;
+      } else {
+        this.activeTool = "dismantle";
+        this.selectedFirstDot = null;
+      }
+      this.renderToolbox();
+      this.redrawCanvas();
+    });
+
+    // Undo & Redo buttons
+    const btnUndo = document.getElementById("btn-tool-undo");
+    const btnRedo = document.getElementById("btn-tool-redo");
+
+    btnUndo?.addEventListener("click", () => {
+      if (this.hasSubmitted) {
+        sound.playBuzzer();
+        this.showToast("🔒 Design is submitted and locked! Cannot undo.", "warning");
+        return;
+      }
+      this.undo();
+    });
+
+    btnRedo?.addEventListener("click", () => {
+      if (this.hasSubmitted) {
+        sound.playBuzzer();
+        this.showToast("🔒 Design is submitted and locked! Cannot redo.", "warning");
+        return;
+      }
+      this.redo();
+    });
+
+    // Keyboard shortcuts (Ctrl+Z, Ctrl+Y, Cmd+Z, Cmd+Shift+Z)
+    if (!this._hasKeyboardUndoListener) {
+      this._hasKeyboardUndoListener = true;
+      window.addEventListener("keydown", (e) => {
+        if (e.target && (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA")) return;
+        if (e.ctrlKey || e.metaKey) {
+          if (e.key === "z" || e.key === "Z") {
+            if (e.shiftKey) {
+              e.preventDefault();
+              this.redo();
+            } else {
+              e.preventDefault();
+              this.undo();
+            }
+          } else if (e.key === "y" || e.key === "Y") {
+            e.preventDefault();
+            this.redo();
+          }
+        }
+      });
+    }
+  }
+
+  /* =========================================================================
+   * UNDO & REDO ENGINE
+   * ========================================================================= */
+  pushUndoAction(action) {
+    if (!this.undoStack) this.undoStack = [];
+    if (!this.redoStack) this.redoStack = [];
+    this.undoStack.push(action);
+    this.redoStack = []; // Clear redo stack on new operation
+    this.updateUndoRedoButtons();
+  }
+
+  undo() {
+    if (this.hasSubmitted) {
+      sound.playBuzzer();
+      this.showToast("🔒 Design is submitted and locked! Cannot undo.", "warning");
+      return;
+    }
+    if (!this.undoStack || this.undoStack.length === 0) {
+      this.showToast("Nothing to undo!", "info");
+      return;
+    }
+    const action = this.undoStack.pop();
+    if (!this.redoStack) this.redoStack = [];
+
+    if (action.type === "place") {
+      const list = this.placedElements[action.view] || [];
+      const idx = list.indexOf(action.element);
+      if (idx !== -1) {
+        list.splice(idx, 1);
+      }
+      this.redoStack.push(action);
+      sound.playClick();
+      this.showToast("↩️ Undid placement (returned to toolbox inventory)", "info");
+    } else if (action.type === "dismantle") {
+      const list = this.placedElements[action.view] || [];
+      const insertIdx = (action.index !== undefined && action.index <= list.length) ? action.index : list.length;
+      list.splice(insertIdx, 0, action.element);
+      this.purchased[action.element.type] = (this.purchased[action.element.type] || 0) + 1;
+      this.redoStack.push(action);
+      sound.playClick();
+      this.showToast(`↩️ Restored dismantled component (-₹${action.element.price || 0})`, "info");
+    }
+
+    this.selectedFirstDot = null;
+    this.saveCurrentState();
+    this.renderToolbox();
+    this.updateUndoRedoButtons();
+    this.redrawCanvas();
+  }
+
+  redo() {
+    if (this.hasSubmitted) {
+      sound.playBuzzer();
+      this.showToast("🔒 Design is submitted and locked! Cannot redo.", "warning");
+      return;
+    }
+    if (!this.redoStack || this.redoStack.length === 0) {
+      this.showToast("Nothing to redo!", "info");
+      return;
+    }
+    const action = this.redoStack.pop();
+    if (!this.undoStack) this.undoStack = [];
+
+    if (action.type === "place") {
+      const list = this.placedElements[action.view] || [];
+      list.push(action.element);
+      this.undoStack.push(action);
+      sound.playClick();
+      this.showToast("↪️ Redid placement of component", "info");
+    } else if (action.type === "dismantle") {
+      const list = this.placedElements[action.view] || [];
+      const idx = list.indexOf(action.element);
+      if (idx !== -1) {
+        list.splice(idx, 1);
+        this.purchased[action.element.type] = Math.max(0, (this.purchased[action.element.type] || 1) - 1);
+      }
+      this.undoStack.push(action);
+      sound.playClick();
+      this.showToast(`↪️ Redid dismantle (+₹${action.element.price || 0} refunded)`, "refund");
+    }
+
+    this.selectedFirstDot = null;
+    this.saveCurrentState();
+    this.renderToolbox();
+    this.updateUndoRedoButtons();
+    this.redrawCanvas();
+  }
+
+  updateUndoRedoButtons() {
+    const undoBtn = document.getElementById("btn-tool-undo");
+    const redoBtn = document.getElementById("btn-tool-redo");
+    const hasUndo = !this.hasSubmitted && this.undoStack && this.undoStack.length > 0;
+    const hasRedo = !this.hasSubmitted && this.redoStack && this.redoStack.length > 0;
+
+    if (undoBtn) {
+      if (this.hasSubmitted) {
+        undoBtn.disabled = true;
+        undoBtn.style.color = "#475569";
+        undoBtn.style.borderColor = "rgba(255,255,255,0.06)";
+        undoBtn.style.background = "rgba(255,255,255,0.02)";
+        undoBtn.style.cursor = "not-allowed";
+        undoBtn.style.opacity = "0.45";
+      } else if (hasUndo) {
+        undoBtn.disabled = false;
+        undoBtn.style.color = "#38bdf8";
+        undoBtn.style.borderColor = "rgba(56,189,248,0.5)";
+        undoBtn.style.background = "rgba(56,189,248,0.14)";
+        undoBtn.style.cursor = "pointer";
+        undoBtn.style.opacity = "1";
+      } else {
+        undoBtn.disabled = true;
+        undoBtn.style.color = "#64748b";
+        undoBtn.style.borderColor = "rgba(255,255,255,0.1)";
+        undoBtn.style.background = "rgba(255,255,255,0.02)";
+        undoBtn.style.cursor = "default";
+        undoBtn.style.opacity = "0.7";
+      }
+    }
+
+    if (redoBtn) {
+      if (this.hasSubmitted) {
+        redoBtn.disabled = true;
+        redoBtn.style.color = "#475569";
+        redoBtn.style.borderColor = "rgba(255,255,255,0.06)";
+        redoBtn.style.background = "rgba(255,255,255,0.02)";
+        redoBtn.style.cursor = "not-allowed";
+        redoBtn.style.opacity = "0.45";
+      } else if (hasRedo) {
+        redoBtn.disabled = false;
+        redoBtn.style.color = "#38bdf8";
+        redoBtn.style.borderColor = "rgba(56,189,248,0.5)";
+        redoBtn.style.background = "rgba(56,189,248,0.14)";
+        redoBtn.style.cursor = "pointer";
+        redoBtn.style.opacity = "1";
+      } else {
+        redoBtn.disabled = true;
+        redoBtn.style.color = "#64748b";
+        redoBtn.style.borderColor = "rgba(255,255,255,0.1)";
+        redoBtn.style.background = "rgba(255,255,255,0.02)";
+        redoBtn.style.cursor = "default";
+        redoBtn.style.opacity = "0.7";
+      }
+    }
+  }
+
+  renderShopCatalog() {
+    const container = document.getElementById("shop-catalog-container");
+    const budgetDisplay = document.getElementById("shop-modal-budget-display");
+    if (budgetDisplay) budgetDisplay.textContent = `₹${this.budget}`;
+    if (!container) return;
+
+    container.innerHTML = Object.values(MATERIAL_CATALOG).map((item) => {
+      const purchasedQty = this.purchased[item.id] || 0;
+      const placedQty = this.getTotalPlacedCount(item.id);
+      const unplacedQty = Math.max(0, purchasedQty - placedQty);
+      const canAfford = this.budget >= item.price;
+
+      return `
+        <div class="shop-item-card" style="background:rgba(15,23,42,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:1rem; display:flex; flex-direction:column; gap:0.55rem; transition:transform 0.15s, border-color 0.15s;">
+          
+          <!-- Image Box -->
+          <div style="width:100%; height:110px; background:#040714; border-radius:10px; display:flex; align-items:center; justify-content:center; overflow:hidden; border:1px solid rgba(255,255,255,0.06); position:relative;">
+            <img src="${item.image}" alt="${item.name}" style="max-width:92%; max-height:92%; object-fit:contain; filter:drop-shadow(0 4px 8px rgba(0,0,0,0.5));" />
+            <span style="position:absolute; bottom:6px; right:6px; background:rgba(15,23,42,0.85); font-family:monospace; font-size:0.7rem; font-weight:700; color:#fbbf24; padding:0.15rem 0.4rem; border-radius:4px; border:1px solid rgba(251,191,36,0.3);">
+              ${item.weight}${item.unit}
+            </span>
+          </div>
+
+          <!-- Title & Badges -->
+          <div>
+            <div style="font-size:0.88rem; font-weight:800; color:#fff; line-height:1.25;">
+              ${item.name}
+            </div>
+            <div style="display:flex; gap:0.4rem; margin-top:0.35rem; align-items:center;">
+              <span style="font-size:0.85rem; font-weight:900; color:#34d399; font-family:monospace;">
+                ₹${item.price}
+              </span>
+              <span style="font-size:0.66rem; color:#94a3b8; background:rgba(255,255,255,0.05); padding:0.15rem 0.45rem; border-radius:4px;">
+                ${item.badge}
+              </span>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div style="font-size:0.72rem; color:#94a3b8; line-height:1.35; flex-grow:1;">
+            ${item.description}
+          </div>
+
+          <!-- Quantity & Purchase Controls (Equip button removed as requested) -->
+          <div style="margin-top:auto; padding-top:0.6rem; border-top:1px solid rgba(255,255,255,0.06); display:flex; flex-direction:column; gap:0.4rem;">
+            ${
+              purchasedQty === 0
+                ? `
+                <button class="btn btn-purchase-single" data-item-id="${item.id}" ${canAfford ? "" : "disabled"} style="width:100%; padding:0.5rem; font-weight:800; font-size:0.8rem; background:${canAfford ? "linear-gradient(135deg, #10b981, #059669)" : "rgba(255,255,255,0.05)"}; color:${canAfford ? "#fff" : "#64748b"}; border:1px solid ${canAfford ? "#34d399" : "transparent"}; border-radius:8px; cursor:${canAfford ? "pointer" : "not-allowed"};">
+                  ${canAfford ? `💳 Purchase 1 (₹${item.price})` : "Insufficient Budget"}
+                </button>
+              `
+                : `
+                <div style="display:flex; justify-content:space-between; align-items:center; background:rgba(2,6,23,0.6); padding:0.25rem 0.5rem; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
+                  <button class="btn-shop-dec" data-item-id="${item.id}" style="width:28px; height:28px; border-radius:6px; border:1px solid rgba(255,255,255,0.15); background:#1e293b; color:#fff; font-weight:800; font-size:1rem; cursor:pointer;">
+                    -
+                  </button>
+                  <div style="text-align:center;">
+                    <div style="font-size:0.82rem; font-weight:800; color:#fff;">
+                      ${purchasedQty} bought
+                    </div>
+                    <div style="font-size:0.64rem; color:#94a3b8;">
+                      (${placedQty} placed / ${unplacedQty} ready)
+                    </div>
+                  </div>
+                  <button class="btn-shop-inc" data-item-id="${item.id}" ${canAfford ? "" : "disabled"} style="width:28px; height:28px; border-radius:6px; border:1px solid ${canAfford ? "#34d399" : "rgba(255,255,255,0.1)"}; background:${canAfford ? "#059669" : "#1e293b"}; color:${canAfford ? "#fff" : "#64748b"}; font-weight:800; font-size:1rem; cursor:${canAfford ? "pointer" : "not-allowed"};">
+                    +
+                  </button>
+                </div>
+              `
+            }
+          </div>
+
+        </div>
+      `;
+    }).join("");
+
+    // Attach event listeners in shop
+    container.querySelectorAll(".btn-purchase-single").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const id = btn.getAttribute("data-item-id");
+        this.buyItem(id);
+      });
+    });
+
+    container.querySelectorAll(".btn-shop-inc").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const id = btn.getAttribute("data-item-id");
+        this.buyItem(id);
+      });
+    });
+
+    container.querySelectorAll(".btn-shop-dec").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const id = btn.getAttribute("data-item-id");
+        this.refundUnplacedItem(id);
+      });
+    });
+  }
+
+  buyItem(id) {
+    if (this.hasSubmitted) {
+      sound.playBuzzer();
+      this.showToast("🔒 Design is submitted and locked! Open a new project to purchase materials.", "warning");
+      return;
+    }
+    const item = MATERIAL_CATALOG[id];
+    if (!item) return;
+    if (this.budget < item.price) {
+      sound.playBuzzer();
+      this.showToast("⚠️ Not enough budget! Need ₹" + item.price, "error");
+      return;
+    }
+
+    sound.playClick();
+    this.budget -= item.price;
+    this.purchased[id] = (this.purchased[id] || 0) + 1;
+    this.showToast(`Purchased 1x ${item.name} (-₹${item.price})`, "success");
+    this.renderShopCatalog();
+    this.renderToolbox();
+    this.saveCurrentState();
+  }
+
+  refundUnplacedItem(id) {
+    if (this.hasSubmitted) {
+      sound.playBuzzer();
+      this.showToast("🔒 Design is submitted and locked! Modifications are not allowed.", "warning");
+      return;
+    }
+    const item = MATERIAL_CATALOG[id];
+    if (!item) return;
+
+    const bought = this.purchased[id] || 0;
+    const placed = this.getTotalPlacedCount(id);
+    const unplaced = bought - placed;
+
+    if (unplaced <= 0) {
+      sound.playBuzzer();
+      this.showToast(`⚠️ All ${bought} ${item.name}(s) are placed on the bridge! Use Dismantle to remove them first.`, "warn");
+      return;
+    }
+
+    sound.playClick();
+    this.budget += item.price;
+    this.purchased[id] = bought - 1;
+    this.showToast(`Refunded 1x ${item.name} (+₹${item.price})`, "refund");
+    this.renderShopCatalog();
+    this.renderToolbox();
+    this.saveCurrentState();
+  }
+
+  renderToolbox() {
+    const grid = document.getElementById("tools-selector-grid");
+    const banner = document.getElementById("active-tool-banner");
+    const btnDismantle = document.getElementById("btn-tool-dismantle");
+
+    this.updateUndoRedoButtons();
+    if (btnDismantle) {
+      if (this.hasSubmitted) {
+        btnDismantle.disabled = true;
+        btnDismantle.style.background = "rgba(255,255,255,0.02)";
+        btnDismantle.style.color = "#475569";
+        btnDismantle.style.borderColor = "rgba(255,255,255,0.06)";
+        btnDismantle.style.cursor = "not-allowed";
+        btnDismantle.style.opacity = "0.45";
+      } else if (this.activeTool === "dismantle") {
+        btnDismantle.disabled = false;
+        btnDismantle.style.background = "#dc2626";
+        btnDismantle.style.color = "#fff";
+        btnDismantle.style.borderColor = "#f87171";
+        btnDismantle.style.cursor = "pointer";
+        btnDismantle.style.opacity = "1";
+      } else {
+        btnDismantle.disabled = false;
+        btnDismantle.style.background = "rgba(239,68,68,0.1)";
+        btnDismantle.style.color = "#f87171";
+        btnDismantle.style.borderColor = "rgba(239,68,68,0.4)";
+        btnDismantle.style.cursor = "pointer";
+        btnDismantle.style.opacity = "1";
+      }
+    }
+
+    if (banner) {
+      if (this.hasSubmitted) {
+        banner.style.background = "rgba(15,23,42,0.85)";
+        banner.style.borderColor = "rgba(239,68,68,0.3)";
+        banner.style.color = "#94a3b8";
+        banner.innerHTML = "🔒 <strong>DESIGN SUBMITTED & LOCKED:</strong> This bridge is sealed for testing and cannot be modified. Start a new project to build another bridge!";
+      } else if (this.activeTool === "dismantle") {
+        banner.style.background = "rgba(239,68,68,0.12)";
+        banner.style.borderColor = "#ef4444";
+        banner.style.color = "#fca5a5";
+        banner.innerHTML = "🪛 <strong>DISMANTLE ACTIVE:</strong> Click any placed wooden member, chord, road deck, or screw to remove it and refund ₹ directly back to your budget!";
+      } else if (this.activeTool && MATERIAL_CATALOG[this.activeTool]) {
+        const item = MATERIAL_CATALOG[this.activeTool];
+        const unplaced = this.getUnplacedCount(this.activeTool);
+        banner.style.background = "rgba(56,189,248,0.1)";
+        banner.style.borderColor = "rgba(56,189,248,0.3)";
+        banner.style.color = "#bae6fd";
+        banner.innerHTML = `<strong>${item.name}</strong> (${unplaced} ready): ${item.ruleText}`;
+      } else {
+        banner.style.background = "rgba(56,189,248,0.08)";
+        banner.style.borderColor = "rgba(56,189,248,0.25)";
+        banner.style.color = "#cbd5e1";
+        banner.innerHTML = "Choose an item below or open the <strong>Material Shop</strong> to buy.";
+      }
+    }
+
+    if (!grid) return;
+
+    grid.innerHTML = Object.values(MATERIAL_CATALOG).map((item) => {
+      const bought = this.purchased[item.id] || 0;
+      const placed = this.getTotalPlacedCount(item.id);
+      const unplaced = Math.max(0, bought - placed);
+      const isActive = !this.hasSubmitted && this.activeTool === item.id;
+      const isLocked = this.hasSubmitted;
+
+      return `
+        <button class="btn-toolbox-item" data-item-id="${item.id}" ${isLocked ? "disabled" : ""} style="display:flex; flex-direction:column; align-items:center; text-align:center; padding:0.5rem; border-radius:10px; border:1px solid ${isActive ? "#38bdf8" : "rgba(255,255,255,0.08)"}; background:${isActive ? "rgba(56,189,248,0.18)" : isLocked ? "rgba(15,23,42,0.4)" : "rgba(15,23,42,0.6)"}; cursor:${isLocked ? "not-allowed" : "pointer"}; opacity:${isLocked ? "0.45" : "1"}; position:relative; transition:all 0.15s; ${isActive ? "box-shadow:0 0 14px rgba(56,189,248,0.35);" : ""}">
+          <div style="width:36px; height:36px; display:flex; align-items:center; justify-content:center; margin-bottom:0.25rem;">
+            <img src="${item.image}" alt="${item.name}" style="max-width:100%; max-height:100%; object-fit:contain;" />
+          </div>
+          <span style="font-size:0.68rem; font-weight:700; color:#fff; line-height:1.15; max-width:95px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">
+            ${item.name.replace("Wooden Member", "Member").replace("Chord Beam", "Chord")}
+          </span>
+          <div style="display:flex; justify-content:space-between; width:100%; font-size:0.62rem; margin-top:0.25rem; color:#94a3b8;">
+            <span style="color:#34d399; font-weight:700;">₹${item.price}</span>
+            <span style="background:${unplaced > 0 ? "rgba(16,185,129,0.2)" : "rgba(239,68,68,0.15)"}; color:${unplaced > 0 ? "#34d399" : "#f87171"}; padding:0.05rem 0.3rem; border-radius:4px; font-weight:800;">
+              ${unplaced} left
+            </span>
+          </div>
+        </button>
+      `;
+    }).join("");
+
+    if (grid && grid.querySelectorAll) grid.querySelectorAll(".btn-toolbox-item").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        if (this.hasSubmitted) {
+          sound.playBuzzer();
+          this.showToast("🔒 Design is submitted and locked! Start a new project to build another bridge.", "warning");
+          return;
+        }
+        const id = btn.getAttribute("data-item-id");
+        sound.playClick();
+        if (this.activeTool === id) {
+          this.activeTool = null;
+          this.selectedFirstDot = null;
+        } else {
+          this.activeTool = id;
+          this.selectedFirstDot = null;
+          if (id === "road_deck" && this.currentView !== "front") {
+            const btnFront = document.getElementById("btn-view-front");
+            if (btnFront) btnFront.click();
+          }
+          const unplaced = this.getUnplacedCount(id);
+          if (unplaced <= 0) {
+            this.showToast(`Out of stock! Open the Material Shop below to buy more.`, "warn");
+          } else {
+            this.showToast(`Equipped <strong>${MATERIAL_CATALOG[id].name}</strong>. ${MATERIAL_CATALOG[id].ruleText}`);
+          }
+        }
+        this.renderToolbox();
+        this.redrawCanvas();
+      });
+    });
+  }
+
+  updateTelemetryUI() {
+    const budgetDisplay = document.getElementById("budget-amount-display");
+    const weightDisplay = document.getElementById("weight-amount-display");
+    const cartBadge = document.getElementById("shop-badge-cart");
+    const statBought = document.getElementById("stat-total-bought");
+    const statPlaced = document.getElementById("stat-total-placed");
+    const statWeight = document.getElementById("stat-total-weight");
+    const statBudget = document.getElementById("stat-remaining-budget");
+
+    const totalWeight = this.getTotalWeight();
+    const totalPlaced = this.getTotalPlacedCount();
+    let totalBought = 0;
+    Object.values(this.purchased).forEach(v => totalBought += v);
+
+    if (budgetDisplay) budgetDisplay.textContent = `₹${this.budget}`;
+    if (weightDisplay) weightDisplay.textContent = `${totalWeight}g`;
+    if (cartBadge) cartBadge.textContent = `₹${this.budget}`;
+    if (statBought) statBought.textContent = `${totalBought} items`;
+    if (statPlaced) statPlaced.textContent = `${totalPlaced} parts`;
+    if (statWeight) statWeight.textContent = `${totalWeight} g`;
+    if (statBudget) statBudget.textContent = `₹${this.budget}`;
+
+    const shopModalBudget = document.getElementById("shop-modal-budget-display");
+    if (shopModalBudget) shopModalBudget.textContent = `₹${this.budget}`;
+  }
+
+  redrawCanvas() {
+    const canvas = document.getElementById("bridge-construction-canvas");
+    if (canvas) {
+      const rect = canvas.getBoundingClientRect();
+      const ctx = canvas.getContext("2d");
+      this.drawConstructionScene(ctx, rect.width, rect.height);
+    }
+  }
+
+  setupViewSwitcher() {
+    const btnLeft = document.getElementById("btn-view-left");
+    const btnRight = document.getElementById("btn-view-right");
+    const btnFront = document.getElementById("btn-view-front");
+    const btnAerial = document.getElementById("btn-view-aerial");
+
+    btnLeft?.addEventListener("click", () => this.switchView("left"));
+    btnRight?.addEventListener("click", () => this.switchView("right"));
+    btnFront?.addEventListener("click", () => this.switchView("front"));
+    btnAerial?.addEventListener("click", () => this.switchView("aerial"));
+  }
+
+  switchView(viewName) {
+    if (this.currentView === viewName) return;
+    if (typeof sound.playClick === "function") sound.playClick();
+    this.currentView = viewName;
+    this.selectedFirstDot = null;
+
+    const btnLeft = document.getElementById("btn-view-left");
+    const btnRight = document.getElementById("btn-view-right");
+    const btnFront = document.getElementById("btn-view-front");
+    const btnAerial = document.getElementById("btn-view-aerial");
+
+    [btnLeft, btnRight, btnFront, btnAerial].forEach((btn) => btn?.classList.remove("active"));
+    if (viewName === "left") btnLeft?.classList.add("active");
+    if (viewName === "right") btnRight?.classList.add("active");
+    if (viewName === "front") btnFront?.classList.add("active");
+    if (viewName === "aerial") btnAerial?.classList.add("active");
+
+    this.updateViewUI();
+    const canvas = document.getElementById("bridge-construction-canvas");
+    if (canvas) {
+      const rect = canvas.getBoundingClientRect();
+      this.computeGridDots(rect.width, rect.height);
+      this.drawConstructionScene(canvas.getContext("2d"), rect.width, rect.height);
+    }
+  }
+
+  updateViewUI() {
+    const titleDisplay = document.getElementById("view-title-display");
+    const legendDisplay = document.getElementById("bottom-view-legend");
+
+    if (this.isPostEvaluationMode) {
+      if (titleDisplay) {
+        if (this.currentView === "left") titleDisplay.textContent = "Left Side View";
+        else if (this.currentView === "right") titleDisplay.textContent = "Right Side View";
+        else if (this.currentView === "front") titleDisplay.textContent = "Front View";
+        else if (this.currentView === "aerial") titleDisplay.textContent = "Top Aerial 3D View";
+      }
+      if (legendDisplay) legendDisplay.style.display = "none";
+      return;
+    }
+
+    if (this.currentLevel === 2) {
+      if (titleDisplay) titleDisplay.textContent = "Level 2: Vehicle Load Test";
+      if (legendDisplay) {
+        legendDisplay.innerHTML = `
+          <div style="display:flex; align-items:center; gap:0.6rem; width:100%; justify-content:space-between;">
+            <div style="display:flex; align-items:center; gap:0.5rem; flex:1; min-width:0;">
+              <span style="display:inline-flex; align-items:center; gap:0.35rem; color:#38bdf8; font-weight:800; font-size:0.74rem; text-transform:uppercase; letter-spacing:0.06em; white-space:nowrap;">
+                <span>🚨</span> STRUCTURAL DIRECTIVE:
+              </span>
+              <span id="level2-directive-bottom-text" style="color:#e2e8f0; font-size:0.78rem; font-weight:600; line-height:1.3; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">
+                Level 2: Vehicle Test Challenge active. Bridge design submitted and locked. Real-time stress and load distribution testing across Himatnagar—Ahmedabad span.
+              </span>
+            </div>
+          </div>
+        `;
+      }
+      return;
+    }
+
+    if (this.currentView === "aerial") {
+      if (titleDisplay) titleDisplay.textContent = "Top Aerial 3D View";
+      if (legendDisplay) {
+        legendDisplay.innerHTML = `
+          <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+            <span style="display:inline-flex; align-items:center; gap:0.4rem; color:#38bdf8; font-weight:700; font-size:0.76rem;">
+              <span>🚁</span>
+              <span>TOP AERIAL 3D PERSPECTIVE — DYNAMIC VEHICLE LOAD CROSSING</span>
+            </span>
+          </div>
+        `;
+      }
+    } else if (this.currentView === "left") {
+      if (titleDisplay) titleDisplay.textContent = "Left Side View";
+      if (legendDisplay) {
+        legendDisplay.innerHTML = `
+          <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+            <span style="display:inline-flex; align-items:center; gap:0.4rem; color:#38bdf8; font-weight:700; font-size:0.76rem;">
+              <span>📐</span>
+              <span>LEFT SIDE TRUSS ELEVATION</span>
+            </span>
+            <span style="font-family:monospace; font-size:0.74rem; color:#94a3b8; font-weight:700;">
+              TAP OR CLICK DOTS TO CONNECT COMPONENTS
+            </span>
+          </div>
+        `;
+      }
+    } else if (this.currentView === "right") {
+      if (titleDisplay) titleDisplay.textContent = "Right Side View";
+      if (legendDisplay) {
+        legendDisplay.innerHTML = `
+          <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+            <span style="display:inline-flex; align-items:center; gap:0.4rem; color:#c084fc; font-weight:700; font-size:0.76rem;">
+              <span>📐</span>
+              <span>RIGHT SIDE TRUSS ELEVATION</span>
+            </span>
+            <span style="font-family:monospace; font-size:0.74rem; color:#94a3b8; font-weight:700;">
+              TAP OR CLICK DOTS TO CONNECT COMPONENTS
+            </span>
+          </div>
+        `;
+      }
+    } else if (this.currentView === "front") {
+      if (titleDisplay) titleDisplay.textContent = "Front View";
+      if (legendDisplay) {
+        legendDisplay.innerHTML = `
+          <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+            <span style="display:inline-flex; align-items:center; gap:0.4rem; color:#10b981; font-weight:700; font-size:0.76rem;">
+              <span>👁️</span>
+              <span>FRONT VIEW: PORTAL ENTRANCE & ROADWAY</span>
+            </span>
+            <span style="font-family:monospace; font-size:0.74rem; color:#fbbf24; font-weight:700;">
+              CLICK ANYWHERE ON FRONT GRID TO INSTALL ROAD DECK
+            </span>
+          </div>
+        `;
+      }
+    }
+  }
+
+  setupConstructionCanvas() {
+    const canvas = document.getElementById("bridge-construction-canvas");
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+
+    this.gridDots = [];
+    this.hoveredDotIndex = null;
+    this.hoveredPlacedId = null;
+
+    const resize = () => {
+      const rect = canvas.getBoundingClientRect();
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = rect.width * dpr;
+      canvas.height = rect.height * dpr;
+      if (ctx.resetTransform) {
+        ctx.resetTransform();
+      } else {
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+      }
+      ctx.scale(dpr, dpr);
+      this.computeGridDots(rect.width, rect.height);
+      this.drawConstructionScene(ctx, rect.width, rect.height);
+    };
+
+    resize();
+    this.resizeCanvas = resize;
+    window.addEventListener("resize", resize);
+
+    const tooltip = document.getElementById("dot-hover-tooltip");
+
+    const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+
+    const onHover = (mx, my) => {
+      if (this.isPostEvaluationMode) {
+        if (tooltip) tooltip.style.display = "none";
+        canvas.style.cursor = "default";
+        return;
+      }
+      const rect = canvas.getBoundingClientRect();
+      if (this.activeTool === "dismantle") {
+        const found = this.findPlacedElementAt(mx, my);
+        if (found) {
+          canvas.style.cursor = "pointer";
+          if (this.hoveredPlacedId !== found.id) {
+            this.hoveredPlacedId = found.id;
+            this.drawConstructionScene(ctx, rect.width, rect.height);
+          }
+          if (tooltip) {
+            tooltip.style.display = "block";
+            tooltip.style.left = `${mx + 14}px`;
+            tooltip.style.top = `${my - 28}px`;
+            tooltip.innerHTML = `<span style="color:#ef4444; font-weight:800;">🗑️ Tap to Dismantle</span> — Refund <span style="color:#34d399; font-weight:800;">₹${found.price}</span>`;
+          }
+          return;
+        } else {
+          if (this.hoveredPlacedId !== null) {
+            this.hoveredPlacedId = null;
+            this.drawConstructionScene(ctx, rect.width, rect.height);
+          }
+        }
+      }
+
+      canvas.style.cursor = "crosshair";
+
+      let closestDot = null;
+      let minDistance = isTouchDevice ? 36 : 22; // Forgiving hit target on touch tablets
+
+      this.gridDots.forEach((dot) => {
+        const dist = Math.hypot(dot.x - mx, dot.y - my);
+        if (dist < minDistance) {
+          closestDot = dot;
+          minDistance = dist;
+        }
+      });
+
+      if (closestDot) {
+        if (this.hoveredDotIndex !== closestDot.id) {
+          this.hoveredDotIndex = closestDot.id;
+          this.drawConstructionScene(ctx, rect.width, rect.height);
+        }
+
+        if (tooltip) {
+          tooltip.style.display = "block";
+          tooltip.style.left = `${closestDot.x + 14}px`;
+          tooltip.style.top = `${closestDot.y - 36}px`;
+          tooltip.innerHTML = closestDot.tooltipText || closestDot.label;
+        }
+      } else {
+        if (this.hoveredDotIndex !== null) {
+          this.hoveredDotIndex = null;
+          this.drawConstructionScene(ctx, rect.width, rect.height);
+        }
+        if (tooltip) tooltip.style.display = "none";
+      }
+    };
+
+    const onInteract = (mx, my) => {
+      if (this.isPostEvaluationMode) return;
+      if (this.hasSubmitted) {
+        sound.playBuzzer();
+        this.showToast("🔒 Design is submitted and locked! Start a new project to build another bridge.", "warning");
+        return;
+      }
+      // 1. Dismantle Click
+      if (this.activeTool === "dismantle") {
+        const found = this.findPlacedElementAt(mx, my);
+        if (found) {
+          this.dismantleElement(found);
+        } else {
+          this.showToast("Tap directly on a placed member, road deck, or screw to dismantle it.", "info");
+        }
+        return;
+      }
+
+      // If no active tool, advise user
+      if (!this.activeTool) {
+        this.showToast("👈 Select a tool from the Construction Toolbox on the right to start building!", "info");
+        return;
+      }
+
+      // 2. Road Deck placement in Front View: Lays over the whole dot grid of front view!
+      if (this.activeTool === "road_deck") {
+        if (this.currentView !== "front") {
+          this.showToast("👉 Switch to <strong>Front View</strong> to lay the Road Deck over the dot grid!", "warn");
+          return;
+        }
+        this.placeRoadDeckFront();
+        return;
+      }
+
+      // 3. Find closest dot (forgiving hit target for touchscreens and iPad)
+      let clickedDot = null;
+      let minDistance = isTouchDevice ? 38 : 24;
+      this.gridDots.forEach((dot) => {
+        const dist = Math.hypot(dot.x - mx, dot.y - my);
+        if (dist < minDistance) {
+          clickedDot = dot;
+          minDistance = dist;
+        }
+      });
+
+      if (!clickedDot) return;
+
+      // 4. Handle Tool Placements
+      switch (this.activeTool) {
+        case "horizontal":
+          this.handleHorizontalPlacement(clickedDot);
+          break;
+        case "vertical":
+          this.handleVerticalPlacement(clickedDot);
+          break;
+        case "diagonal":
+          this.handleDiagonalPlacement(clickedDot);
+          break;
+        case "top_chord":
+          this.handleTopChordPlacement(clickedDot);
+          break;
+        case "bottom_chord":
+          this.handleBottomChordPlacement(clickedDot);
+          break;
+        case "joint":
+          this.handleJointPlacement(clickedDot);
+          break;
+      }
+    };
+
+    canvas.addEventListener("mousemove", (e) => {
+      const rect = canvas.getBoundingClientRect();
+      onHover(e.clientX - rect.left, e.clientY - rect.top);
+    });
+
+    canvas.addEventListener("mouseleave", () => {
+      this.hoveredDotIndex = null;
+      this.hoveredPlacedId = null;
+      if (tooltip) tooltip.style.display = "none";
+      const rect = canvas.getBoundingClientRect();
+      this.drawConstructionScene(ctx, rect.width, rect.height);
+    });
+
+    canvas.addEventListener("click", (e) => {
+      const rect = canvas.getBoundingClientRect();
+      onInteract(e.clientX - rect.left, e.clientY - rect.top);
+    });
+
+    // Touchscreen / iPad / Tablet Touch Event Handlers
+    canvas.addEventListener("touchstart", (e) => {
+      if (e.touches && e.touches.length === 1) {
+        const touch = e.touches[0];
+        const rect = canvas.getBoundingClientRect();
+        onHover(touch.clientX - rect.left, touch.clientY - rect.top);
+      }
+    }, { passive: true });
+
+    canvas.addEventListener("touchmove", (e) => {
+      if (e.touches && e.touches.length === 1) {
+        const touch = e.touches[0];
+        const rect = canvas.getBoundingClientRect();
+        onHover(touch.clientX - rect.left, touch.clientY - rect.top);
+      }
+    }, { passive: true });
+
+    canvas.addEventListener("touchend", (e) => {
+      if (e.changedTouches && e.changedTouches.length > 0) {
+        const touch = e.changedTouches[0];
+        const rect = canvas.getBoundingClientRect();
+        onInteract(touch.clientX - rect.left, touch.clientY - rect.top);
+        if (tooltip) {
+          setTimeout(() => { if (tooltip) tooltip.style.display = "none"; }, 1000);
+        }
+      }
+    }, { passive: true });
+  }
+
+  findPlacedElementAt(mx, my) {
+    const list = this.placedElements[this.currentView] || [];
+    // Check joints first
+    for (const item of list) {
+      if (item.type === "joint") {
+        const dot = this.gridDots.find(d => d.row === item.row && d.col === item.col);
+        if (dot && Math.hypot(dot.x - mx, dot.y - my) < 14) {
+          return item;
+        }
+      }
+    }
+
+    // Check beams
+    for (const item of list) {
+      if (item.type === "horizontal" || item.type === "vertical" || item.type === "diagonal") {
+        const d1 = this.gridDots.find(d => d.row === item.dotA.row && d.col === item.dotA.col);
+        const d2 = this.gridDots.find(d => d.row === item.dotB.row && d.col === item.dotB.col);
+        if (d1 && d2) {
+          const hitThresh = (('ontouchstart' in window) || (navigator.maxTouchPoints > 0)) ? 22 : 11;
+          const dist = this.distToSegment(mx, my, d1.x, d1.y, d2.x, d2.y);
+          if (dist < hitThresh) return item;
+        }
+      } else if (item.type === "top_chord" || item.type === "bottom_chord") {
+        const rowDots = this.gridDots.filter(d => d.row === item.row);
+        const d0 = rowDots.find(d => d.col === 0);
+        const d12 = rowDots.find(d => d.col === 12);
+        if (d0 && d12) {
+          const hitThresh = (('ontouchstart' in window) || (navigator.maxTouchPoints > 0)) ? 24 : 13;
+          const dist = this.distToSegment(mx, my, d0.x, d0.y, d12.x, d12.y);
+          if (dist < hitThresh) return item;
+        }
+      } else if (item.type === "road_deck" && this.currentView === "front") {
+        const canvas = document.getElementById("bridge-construction-canvas");
+        const cw = canvas ? canvas.getBoundingClientRect().width : 800;
+        const ch = canvas ? canvas.getBoundingClientRect().height : 600;
+        const portalWidth = Math.min(cw * 0.44, 380);
+        const leftX = cw * 0.5 - portalWidth * 0.5;
+        const rightX = cw * 0.5 + portalWidth * 0.5;
+        const topY = ch * 0.22;
+        const bottomY = ch * 0.74;
+        const roadLeft = leftX - 24;
+        const roadRight = rightX + 24;
+        const roadTop = topY - 20;
+        const roadBottom = bottomY + 22;
+        if (mx >= roadLeft && mx <= roadRight && my >= roadTop && my <= roadBottom) {
+          return item;
+        }
+      }
+    }
+    return null;
+  }
+
+  distToSegment(px, py, x1, y1, x2, y2) {
+    const l2 = (x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1);
+    if (l2 === 0) return Math.hypot(px - x1, py - y1);
+    let t = ((px - x1) * (x2 - x1) + (py - y1) * (y2 - y1)) / l2;
+    t = Math.max(0, Math.min(1, t));
+    return Math.hypot(px - (x1 + t * (x2 - x1)), py - (y1 + t * (y2 - y1)));
+  }
+
+  dismantleElement(item) {
+    if (this.hasSubmitted) {
+      sound.playBuzzer();
+      this.showToast("🔒 Design is submitted and locked! Cannot dismantle components.", "warning");
+      return;
+    }
+    const list = this.placedElements[this.currentView];
+    const index = list.indexOf(item);
+    if (index === -1) return;
+
+    sound.playClick();
+    this.pushUndoAction({ type: "dismantle", view: this.currentView, element: item, index: index });
+    list.splice(index, 1);
+
+    // Immediate refund to budget!
+    this.budget += item.price;
+    this.purchased[item.type] = Math.max(0, (this.purchased[item.type] || 1) - 1);
+
+    this.showToast(`🗑️ Dismantled component! <span style="color:#34d399; font-weight:800;">+₹${item.price} Refunded</span> to Budget.`, "refund");
+    this.hoveredPlacedId = null;
+    this.renderToolbox();
+    this.saveCurrentState();
+    this.redrawCanvas();
+  }
+
+  /* ---------------- Placement Handlers ---------------- */
+  handleHorizontalPlacement(dot) {
+    if (this.hasSubmitted) {
+      sound.playBuzzer();
+      this.showToast("🔒 Design is submitted and locked! Cannot modify bridge.", "warning");
+      return;
+    }
+    if (!this.selectedFirstDot) {
+      sound.playClick();
+      this.selectedFirstDot = dot;
+      this.showToast(`Selected Dot (R${dot.row}:C${dot.col}). Now click an adjacent horizontal dot!`, "info");
+      this.redrawCanvas();
+      return;
+    }
+
+    const d1 = this.selectedFirstDot;
+    const d2 = dot;
+    this.selectedFirstDot = null;
+
+    if (d1.id === d2.id) {
+      this.redrawCanvas();
+      return;
+    }
+
+    if (d1.row !== d2.row || Math.abs(d1.col - d2.col) !== 1) {
+      sound.playBuzzer();
+      this.showToast("⚠️ Horizontal beams must connect two adjacent dots on the SAME row!", "error");
+      this.redrawCanvas();
+      return;
+    }
+
+    const exists = (this.placedElements[this.currentView] || []).some(
+      (m) =>
+        m.type === "horizontal" &&
+        m.dotA.row === d1.row &&
+        ((m.dotA.col === d1.col && m.dotB.col === d2.col) || (m.dotA.col === d2.col && m.dotB.col === d1.col))
+    );
+    if (exists) {
+      sound.playBuzzer();
+      this.showToast("⚠️ A horizontal beam already exists between these dots!", "warn");
+      this.redrawCanvas();
+      return;
+    }
+
+    if (this.getUnplacedCount("horizontal") <= 0) {
+      sound.playBuzzer();
+      this.showToast("🛒 No Horizontal Beams in inventory! Open Material Shop to purchase one for ₹3.", "warn");
+      this.redrawCanvas();
+      return;
+    }
+
+    sound.playClick();
+    const newH = {
+      id: `beam_h_${Date.now()}_${Math.random().toString(36).substr(2, 4)}`,
+      type: "horizontal",
+      dotA: { row: d1.row, col: d1.col },
+      dotB: { row: d2.row, col: d2.col },
+      price: MATERIAL_CATALOG.horizontal.price,
+      weight: MATERIAL_CATALOG.horizontal.weight
+    };
+    this.placedElements[this.currentView].push(newH);
+    this.pushUndoAction({ type: "place", view: this.currentView, element: newH });
+
+    this.showToast("🪵 Horizontal Timber Beam installed!", "success");
+    this.renderToolbox();
+    this.saveCurrentState();
+    this.redrawCanvas();
+  }
+
+  handleVerticalPlacement(dot) {
+    if (this.hasSubmitted) {
+      sound.playBuzzer();
+      this.showToast("🔒 Design is submitted and locked! Cannot modify bridge.", "warning");
+      return;
+    }
+    if (!this.selectedFirstDot) {
+      sound.playClick();
+      this.selectedFirstDot = dot;
+      this.showToast(`Selected Dot (R${dot.row}:C${dot.col}). Now click an adjacent vertical dot!`, "info");
+      this.redrawCanvas();
+      return;
+    }
+
+    const d1 = this.selectedFirstDot;
+    const d2 = dot;
+    this.selectedFirstDot = null;
+
+    if (d1.id === d2.id) {
+      this.redrawCanvas();
+      return;
+    }
+
+    if (d1.col !== d2.col || Math.abs(d1.row - d2.row) !== 1) {
+      sound.playBuzzer();
+      this.showToast("⚠️ Vertical beams must connect two adjacent dots on the SAME column!", "error");
+      this.redrawCanvas();
+      return;
+    }
+
+    const exists = (this.placedElements[this.currentView] || []).some(
+      (m) =>
+        m.type === "vertical" &&
+        m.dotA.col === d1.col &&
+        ((m.dotA.row === d1.row && m.dotB.row === d2.row) || (m.dotA.row === d2.row && m.dotB.row === d1.row))
+    );
+    if (exists) {
+      sound.playBuzzer();
+      this.showToast("⚠️ A vertical beam already exists between these dots!", "warn");
+      this.redrawCanvas();
+      return;
+    }
+
+    if (this.getUnplacedCount("vertical") <= 0) {
+      sound.playBuzzer();
+      this.showToast("🛒 No Vertical Beams in inventory! Open Material Shop to purchase one for ₹3.", "warn");
+      this.redrawCanvas();
+      return;
+    }
+
+    sound.playClick();
+    const newV = {
+      id: `beam_v_${Date.now()}_${Math.random().toString(36).substr(2, 4)}`,
+      type: "vertical",
+      dotA: { row: d1.row, col: d1.col },
+      dotB: { row: d2.row, col: d2.col },
+      price: MATERIAL_CATALOG.vertical.price,
+      weight: MATERIAL_CATALOG.vertical.weight
+    };
+    this.placedElements[this.currentView].push(newV);
+    this.pushUndoAction({ type: "place", view: this.currentView, element: newV });
+
+    this.showToast("🪵 Vertical Timber Post installed!", "success");
+    this.renderToolbox();
+    this.saveCurrentState();
+    this.redrawCanvas();
+  }
+
+  handleDiagonalPlacement(dot) {
+    if (this.hasSubmitted) {
+      sound.playBuzzer();
+      this.showToast("🔒 Design is submitted and locked! Cannot modify bridge.", "warning");
+      return;
+    }
+    if (!this.selectedFirstDot) {
+      sound.playClick();
+      this.selectedFirstDot = dot;
+      this.showToast(`Selected Dot (R${dot.row}:C${dot.col}). Now click a diagonal dot!`, "info");
+      this.redrawCanvas();
+      return;
+    }
+
+    const d1 = this.selectedFirstDot;
+    const d2 = dot;
+    this.selectedFirstDot = null;
+
+    if (d1.id === d2.id) {
+      this.redrawCanvas();
+      return;
+    }
+
+    if (Math.abs(d1.col - d2.col) !== 1 || Math.abs(d1.row - d2.row) !== 1) {
+      sound.playBuzzer();
+      this.showToast("⚠️ Diagonal beams must connect two diagonally adjacent dots across a grid square!", "error");
+      this.redrawCanvas();
+      return;
+    }
+
+    const exists = (this.placedElements[this.currentView] || []).some(
+      (m) =>
+        m.type === "diagonal" &&
+        ((m.dotA.row === d1.row && m.dotA.col === d1.col && m.dotB.row === d2.row && m.dotB.col === d2.col) ||
+          (m.dotA.row === d2.row && m.dotA.col === d2.col && m.dotB.row === d1.row && m.dotB.col === d1.col))
+    );
+    if (exists) {
+      sound.playBuzzer();
+      this.showToast("⚠️ A diagonal beam already exists here!", "warn");
+      this.redrawCanvas();
+      return;
+    }
+
+    if (this.getUnplacedCount("diagonal") <= 0) {
+      sound.playBuzzer();
+      this.showToast("🛒 No Diagonal Beams in inventory! Open Material Shop to purchase one for ₹3.", "warn");
+      this.redrawCanvas();
+      return;
+    }
+
+    sound.playClick();
+    const newD = {
+      id: `beam_d_${Date.now()}_${Math.random().toString(36).substr(2, 4)}`,
+      type: "diagonal",
+      dotA: { row: d1.row, col: d1.col },
+      dotB: { row: d2.row, col: d2.col },
+      price: MATERIAL_CATALOG.diagonal.price,
+      weight: MATERIAL_CATALOG.diagonal.weight
+    };
+    this.placedElements[this.currentView].push(newD);
+    this.pushUndoAction({ type: "place", view: this.currentView, element: newD });
+
+    this.showToast("📐 Diagonal Timber Strut installed!", "success");
+    this.renderToolbox();
+    this.saveCurrentState();
+    this.redrawCanvas();
+  }
+
+  handleTopChordPlacement(dot) {
+    if (this.hasSubmitted) {
+      sound.playBuzzer();
+      this.showToast("🔒 Design is submitted and locked! Cannot modify bridge.", "warning");
+      return;
+    }
+    if (this.currentView === "front") {
+      this.showToast("⚠️ Chords are installed in Side Views (Left & Right Truss).", "warn");
+      return;
+    }
+
+    if (dot.row < 1 || dot.row > 4) {
+      sound.playBuzzer();
+      this.showToast("⚠️ Top Chord can only be installed on Rows 1, 2, 3, or 4! Use Bottom Chord for Row 0 (Deck).", "error");
+      return;
+    }
+
+    const exists = (this.placedElements[this.currentView] || []).some(
+      (m) => m.type === "top_chord" && m.row === dot.row
+    );
+    if (exists) {
+      sound.playBuzzer();
+      this.showToast(`⚠️ Top Chord is already installed across Row ${dot.row}!`, "warn");
+      return;
+    }
+
+    if (this.getUnplacedCount("top_chord") <= 0) {
+      sound.playBuzzer();
+      this.showToast("🛒 No Top Chord Beams in inventory! Open Material Shop to purchase one for ₹20.", "warn");
+      return;
+    }
+
+    sound.playClick();
+    const newTC = {
+      id: `chord_top_${Date.now()}_${Math.random().toString(36).substr(2, 4)}`,
+      type: "top_chord",
+      row: dot.row,
+      colStart: 0,
+      colEnd: 12,
+      price: MATERIAL_CATALOG.top_chord.price,
+      weight: MATERIAL_CATALOG.top_chord.weight
+    };
+    this.placedElements[this.currentView].push(newTC);
+    this.pushUndoAction({ type: "place", view: this.currentView, element: newTC });
+
+    this.showToast(`🟦 Heavy Top Chord Beam installed across Row ${dot.row} (Dots 0–12)!`, "success");
+    this.renderToolbox();
+    this.saveCurrentState();
+    this.redrawCanvas();
+  }
+
+  handleBottomChordPlacement(dot) {
+    if (this.hasSubmitted) {
+      sound.playBuzzer();
+      this.showToast("🔒 Design is submitted and locked! Cannot modify bridge.", "warning");
+      return;
+    }
+    if (this.currentView === "front") {
+      this.showToast("⚠️ Chords are installed in Side Views (Left & Right Truss).", "warn");
+      return;
+    }
+
+    if (dot.row !== 0) {
+      sound.playBuzzer();
+      this.showToast("⚠️ Bottom Chord can only be installed on Row 0 (Deck Baseline)! Use Top Chord for upper rows.", "error");
+      return;
+    }
+
+    const exists = (this.placedElements[this.currentView] || []).some(
+      (m) => m.type === "bottom_chord" && m.row === 0
+    );
+    if (exists) {
+      sound.playBuzzer();
+      this.showToast("⚠️ Bottom Chord is already installed across Row 0 (Deck Baseline)!", "warn");
+      return;
+    }
+
+    if (this.getUnplacedCount("bottom_chord") <= 0) {
+      sound.playBuzzer();
+      this.showToast("🛒 No Bottom Chord Beams in inventory! Open Material Shop to purchase one for ₹20.", "warn");
+      return;
+    }
+
+    sound.playClick();
+    const newBC = {
+      id: `chord_bot_${Date.now()}_${Math.random().toString(36).substr(2, 4)}`,
+      type: "bottom_chord",
+      row: 0,
+      colStart: 0,
+      colEnd: 12,
+      price: MATERIAL_CATALOG.bottom_chord.price,
+      weight: MATERIAL_CATALOG.bottom_chord.weight
+    };
+    this.placedElements[this.currentView].push(newBC);
+    this.pushUndoAction({ type: "place", view: this.currentView, element: newBC });
+
+    this.showToast("🟦 Heavy Bottom Chord Beam installed across Row 0 (Anchor A to Anchor B)!", "success");
+    this.renderToolbox();
+    this.saveCurrentState();
+    this.redrawCanvas();
+  }
+
+  handleJointPlacement(dot) {
+    if (this.hasSubmitted) {
+      sound.playBuzzer();
+      this.showToast("🔒 Design is submitted and locked! Cannot modify bridge.", "warning");
+      return;
+    }
+    const exists = (this.placedElements[this.currentView] || []).some(
+      (m) => m.type === "joint" && m.row === dot.row && m.col === dot.col
+    );
+    if (exists) {
+      sound.playBuzzer();
+      this.showToast(`⚠️ A metallic joint screw is already secured at Row ${dot.row}, Dot ${dot.col}!`, "warn");
+      return;
+    }
+
+    if (this.getUnplacedCount("joint") <= 0) {
+      sound.playBuzzer();
+      this.showToast("🛒 No Joint Fasteners in inventory! Open Material Shop to purchase one for ₹2.", "warn");
+      return;
+    }
+
+    sound.playClick();
+    const newJoint = {
+      id: `joint_${Date.now()}_${Math.random().toString(36).substr(2, 4)}`,
+      type: "joint",
+      row: dot.row,
+      col: dot.col,
+      price: MATERIAL_CATALOG.joint.price,
+      weight: MATERIAL_CATALOG.joint.weight
+    };
+    this.placedElements[this.currentView].push(newJoint);
+    this.pushUndoAction({ type: "place", view: this.currentView, element: newJoint });
+
+    this.showToast(`🔩 Metallic Grey Screw Fastener secured at Row ${dot.row}, Dot ${dot.col}!`, "success");
+    this.renderToolbox();
+    this.saveCurrentState();
+    this.redrawCanvas();
+  }
+
+  placeRoadDeckFront() {
+    if (this.hasSubmitted) {
+      sound.playBuzzer();
+      this.showToast("🔒 Design is submitted and locked! Cannot modify bridge.", "warning");
+      return;
+    }
+    const exists = (this.placedElements["front"] || []).some((m) => m.type === "road_deck");
+    if (exists) {
+      sound.playBuzzer();
+      this.showToast("⚠️ Complete Road Deck is already laid over the whole Front View dot grid!", "warn");
+      return;
+    }
+
+    if (this.getUnplacedCount("road_deck") <= 0) {
+      sound.playBuzzer();
+      this.showToast("🛒 No Road Deck in inventory! Open Material Shop to purchase one for ₹30.", "warn");
+      return;
+    }
+
+    sound.playClick();
+    const newRoad = {
+      id: `road_deck_${Date.now()}`,
+      type: "road_deck",
+      price: MATERIAL_CATALOG.road_deck.price,
+      weight: MATERIAL_CATALOG.road_deck.weight
+    };
+    this.placedElements["front"].push(newRoad);
+    this.pushUndoAction({ type: "place", view: "front", element: newRoad });
+
+    this.showToast("🛣️ Complete Road Deck laid over the whole dot grid, covering all rows and dots!", "success");
+    this.renderToolbox();
+    this.saveCurrentState();
+    this.redrawCanvas();
+  }
+
+  /* =========================================================================
+   * BLUEPRINT GRID COMPUTATION & RENDERING
+   * ========================================================================= */
+  computeGridDots(w, h) {
+    this.gridDots = [];
+
+    if (this.currentView === "left" || this.currentView === "right") {
+      const x0 = w * 0.16;
+      const x12 = w * 0.84;
+      const deckY = h * 0.60;
+      const spanWidth = x12 - x0;
+      const numIntervals = 12;
+      const stepX = spanWidth / numIntervals;
+      const rowSpacing = Math.min((deckY - 80) / 5.5, 42);
+
+      // BASELINE (Row 0): Dots 0 to 12
+      for (let i = 0; i <= numIntervals; i++) {
+        const dotX = x0 + i * stepX;
+        let type = (i === 0) ? "anchor-a" : (i === 12) ? "anchor-b" : "node";
+        let label = `Dot ${i}`;
+        let tooltipText = `<span style="color:#38bdf8; font-weight:700;">Baseline</span> — Dot ${i}`;
+
+        this.gridDots.push({
+          id: `baseline-${i}`,
+          row: 0,
+          col: i,
+          x: dotX,
+          y: deckY,
+          type: type,
+          label: label,
+          tooltipText: tooltipText
+        });
+      }
+
+      // 4 ROWS OF DOTS (Rows 1 to 4) ABOVE ALL COLUMNS (0 to 12)
+      for (let r = 1; r <= 4; r++) {
+        const rowY = deckY - r * rowSpacing;
+
+        for (let col = 0; col <= 12; col++) {
+          const dotX = x0 + col * stepX;
+          let colDesc = `Col ${col}`;
+          let dotType = col === 0 ? "anchor-a-upper" : col === 12 ? "anchor-b-upper" : "truss-node";
+          this.gridDots.push({
+            id: `row-${r}-col-${col}`,
+            row: r,
+            col: col,
+            x: dotX,
+            y: rowY,
+            type: dotType,
+            label: `R${r}:D${col}`,
+            tooltipText: `<span style="color:var(--accent-cyan, #38bdf8); font-weight:800;">Row ${r}</span> • <span style="color:#fff; font-weight:700;">Dot ${col}</span> <span style="color:#94a3b8; font-size:0.85em;">(${colDesc})</span>`
+          });
+        }
+      }
+    } else if (this.currentView === "front") {
+      const centerX = w * 0.5;
+      const portalWidth = Math.min(w * 0.44, 380);
+      const leftX = centerX - portalWidth * 0.5;
+      const rightX = centerX + portalWidth * 0.5;
+      const stepX = portalWidth / 4;
+
+      const numRows = 10;
+      const bottomY = h * 0.74;
+      const topY = h * 0.22;
+      const stepY = (bottomY - topY) / (numRows - 1);
+
+      for (let r = 0; r < numRows; r++) {
+        const rowY = bottomY - r * stepY;
+        const rowNum = r + 1;
+
+        this.gridDots.push({
+          id: `front-${r}-0`,
+          row: rowNum,
+          col: 0,
+          x: leftX,
+          y: rowY,
+          type: "left-line",
+          label: `L${rowNum}`,
+          tooltipText: `<span style="color:#38bdf8; font-weight:800;">Left Line</span>`
+        });
+
+        for (let s = 1; s <= 3; s++) {
+          const sepX = leftX + s * stepX;
+          this.gridDots.push({
+            id: `front-${r}-${s}`,
+            row: rowNum,
+            col: s,
+            x: sepX,
+            y: rowY,
+            type: "sep-dot",
+            label: `Dot ${s}`,
+            tooltipText: `<span style="color:#38bdf8; font-weight:800;">Front Grid Dot</span>`
+          });
+        }
+
+        this.gridDots.push({
+          id: `front-${r}-4`,
+          row: rowNum,
+          col: 4,
+          x: rightX,
+          y: rowY,
+          type: "right-line",
+          label: `R${rowNum}`,
+          tooltipText: `<span style="color:#38bdf8; font-weight:800;">Right Line</span>`
+        });
+      }
+    }
+  }
+
+  drawConstructionScene(ctx, w, h) {
+    ctx.clearRect(0, 0, w, h);
+
+    if (this.currentView === "aerial") {
+      this.drawAerialView(ctx, w, h);
+    } else if (this.currentView === "left" || this.currentView === "right") {
+      this.drawSideView(ctx, w, h, this.currentView);
+    } else if (this.currentView === "front") {
+      this.drawFrontView(ctx, w, h);
+    }
+  }
+
+  drawSideView(ctx, w, h, viewSide) {
+    const cliffY = h * 0.60;
+    const cliffLeftW = w * 0.16;
+    const cliffRightX = w * 0.84;
+
+    this.drawBlueprintGrid(ctx, w, h);
+    this.drawCanyonEnvironment(ctx, w, h, cliffY, cliffLeftW, cliffRightX);
+    this.drawAnchorFoundations(ctx, w, h, cliffY, cliffLeftW, cliffRightX, viewSide);
+    this.drawSideDottedLineAndDots(ctx, cliffY, viewSide, h);
+
+    // DRAW REALISTIC 3D PLACED COMPONENTS
+    this.drawPlacedComponentsSide(ctx, cliffY);
+  }
+
+  /* =========================================================================
+   * TOP AERIAL 3D PERSPECTIVE VIEW (MATCHING USER IMAGES)
+   * Elevated 3D isometric perspective showing the bridge deck, timber trusses,
+   * green overhead crossbeams, and clear animated vehicle crossing.
+   * ========================================================================= */
+  drawAerialView(ctx, w, h) {
+    // 3D Isometric View Parameters (Matching Image 2 elevated 3/4 angle)
+    const originX = w * 0.11;
+    const originY = h * 0.63;
+    const spanVecX = w * 0.70;
+    const spanVecY = -h * 0.08;
+    const depthVecX = w * 0.13;
+    const depthVecY = -h * 0.16;
+    const rowHeight = Math.min(h * 0.082, 42);
+
+    // 3D Point Projection Helper with live load deflection & earthquake sway
+    const project3D = (col, row, z) => {
+      const u = Math.max(0, Math.min(12, col)) / 12;
+      let def = 0;
+      if (this.isTestingActive && this.activeTestType === "vehicle") {
+        def = (this.currentDeflection || 0) * Math.sin(u * Math.PI) * (1 - row * 0.12);
+      }
+      let eqSway = 0;
+      if (this.isTestingActive && this.activeTestType === "earthquake") {
+        eqSway = (this.earthquakeDisplacement || 0) * ((row + 1) / 5);
+      }
+      let collapseDrop = 0;
+      if ((this.bridgeCollapseProgress || 0) > 0 && col > 0 && col < 12) {
+        const breakCol = this.bridgeBreakColumn || 6;
+        const distFromBreak = Math.abs(col - breakCol);
+        const jolt = Math.max(0, 1 - distFromBreak / 3.5) * 35;
+        collapseDrop = (this.bridgeCollapseDrop || 0) * Math.sin(u * Math.PI) + jolt * this.bridgeCollapseProgress;
+      }
+      const px = originX + u * spanVecX + z * depthVecX + eqSway;
+      const py = originY + u * spanVecY + z * depthVecY - row * rowHeight + def + collapseDrop;
+      return { x: px, y: py };
+    };
+
+    // 1. SCENIC ENVIRONMENT (Sky, Clouds, Cliffs & Canyon River)
+    this.drawAerialEnvironment(ctx, w, h, originX, originY, spanVecX, spanVecY, depthVecX, depthVecY);
+
+    // 2. MASONRY PIERS & ABUTMENTS (Under Col 0 & Col 12 - Always present as physical anchor foundations)
+    this.drawAerialAbutments(ctx, project3D);
+
+    // 3. BACKGROUND TRUSS (Right Side Elevation, Z = 1 - Only renders elements placed in Right View)
+    this.drawAerialTrussSide(ctx, project3D, "right", 1, null);
+
+    // 4. CHECK IF ROAD DECK HAS BEEN PLACED IN FRONT VIEW
+    const hasRoadDeck = (this.placedElements["front"] || []).some(m => m.type === "road_deck");
+
+    // 5. TRANSVERSE FLOOR BEAMS UNDER ROADWAY (Only drawn when road deck is placed in Front View!)
+    if (hasRoadDeck) {
+      this.drawAerialFloorBeams(ctx, project3D);
+      // 6. THE ROAD DECK (Red Wood Planks / Paved Asphalt Roadway)
+      this.drawAerialRoadDeck(ctx, project3D);
+    }
+
+    // 7. PASSING VEHICLE IN 3D ISOMETRIC VIEW (ON ROAD DECK, Z = 0.5)
+    let vehicleCol = null;
+    if (this.isTestingActive && this.activeTestType === "vehicle") {
+      vehicleCol = this.drawAerialVehicle(ctx, project3D);
+    }
+
+    // 8. FOREGROUND TRUSS (Left Side Elevation, Z = 0 - Only renders elements placed in Left View)
+    this.drawAerialTrussSide(ctx, project3D, "left", 0, vehicleCol);
+
+    // 9. ROADWAY GUARDRAILS (Only drawn when road deck is placed in Front View!)
+    if (hasRoadDeck) {
+      this.drawAerialGuardrails(ctx, project3D);
+    }
+
+    // 9.5 RENDER FALLING DEBRIS PARTICLES (During Bridge Overload Collapse)
+    if (this.debrisParticles && this.debrisParticles.length > 0 && (this.bridgeCollapseProgress || 0) > 0) {
+      ctx.save();
+      for (const p of this.debrisParticles) {
+        const pt = project3D(p.col, p.row, p.z);
+        ctx.save();
+        ctx.translate(pt.x, pt.y);
+        ctx.rotate(p.rot || 0);
+        if (p.type === "deck_slab") {
+          // Falling broken road deck slab (crimson timber or dark asphalt)
+          ctx.fillStyle = p.color || "#b91c1c";
+          ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+          ctx.strokeStyle = "rgba(0,0,0,0.45)";
+          ctx.lineWidth = 1;
+          ctx.strokeRect(-p.w / 2, -p.h / 2, p.w, p.h);
+          if (p.accentColor) {
+            ctx.fillStyle = p.accentColor;
+            ctx.fillRect(-p.w / 2, -p.h / 2, p.w, 2);
+          }
+        } else if (p.type === "timber_beam") {
+          // Falling broken wooden truss beam
+          ctx.fillStyle = p.color || "#854d0e";
+          ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+          ctx.strokeStyle = "#451a03";
+          ctx.lineWidth = 1;
+          ctx.strokeRect(-p.w / 2, -p.h / 2, p.w, p.h);
+        } else {
+          // Screws / joint pins / stone chunks
+          const sz = p.size || 5;
+          ctx.fillStyle = p.color || "#a1a1aa";
+          ctx.fillRect(-sz / 2, -sz / 2, sz, sz);
+        }
+        ctx.restore();
+      }
+      ctx.restore();
+    }
+
+    // 10. GUIDANCE BANNER WHEN CANYON SPAN IS EMPTY (Level 1 Initial State)
+    if (this.getTotalPlacedCount() === 0 && !this.isTestingActive) {
+      ctx.save();
+      const pMid = project3D(6, 0, 0.5);
+      const bW = 380;
+      const bH = 46;
+      ctx.fillStyle = "rgba(15, 23, 42, 0.88)";
+      ctx.strokeStyle = "rgba(56, 189, 248, 0.35)";
+      ctx.lineWidth = 1.2;
+      ctx.beginPath();
+      ctx.roundRect(pMid.x - bW * 0.5, pMid.y - bH * 0.5 - 20, bW, bH, 10);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = "#38bdf8";
+      ctx.font = "bold 11px Inter, sans-serif";
+      ctx.textAlign = "center";
+      ctx.fillText("🌉 CANYON SPAN OPEN — NO MATERIALS PLACED YET", pMid.x, pMid.y - 25);
+
+      ctx.fillStyle = "#94a3b8";
+      ctx.font = "10px Inter, sans-serif";
+      ctx.fillText("Build trusses in Left/Right view & road deck in Front view", pMid.x, pMid.y - 10);
+      ctx.restore();
+    }
+
+    // 11. REAL-TIME TESTING TELEMETRY HUD / AERIAL STATUS HUD
+    this.drawAerialHUD(ctx, w, h);
+  }
+
+  /* 1. SCENIC ENVIRONMENT IN AERIAL PERSPECTIVE */
+  drawAerialEnvironment(ctx, w, h, ox, oy, sx, sy, dx, dy) {
+    // Majestic Sky Gradient (Daylight Azure to Horizon Light Cyan)
+    const skyGrad = ctx.createLinearGradient(0, 0, 0, h * 0.75);
+    skyGrad.addColorStop(0, "#0b192e");
+    skyGrad.addColorStop(0.35, "#0d2b45");
+    skyGrad.addColorStop(0.65, "#1d4e78");
+    skyGrad.addColorStop(0.85, "#38bdf8");
+    skyGrad.addColorStop(1, "#bae6fd");
+    ctx.fillStyle = skyGrad;
+    ctx.fillRect(0, 0, w, h);
+
+    // Subtle sun halo
+    const sunGrad = ctx.createRadialGradient(w * 0.85, h * 0.22, 10, w * 0.85, h * 0.22, 180);
+    sunGrad.addColorStop(0, "rgba(254, 240, 138, 0.45)");
+    sunGrad.addColorStop(0.4, "rgba(253, 224, 71, 0.15)");
+    sunGrad.addColorStop(1, "rgba(253, 224, 71, 0)");
+    ctx.fillStyle = sunGrad;
+    ctx.beginPath();
+    ctx.arc(w * 0.85, h * 0.22, 180, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Distant mountain ridge silhouettes (Atmospheric depth)
+    ctx.fillStyle = "rgba(15, 23, 42, 0.45)";
+    ctx.beginPath();
+    ctx.moveTo(0, h * 0.46);
+    ctx.lineTo(w * 0.22, h * 0.38);
+    ctx.lineTo(w * 0.45, h * 0.44);
+    ctx.lineTo(w * 0.70, h * 0.36);
+    ctx.lineTo(w, h * 0.42);
+    ctx.lineTo(w, h);
+    ctx.lineTo(0, h);
+    ctx.closePath();
+    ctx.fill();
+
+    // Canyon River Gorge (Deep turquoise water flowing below bridge)
+    const riverY = h * 0.76;
+    const riverGrad = ctx.createLinearGradient(0, riverY, 0, h);
+    riverGrad.addColorStop(0, "#0369a1");
+    riverGrad.addColorStop(0.45, "#0284c7");
+    riverGrad.addColorStop(1, "#075985");
+    ctx.fillStyle = riverGrad;
+    ctx.fillRect(0, riverY, w, h - riverY);
+
+    // Flowing water reflection ripple bands
+    ctx.fillStyle = "rgba(255, 255, 255, 0.14)";
+    for (let i = 0; i < 7; i++) {
+      const rx = (w * 0.15 + i * 130 + (Date.now() * 0.02) % 120) % (w * 0.9);
+      const ry = riverY + 16 + (i * 12);
+      ctx.fillRect(rx, ry, 75, 2);
+    }
+
+    // Left Canyon Cliff & Approach Plateau (Himmatnagar Shore)
+    const leftCliffW = ox + dx * 0.4;
+    const leftCliffY = oy + dy * 0.4;
+    ctx.fillStyle = "#1e293b";
+    ctx.beginPath();
+    ctx.moveTo(0, leftCliffY - 18);
+    ctx.lineTo(leftCliffW, leftCliffY);
+    ctx.lineTo(leftCliffW - 20, leftCliffY + 65);
+    ctx.lineTo(leftCliffW - 8, leftCliffY + 130);
+    ctx.lineTo(leftCliffW - 35, h);
+    ctx.lineTo(0, h);
+    ctx.closePath();
+    ctx.fill();
+
+    // Top Plateau Roadway Approach on Left Shore
+    ctx.fillStyle = "#334155";
+    ctx.beginPath();
+    ctx.moveTo(0, leftCliffY - 14);
+    ctx.lineTo(leftCliffW, leftCliffY);
+    ctx.lineTo(leftCliffW - 8, leftCliffY + 14);
+    ctx.lineTo(0, leftCliffY);
+    ctx.closePath();
+    ctx.fill();
+
+    // Right Canyon Cliff & Departure Plateau (Ahmedabad Shore)
+    const rightCliffX = ox + sx + dx * 0.4;
+    const rightCliffY = oy + sy + dy * 0.4;
+    ctx.fillStyle = "#1e293b";
+    ctx.beginPath();
+    ctx.moveTo(rightCliffX, rightCliffY);
+    ctx.lineTo(w, rightCliffY - 12);
+    ctx.lineTo(w, h);
+    ctx.lineTo(rightCliffX - 25, h);
+    ctx.lineTo(rightCliffX - 8, rightCliffY + 120);
+    ctx.lineTo(rightCliffX - 20, rightCliffY + 60);
+    ctx.closePath();
+    ctx.fill();
+
+    // Top Plateau Roadway Departure on Right Shore
+    ctx.fillStyle = "#334155";
+    ctx.beginPath();
+    ctx.moveTo(rightCliffX, rightCliffY);
+    ctx.lineTo(w, rightCliffY - 12);
+    ctx.lineTo(w, rightCliffY + 2);
+    ctx.lineTo(rightCliffX - 8, rightCliffY + 14);
+    ctx.closePath();
+    ctx.fill();
+  }
+
+  /* 2. STONE MASONRY PIERS & ABUTMENTS */
+  drawAerialAbutments(ctx, project3D) {
+    const drawPier = (col, label) => {
+      const pFront = project3D(col, 0, 0);
+      const pBack = project3D(col, 0, 1);
+      const pierHeight = 110;
+
+      // Heavy 3D Stone Pier Base
+      ctx.fillStyle = "#0f172a";
+      ctx.beginPath();
+      ctx.moveTo(pFront.x - 14, pFront.y + 4);
+      ctx.lineTo(pBack.x - 14, pBack.y + 4);
+      ctx.lineTo(pBack.x + 14, pBack.y + 4);
+      ctx.lineTo(pBack.x + 14, pBack.y + pierHeight);
+      ctx.lineTo(pFront.x - 14, pFront.y + pierHeight);
+      ctx.closePath();
+      ctx.fill();
+
+      // Front Pier Face
+      const pierGrad = ctx.createLinearGradient(pFront.x - 14, 0, pFront.x + 14, 0);
+      pierGrad.addColorStop(0, "#475569");
+      pierGrad.addColorStop(0.5, "#64748b");
+      pierGrad.addColorStop(1, "#334155");
+      ctx.fillStyle = pierGrad;
+      ctx.beginPath();
+      ctx.moveTo(pFront.x - 14, pFront.y + 4);
+      ctx.lineTo(pFront.x + 14, pFront.y + 4);
+      ctx.lineTo(pFront.x + 14, pFront.y + pierHeight);
+      ctx.lineTo(pFront.x - 14, pFront.y + pierHeight);
+      ctx.closePath();
+      ctx.fill();
+
+      // Concrete Bearing Pedestal Pad
+      ctx.fillStyle = "#94a3b8";
+      ctx.beginPath();
+      ctx.moveTo(pFront.x - 16, pFront.y + 2);
+      ctx.lineTo(pBack.x - 16, pBack.y + 2);
+      ctx.lineTo(pBack.x + 16, pBack.y + 2);
+      ctx.lineTo(pFront.x + 16, pFront.y + 2);
+      ctx.closePath();
+      ctx.fill();
+
+      // Steel Roller Bearing Pins at Z=0 (Front) and Z=1 (Back)
+      ctx.fillStyle = "#38bdf8";
+      ctx.beginPath();
+      ctx.arc(pFront.x, pFront.y + 2, 4.5, 0, Math.PI * 2);
+      ctx.arc(pBack.x, pBack.y + 2, 4.0, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Anchor Pin Badge Label
+      ctx.save();
+      const isLeft = (col === 0);
+      const badgeX = isLeft ? pFront.x - 20 : pFront.x + 20;
+      const badgeY = pFront.y + 28;
+      ctx.fillStyle = "rgba(15, 23, 42, 0.90)";
+      ctx.strokeStyle = "rgba(56, 189, 248, 0.4)";
+      ctx.lineWidth = 1;
+      const bW = 104;
+      const bH = 22;
+      ctx.beginPath();
+      ctx.roundRect(isLeft ? badgeX - bW + 14 : badgeX - 14, badgeY, bW, bH, 5);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = "#38bdf8";
+      ctx.font = "bold 9.5px sans-serif";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      const bText = isLeft ? "⚓ ANCHOR A" : "⚓ ANCHOR B";
+      ctx.fillText(bText, isLeft ? badgeX - bW * 0.5 + 14 : badgeX + bW * 0.5 - 14, badgeY + bH * 0.5);
+      ctx.restore();
+    };
+
+    drawPier(0, "Anchor A");
+    drawPier(12, "Anchor B");
+  }
+
+  /* 3. TRANSVERSE FLOOR BEAMS UNDER ROADWAY (Connecting Z=0 to Z=1) */
+  drawAerialFloorBeams(ctx, project3D) {
+    ctx.lineWidth = 4;
+    ctx.strokeStyle = "#451a03"; // Dark timber floor beam
+    const isCollapsing = (this.bridgeCollapseProgress || 0) > 0;
+    const p = this.bridgeCollapseProgress || 0;
+    const breakCol = this.bridgeBreakColumn || 6;
+
+    for (let c = 0; c <= 12; c++) {
+      const p0 = project3D(c, 0, 0);
+      const p1 = project3D(c, 0, 1);
+
+      // Tilt and plunge detached floor beams near the structural fracture
+      if (isCollapsing && Math.abs(c - breakCol) < 0.8) {
+        p0.y += 24 * p;
+        p1.y += 38 * p;
+      }
+
+      ctx.beginPath();
+      ctx.moveTo(p0.x, p0.y + 3);
+      ctx.lineTo(p1.x, p1.y + 3);
+      ctx.stroke();
+
+      // Steel end bracket
+      ctx.fillStyle = "#64748b";
+      ctx.beginPath();
+      ctx.arc(p0.x, p0.y + 3, 3, 0, Math.PI * 2);
+      ctx.arc(p1.x, p1.y + 3, 3, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  /* 4. THE ROAD DECK (Segmented Panels, Deflecting, Snapping & Tumbling into Canyon when Breaking) */
+  drawAerialRoadDeck(ctx, project3D) {
+    const isCollapsing = (this.bridgeCollapseProgress || 0) > 0;
+    const p = this.bridgeCollapseProgress || 0;
+    const rawBreakCol = Math.round(this.bridgeBreakColumn || 6);
+    const breakIndex = Math.max(1, Math.min(10, rawBreakCol));
+
+    // Render roadway panel-by-panel (c = 0 to 11)
+    for (let c = 0; c < 12; c++) {
+      if (isCollapsing && c === breakIndex) {
+        // --- 1. EPIC FRACTURE / BREAK ZONE ---
+        // Road deck snaps in two: left jagged slab and right jagged slab plunge downward,
+        // leaving a shattered gap where severed road deck debris tumbles into the canyon!
+
+        // A. Left Jagged Slab (c to c + 0.38)
+        const pL0_0 = project3D(c, 0, 0);
+        const pL0_1 = project3D(c, 0, 1);
+        const pL1_0 = project3D(c + 0.38, 0, 0);
+        const pL1_1 = project3D(c + 0.38, 0, 1);
+        pL1_0.y += 28 * p;
+        pL1_1.y += 32 * p;
+
+        // Fascia
+        ctx.fillStyle = "#7f1d1d";
+        ctx.beginPath();
+        ctx.moveTo(pL0_0.x, pL0_0.y);
+        ctx.lineTo(pL1_0.x, pL1_0.y);
+        ctx.lineTo(pL1_0.x, pL1_0.y + 9);
+        ctx.lineTo(pL0_0.x, pL0_0.y + 9);
+        ctx.closePath();
+        ctx.fill();
+
+        // Red wood deck surface
+        ctx.fillStyle = "#b91c1c";
+        ctx.beginPath();
+        ctx.moveTo(pL0_0.x, pL0_0.y);
+        ctx.lineTo(pL1_0.x, pL1_0.y);
+        ctx.lineTo(pL1_1.x, pL1_1.y);
+        ctx.lineTo(pL0_1.x, pL0_1.y);
+        ctx.closePath();
+        ctx.fill();
+
+        // Asphalt lane
+        const pL_asph0_A = project3D(c, 0, 0.22);
+        const pL_asph1_A = project3D(c, 0, 0.78);
+        const pL_asph0_B = project3D(c + 0.38, 0, 0.22);
+        const pL_asph1_B = project3D(c + 0.38, 0, 0.78);
+        pL_asph0_B.y += 29 * p;
+        pL_asph1_B.y += 31 * p;
+        ctx.fillStyle = "#1e293b";
+        ctx.beginPath();
+        ctx.moveTo(pL_asph0_A.x, pL_asph0_A.y);
+        ctx.lineTo(pL_asph0_B.x, pL_asph0_B.y);
+        ctx.lineTo(pL_asph1_B.x, pL_asph1_B.y);
+        ctx.lineTo(pL_asph1_A.x, pL_asph1_A.y);
+        ctx.closePath();
+        ctx.fill();
+
+        // Splintered fracture teeth on left edge
+        ctx.strokeStyle = "#450a0a";
+        ctx.lineWidth = 2.5;
+        ctx.beginPath();
+        ctx.moveTo(pL1_0.x, pL1_0.y);
+        ctx.lineTo(pL1_0.x - 3, pL1_0.y + (pL1_1.y - pL1_0.y) * 0.3);
+        ctx.lineTo(pL1_0.x + 2, pL1_0.y + (pL1_1.y - pL1_0.y) * 0.6);
+        ctx.lineTo(pL1_1.x, pL1_1.y);
+        ctx.stroke();
+
+        // B. Right Jagged Slab (c + 0.62 to c + 1)
+        const pR0_0 = project3D(c + 0.62, 0, 0);
+        const pR0_1 = project3D(c + 0.62, 0, 1);
+        pR0_0.y += 34 * p;
+        pR0_1.y += 38 * p;
+        const pR1_0 = project3D(c + 1, 0, 0);
+        const pR1_1 = project3D(c + 1, 0, 1);
+
+        // Fascia
+        ctx.fillStyle = "#7f1d1d";
+        ctx.beginPath();
+        ctx.moveTo(pR0_0.x, pR0_0.y);
+        ctx.lineTo(pR1_0.x, pR1_0.y);
+        ctx.lineTo(pR1_0.x, pR1_0.y + 9);
+        ctx.lineTo(pR0_0.x, pR0_0.y + 9);
+        ctx.closePath();
+        ctx.fill();
+
+        // Red wood deck surface
+        ctx.fillStyle = "#b91c1c";
+        ctx.beginPath();
+        ctx.moveTo(pR0_0.x, pR0_0.y);
+        ctx.lineTo(pR1_0.x, pR1_0.y);
+        ctx.lineTo(pR1_1.x, pR1_1.y);
+        ctx.lineTo(pR0_1.x, pR0_1.y);
+        ctx.closePath();
+        ctx.fill();
+
+        // Asphalt lane
+        const pR_asph0_A = project3D(c + 0.62, 0, 0.22);
+        const pR_asph1_A = project3D(c + 0.62, 0, 0.78);
+        pR_asph0_A.y += 35 * p;
+        pR_asph1_A.y += 37 * p;
+        const pR_asph0_B = project3D(c + 1, 0, 0.22);
+        const pR_asph1_B = project3D(c + 1, 0, 0.78);
+        ctx.fillStyle = "#1e293b";
+        ctx.beginPath();
+        ctx.moveTo(pR_asph0_A.x, pR_asph0_A.y);
+        ctx.lineTo(pR_asph0_B.x, pR_asph0_B.y);
+        ctx.lineTo(pR_asph1_B.x, pR_asph1_B.y);
+        ctx.lineTo(pR_asph1_A.x, pR_asph1_A.y);
+        ctx.closePath();
+        ctx.fill();
+
+        // Splintered fracture teeth on right edge
+        ctx.strokeStyle = "#450a0a";
+        ctx.lineWidth = 2.5;
+        ctx.beginPath();
+        ctx.moveTo(pR0_0.x, pR0_0.y);
+        ctx.lineTo(pR0_0.x + 3, pR0_0.y + (pR0_1.y - pR0_0.y) * 0.4);
+        ctx.lineTo(pR0_0.x - 2, pR0_0.y + (pR0_1.y - pR0_0.y) * 0.7);
+        ctx.lineTo(pR0_1.x, pR0_1.y);
+        ctx.stroke();
+
+        // C. Shattered Fallen Deck Slabs Tumbling into Canyon Gorge
+        const plungeBaseY = (this.bridgeCollapseDrop || 0) * 0.85 + 40 * p;
+        const pMid = project3D(c + 0.5, 0, 0.5);
+
+        // Slab 1 (Crimson Wood & Asphalt)
+        ctx.save();
+        ctx.translate(pMid.x - 12, pMid.y + plungeBaseY);
+        ctx.rotate(p * 1.6);
+        ctx.fillStyle = "#b91c1c";
+        ctx.fillRect(-16, -7, 32, 14);
+        ctx.fillStyle = "#1e293b";
+        ctx.fillRect(-16, -3, 32, 8);
+        ctx.strokeStyle = "#f59e0b"; // yellow curb remnant
+        ctx.lineWidth = 1.2;
+        ctx.strokeRect(-16, -7, 32, 14);
+        ctx.restore();
+
+        // Slab 2 (Asphalt & Centerline remnant)
+        ctx.save();
+        ctx.translate(pMid.x + 14, pMid.y + plungeBaseY * 1.25);
+        ctx.rotate(-p * 2.1);
+        ctx.fillStyle = "#991b1b";
+        ctx.fillRect(-14, -6, 28, 12);
+        ctx.fillStyle = "#334155";
+        ctx.fillRect(-14, -2, 28, 7);
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(-4, -2, 8, 2); // white stripe remnant
+        ctx.restore();
+
+      } else {
+        // --- 2. REGULAR ROADWAY PANEL (Smoothly connected, deflecting, or sagging into canyon during collapse) ---
+        const p0_0 = project3D(c, 0, 0);
+        const p1_0 = project3D(c + 1, 0, 0);
+        const p1_1 = project3D(c + 1, 0, 1);
+        const p0_1 = project3D(c, 0, 1);
+
+        // Front edge slab thickness (3D vertical fascia)
+        const deckThickness = 9;
+        ctx.fillStyle = "#7f1d1d"; // Dark crimson slab face
+        ctx.beginPath();
+        ctx.moveTo(p0_0.x, p0_0.y);
+        ctx.lineTo(p1_0.x, p1_0.y);
+        ctx.lineTo(p1_0.x, p1_0.y + deckThickness);
+        ctx.lineTo(p0_0.x, p0_0.y + deckThickness);
+        ctx.closePath();
+        ctx.fill();
+
+        // Fascia bottom bevel
+        ctx.strokeStyle = "#450a0a";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(p0_0.x, p0_0.y + deckThickness);
+        ctx.lineTo(p1_0.x, p1_0.y + deckThickness);
+        ctx.stroke();
+
+        // MAIN ROADWAY SURFACE (Base: Crimson/Red Timber Planks)
+        ctx.fillStyle = "#b91c1c";
+        ctx.beginPath();
+        ctx.moveTo(p0_0.x, p0_0.y);
+        ctx.lineTo(p1_0.x, p1_0.y);
+        ctx.lineTo(p1_1.x, p1_1.y);
+        ctx.lineTo(p0_1.x, p0_1.y);
+        ctx.closePath();
+        ctx.fill();
+
+        // CENTER PAVED ASPHALT TRAVEL LANE
+        const p0_lane0 = project3D(c, 0, 0.22);
+        const p1_lane0 = project3D(c + 1, 0, 0.22);
+        const p1_lane1 = project3D(c + 1, 0, 0.78);
+        const p0_lane1 = project3D(c, 0, 0.78);
+
+        ctx.fillStyle = "#1e293b";
+        ctx.beginPath();
+        ctx.moveTo(p0_lane0.x, p0_lane0.y);
+        ctx.lineTo(p1_lane0.x, p1_lane0.y);
+        ctx.lineTo(p1_lane1.x, p1_lane1.y);
+        ctx.lineTo(p0_lane1.x, p0_lane1.y);
+        ctx.closePath();
+        ctx.fill();
+
+        // Transverse plank grooves across the red deck
+        ctx.strokeStyle = "rgba(0, 0, 0, 0.35)";
+        ctx.lineWidth = 1.2;
+        ctx.beginPath();
+        ctx.moveTo(p0_0.x, p0_0.y);
+        ctx.lineTo(p0_1.x, p0_1.y);
+        ctx.stroke();
+
+        // Mid-panel plank groove
+        const pMid0 = project3D(c + 0.5, 0, 0);
+        const pMid1 = project3D(c + 0.5, 0, 1);
+        ctx.beginPath();
+        ctx.moveTo(pMid0.x, pMid0.y);
+        ctx.lineTo(pMid1.x, pMid1.y);
+        ctx.stroke();
+
+        // Solid yellow curb safety lines
+        ctx.strokeStyle = "#f59e0b";
+        ctx.lineWidth = 1.5;
+        const pYel0A = project3D(c, 0, 0.23);
+        const pYel1A = project3D(c + 1, 0, 0.23);
+        ctx.beginPath();
+        ctx.moveTo(pYel0A.x, pYel0A.y);
+        ctx.lineTo(pYel1A.x, pYel1A.y);
+        ctx.stroke();
+
+        const pYel0B = project3D(c, 0, 0.77);
+        const pYel1B = project3D(c + 1, 0, 0.77);
+        ctx.beginPath();
+        ctx.moveTo(pYel0B.x, pYel0B.y);
+        ctx.lineTo(pYel1B.x, pYel1B.y);
+        ctx.stroke();
+
+        // WHITE DASHED CENTERLINE ROAD MARKINGS
+        ctx.strokeStyle = "#f8fafc";
+        ctx.lineWidth = 2.2;
+        ctx.setLineDash([8, 6]);
+        const pCen0 = project3D(c, 0, 0.5);
+        const pCen1 = project3D(c + 1, 0, 0.5);
+        ctx.beginPath();
+        ctx.moveTo(pCen0.x, pCen0.y);
+        ctx.lineTo(pCen1.x, pCen1.y);
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
+    }
+
+    // End column transverse plank groove at Anchor B (col 12)
+    const pEnd0 = project3D(12, 0, 0);
+    const pEnd1 = project3D(12, 0, 1);
+    ctx.strokeStyle = "rgba(0, 0, 0, 0.35)";
+    ctx.lineWidth = 1.2;
+    ctx.beginPath();
+    ctx.moveTo(pEnd0.x, pEnd0.y);
+    ctx.lineTo(pEnd1.x, pEnd1.y);
+    ctx.stroke();
+  }
+
+  /* 6. TIMBER TRUSS ELEVATION SIDE (Left at Z=0 or Right at Z=1) */
+  drawAerialTrussSide(ctx, project3D, viewSide, z, vehicleCol) {
+    let list = this.placedElements[viewSide] || [];
+    if (this.isTestingActive && list.length === 0 && viewSide === "right") {
+      list = this.placedElements["left"] || []; // Mirror left only during test execution if right was left unbuilt
+    }
+
+    const isForeground = (z === 0);
+
+    // Helper: Calculate member stress glow color (Safe load retains natural wooden colour - no green!)
+    const getMemberStressColor = (memberId) => {
+      if (!this.stressedMembers || !this.stressedMembers.has(memberId)) return null;
+      const ratio = this.stressedMembers.get(memberId);
+      if (ratio >= 1.0) return "#ef4444"; // Yield failure / Red
+      if (ratio >= 0.75) return "#f97316"; // High stress / Orange
+      if (ratio >= 0.5) return "#fbbf24"; // Medium stress / Amber
+      return null; // Safe load -> Keep natural timber colour (do NOT use green)
+    };
+
+    // A. BOTTOM & TOP CHORDS (Rendered panel-by-panel, deflecting & snapping during collapse)
+    const isCollapsing = (this.bridgeCollapseProgress || 0) > 0;
+    const pColl = this.bridgeCollapseProgress || 0;
+    const rawBreakCol = Math.round(this.bridgeBreakColumn || 6);
+    const breakIndex = Math.max(1, Math.min(10, rawBreakCol));
+
+    list.filter(m => m.type === "bottom_chord" || m.type === "top_chord").forEach((chord) => {
+      const r = chord.row || (chord.type === "top_chord" ? 2 : 0);
+      const stressColor = getMemberStressColor(chord.id);
+
+      ctx.save();
+      ctx.lineWidth = chord.type === "bottom_chord" ? 8.5 : 7.5;
+      ctx.strokeStyle = stressColor || (isForeground ? "#d49a55" : "#854d0e");
+
+      // Draw chord panel-by-panel
+      for (let c = 0; c < 12; c++) {
+        if (isCollapsing && c === breakIndex) {
+          // Chord snapped in two at break point
+          const pL0 = project3D(c, r, z);
+          const pL1 = project3D(c + 0.4, r, z);
+          pL1.y += 26 * pColl;
+          ctx.beginPath();
+          ctx.moveTo(pL0.x, pL0.y);
+          ctx.lineTo(pL1.x, pL1.y);
+          ctx.stroke();
+
+          const pR0 = project3D(c + 0.6, r, z);
+          pR0.y += 32 * pColl;
+          const pR1 = project3D(c + 1, r, z);
+          ctx.beginPath();
+          ctx.moveTo(pR0.x, pR0.y);
+          ctx.lineTo(pR1.x, pR1.y);
+          ctx.stroke();
+        } else {
+          const pA = project3D(c, r, z);
+          const pB = project3D(c + 1, r, z);
+          ctx.beginPath();
+          ctx.moveTo(pA.x, pA.y);
+          ctx.lineTo(pB.x, pB.y);
+          ctx.stroke();
+        }
+      }
+
+      // Top wood grain highlight panel-by-panel
+      ctx.lineWidth = 1.8;
+      ctx.strokeStyle = isForeground ? "#fef08a" : "rgba(255,255,255,0.2)";
+      for (let c = 0; c < 12; c++) {
+        if (isCollapsing && c === breakIndex) {
+          const pL0 = project3D(c, r, z);
+          const pL1 = project3D(c + 0.4, r, z);
+          pL1.y += 26 * pColl;
+          ctx.beginPath();
+          ctx.moveTo(pL0.x, pL0.y - 2);
+          ctx.lineTo(pL1.x, pL1.y - 2);
+          ctx.stroke();
+
+          const pR0 = project3D(c + 0.6, r, z);
+          pR0.y += 32 * pColl;
+          const pR1 = project3D(c + 1, r, z);
+          ctx.beginPath();
+          ctx.moveTo(pR0.x, pR0.y - 2);
+          ctx.lineTo(pR1.x, pR1.y - 2);
+          ctx.stroke();
+        } else {
+          const pA = project3D(c, r, z);
+          const pB = project3D(c + 1, r, z);
+          ctx.beginPath();
+          ctx.moveTo(pA.x, pA.y - 2);
+          ctx.lineTo(pB.x, pB.y - 2);
+          ctx.stroke();
+        }
+      }
+
+      ctx.restore();
+    });
+
+    // B. VERTICAL & DIAGONAL BEAMS
+    list.filter(m => m.type === "vertical" || m.type === "diagonal" || m.type === "horizontal").forEach((beam) => {
+      if (!beam.dotA || !beam.dotB) return;
+      const pA = project3D(beam.dotA.col, beam.dotA.row, z);
+      const pB = project3D(beam.dotB.col, beam.dotB.row, z);
+      const stressColor = getMemberStressColor(beam.id);
+
+      const midCol = (beam.dotA.col + beam.dotB.col) * 0.5;
+      const nearVehicle = isForeground && vehicleCol !== null && Math.abs(midCol - vehicleCol) < 0.85;
+
+      ctx.save();
+      // If foreground beam is directly overlapping the passing vehicle, make it softly translucent
+      // so the student can SEE THE VEHICLE CRYSTAL CLEARLY!
+      if (nearVehicle) {
+        ctx.globalAlpha = 0.35;
+      }
+
+      // Beam shadow
+      if (!isForeground) {
+        ctx.strokeStyle = "rgba(0, 0, 0, 0.4)";
+        ctx.lineWidth = 7;
+        ctx.beginPath();
+        ctx.moveTo(pA.x + 2, pA.y + 2);
+        ctx.lineTo(pB.x + 2, pB.y + 2);
+        ctx.stroke();
+      }
+
+      ctx.lineWidth = 6;
+      ctx.strokeStyle = stressColor || (isForeground ? "#d49a55" : "#92400e");
+      ctx.lineCap = "round";
+      ctx.beginPath();
+      ctx.moveTo(pA.x, pA.y);
+      ctx.lineTo(pB.x, pB.y);
+      ctx.stroke();
+
+      // Center wood highlight
+      ctx.lineWidth = 1.4;
+      ctx.strokeStyle = isForeground ? "rgba(255, 255, 255, 0.45)" : "rgba(255, 255, 255, 0.15)";
+      ctx.beginPath();
+      ctx.moveTo(pA.x, pA.y);
+      ctx.lineTo(pB.x, pB.y);
+      ctx.stroke();
+
+      ctx.restore();
+    });
+
+    // C. JOINT SCREWS
+    list.filter(m => m.type === "joint").forEach((screw) => {
+      const p = project3D(screw.col, screw.row, z);
+      ctx.save();
+      ctx.fillStyle = isForeground ? "#94a3b8" : "#475569";
+      ctx.strokeStyle = "#0f172a";
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, 4, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+      ctx.restore();
+    });
+  }
+
+  /* 7. PASSING VEHICLE IN 3D ISOMETRIC VIEW (ON ROAD DECK, Z = 0.5) */
+  drawAerialVehicle(ctx, project3D) {
+    const vehicle = SIMULATION_CONFIG.vehicles[this.activeVehicleIndex] || SIMULATION_CONFIG.vehicles[0];
+    const u = this.vehicleAnimProgress;
+
+    // Map progress (0..1) to bridge span column
+    let col = 0;
+    if (u < 0.16) {
+      col = (u / 0.16 - 1) * 2.5; // Approaching on left cliff
+    } else if (u <= 0.84) {
+      col = ((u - 0.16) / (0.84 - 0.16)) * 12; // Crossing the bridge span
+    } else {
+      col = 12 + ((u - 0.84) / 0.20) * 2.5; // Exiting on right cliff
+    }
+
+    // 3D position on road deck centerline (Z = 0.5)
+    const pGround = project3D(col, 0, 0.5);
+    const pNext = project3D(col + 0.3, 0, 0.5);
+    let travelAngle = Math.atan2(pNext.y - pGround.y, pNext.x - pGround.x);
+
+    let vehX = pGround.x;
+    let vehY = pGround.y;
+    const isBreaking = (this.vehicleAnimState === "breaking" || this.vehicleAnimState === "failed");
+    if (isBreaking) {
+      vehY += (this.vehicleFallDrop || 0) * 0.45;
+      travelAngle += (this.vehicleFallAngle || 0);
+    }
+
+    ctx.save();
+    ctx.translate(vehX, vehY);
+
+    // 1. Contact shadow on road deck surface (only if not falling into canyon)
+    if (!isBreaking) {
+      const shadowLen = (vehicle.id === "transport" ? 110 : (vehicle.id === "truck" || vehicle.id === "bus") ? 88 : (vehicle.id === "suv" || vehicle.id === "car") ? 66 : 38);
+      const shadowWidth = (vehicle.id === "scooter" || vehicle.id === "motorcycle") ? 14 : 24;
+      ctx.fillStyle = "rgba(0, 0, 0, 0.48)";
+      ctx.beginPath();
+      ctx.ellipse(0, 2.5, shadowLen, shadowWidth, travelAngle, 0, Math.PI * 2);
+      ctx.fill();
+
+      // 2. Headlight illumination beam shining forward along road deck
+      const lightLen = 135;
+      const coneGrad = ctx.createRadialGradient(28, -6, 6, 28 + Math.cos(travelAngle) * lightLen, -6 + Math.sin(travelAngle) * lightLen, 45);
+      coneGrad.addColorStop(0, "rgba(254, 240, 138, 0.65)");
+      coneGrad.addColorStop(0.4, "rgba(254, 240, 138, 0.22)");
+      coneGrad.addColorStop(1, "rgba(254, 240, 138, 0)");
+      ctx.fillStyle = coneGrad;
+      ctx.beginPath();
+      ctx.moveTo(25, -6);
+      ctx.lineTo(25 + Math.cos(travelAngle - 0.22) * lightLen, -6 + Math.sin(travelAngle - 0.22) * lightLen);
+      ctx.lineTo(25 + Math.cos(travelAngle + 0.22) * lightLen, -6 + Math.sin(travelAngle + 0.22) * lightLen);
+      ctx.closePath();
+      ctx.fill();
+    }
+
+    // 3. Render 3D Isometric Vehicle Model (scaled 2.2x)
+    this.render3DVehicleModel(ctx, vehicle, travelAngle);
+
+    // 4. Live Vehicle Badge (Clear Tag Floating Above Scaled Vehicle)
+    const badgeY = (vehicle.id === "transport" || vehicle.id === "truck" || vehicle.id === "bus") ? -80 : -66;
+    const defMm = (this.currentDeflection || 0).toFixed(1);
+    const isMidPause = (this.vehicleAnimState === "center_pause");
+    let badgeText = `${vehicle.icon} ${vehicle.name} (${vehicle.simulationLoad}g) • ↓ ${defMm}mm`;
+    if (isBreaking) {
+      badgeText = `💥 ${vehicle.name} Overload Collapse!`;
+    }
+
+    ctx.font = "bold 11px sans-serif";
+    const textW = ctx.measureText(badgeText).width;
+    const pillW = textW + 20;
+
+    // Badge bubble
+    ctx.fillStyle = isBreaking ? "rgba(220, 38, 38, 0.95)" : "rgba(15, 23, 42, 0.92)";
+    ctx.strokeStyle = isBreaking ? "#f87171" : isMidPause ? "#fbbf24" : this.currentDeflection > 14 ? "#ef4444" : "#38bdf8";
+    ctx.lineWidth = 1.8;
+    ctx.beginPath();
+    ctx.roundRect(-pillW * 0.5, badgeY - 14, pillW, 21, 10);
+    ctx.fill();
+    ctx.stroke();
+
+    // Badge text
+    ctx.fillStyle = "#ffffff";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(badgeText, 0, badgeY - 3.5);
+
+    // Pointer notch
+    ctx.fillStyle = ctx.strokeStyle;
+    ctx.beginPath();
+    ctx.moveTo(-4, badgeY + 7);
+    ctx.lineTo(4, badgeY + 7);
+    ctx.lineTo(0, badgeY + 11);
+    ctx.closePath();
+    ctx.fill();
+
+    ctx.restore();
+
+    return col;
+  }
+
+  /* 8. DETAILED 3D ISOMETRIC VEHICLE MODELS (7 DISTINCT VEHICLES) */
+  render3DVehicleModel(ctx, vehicle, angle) {
+    ctx.save();
+    ctx.rotate(angle);
+    ctx.scale(2.2, 2.2); // 2.2x scale (between 2x and 2.5x) for clearly visible & distinct vehicles
+
+    const drawWheel = (wx, wy, radius = 5.5) => {
+      ctx.fillStyle = "#0f172a";
+      ctx.beginPath();
+      ctx.arc(wx, wy, radius, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = "#94a3b8";
+      ctx.beginPath();
+      ctx.arc(wx, wy, radius * 0.45, 0, Math.PI * 2);
+      ctx.fill();
+    };
+
+    if (vehicle.id === "scooter") {
+      // 🛵 Delivery Scooter
+      ctx.fillStyle = "#06b6d4"; // Cyan
+      ctx.fillRect(-10, -10, 20, 5); // Footboard
+      ctx.fillStyle = "#0891b2";
+      ctx.fillRect(8, -20, 3, 14); // Stem
+      ctx.fillRect(5, -22, 8, 3); // Handle
+      // Rider
+      ctx.fillStyle = "#fed7aa";
+      ctx.beginPath(); ctx.arc(-2, -26, 4.5, 0, Math.PI * 2); ctx.fill(); // Head
+      ctx.fillStyle = "#0284c7"; // Helmet
+      ctx.beginPath(); ctx.arc(-2, -28, 5, Math.PI, Math.PI * 2); ctx.fill();
+      // Headlight
+      ctx.fillStyle = "#fef08a";
+      ctx.fillRect(11, -19, 3, 3);
+      drawWheel(-8, -2, 4);
+      drawWheel(9, -2, 4);
+
+    } else if (vehicle.id === "motorcycle") {
+      // 🏍️ Sport Motorcycle
+      ctx.fillStyle = "#ef4444"; // Red
+      ctx.beginPath();
+      ctx.moveTo(-12, -8); ctx.lineTo(10, -8); ctx.lineTo(14, -20); ctx.lineTo(-4, -18);
+      ctx.closePath(); ctx.fill();
+      // Rider
+      ctx.fillStyle = "#1e293b"; // Leather jacket
+      ctx.beginPath(); ctx.ellipse(-1, -22, 6, 8, -0.2, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "#f43f5e"; // Helmet
+      ctx.beginPath(); ctx.arc(1, -28, 4.5, 0, Math.PI * 2); ctx.fill();
+      // Headlight
+      ctx.fillStyle = "#fef08a";
+      ctx.fillRect(13, -19, 3, 3);
+      drawWheel(-10, -2, 5);
+      drawWheel(12, -2, 5);
+
+    } else if (vehicle.id === "car") {
+      // 🚗 Commuter Car (Sleek Sedan)
+      ctx.fillStyle = "#2563eb"; // Sapphire Blue Body
+      ctx.beginPath();
+      ctx.roundRect(-22, -14, 44, 9, [3, 5, 2, 2]);
+      ctx.fill();
+      // Cabin Roof
+      ctx.fillStyle = "#1d4ed8";
+      ctx.beginPath();
+      ctx.roundRect(-10, -22, 24, 9, [4, 4, 0, 0]);
+      ctx.fill();
+      // Windshield & Windows
+      ctx.fillStyle = "#93c5fd";
+      ctx.fillRect(-7, -20, 9, 6);
+      ctx.fillRect(4, -20, 8, 6);
+      // Headlight & Taillight
+      ctx.fillStyle = "#fef08a"; ctx.fillRect(20, -11, 2.5, 4);
+      ctx.fillStyle = "#ef4444"; ctx.fillRect(-22, -11, 2, 3);
+      drawWheel(-12, -3, 5.5);
+      drawWheel(12, -3, 5.5);
+
+    } else if (vehicle.id === "suv") {
+      // 🚙 Heavy SUV
+      ctx.fillStyle = "#059669"; // Emerald Green
+      ctx.beginPath();
+      ctx.roundRect(-24, -17, 48, 12, [3, 4, 2, 2]);
+      ctx.fill();
+      // Roof & Rack
+      ctx.fillStyle = "#047857";
+      ctx.roundRect(-16, -26, 32, 10, [3, 3, 0, 0]);
+      ctx.fill();
+      ctx.strokeStyle = "#334155"; ctx.lineWidth = 1.5;
+      ctx.strokeRect(-14, -28, 28, 2);
+      // Tinted Windows
+      ctx.fillStyle = "#a7f3d0";
+      ctx.fillRect(-13, -24, 11, 6);
+      ctx.fillRect(1, -24, 11, 6);
+      // Headlight
+      ctx.fillStyle = "#fef08a"; ctx.fillRect(22, -13, 2.5, 5);
+      drawWheel(-13, -3, 6.5);
+      drawWheel(13, -3, 6.5);
+
+    } else if (vehicle.id === "bus") {
+      // 🚌 School Bus (Yellow)
+      ctx.fillStyle = "#eab308"; // Golden Yellow
+      ctx.beginPath();
+      ctx.roundRect(-32, -26, 64, 20, [4, 5, 2, 2]);
+      ctx.fill();
+      // Black trim stripe
+      ctx.fillStyle = "#0f172a";
+      ctx.fillRect(-32, -12, 64, 3);
+      // Windows
+      ctx.fillStyle = "#fef9c3";
+      for (let i = 0; i < 4; i++) {
+        ctx.fillRect(-26 + i * 13, -23, 10, 8);
+      }
+      // Headlight
+      ctx.fillStyle = "#fef08a"; ctx.fillRect(30, -18, 2.5, 6);
+      drawWheel(-20, -4, 6.5);
+      drawWheel(20, -4, 6.5);
+
+    } else if (vehicle.id === "truck") {
+      // 🚚 Heavy Cargo Truck
+      // Red Cab
+      ctx.fillStyle = "#dc2626";
+      ctx.beginPath();
+      ctx.roundRect(8, -26, 26, 20, [4, 4, 2, 2]);
+      ctx.fill();
+      // Cab window
+      ctx.fillStyle = "#bae6fd";
+      ctx.fillRect(16, -24, 14, 9);
+      // White Freight Cargo Box
+      ctx.fillStyle = "#f8fafc";
+      ctx.beginPath();
+      ctx.roundRect(-36, -30, 42, 24, [3, 3, 2, 2]);
+      ctx.fill();
+      ctx.strokeStyle = "#cbd5e1"; ctx.lineWidth = 1;
+      ctx.strokeRect(-36, -30, 42, 24);
+      // Headlight
+      ctx.fillStyle = "#fef08a"; ctx.fillRect(32, -18, 2.5, 6);
+      drawWheel(-28, -4, 6.5);
+      drawWheel(-12, -4, 6.5);
+      drawWheel(22, -4, 6.5);
+
+    } else {
+      // 🚛 Heavy Transport (18-Wheeler Multi-Axle)
+      // Purple Sleeper Cab
+      ctx.fillStyle = "#7c3aed";
+      ctx.beginPath();
+      ctx.roundRect(14, -28, 28, 22, [4, 4, 2, 2]);
+      ctx.fill();
+      // Exhaust Chrome Stacks
+      ctx.fillStyle = "#cbd5e1";
+      ctx.fillRect(11, -34, 3, 16);
+      // Elongated Blue Cargo Container
+      ctx.fillStyle = "#1e40af";
+      ctx.beginPath();
+      ctx.roundRect(-42, -32, 54, 26, [3, 3, 2, 2]);
+      ctx.fill();
+      // Corrugation lines
+      ctx.strokeStyle = "rgba(255, 255, 255, 0.2)";
+      for (let i = -36; i < 6; i += 8) {
+        ctx.strokeRect(i, -32, 4, 26);
+      }
+      // Headlight
+      ctx.fillStyle = "#fef08a"; ctx.fillRect(40, -18, 2.5, 6);
+      drawWheel(-34, -4, 6.5);
+      drawWheel(-20, -4, 6.5);
+      drawWheel(22, -4, 6.5);
+      drawWheel(34, -4, 6.5);
+    }
+
+    ctx.restore();
+  }
+
+  /* 9. ROADWAY GUARDRAILS & ENTRY PORTALS (Segmented, Snapping during Collapse) */
+  drawAerialGuardrails(ctx, project3D) {
+    const isCollapsing = (this.bridgeCollapseProgress || 0) > 0;
+    const p = this.bridgeCollapseProgress || 0;
+    const rawBreakCol = Math.round(this.bridgeBreakColumn || 6);
+    const breakIndex = Math.max(1, Math.min(10, rawBreakCol));
+
+    ctx.strokeStyle = "rgba(148, 163, 184, 0.65)";
+    ctx.lineWidth = 2;
+
+    // Posts at each column
+    for (let c = 0; c <= 12; c++) {
+      const pt = project3D(c, 0, 0);
+      if (isCollapsing && Math.abs(c - rawBreakCol) < 0.6) {
+        ctx.beginPath();
+        ctx.moveTo(pt.x, pt.y);
+        ctx.lineTo(pt.x + 8 * p, pt.y + 4);
+        ctx.stroke();
+      } else {
+        ctx.beginPath();
+        ctx.moveTo(pt.x, pt.y);
+        ctx.lineTo(pt.x, pt.y - 7);
+        ctx.stroke();
+      }
+    }
+
+    // Horizontal rails panel-by-panel
+    for (let c = 0; c < 12; c++) {
+      if (isCollapsing && c === breakIndex) {
+        // Rail snapped in two
+        const pL0 = project3D(c, 0, 0);
+        const pL1 = project3D(c + 0.38, 0, 0);
+        pL1.y += 28 * p;
+        ctx.beginPath();
+        ctx.moveTo(pL0.x, pL0.y - 7);
+        ctx.lineTo(pL1.x, pL1.y - 4);
+        ctx.stroke();
+
+        const pR0 = project3D(c + 0.62, 0, 0);
+        pR0.y += 34 * p;
+        const pR1 = project3D(c + 1, 0, 0);
+        ctx.beginPath();
+        ctx.moveTo(pR0.x, pR0.y - 4);
+        ctx.lineTo(pR1.x, pR1.y - 7);
+        ctx.stroke();
+      } else {
+        const p0 = project3D(c, 0, 0);
+        const p1 = project3D(c + 1, 0, 0);
+        ctx.beginPath();
+        ctx.moveTo(p0.x, p0.y - 7);
+        ctx.lineTo(p1.x, p1.y - 7);
+        ctx.stroke();
+      }
+    }
+  }
+
+  /* 10. REAL-TIME TESTING TELEMETRY HUD OVERLAY IN CANVAS */
+  drawAerialHUD(ctx, w, h) {
+    // Top Right Telemetry Pill
+    const hudW = 260;
+    const hudH = 50;
+    const hudX = w - hudW - 14;
+    const hudY = 14;
+
+    ctx.save();
+    ctx.fillStyle = "rgba(15, 23, 42, 0.85)";
+    ctx.strokeStyle = "rgba(56, 189, 248, 0.4)";
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.roundRect(hudX, hudY, hudW, hudH, 12);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.fillStyle = "#38bdf8";
+    ctx.font = "bold 10px sans-serif";
+    ctx.fillText("🚁 TOP AERIAL 3D PERSPECTIVE", hudX + 12, hudY + 18);
+
+    if (this.isTestingActive && this.activeTestType === "vehicle") {
+      const vehicle = SIMULATION_CONFIG.vehicles[this.activeVehicleIndex] || SIMULATION_CONFIG.vehicles[0];
+      const defVal = (this.currentDeflection || 0).toFixed(1);
+      ctx.fillStyle = "#ffffff";
+      ctx.font = "bold 12px sans-serif";
+      ctx.fillText(`Vehicle: ${vehicle.name} (${vehicle.simulationLoad}g) • Deflection: ${defVal}mm`, hudX + 12, hudY + 38);
+    } else {
+      const totalPlaced = this.getTotalPlacedCount();
+      const hasRoadDeck = (this.placedElements["front"] || []).some(m => m.type === "road_deck");
+      ctx.fillStyle = "#cbd5e1";
+      ctx.font = "bold 11px sans-serif";
+      const statusText = totalPlaced === 0 
+        ? "Canyon Open • Build in Left, Right & Front Views"
+        : `Built: ${totalPlaced} parts • Deck: ${hasRoadDeck ? "Installed ✓" : "Unpaved ⚠️"}`;
+      ctx.fillText(statusText, hudX + 12, hudY + 38);
+    }
+
+    ctx.restore();
+  }
+
+
+  drawBlueprintGrid(ctx, w, h) {
+    // Pinterest Aesthetic: Deep Calm Midnight Gradient with subtle ambient center
+    const bgGrad = ctx.createRadialGradient(w * 0.5, h * 0.45, 10, w * 0.5, h * 0.45, Math.max(w, h));
+    bgGrad.addColorStop(0, "#0c1324");
+    bgGrad.addColorStop(0.65, "#070b16");
+    bgGrad.addColorStop(1, "#03060c");
+    ctx.fillStyle = bgGrad;
+    ctx.fillRect(0, 0, w, h);
+
+    ctx.strokeStyle = "rgba(56, 189, 248, 0.035)";
+    ctx.lineWidth = 1;
+    const gridSize = 32;
+
+    for (let x = 0; x < w; x += gridSize) {
+      ctx.beginPath();
+      ctx.moveTo(x, 0);
+      ctx.lineTo(x, h);
+      ctx.stroke();
+    }
+    for (let y = 0; y < h; y += gridSize) {
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(w, y);
+      ctx.stroke();
+    }
+  }
+
+  drawCanyonEnvironment(ctx, w, h, cliffY, cliffLeftW, cliffRightX) {
+    // Soft atmospheric twilight canyon layers
+    ctx.fillStyle = "rgba(30, 27, 75, 0.5)";
+    ctx.beginPath();
+    ctx.moveTo(0, h * 0.44);
+    ctx.lineTo(w * 0.25, h * 0.38);
+    ctx.lineTo(w * 0.5, h * 0.45);
+    ctx.lineTo(w * 0.75, h * 0.37);
+    ctx.lineTo(w, h * 0.43);
+    ctx.lineTo(w, h);
+    ctx.lineTo(0, h);
+    ctx.closePath();
+    ctx.fill();
+
+    const riverY = h * 0.86;
+    const riverGrad = ctx.createLinearGradient(0, riverY, 0, h);
+    riverGrad.addColorStop(0, "#0e1a38");
+    riverGrad.addColorStop(0.5, "#0369a1");
+    riverGrad.addColorStop(1, "#0284c7");
+    ctx.fillStyle = riverGrad;
+    ctx.fillRect(0, riverY, w, h - riverY);
+
+    ctx.fillStyle = "rgba(255, 255, 255, 0.12)";
+    for (let i = 0; i < 5; i++) {
+      ctx.fillRect(w * 0.2 + i * 140, riverY + 14 + i * 5, 55, 1.5);
+    }
+
+    // Left Rock Cliff (With subtle warm top edge rim)
+    ctx.fillStyle = "#161f33";
+    ctx.beginPath();
+    ctx.moveTo(0, cliffY);
+    ctx.lineTo(cliffLeftW, cliffY);
+    ctx.lineTo(cliffLeftW - 25, cliffY + 80);
+    ctx.lineTo(cliffLeftW - 10, cliffY + 160);
+    ctx.lineTo(cliffLeftW - 40, h);
+    ctx.lineTo(0, h);
+    ctx.closePath();
+    ctx.fill();
+    ctx.strokeStyle = "rgba(251, 191, 36, 0.3)";
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(0, cliffY);
+    ctx.lineTo(cliffLeftW, cliffY);
+    ctx.stroke();
+
+    ctx.fillStyle = "#0b1220";
+    ctx.fillRect(0, cliffY - 5, cliffLeftW, 8);
+
+    // Right Rock Cliff
+    ctx.fillStyle = "#161f33";
+    ctx.beginPath();
+    ctx.moveTo(cliffRightX, cliffY);
+    ctx.lineTo(w, cliffY);
+    ctx.lineTo(w, h);
+    ctx.lineTo(cliffRightX + 40, h);
+    ctx.lineTo(cliffRightX + 10, cliffY + 160);
+    ctx.lineTo(cliffRightX + 25, cliffY + 80);
+    ctx.closePath();
+    ctx.fill();
+    ctx.strokeStyle = "rgba(52, 211, 153, 0.3)";
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(cliffRightX, cliffY);
+    ctx.lineTo(w, cliffY);
+    ctx.stroke();
+
+    ctx.fillStyle = "#0b1220";
+    ctx.fillRect(cliffRightX, cliffY - 5, w - cliffRightX, 8);
+  }
+
+  drawAnchorFoundations(ctx, w, h, cliffY, cliffLeftW, cliffRightX, viewSide) {
+    const anchorW = 28;
+    const anchorH = 42;
+
+    // Left Abutment Foundation Block (clean realistic stone, no orange box/arc)
+    const aX = cliffLeftW - anchorW;
+    const aY = cliffY - 6;
+
+    const aGrad = ctx.createLinearGradient(aX, aY, aX + anchorW, aY + anchorH);
+    aGrad.addColorStop(0, "#334155");
+    aGrad.addColorStop(1, "#1e293b");
+
+    ctx.fillStyle = aGrad;
+    ctx.beginPath();
+    ctx.roundRect(aX, aY, anchorW, anchorH, 4);
+    ctx.fill();
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.12)";
+    ctx.lineWidth = 1;
+    ctx.stroke();
+
+    // Right Abutment Foundation Block (clean realistic stone, no green box/arc)
+    const bX = cliffRightX;
+    const bY = cliffY - 6;
+
+    const bGrad = ctx.createLinearGradient(bX, bY, bX + anchorW, bY + anchorH);
+    bGrad.addColorStop(0, "#334155");
+    bGrad.addColorStop(1, "#1e293b");
+
+    ctx.fillStyle = bGrad;
+    ctx.beginPath();
+    ctx.roundRect(bX, bY, anchorW, anchorH, 4);
+    ctx.fill();
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.12)";
+    ctx.lineWidth = 1;
+    ctx.stroke();
+  }
+
+  /* SMALLER DOT GRID & DELICATE PINTEREST AESTHETIC LINES */
+  drawSideDottedLineAndDots(ctx, cliffY, viewSide, h) {
+    if (!this.gridDots || this.gridDots.length === 0) return;
+
+    const accentColor = viewSide === "right" ? "rgba(192, 132, 252, 0.65)" : "rgba(56, 189, 248, 0.65)";
+    const themeColor = viewSide === "right" ? "#c084fc" : "#38bdf8";
+    const coreThemeColor = viewSide === "right" ? "#a855f7" : "#0284c7";
+
+    const baselineDots = this.gridDots.filter(d => d.row === 0);
+    const startDot = baselineDots.find(d => d.col === 0);
+    const endDot = baselineDots.find(d => d.col === 12);
+
+    if (!startDot || !endDot) return;
+
+    const rowSpacing = Math.min((cliffY - 80) / 5.5, 42);
+
+    // 1. BASELINE DOTTED LINE
+    ctx.save();
+    ctx.strokeStyle = accentColor;
+    ctx.lineWidth = 2.0;
+    ctx.setLineDash([4, 5]);
+    ctx.beginPath();
+    ctx.moveTo(startDot.x, startDot.y);
+    ctx.lineTo(endDot.x, endDot.y);
+    ctx.stroke();
+
+    // 2. VERTICAL DOTTED GUIDE LINES
+    ctx.strokeStyle = "rgba(148, 163, 184, 0.16)";
+    ctx.lineWidth = 1.0;
+    ctx.setLineDash([2, 4]);
+
+    const row4Y = cliffY - 4 * rowSpacing;
+
+    for (let col = 0; col <= 12; col++) {
+      const colDot = baselineDots.find(d => d.col === col);
+      if (colDot) {
+        ctx.beginPath();
+        ctx.moveTo(colDot.x, cliffY);
+        ctx.lineTo(colDot.x, row4Y);
+        ctx.stroke();
+      }
+    }
+
+    // 3. HORIZONTAL DOTTED GUIDE LINES
+    const dot0X = startDot.x;
+    const dot12X = endDot.x;
+
+    for (let r = 1; r <= 4; r++) {
+      const rowY = cliffY - r * rowSpacing;
+      ctx.strokeStyle = "rgba(148, 163, 184, 0.16)";
+      ctx.lineWidth = 1.0;
+      ctx.setLineDash([2, 4]);
+      ctx.beginPath();
+      ctx.moveTo(dot0X, rowY);
+      ctx.lineTo(dot12X, rowY);
+      ctx.stroke();
+
+      ctx.fillStyle = "rgba(226, 232, 240, 0.75)";
+      ctx.font = "bold 9px monospace";
+      ctx.textAlign = "right";
+      ctx.fillText(`Row ${r} :`, dot0X - 14, rowY + 3);
+
+      ctx.textAlign = "left";
+      ctx.fillText(`: Row ${r}`, dot12X + 14, rowY + 3);
+    }
+
+    ctx.fillStyle = "rgba(148, 163, 184, 0.7)";
+    ctx.font = "bold 9px monospace";
+    ctx.textAlign = "right";
+    ctx.fillText("Row 0 :", dot0X - 14, cliffY + 3);
+    ctx.textAlign = "left";
+    ctx.fillText(": Row 0", dot12X + 14, cliffY + 3);
+
+    ctx.restore();
+
+    // 4. DRAW ALL DOTS (SMALLER REFINED SIZES & SOFT PASTEL HALOS)
+    this.gridDots.forEach((dot) => {
+      const isHovered = this.hoveredDotIndex === dot.id;
+      const isSelected = this.selectedFirstDot && this.selectedFirstDot.id === dot.id;
+      const isAnchorA = dot.row === 0 && dot.col === 0;
+      const isAnchorB = dot.row === 0 && dot.col === 12;
+      const isBaseline = dot.row === 0;
+      const isPylonCol = dot.col === 0 || dot.col === 12;
+
+      ctx.save();
+
+      // Scaled down smaller dot sizes
+      let radius = isBaseline ? 3.8 : 3.2;
+      let haloColor = viewSide === "right" ? "rgba(192, 132, 252, 0.18)" : "rgba(56, 189, 248, 0.18)";
+      let strokeColor = themeColor;
+      let coreColor = coreThemeColor;
+
+      if (isPylonCol && !isBaseline) {
+        strokeColor = viewSide === "right" ? "#e9d5ff" : "#bae6fd";
+        coreColor = viewSide === "right" ? "#c084fc" : "#38bdf8";
+        radius = 3.5;
+      } else if (!isBaseline) {
+        strokeColor = viewSide === "right" ? "#d8b4fe" : "#7dd3fc";
+        coreColor = viewSide === "right" ? "#a855f7" : "#0284c7";
+      }
+
+      if (isSelected) {
+        radius += 3;
+        haloColor = "rgba(245, 158, 11, 0.85)";
+        strokeColor = "#fef08a";
+        coreColor = "#f59e0b";
+      } else if (isHovered) {
+        radius += 2.2;
+        haloColor = isAnchorA ? "rgba(245, 158, 11, 0.75)" : isAnchorB ? "rgba(16, 185, 129, 0.75)" : "rgba(56, 189, 248, 0.75)";
+        strokeColor = "#ffffff";
+      }
+
+      // Soft Glow Halo
+      ctx.fillStyle = haloColor;
+      ctx.beginPath();
+      ctx.arc(dot.x, dot.y, radius + 2.5, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Outer Ring
+      ctx.fillStyle = "#090d1a";
+      ctx.strokeStyle = strokeColor;
+      ctx.lineWidth = isSelected ? 2.2 : isHovered ? 1.8 : 1.2;
+      ctx.beginPath();
+      ctx.arc(dot.x, dot.y, radius, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+
+      // Core
+      ctx.fillStyle = isSelected ? "#fef08a" : isHovered ? "#ffffff" : coreColor;
+      ctx.beginPath();
+      ctx.arc(dot.x, dot.y, radius * 0.45, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Column Number Label under Baseline
+      if (isBaseline) {
+        ctx.font = isHovered ? "bold 11px monospace" : "bold 10px monospace";
+        ctx.textAlign = "center";
+        ctx.fillStyle = isHovered ? "#fff" : "#cbd5e1";
+        ctx.fillText(dot.col.toString(), dot.x, dot.y + 16);
+      }
+
+      ctx.restore();
+    });
+
+    // Label "(columns)"
+    ctx.save();
+    const midColX = (startDot.x + endDot.x) * 0.5;
+    ctx.font = "italic 10px monospace";
+    ctx.fillStyle = "rgba(148, 163, 184, 0.8)";
+    ctx.textAlign = "center";
+    ctx.fillText("(columns)", midColX, cliffY + 34);
+
+    // Baseline ends
+    ctx.restore();
+  }
+
+  /* =========================================================================
+   * REALISTIC 3D COMPONENT RENDERING
+   * ========================================================================= */
+  drawPlacedComponentsSide(ctx, cliffY) {
+    const list = this.placedElements[this.currentView] || [];
+
+    // 1. Chords
+    list.filter(m => m.type === "bottom_chord" || m.type === "top_chord").forEach((chord) => {
+      const isHovered = this.hoveredPlacedId === chord.id;
+      const rowDots = this.gridDots.filter(d => d.row === chord.row);
+      const d0 = rowDots.find(d => d.col === 0);
+      const d12 = rowDots.find(d => d.col === 12);
+      if (d0 && d12) {
+        this.drawRealisticChord(ctx, d0.x, d0.y, d12.x, d12.y, chord.row, chord.type === "top_chord", isHovered);
+      }
+    });
+
+    // 2. Wooden Beams
+    list.filter(m => m.type === "horizontal" || m.type === "vertical" || m.type === "diagonal").forEach((beam) => {
+      const isHovered = this.hoveredPlacedId === beam.id;
+      const d1 = this.gridDots.find(d => d.row === beam.dotA.row && d.col === beam.dotA.col);
+      const d2 = this.gridDots.find(d => d.row === beam.dotB.row && d.col === beam.dotB.col);
+      if (d1 && d2) {
+        this.drawRealisticTimberBeam(ctx, d1.x, d1.y, d2.x, d2.y, isHovered);
+      }
+    });
+
+    // 3. Joint Connectors
+    list.filter(m => m.type === "joint").forEach((screw) => {
+      const isHovered = this.hoveredPlacedId === screw.id;
+      const dot = this.gridDots.find(d => d.row === screw.row && d.col === screw.col);
+      if (dot) {
+        this.drawRealisticGreyScrew(ctx, dot.x, dot.y, isHovered);
+      }
+    });
+
+    // 4. Inspected Failed Segment Highlight
+    if (this.inspectedFailedSegment) {
+      this.drawFailedSegmentHighlight(ctx);
+    }
+  }
+
+  drawFailedSegmentHighlight(ctx) {
+    const fail = this.inspectedFailedSegment;
+    if (!fail) return;
+
+    ctx.save();
+    if (fail.dotA && fail.dotB) {
+      const d1 = this.gridDots.find(d => d.row === fail.dotA.row && d.col === fail.dotA.col);
+      const d2 = this.gridDots.find(d => d.row === fail.dotB.row && d.col === fail.dotB.col);
+      if (d1 && d2) {
+        // Red glowing halo
+        ctx.strokeStyle = "rgba(239, 68, 68, 0.4)";
+        ctx.lineWidth = 14;
+        ctx.lineCap = "round";
+        ctx.beginPath();
+        ctx.moveTo(d1.x, d1.y);
+        ctx.lineTo(d2.x, d2.y);
+        ctx.stroke();
+
+        // Dashed bright red outline
+        ctx.strokeStyle = "#ef4444";
+        ctx.lineWidth = 4;
+        ctx.setLineDash([8, 5]);
+        ctx.beginPath();
+        ctx.moveTo(d1.x, d1.y);
+        ctx.lineTo(d2.x, d2.y);
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        // Label banner
+        const midX = (d1.x + d2.x) * 0.5;
+        const midY = (d1.y + d2.y) * 0.5 - 18;
+        ctx.fillStyle = "rgba(15, 23, 42, 0.95)";
+        ctx.strokeStyle = "#ef4444";
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.roundRect(midX - 70, midY - 12, 140, 22, 6);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.fillStyle = "#fca5a5";
+        ctx.font = "bold 10px JetBrains Mono, monospace";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText(`💥 FAILED (${Math.round((fail.stressRatio || 1.2) * 100)}% STRESS)`, midX, midY - 1);
+      }
+    } else if (fail.col !== undefined && fail.row !== undefined) {
+      const dot = this.gridDots.find(d => d.row === fail.row && d.col === fail.col);
+      if (dot) {
+        ctx.strokeStyle = "#ef4444";
+        ctx.lineWidth = 3.5;
+        ctx.setLineDash([5, 4]);
+        ctx.beginPath();
+        ctx.arc(dot.x, dot.y, 22, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        ctx.fillStyle = "rgba(15, 23, 42, 0.95)";
+        ctx.strokeStyle = "#ef4444";
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.roundRect(dot.x - 65, dot.y - 36, 130, 20, 6);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.fillStyle = "#fca5a5";
+        ctx.font = "bold 9.5px JetBrains Mono, monospace";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText(`💥 FAILED JOINT (${Math.round((fail.stressRatio || 1.2) * 100)}%)`, dot.x, dot.y - 26);
+      }
+    }
+    ctx.restore();
+  }
+
+  /* 1. REALISTIC BALSA TIMBER BEAM */
+  drawRealisticTimberBeam(ctx, x1, y1, x2, y2, isHovered) {
+    const angle = Math.atan2(y2 - y1, x2 - x1);
+    const len = Math.hypot(x2 - x1, y2 - y1);
+    const thickness = 13;
+
+    ctx.save();
+    ctx.translate(x1, y1);
+    ctx.rotate(angle);
+
+    // Drop Shadow
+    ctx.fillStyle = "rgba(0, 0, 0, 0.45)";
+    ctx.fillRect(2, 3, len - 4, thickness);
+
+    // Main Balsa Wood Body
+    const woodGrad = ctx.createLinearGradient(0, -thickness * 0.5, 0, thickness * 0.5);
+    if (isHovered) {
+      woodGrad.addColorStop(0, "#f87171");
+      woodGrad.addColorStop(0.5, "#dc2626");
+      woodGrad.addColorStop(1, "#991b1b");
+    } else {
+      woodGrad.addColorStop(0, "#e8b87d");
+      woodGrad.addColorStop(0.18, "#d49a55");
+      woodGrad.addColorStop(0.5, "#bc7d35");
+      woodGrad.addColorStop(0.85, "#a16323");
+      woodGrad.addColorStop(1, "#75410e");
+    }
+
+    ctx.fillStyle = woodGrad;
+    ctx.fillRect(0, -thickness * 0.5, len, thickness);
+
+    if (!isHovered) {
+      ctx.strokeStyle = "rgba(95, 52, 14, 0.28)";
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(2, -thickness * 0.22);
+      ctx.lineTo(len - 2, -thickness * 0.22);
+      ctx.moveTo(6, thickness * 0.18);
+      ctx.lineTo(len - 6, thickness * 0.18);
+      ctx.stroke();
+
+      ctx.strokeStyle = "rgba(255, 237, 213, 0.5)";
+      ctx.lineWidth = 1.2;
+      ctx.beginPath();
+      ctx.moveTo(0, -thickness * 0.5);
+      ctx.lineTo(len, -thickness * 0.5);
+      ctx.stroke();
+
+      ctx.strokeStyle = "rgba(50, 24, 5, 0.7)";
+      ctx.lineWidth = 1.4;
+      ctx.beginPath();
+      ctx.moveTo(0, thickness * 0.5);
+      ctx.lineTo(len, thickness * 0.5);
+      ctx.stroke();
+
+      ctx.fillStyle = "#8c4a16";
+      ctx.fillRect(0, -thickness * 0.5, 3, thickness);
+      ctx.fillRect(len - 3, -thickness * 0.5, 3, thickness);
+    } else {
+      ctx.strokeStyle = "#ffffff";
+      ctx.lineWidth = 2;
+      ctx.strokeRect(0, -thickness * 0.5, len, thickness);
+
+      ctx.fillStyle = "#ffffff";
+      ctx.font = "bold 11px sans-serif";
+      ctx.textAlign = "center";
+      ctx.fillText("✕ DISMANTLE", len * 0.5, 3.5);
+    }
+
+    ctx.restore();
+  }
+
+  /* 2. REALISTIC STEEL-BLUE CONTINUOUS CHORD BEAM */
+  drawRealisticChord(ctx, x1, y1, x2, y2, row, isTop, isHovered) {
+    const angle = Math.atan2(y2 - y1, x2 - x1);
+    const len = Math.hypot(x2 - x1, y2 - y1);
+    const thickness = 16;
+
+    ctx.save();
+    ctx.translate(x1, y1);
+    ctx.rotate(angle);
+
+    ctx.fillStyle = "rgba(0, 0, 0, 0.55)";
+    ctx.fillRect(2, 4, len - 4, thickness);
+
+    const chordGrad = ctx.createLinearGradient(0, -thickness * 0.5, 0, thickness * 0.5);
+    if (isHovered) {
+      chordGrad.addColorStop(0, "#f87171");
+      chordGrad.addColorStop(0.5, "#dc2626");
+      chordGrad.addColorStop(1, "#7f1d1d");
+    } else {
+      chordGrad.addColorStop(0, "#93c5fd");
+      chordGrad.addColorStop(0.18, "#3b82f6");
+      chordGrad.addColorStop(0.5, "#1d4ed8");
+      chordGrad.addColorStop(0.85, "#1e3a8a");
+      chordGrad.addColorStop(1, "#0f172a");
+    }
+
+    ctx.fillStyle = chordGrad;
+    ctx.fillRect(0, -thickness * 0.5, len, thickness);
+
+    if (!isHovered) {
+      ctx.strokeStyle = "rgba(255, 255, 255, 0.7)";
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.moveTo(0, -thickness * 0.5);
+      ctx.lineTo(len, -thickness * 0.5);
+      ctx.stroke();
+
+      ctx.strokeStyle = "rgba(15, 23, 42, 0.5)";
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(0, 0);
+      ctx.lineTo(len, 0);
+      ctx.stroke();
+
+      const stepX = len / 12;
+      for (let c = 0; c <= 12; c++) {
+        const rx = c * stepX;
+        ctx.fillStyle = "#cbd5e1";
+        ctx.beginPath();
+        ctx.arc(rx, -thickness * 0.28, 2, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.fillStyle = "#1e293b";
+        ctx.beginPath();
+        ctx.arc(rx, -thickness * 0.28 + 0.6, 1.2, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = "#cbd5e1";
+        ctx.beginPath();
+        ctx.arc(rx, thickness * 0.28, 2, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.fillStyle = "#1e293b";
+        ctx.beginPath();
+        ctx.arc(rx, thickness * 0.28 + 0.6, 1.2, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    } else {
+      ctx.strokeStyle = "#ffffff";
+      ctx.lineWidth = 2;
+      ctx.strokeRect(0, -thickness * 0.5, len, thickness);
+      ctx.fillStyle = "#ffffff";
+      ctx.font = "bold 11px sans-serif";
+      ctx.textAlign = "center";
+      ctx.fillText("✕ DISMANTLE CHORD", len * 0.5, 4);
+    }
+
+    ctx.restore();
+  }
+
+  /* 3. REALISTIC METALLIC GREY SCREW JOINT FASTENER */
+  drawRealisticGreyScrew(ctx, x, y, isHovered) {
+    ctx.save();
+
+    ctx.fillStyle = "rgba(0, 0, 0, 0.55)";
+    ctx.beginPath();
+    ctx.arc(x + 1.5, y + 2.5, 8.5, 0, Math.PI * 2);
+    ctx.fill();
+
+    const washerGrad = ctx.createRadialGradient(x, y, 3, x, y, 9);
+    washerGrad.addColorStop(0, "#cbd5e1");
+    washerGrad.addColorStop(0.7, "#94a3b8");
+    washerGrad.addColorStop(1, "#475569");
+    ctx.fillStyle = washerGrad;
+    ctx.beginPath();
+    ctx.arc(x, y, 8.5, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.strokeStyle = "#334155";
+    ctx.lineWidth = 1;
+    ctx.stroke();
+
+    const screwGrad = ctx.createRadialGradient(x - 2, y - 2, 1, x, y, 7.5);
+    if (isHovered) {
+      screwGrad.addColorStop(0, "#fee2e2");
+      screwGrad.addColorStop(0.3, "#f87171");
+      screwGrad.addColorStop(0.8, "#dc2626");
+      screwGrad.addColorStop(1, "#7f1d1d");
+    } else {
+      screwGrad.addColorStop(0, "#ffffff");
+      screwGrad.addColorStop(0.25, "#e2e8f0");
+      screwGrad.addColorStop(0.65, "#94a3b8");
+      screwGrad.addColorStop(0.9, "#64748b");
+      screwGrad.addColorStop(1, "#334155");
+    }
+
+    ctx.fillStyle = screwGrad;
+    ctx.beginPath();
+    ctx.arc(x, y, 7, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.6)";
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.arc(x, y, 6.8, -Math.PI * 0.75, Math.PI * 0.25);
+    ctx.stroke();
+
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.rotate(0.45);
+
+    ctx.fillStyle = isHovered ? "#450a0a" : "#0f172a";
+    ctx.fillRect(-5, -1.2, 10, 2.4);
+    ctx.fillRect(-1.2, -5, 2.4, 10);
+
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.4)";
+    ctx.lineWidth = 0.8;
+    ctx.strokeRect(-5, -1.2, 10, 2.4);
+    ctx.strokeRect(-1.2, -5, 2.4, 10);
+
+    ctx.restore();
+
+    ctx.fillStyle = "#ffffff";
+    ctx.beginPath();
+    ctx.arc(x - 2.5, y - 2.5, 1, 0, Math.PI * 2);
+    ctx.fill();
+
+    if (isHovered) {
+      ctx.strokeStyle = "#ef4444";
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.arc(x, y, 11, 0, Math.PI * 2);
+      ctx.stroke();
+    }
+
+    ctx.restore();
+  }
+
+  /* =========================================================================
+   * DRAW FRONT VIEW: (PORTAL ENTRANCE + COMPLETE ROAD DECK OVER ENTIRE GRID)
+   * ========================================================================= */
+  drawFrontView(ctx, w, h) {
+    this.drawBlueprintGrid(ctx, w, h);
+
+    const centerX = w * 0.5;
+    const portalWidth = Math.min(w * 0.44, 380);
+    const leftX = centerX - portalWidth * 0.5;
+    const rightX = centerX + portalWidth * 0.5;
+    const stepX = portalWidth / 4;
+
+    const numRows = 10;
+    const bottomY = h * 0.74; // Row 1 (bottom-most row)
+    const topY = h * 0.22;    // Row 10 (top-most row)
+    const stepY = (bottomY - topY) / (numRows - 1);
+
+    // 1. Portal Framing Pillars
+    ctx.fillStyle = "#1e293b";
+    ctx.fillRect(leftX - 35, bottomY + 6, 70, 45);
+    ctx.strokeStyle = "#334155";
+    ctx.lineWidth = 2;
+    ctx.strokeRect(leftX - 35, bottomY + 6, 70, 45);
+
+    ctx.fillStyle = "#1e293b";
+    ctx.fillRect(rightX - 35, bottomY + 6, 70, 45);
+    ctx.strokeStyle = "#334155";
+    ctx.lineWidth = 2;
+    ctx.strokeRect(rightX - 35, bottomY + 6, 70, 45);
+
+    // 2. Check if Road Deck is installed in Front View
+    const hasRoadDeck = (this.placedElements["front"] || []).some(m => m.type === "road_deck");
+    const isDeckHovered = this.hoveredPlacedId && (this.placedElements["front"] || []).some(m => m.type === "road_deck" && m.id === this.hoveredPlacedId);
+
+    // 3. Header Badges ("LEFT LINE", "RIGHT LINE")
+    ctx.fillStyle = "rgba(15, 23, 42, 0.92)";
+    ctx.strokeStyle = "var(--accent-cyan, #38bdf8)";
+    ctx.lineWidth = 1.2;
+
+    ctx.beginPath();
+    ctx.roundRect(leftX - 52, topY - 42, 104, 30, 6);
+    ctx.fill();
+    ctx.stroke();
+    ctx.fillStyle = "var(--accent-cyan, #38bdf8)";
+    ctx.font = "bold 10px sans-serif";
+    ctx.textAlign = "center";
+    ctx.fillText("LEFT LINE", leftX, topY - 23);
+
+    ctx.beginPath();
+    ctx.roundRect(rightX - 52, topY - 42, 104, 30, 6);
+    ctx.fill();
+    ctx.stroke();
+    ctx.fillStyle = "var(--accent-cyan, #38bdf8)";
+    ctx.font = "bold 10px sans-serif";
+    ctx.textAlign = "center";
+    ctx.fillText("RIGHT LINE", rightX, topY - 23);
+
+    // Front View header cleaned
+
+    // 4. EITHER DRAW COMPLETE ROAD DECK OVER WHOLE GRID, OR DRAW EXPOSED DOT GRID
+    if (hasRoadDeck) {
+      // THE ROAD DECK IS A COMPLETE ROAD LAYED OVER THE WHOLE DOT GRID,
+      // COVERING ALL THE ROWS, COLUMNS AND DOTS OF THE FRONT VIEW!
+      this.drawRealisticCompleteRoadDeck(ctx, leftX, rightX, topY, bottomY, isDeckHovered, centerX);
+    } else {
+      // Unpaved bridge base guide
+      ctx.fillStyle = "#0b1220";
+      ctx.fillRect(leftX - 10, bottomY - 3, portalWidth + 20, 8);
+      ctx.fillStyle = "#fbbf24";
+      ctx.fillRect(centerX - 15, bottomY - 1, 30, 2);
+
+      // The two dotted lines side-by-side
+      ctx.save();
+      ctx.strokeStyle = "rgba(56, 189, 248, 0.75)";
+      ctx.lineWidth = 2.0;
+      ctx.setLineDash([5, 5]);
+
+      ctx.beginPath();
+      ctx.moveTo(leftX, bottomY);
+      ctx.lineTo(leftX, topY);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(rightX, bottomY);
+      ctx.lineTo(rightX, topY);
+      ctx.stroke();
+
+      ctx.strokeStyle = "rgba(148, 163, 184, 0.18)";
+      ctx.lineWidth = 1.0;
+      ctx.setLineDash([2, 4]);
+      for (let r = 0; r < numRows; r++) {
+        const y = bottomY - r * stepY;
+        ctx.beginPath();
+        ctx.moveTo(leftX, y);
+        ctx.lineTo(rightX, y);
+        ctx.stroke();
+      }
+      ctx.restore();
+
+      // Draw all 50 dots in Front View (Smaller refined dots)
+      this.gridDots.forEach((dot) => {
+        const isHovered = this.hoveredDotIndex === dot.id;
+        const isBoundary = dot.col === 0 || dot.col === 4;
+
+        ctx.save();
+
+        let radius = isBoundary ? 3.8 : 2.8;
+        let haloColor = isBoundary ? "rgba(56, 189, 248, 0.22)" : "rgba(255, 255, 255, 0.12)";
+        let strokeColor = isBoundary ? "#38bdf8" : "#94a3b8";
+        let coreColor = isBoundary ? "#0284c7" : "#475569";
+
+        if (isHovered) {
+          radius += 1.8;
+          haloColor = "rgba(56, 189, 248, 0.75)";
+          strokeColor = "#ffffff";
+          coreColor = "#38bdf8";
+        }
+
+        ctx.fillStyle = haloColor;
+        ctx.beginPath();
+        ctx.arc(dot.x, dot.y, radius + 2.0, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = "#090d1a";
+        ctx.strokeStyle = strokeColor;
+        ctx.lineWidth = isHovered ? 1.8 : 1.2;
+        ctx.beginPath();
+        ctx.arc(dot.x, dot.y, radius, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.fillStyle = coreColor;
+        ctx.beginPath();
+        ctx.arc(dot.x, dot.y, radius * 0.45, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Dot labels removed from Front View
+
+        ctx.restore();
+      });
+
+      // Bottom ready instruction removed
+    }
+  }
+
+  /* 4. REALISTIC COMPLETE ROAD DECK OVERLAY (LAYED OVER WHOLE DOT GRID) */
+  drawRealisticCompleteRoadDeck(ctx, leftX, rightX, topY, bottomY, isHovered, centerX) {
+    const roadLeft = leftX - 24;
+    const roadRight = rightX + 24;
+    const roadTop = topY - 20;
+    const roadBottom = bottomY + 22;
+    const roadW = roadRight - roadLeft;
+    const roadH = roadBottom - roadTop;
+
+    ctx.save();
+
+    // 1. Cast Drop Shadow beneath complete road slab
+    ctx.fillStyle = "rgba(0, 0, 0, 0.65)";
+    ctx.beginPath();
+    ctx.roundRect(roadLeft + 6, roadTop + 8, roadW - 12, roadH, 10);
+    ctx.fill();
+
+    // 2. Concrete & Structural Steel Girder Base Plate
+    const baseGrad = ctx.createLinearGradient(roadLeft, 0, roadRight, 0);
+    baseGrad.addColorStop(0, "#0f172a");
+    baseGrad.addColorStop(0.5, "#1e293b");
+    baseGrad.addColorStop(1, "#0f172a");
+    ctx.fillStyle = baseGrad;
+    ctx.beginPath();
+    ctx.roundRect(roadLeft, roadTop, roadW, roadH, 10);
+    ctx.fill();
+    ctx.strokeStyle = "#334155";
+    ctx.lineWidth = 2.5;
+    ctx.stroke();
+
+    // 3. Modular Segmented Side Profiles (Matching item_road_deck.jpg)
+    const curbW = 16;
+    ctx.fillStyle = "#1e293b";
+    ctx.fillRect(roadLeft, roadTop, curbW, roadH);
+    ctx.fillRect(roadRight - curbW, roadTop, curbW, roadH);
+
+    // Modular segment divider seams & mounting sockets
+    const segmentH = 34;
+    const numSegments = Math.floor(roadH / segmentH);
+    for (let s = 0; s < numSegments; s++) {
+      const segY = roadTop + s * segmentH;
+      ctx.strokeStyle = "#090d16";
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.moveTo(roadLeft, segY);
+      ctx.lineTo(roadLeft + curbW, segY);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(roadRight - curbW, segY);
+      ctx.lineTo(roadRight, segY);
+      ctx.stroke();
+
+      ctx.fillStyle = "#020617";
+      ctx.fillRect(roadLeft + 5, segY + segmentH * 0.5 - 3, 6, 6);
+      ctx.fillRect(roadRight - 11, segY + segmentH * 0.5 - 3, 6, 6);
+      ctx.strokeStyle = "#475569";
+      ctx.lineWidth = 0.8;
+      ctx.strokeRect(roadLeft + 5, segY + segmentH * 0.5 - 3, 6, 6);
+      ctx.strokeRect(roadRight - 11, segY + segmentH * 0.5 - 3, 6, 6);
+    }
+
+    // 4. Yellow/Black Curb Hazard Edges
+    for (let k = 0; k < Math.floor(roadH / 14); k++) {
+      ctx.fillStyle = k % 2 === 0 ? "#fbbf24" : "#1e293b";
+      ctx.fillRect(roadLeft + curbW - 4, roadTop + k * 14, 4, 14);
+      ctx.fillRect(roadRight - curbW, roadTop + k * 14, 4, 14);
+    }
+
+    // 5. Asphalt Pavement Surface (Layed over whole dot grid)
+    const surfLeft = roadLeft + curbW;
+    const surfRight = roadRight - curbW;
+    const surfW = surfRight - surfLeft;
+    const surfH = roadH;
+
+    const asphaltGrad = ctx.createLinearGradient(0, roadTop, 0, roadBottom);
+    if (isHovered) {
+      asphaltGrad.addColorStop(0, "#b91c1c");
+      asphaltGrad.addColorStop(0.5, "#dc2626");
+      asphaltGrad.addColorStop(1, "#991b1b");
+    } else {
+      asphaltGrad.addColorStop(0, "#18202d");
+      asphaltGrad.addColorStop(0.3, "#222c3d");
+      asphaltGrad.addColorStop(0.7, "#243042");
+      asphaltGrad.addColorStop(1, "#18202d");
+    }
+    ctx.fillStyle = asphaltGrad;
+    ctx.fillRect(surfLeft, roadTop, surfW, surfH);
+
+    // Subtle aggregate texture specks
+    if (!isHovered) {
+      ctx.fillStyle = "rgba(255, 255, 255, 0.03)";
+      for (let i = 0; i < 24; i++) {
+        ctx.fillRect(surfLeft + (i * 29) % surfW, roadTop + (i * 37) % surfH, 35, 1);
+      }
+    }
+
+    // 6. Road Markings (Matching item_road_deck.jpg)
+    ctx.strokeStyle = isHovered ? "rgba(255, 255, 255, 0.6)" : "rgba(255, 255, 255, 0.95)";
+    ctx.lineWidth = 3.5;
+    ctx.beginPath();
+    ctx.moveTo(surfLeft + 10, roadTop + 6);
+    ctx.lineTo(surfLeft + 10, roadBottom - 6);
+    ctx.moveTo(surfRight - 10, roadTop + 6);
+    ctx.lineTo(surfRight - 10, roadBottom - 6);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(surfLeft + 8, roadTop + 14);
+    ctx.lineTo(surfRight - 8, roadTop + 14);
+    ctx.moveTo(surfLeft + 8, roadBottom - 14);
+    ctx.lineTo(surfRight - 8, roadBottom - 14);
+    ctx.stroke();
+
+    // Center Dashed White Line
+    ctx.strokeStyle = "#ffffff";
+    ctx.lineWidth = 4.5;
+    ctx.setLineDash([22, 16]);
+    ctx.beginPath();
+    ctx.moveTo(centerX, roadTop + 24);
+    ctx.lineTo(centerX, roadBottom - 24);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Directional Highway Arrows painted on lanes
+    const laneMidL = (surfLeft + 10 + centerX) * 0.5;
+    const laneMidR = (centerX + surfRight - 10) * 0.5;
+    const arrowY1 = roadTop + roadH * 0.35;
+    const arrowY2 = roadTop + roadH * 0.65;
+
+    [arrowY1, arrowY2].forEach((ay) => {
+      this.drawRoadArrow(ctx, laneMidL, ay, true);
+      this.drawRoadArrow(ctx, laneMidR, ay, true);
+    });
+
+    // 7. Corner Mounting Sockets / Bolt Cutouts
+    [
+      { x: roadLeft + 8, y: roadTop + 10 },
+      { x: roadRight - 8, y: roadTop + 10 },
+      { x: roadLeft + 8, y: roadBottom - 10 },
+      { x: roadRight - 8, y: roadBottom - 10 }
+    ].forEach((pt) => {
+      ctx.fillStyle = "#020617";
+      ctx.beginPath();
+      ctx.arc(pt.x, pt.y, 4.5, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = "#64748b";
+      ctx.lineWidth = 1.2;
+      ctx.stroke();
+    });
+
+    // 8. Header / Status Tag
+    if (!isHovered) {
+      ctx.fillStyle = "rgba(15, 23, 42, 0.88)";
+      ctx.strokeStyle = "#10b981";
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.roundRect(centerX - 130, roadTop + 20, 260, 28, 6);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = "#34d399";
+      ctx.font = "bold 11px sans-serif";
+      ctx.textAlign = "center";
+      ctx.fillText("🛣️ COMPLETE ROAD DECK — ALL 10 ROWS COVERED", centerX, roadTop + 38);
+    } else {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.85)";
+      ctx.strokeStyle = "#ef4444";
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.roundRect(centerX - 160, (roadTop + roadBottom) * 0.5 - 20, 320, 40, 8);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = "#ffffff";
+      ctx.font = "bold 13px sans-serif";
+      ctx.textAlign = "center";
+      ctx.fillText("✕ CLICK TO DISMANTLE ROAD DECK (REFUND ₹30)", centerX, (roadTop + roadBottom) * 0.5 + 5);
+    }
+
+    ctx.restore();
+  }
+
+  drawRoadArrow(ctx, x, y, northbound = true) {
+    ctx.save();
+    ctx.fillStyle = "rgba(255, 255, 255, 0.4)";
+    ctx.beginPath();
+    if (northbound) {
+      ctx.moveTo(x, y - 12);
+      ctx.lineTo(x + 7, y - 4);
+      ctx.lineTo(x + 2.5, y - 4);
+      ctx.lineTo(x + 2.5, y + 10);
+      ctx.lineTo(x - 2.5, y + 10);
+      ctx.lineTo(x - 2.5, y - 4);
+      ctx.lineTo(x - 7, y - 4);
+    }
+    ctx.closePath();
+    ctx.fill();
+    ctx.restore();
+  }
+}
+
+/**
+ * Mission 3: Urban Heat Island: Historical vs Modern City
+ * Domain 3: Earth, Society & Human Progress
+ * Incorporates: Time-Capsule Immersion (h), First Principles (a), Ethical Radical (c), Physical Build (d)
+ */
+
+
+
+class UrbanHeatSimulation {
+  constructor(container, onComplete) {
+    this.container = container;
+    this.onComplete = onComplete;
+    this.era = "2020s"; // "1950s" vs "2020s"
+    this.scenario = 1; // 1: Temp Delta | 2: Mitigation Plan | 3: Ethical Debate
+
+    // Microclimate Variables
+    this.greenCover = 18; // % (1950s default ~55%, 2020s default ~18%)
+    this.buildingDensity = 72; // % (1950s ~25%, 2020s ~72%)
+    this.albedo = 0.18; // 0.10 (asphalt) to 0.75 (cool roof)
+
+    this.animFrame = null;
+    this.ethicalVote = null;
+  }
+
+  mount() {
+    this.renderLayout();
+    this.setupCanvas();
+    this.renderControls();
+    this.updateMicroclimate();
+  }
+
+  destroy() {
+    if (this.animFrame) cancelAnimationFrame(this.animFrame);
+    sound.stopAll();
+  }
+
+  renderLayout() {
+    this.container.innerHTML = `
+      <div class="sim-stage-split">
+        <!-- 70% Left: Satellite & Thermal Heatmap Viewport -->
+        <div class="sim-stage-visual" id="heat-visual-pane">
+          <div class="sim-canvas-container">
+            <canvas id="heatCanvas" class="sim-canvas"></canvas>
+
+            <!-- Era Toggle Toolbar -->
+            <div style="position:absolute; top:15px; left:15px; display:flex; gap:0.5rem; background:rgba(15,23,42,0.85); backdrop-filter:blur(8px); padding:0.4rem; border-radius:8px; border:1px solid var(--border-subtle); z-index:10;">
+              <button id="era-1950-btn" class="filter-chip">⏳ 1950s Historical City</button>
+              <button id="era-2020-btn" class="filter-chip active">🏙️ 2020s Modern Concrete</button>
+              <button id="heatmap-toggle-btn" class="filter-chip" style="color:var(--accent-amber);">🌡️ Toggle Thermal IR</button>
+            </div>
+
+            <!-- Real-Time Microclimate Telemetry HUD -->
+            <div style="position:absolute; bottom:20px; left:20px; right:20px; background:rgba(15,23,42,0.9); border:1px solid rgba(56,189,248,0.25); border-radius:12px; padding:0.85rem 1.25rem; display:flex; justify-content:space-between; align-items:center; backdrop-filter:blur(10px); z-index:10;">
+              <div>
+                <div style="font-size:0.7rem; color:var(--text-faint); text-transform:uppercase; font-weight:700;">Surface Urban Heat Index</div>
+                <div style="font-family:var(--font-mono); font-size:1.5rem; font-weight:800; color:#ef4444;" id="surface-temp-display">42.4°C</div>
+              </div>
+              <div>
+                <div style="font-size:0.7rem; color:var(--text-faint); text-transform:uppercase; font-weight:700;">Solar Radiation Absorbed</div>
+                <div style="font-family:var(--font-mono); font-size:1.5rem; font-weight:800; color:var(--accent-amber);" id="radiation-display">680 <span style="font-size:0.8rem; color:var(--text-muted);">W/m²</span></div>
+              </div>
+              <div>
+                <div style="font-size:0.7rem; color:var(--text-faint); text-transform:uppercase; font-weight:700;">Evapotranspirative Cooling</div>
+                <div style="font-family:var(--font-mono); font-size:1.5rem; font-weight:800; color:#34d399;" id="evapo-display">-3.2°C</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 30% Right: Thermodynamic Controls & Scenarios -->
+        <div class="sim-stage-controls" id="heat-controls-pane">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <div>
+              <div style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); font-weight:700;">Investigation Stage</div>
+              <span id="heat-level-badge" class="level-chip active">Scenario 1: Delta</span>
+            </div>
+          </div>
+
+          <div id="heat-controls-area">
+            <!-- Dynamic Controls -->
+          </div>
+        </div>
+      </div>
+    `;
+
+    document.getElementById("era-1950-btn").addEventListener("click", () => this.switchEra("1950s"));
+    document.getElementById("era-2020-btn").addEventListener("click", () => this.switchEra("2020s"));
+    document.getElementById("heatmap-toggle-btn").addEventListener("click", () => {
+      sound.playClick();
+      this.showHeatmap = !this.showHeatmap;
+      document.getElementById("heatmap-toggle-btn").classList.toggle("active", this.showHeatmap);
+    });
+  }
+
+  setupCanvas() {
+    this.canvas = document.getElementById("heatCanvas");
+    this.ctx = this.canvas.getContext("2d");
+    this.showHeatmap = true;
+    this.resizeCanvas();
+    window.addEventListener("resize", () => this.resizeCanvas());
+    this.animate();
+  }
+
+  resizeCanvas() {
+    const parent = this.canvas.parentElement;
+    this.canvas.width = parent.clientWidth * window.devicePixelRatio;
+    this.canvas.height = parent.clientHeight * window.devicePixelRatio;
+  }
+
+  switchEra(era) {
+    sound.playClick();
+    this.era = era;
+    document.getElementById("era-1950-btn").classList.toggle("active", era === "1950s");
+    document.getElementById("era-2020-btn").classList.toggle("active", era === "2020s");
+
+    if (era === "1950s") {
+      this.greenCover = 55;
+      this.buildingDensity = 25;
+      this.albedo = 0.42;
+    } else {
+      this.greenCover = 18;
+      this.buildingDensity = 72;
+      this.albedo = 0.18;
+    }
+
+    this.syncSliders();
+    this.updateMicroclimate();
+  }
+
+  syncSliders() {
+    const sG = document.getElementById("slider-green");
+    const sD = document.getElementById("slider-density");
+    const sA = document.getElementById("slider-albedo");
+    if (sG) {
+      sG.value = this.greenCover;
+      document.getElementById("val-green").textContent = `${this.greenCover}%`;
+    }
+    if (sD) {
+      sD.value = this.buildingDensity;
+      document.getElementById("val-density").textContent = `${this.buildingDensity}%`;
+    }
+    if (sA) {
+      sA.value = this.albedo;
+      document.getElementById("val-albedo").textContent = this.albedo.toFixed(2);
+    }
+  }
+
+  renderControls() {
+    const area = document.getElementById("heat-controls-area");
+    area.innerHTML = `
+      <div style="background:rgba(56,189,248,0.06); border:1px solid rgba(56,189,248,0.2); border-radius:8px; padding:0.85rem; margin-bottom:1.25rem;">
+        <div style="font-size:0.75rem; text-transform:uppercase; color:var(--accent-cyan); font-weight:700; margin-bottom:0.25rem;" id="scenario-title">
+          Scenario 1: Thermal Delta Analysis
+        </div>
+        <p style="font-size:0.78rem; color:var(--text-muted); line-height:1.4;" id="scenario-desc">
+          Compare the <strong>1950s historical city</strong> against the <strong>2020s modern metropolis</strong>. Measure the temperature divergence caused by concrete sprawl and loss of vegetative canopy.
+        </p>
+      </div>
+
+      <!-- Green Canopy Slider -->
+      <div class="control-group">
+        <div class="control-header">
+          <span class="control-title">🌳 Green Canopy Cover</span>
+          <span class="control-value" id="val-green">${this.greenCover}%</span>
+        </div>
+        <input type="range" class="slider-range" id="slider-green" min="5" max="65" value="${this.greenCover}">
+        <div class="control-hints">
+          <span>5% (Concrete Desert)</span>
+          <span>30% (Standard)</span>
+          <span>65% (Urban Forest)</span>
+        </div>
+      </div>
+
+      <!-- Building Density Slider -->
+      <div class="control-group">
+        <div class="control-header">
+          <span class="control-title">🏢 Building Surface Density</span>
+          <span class="control-value" id="val-density">${this.buildingDensity}%</span>
+        </div>
+        <input type="range" class="slider-range" id="slider-density" min="10" max="90" value="${this.buildingDensity}">
+        <div class="control-hints">
+          <span>10% (Suburban Open)</span>
+          <span>50% (Mixed-Use)</span>
+          <span>90% (Dense Downtown)</span>
+        </div>
+      </div>
+
+      <!-- Surface Albedo Slider -->
+      <div class="control-group">
+        <div class="control-header">
+          <span class="control-title">☀️ Surface Albedo (Reflectivity α)</span>
+          <span class="control-value" id="val-albedo">${this.albedo.toFixed(2)}</span>
+        </div>
+        <input type="range" class="slider-range" id="slider-albedo" min="0.10" max="0.75" step="0.05" value="${this.albedo}">
+        <div class="control-hints">
+          <span>0.10 (Black Asphalt)</span>
+          <span>0.40 (Stone/Lime)</span>
+          <span>0.75 (Cool Roof Paint)</span>
+        </div>
+      </div>
+
+      <!-- Action Button -->
+      <button id="scenario-action-btn" class="btn btn-primary" style="width:100%; justify-content:center; padding:0.8rem; margin-top:0.5rem;">
+        📊 Record Scenario 1 Temperature Delta
+      </button>
+
+      <div id="heat-feedback" style="font-size:0.8rem; text-align:center; margin-top:0.75rem; min-height:1.2rem;"></div>
+    `;
+
+    document.getElementById("slider-green").addEventListener("input", (e) => {
+      this.greenCover = parseInt(e.target.value);
+      document.getElementById("val-green").textContent = `${this.greenCover}%`;
+      this.updateMicroclimate();
+    });
+
+    document.getElementById("slider-density").addEventListener("input", (e) => {
+      this.buildingDensity = parseInt(e.target.value);
+      document.getElementById("val-density").textContent = `${this.buildingDensity}%`;
+      this.updateMicroclimate();
+    });
+
+    document.getElementById("slider-albedo").addEventListener("input", (e) => {
+      this.albedo = parseFloat(e.target.value);
+      document.getElementById("val-albedo").textContent = this.albedo.toFixed(2);
+      this.updateMicroclimate();
+    });
+
+    document.getElementById("scenario-action-btn").addEventListener("click", () => this.handleScenarioAction());
+  }
+
+  updateMicroclimate() {
+    // Physical Radiation & Thermodynamic Model
+    // Base ambient solar insolation S = 1000 W/m^2
+    const solarInsolation = 1000;
+    const absorbedSolar = Math.round(solarInsolation * (1 - this.albedo));
+    
+    // Evapotranspiration cooling: trees reduce air temperature by up to 8°C
+    const coolingDelta = (this.greenCover / 65) * 7.5;
+    
+    // Thermal mass absorption from buildings
+    const thermalMassHeating = (this.buildingDensity / 100) * 11.0;
+
+    // Derived surface temperature (30°C to 46°C)
+    const baseTemp = 30.0;
+    const surfaceTemp = baseTemp + thermalMassHeating - coolingDelta + (absorbedSolar - 500) * 0.012;
+
+    const tempDisplay = document.getElementById("surface-temp-display");
+    const radDisplay = document.getElementById("radiation-display");
+    const evapoDisplay = document.getElementById("evapo-display");
+
+    if (tempDisplay) {
+      tempDisplay.textContent = `${surfaceTemp.toFixed(1)}°C`;
+      tempDisplay.style.color = surfaceTemp > 38 ? "#ef4444" : surfaceTemp > 33 ? "#f59e0b" : "#10b981";
+    }
+    if (radDisplay) {
+      radDisplay.innerHTML = `${absorbedSolar} <span style="font-size:0.8rem; color:var(--text-muted);">W/m²</span>`;
+    }
+    if (evapoDisplay) {
+      evapoDisplay.textContent = `-${coolingDelta.toFixed(1)}°C`;
+    }
+
+    this.currentTemp = surfaceTemp;
+  }
+
+  handleScenarioAction() {
+    sound.playClick();
+    const feedback = document.getElementById("heat-feedback");
+
+    if (this.scenario === 1) {
+      sound.playSuccess();
+      feedback.style.color = "#34d399";
+      feedback.textContent = `Delta logged! 1950s: ~31.8°C vs 2020s: ~42.4°C (+10.6°C Urban Heat Island effect).`;
+      setTimeout(() => this.advanceToScenario2(), 1000);
+    } else if (this.scenario === 2) {
+      // Goal in Scenario 2: Mitigate temperature below 33.5°C
+      if (this.currentTemp <= 33.5) {
+        sound.playSuccess();
+        feedback.style.color = "#34d399";
+        feedback.textContent = `Mitigation Successful! Urban surface cooled to ${this.currentTemp.toFixed(1)}°C.`;
+        setTimeout(() => this.advanceToScenario3Ethical(), 1000);
+      } else {
+        sound.playWarning();
+        feedback.style.color = "#f87171";
+        feedback.textContent = `Current temperature is ${this.currentTemp.toFixed(1)}°C. Elevate Green Canopy (>=45%) and Albedo (>=0.55) to bring below 33.5°C!`;
+      }
+    } else if (this.scenario === 3) {
+      if (this.ethicalVote) {
+        sound.playSuccess();
+        this.completeMission();
+      } else {
+        sound.playWarning();
+        feedback.style.color = "#f87171";
+        feedback.textContent = "Please select your policy stance on thermal justice to proceed.";
+      }
+    }
+  }
+
+  advanceToScenario2() {
+    this.scenario = 2;
+    document.getElementById("heat-level-badge").textContent = "Scenario 2: Mitigation";
+    document.getElementById("scenario-title").textContent = "Scenario 2: Cool Roof & Urban Canopy Mitigation";
+    document.getElementById("scenario-desc").innerHTML = `
+      Modern 2020s city is suffering heat strokes at 42°C. Propose an engineering intervention:
+      increase <strong>Albedo (&ge; 0.55 via reflective cool roofs)</strong> and <strong>Canopy (&ge; 45%)</strong> to bring surface temp <strong>below 33.5°C</strong>!
+    `;
+    document.getElementById("scenario-action-btn").textContent = "🧪 Test Mitigation Efficacy";
+  }
+
+  advanceToScenario3Ethical() {
+    this.scenario = 3;
+    document.getElementById("heat-level-badge").textContent = "Scenario 3: Ethical Debate";
+    const area = document.getElementById("heat-controls-area");
+    area.innerHTML = `
+      <div style="background:rgba(139,92,246,0.1); border:1px solid rgba(139,92,246,0.3); border-radius:8px; padding:1rem; margin-bottom:1.25rem;">
+        <div style="font-size:0.75rem; text-transform:uppercase; color:var(--accent-purple); font-weight:700; letter-spacing:0.06em;">Method (c) Ethical Radical</div>
+        <h4 style="font-size:0.95rem; color:#fff; margin:0.3rem 0;">Thermal Inequality & Municipal Zoning Debate</h4>
+        <p style="font-size:0.8rem; color:var(--text-muted); line-height:1.4;">
+          Satellite thermal audits prove low-income industrial working zones are <strong>6°C hotter</strong> than affluent tree-lined suburbs due to lack of municipal tree planting.
+        </p>
+      </div>
+
+      <div style="background:rgba(244,63,94,0.08); border:1px solid rgba(244,63,94,0.3); border-radius:8px; padding:0.85rem; margin-bottom:1.25rem; font-size:0.82rem; color:#fca5a5;">
+        ⚖️ <strong>Ethical Question:</strong> <em>"Should municipal governments mandate compulsory 40% cool-roof taxes on private factories, or subsidize urban forestry through city-wide tax hikes?"</em>
+      </div>
+
+      <div class="ethical-deck" style="grid-template-columns:1fr; gap:0.75rem;">
+        <div class="ethical-card" id="policy-tax-factory">
+          <div class="ethical-card-icon">🏭</div>
+          <h3>Policy A: Polluter-Pays Mandate</h3>
+          <p>Compel industrial warehouse owners to paint all roofs white and install sedum trays at their own expense.</p>
+        </div>
+
+        <div class="ethical-card" id="policy-city-subsidy">
+          <div class="ethical-card-icon">🌳</div>
+          <h3>Policy B: Universal Municipal Forestry</h3>
+          <p>Fund public street canopy corridors and biophilic cooling parks across all neighborhoods through civic bond funding.</p>
+        </div>
+      </div>
+
+      <button id="scenario-action-btn" class="btn btn-primary" style="width:100%; justify-content:center; padding:0.8rem; margin-top:0.75rem;">
+        Finalize Thermal Justice Policy Resolution
+      </button>
+
+      <div id="heat-feedback" style="font-size:0.8rem; text-align:center; margin-top:0.75rem; min-height:1.2rem;"></div>
+    `;
+
+    const cardA = document.getElementById("policy-tax-factory");
+    const cardB = document.getElementById("policy-city-subsidy");
+
+    cardA.addEventListener("click", () => {
+      sound.playClick();
+      this.ethicalVote = "polluter-pays";
+      cardA.classList.add("selected");
+      cardB.classList.remove("selected");
+    });
+
+    cardB.addEventListener("click", () => {
+      sound.playClick();
+      this.ethicalVote = "universal-subsidy";
+      cardB.classList.add("selected");
+      cardA.classList.remove("selected");
+    });
+
+    document.getElementById("scenario-action-btn").addEventListener("click", () => this.handleScenarioAction());
+  }
+
+  completeMission() {
+    const modalArea = document.createElement("div");
+    modalArea.style.cssText = `
+      position:fixed; inset:0; background:rgba(5,8,16,0.9); backdrop-filter:blur(12px);
+      z-index:300; display:flex; align-items:center; justify-content:center; padding:1.5rem;
+    `;
+    modalArea.innerHTML = `
+      <div class="value-card-modal" style="max-width:580px; width:100%;">
+        <div style="text-align:center; margin-bottom:1.5rem;">
+          <div style="font-size:2.5rem; margin-bottom:0.25rem;">🏙️🏆</div>
+          <h2 style="font-size:1.5rem; color:#fff;">Mission 3: Urban Heat Island Mastered</h2>
+          <p style="font-size:0.85rem; color:var(--accent-cyan);">Domain 3: Earth, Society & Human Progress Loop Cleared</p>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-subtle); border-radius:8px; padding:1rem; margin-bottom:1.25rem; font-size:0.85rem;">
+          <div style="margin-bottom:0.4rem;">
+            <span style="color:var(--text-muted);">Historical vs Modern Delta:</span>
+            <strong style="color:#ef4444;">+10.6°C Concrete Trapping</strong>
+          </div>
+          <div style="margin-bottom:0.4rem;">
+            <span style="color:var(--text-muted);">Thermal Justice Stance:</span>
+            <strong style="color:#34d399; text-transform:capitalize;"> ${this.ethicalVote}</strong>
+          </div>
+          <div>
+            <span style="color:var(--text-muted);">First-Principles Proof:</span>
+            <span style="color:#fff;"> $j^* = \epsilon \sigma T^4$ & albedo reflection mitigates latent heat index.</span>
+          </div>
+        </div>
+
+        <div class="physical-brief-box" style="margin-bottom:1.5rem;">
+          <div class="physical-brief-header">
+            <span>🔬</span>
+            <span>NEXT 50%: Classroom Physical Build Project</span>
+          </div>
+          <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.6rem;">
+            Execute the <strong>Multi-Surface Albedo & Microclimate Calorimeter Chamber</strong> build using miniature roofs (black tar vs cool white vs living moss) tested under infrared heat lamps!
+          </p>
+          <button id="view-urban-lab-brief-btn" class="btn btn-subtle" style="font-size:0.75rem; padding:0.4rem 0.8rem;">
+            Open Classroom Physical Lab Brief 📋
+          </button>
+        </div>
+
+        <button id="exit-urban-sim-btn" class="btn btn-primary" style="width:100%; justify-content:center; padding:0.8rem;">
+          Return to Mission Command
+        </button>
+      </div>
+    `;
+
+    document.body.appendChild(modalArea);
+    document.getElementById("view-urban-lab-brief-btn").addEventListener("click", () => {
+      window.dispatchEvent(new CustomEvent("open-physical-brief", { detail: "sim-urban-heat" }));
+    });
+    document.getElementById("exit-urban-sim-btn").addEventListener("click", () => {
+      modalArea.remove();
+      if (this.onComplete) this.onComplete();
+    });
+  }
+
+  animate() {
+    this.drawCityMap();
+    this.animFrame = requestAnimationFrame(() => this.animate());
+  }
+
+  drawCityMap() {
+    if (!this.ctx || !this.canvas) return;
+    const ctx = this.ctx;
+    const w = this.canvas.width;
+    const h = this.canvas.height;
+
+    ctx.clearRect(0, 0, w, h);
+
+    const cols = 12;
+    const rows = 8;
+    const cellW = w / cols;
+    const cellH = h / rows;
+
+    for (let r = 0; r < rows; r++) {
+      for (let c = 0; c < cols; c++) {
+        const x = c * cellW;
+        const y = r * cellH;
+
+        // Base land type determined by era and greenCover
+        const seed = Math.sin(r * 13 + c * 37);
+        const isWater = (r === 3 || r === 4) && c > 7;
+        const isGreen = !isWater && (seed * 50 + 50) < this.greenCover;
+        const isBuilding = !isWater && !isGreen && (seed * 50 + 50) < this.buildingDensity;
+
+        if (this.showHeatmap) {
+          // Heatmap rendering mode
+          let cellTemp = 32;
+          if (isWater) cellTemp = 28;
+          else if (isGreen) cellTemp = 31;
+          else if (isBuilding) cellTemp = 38 + (1 - this.albedo) * 8;
+          else cellTemp = 34 + (1 - this.albedo) * 4;
+
+          // Color interpolate from 28°C (blue) to 46°C (red/purple)
+          const heatRatio = Math.max(0, Math.min(1, (cellTemp - 28) / 18));
+          const red = Math.round(heatRatio * 255);
+          const blue = Math.round((1 - heatRatio) * 200);
+          ctx.fillStyle = `rgba(${red}, 40, ${blue}, 0.75)`;
+          ctx.fillRect(x, y, cellW, cellH);
+
+          ctx.strokeStyle = "rgba(0,0,0,0.2)";
+          ctx.strokeRect(x, y, cellW, cellH);
+        } else {
+          // Physical visual map
+          if (isWater) {
+            ctx.fillStyle = "#0284c7";
+          } else if (isGreen) {
+            ctx.fillStyle = this.era === "1950s" ? "#15803d" : "#16a34a";
+          } else if (isBuilding) {
+            ctx.fillStyle = this.era === "1950s" ? "#b45309" : "#334155";
+          } else {
+            ctx.fillStyle = "#1e293b";
+          }
+          ctx.fillRect(x, y, cellW, cellH);
+
+          ctx.strokeStyle = "rgba(255,255,255,0.06)";
+          ctx.strokeRect(x, y, cellW, cellH);
+        }
+      }
+    }
+  }
+}
+
+
+/**
+ * Mission 4: The Sabarkantha Mandi Arbitrage Engine
+ * Domain 4: Market Execution & Business
+ * Incorporates: Real Life Market Exposure (e), Chaos Management (k), First Principles (a), Physical Build (d)
+ */
+
+
+
+class MandiArbitrageSimulation {
+  constructor(container, onComplete) {
+    this.container = container;
+    this.onComplete = onComplete;
+    this.stage = "trading"; // trading | crisis | settled | completed
+
+    // Starting Working Capital (₹)
+    this.capital = 100000;
+    
+    // Sabarkantha Commodities Portfolio
+    this.commodities = [
+      { id: "castor", name: "Castor Seeds (Diveli)", qtyQuintals: 120, buyPricePerQ: 6200, mandiSpotPrice: 6950, storageTempC: 18, decayRateDay: 0.15 },
+      { id: "groundnut", name: "Saurashtra Groundnut (Singdana)", qtyQuintals: 80, buyPricePerQ: 5800, mandiSpotPrice: 6500, storageTempC: 15, decayRateDay: 0.25 },
+      { id: "cotton", name: "Shankar-6 Raw Cotton (Kapas)", qtyQuintals: 150, buyPricePerQ: 7100, mandiSpotPrice: 7850, storageTempC: 22, decayRateDay: 0.10 },
+      { id: "wheat", name: "Sharbati Golden Wheat", qtyQuintals: 200, buyPricePerQ: 2400, mandiSpotPrice: 2850, storageTempC: 20, decayRateDay: 0.05 }
+    ];
+
+    // Operational Logistics Parameters
+    this.selectedCommodity = this.commodities[0];
+    this.transportKm = 120; // km to terminal market
+    this.dieselFreightPerKmPerQ = 3.5; // ₹ / km / quintal
+    this.coldStorageDays = 14; // days held in warehouse
+    this.refrigerationPowerCostPerDayPerQ = 4.0; // ₹ / day / quintal
+
+    // Crisis price shock state (-38% crash)
+    this.priceCrashFactor = 1.0;
+    this.crisisTriggered = false;
+  }
+
+  mount() {
+    this.renderLayout();
+    this.renderLedger();
+  }
+
+  destroy() {
+    sound.stopAll();
+  }
+
+  renderLayout() {
+    this.container.innerHTML = `
+      <div class="sim-stage-split">
+        <!-- 70% Left: Authentic Commodity Exchange Terminal & Double-Entry Ledger -->
+        <div class="sim-stage-visual" id="mandi-visual-pane" style="background:#090e1a; padding:1.5rem; overflow-y:auto;">
+          
+          <!-- Terminal Header -->
+          <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-subtle); padding-bottom:1rem; margin-bottom:1.5rem;">
+            <div>
+              <div style="font-size:0.75rem; font-family:var(--font-mono); color:var(--accent-amber); font-weight:700;">APMC SABARKANTHA COMMODITY DESK // TERMINAL 04</div>
+              <h2 style="font-size:1.4rem; font-weight:800; color:#fff; font-family:var(--font-mono);">ARBITRAGE LEDGER SYSTEM</h2>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-size:0.7rem; color:var(--text-faint); font-family:var(--font-mono);">COMMODITY SETTLEMENT DATE</div>
+              <div style="font-size:1.1rem; font-family:var(--font-mono); font-weight:700; color:var(--accent-cyan);">2026-SEP-13 // OPEN</div>
+            </div>
+          </div>
+
+          <!-- Market Spot Price Ticker -->
+          <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:0.75rem; margin-bottom:1.5rem;" id="ticker-grid">
+            <!-- Populated dynamically -->
+          </div>
+
+          <!-- The Live Financial Double-Entry Ledger Table -->
+          <div class="ledger-table-wrap">
+            <table class="ledger-table" id="arbitrage-ledger">
+              <thead>
+                <tr>
+                  <th>Commodity</th>
+                  <th>Volume (Qtl)</th>
+                  <th>Cost Outlay (₹)</th>
+                  <th>Freight & Storage (₹)</th>
+                  <th>Net Basis (₹/Qtl)</th>
+                  <th>Mandi Realization (₹)</th>
+                  <th>Gross Profit/Loss</th>
+                </tr>
+              </thead>
+              <tbody id="ledger-tbody">
+                <!-- Calculated rows -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Formula Ledger Math Card (Class 7/8 Comparing Quantities Anchor) -->
+          <div style="background:rgba(255,255,255,0.02); border:1px solid var(--border-subtle); border-radius:8px; padding:1rem; font-family:var(--font-mono); font-size:0.78rem;">
+            <div style="color:var(--accent-amber); font-weight:700; margin-bottom:0.35rem;">📐 FIRST-PRINCIPLES COMMERCIAL ARITHMETIC FORMULAS:</div>
+            <div style="color:var(--text-muted); display:grid; grid-template-columns:repeat(2, 1fr); gap:0.5rem;">
+              <div>• Total Cost $TC = (Qty \times BuyPrice) + Freight + Storage$</div>
+              <div>• Net Freight $F = Qty \times Radius(km) \times DieselRate$</div>
+              <div>• Storage $S = Qty \times Days \times PowerRate$</div>
+              <div>• Margin $\% = \frac{Gross Revenue - Total Cost}{Total Cost} \times 100$</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 30% Right: Trade Logistics HUD & Crisis Verification Lock -->
+        <div class="sim-stage-controls" id="mandi-controls-pane">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <div>
+              <div style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); font-weight:700;">Desk Status</div>
+              <span id="mandi-status-badge" class="level-chip active" style="font-family:var(--font-mono);">STAGE 1: POSITIONING</span>
+            </div>
+          </div>
+
+          <div id="mandi-controls-dynamic">
+            <!-- Dynamic Controls -->
+          </div>
+        </div>
+      </div>
+    `;
+
+    this.renderControlsArea();
+  }
+
+  renderControlsArea() {
+    const area = document.getElementById("mandi-controls-dynamic");
+    if (!this.crisisTriggered) {
+      area.innerHTML = `
+        <div style="background:rgba(245,158,11,0.06); border:1px solid rgba(245,158,11,0.25); border-radius:8px; padding:0.85rem; margin-bottom:1.25rem;">
+          <div style="font-size:0.75rem; text-transform:uppercase; color:var(--accent-amber); font-weight:700; margin-bottom:0.25rem;">
+            ARBITRAGE DESK MANDATE
+          </div>
+          <p style="font-size:0.78rem; color:var(--text-muted); line-height:1.4;">
+            Configure transport transit distance and warehouse cold storage hold days. Maximize net realization yield before the settlement window closes.
+          </p>
+        </div>
+
+        <!-- Transport Radius Slider -->
+        <div class="control-group">
+          <div class="control-header">
+            <span class="control-title">🚛 Transport Radius (km)</span>
+            <span class="control-value" id="val-radius">${this.transportKm} km</span>
+          </div>
+          <input type="range" class="slider-range" id="slider-radius" min="40" max="350" value="${this.transportKm}">
+          <div class="control-hints">
+            <span>40 km (Local APMC)</span>
+            <span>350 km (Port Terminal)</span>
+          </div>
+        </div>
+
+        <!-- Cold Storage Days Slider -->
+        <div class="control-group">
+          <div class="control-header">
+            <span class="control-title">❄️ Cold Storage Hold (Days)</span>
+            <span class="control-value" id="val-days">${this.coldStorageDays} Days</span>
+          </div>
+          <input type="range" class="slider-range" id="slider-days" min="2" max="60" value="${this.coldStorageDays}">
+          <div class="control-hints">
+            <span>2 Days (Quick Flip)</span>
+            <span>60 Days (Seasonal Carry)</span>
+          </div>
+        </div>
+
+        <button id="trigger-crisis-btn" class="btn btn-primary" style="width:100%; justify-content:center; padding:0.85rem; margin-top:0.75rem; background:linear-gradient(135deg, #d97706, #b45309);">
+          ⚡ Execute Settlement & Advance Clock
+        </button>
+      `;
+
+      document.getElementById("slider-radius").addEventListener("input", (e) => {
+        this.transportKm = parseInt(e.target.value);
+        document.getElementById("val-radius").textContent = `${this.transportKm} km`;
+        this.renderLedger();
+      });
+
+      document.getElementById("slider-days").addEventListener("input", (e) => {
+        this.coldStorageDays = parseInt(e.target.value);
+        document.getElementById("val-days").textContent = `${this.coldStorageDays} Days`;
+        this.renderLedger();
+      });
+
+      document.getElementById("trigger-crisis-btn").addEventListener("click", () => this.triggerMandiPriceCrash());
+    } else {
+      this.renderVerificationLock();
+    }
+  }
+
+  triggerMandiPriceCrash() {
+    sound.playAlarm();
+    this.crisisTriggered = true;
+    this.priceCrashFactor = 0.62; // 38% sudden price collapse!
+
+    const badge = document.getElementById("mandi-status-badge");
+    badge.textContent = "CRISIS: PRICE COLLAPSE";
+    badge.style.background = "#e11d48";
+    badge.style.borderColor = "#f43f5e";
+
+    this.renderControlsArea();
+    this.renderLedger();
+  }
+
+  renderVerificationLock() {
+    const area = document.getElementById("mandi-controls-dynamic");
+
+    // Calculate exact metrics for Castor Seeds (active reference)
+    const comm = this.commodities[0];
+    const buyTotal = comm.qtyQuintals * comm.buyPricePerQ;
+    const freight = comm.qtyQuintals * this.transportKm * this.dieselFreightPerKmPerQ;
+    const storage = comm.qtyQuintals * this.coldStorageDays * this.refrigerationPowerCostPerDayPerQ;
+    const totalCost = buyTotal + freight + storage;
+    const crashedSpot = Math.round(comm.mandiSpotPrice * this.priceCrashFactor);
+    const grossRev = comm.qtyQuintals * crashedSpot;
+    const netProfit = grossRev - totalCost;
+    const netProfitPct = ((netProfit / totalCost) * 100).toFixed(2);
+    const breakEvenPrice = (totalCost / comm.qtyQuintals).toFixed(2);
+
+    this.correctProfitPct = parseFloat(netProfitPct);
+    this.correctBreakEven = parseFloat(breakEvenPrice);
+
+    area.innerHTML = `
+      <div class="crisis-banner">
+        <span class="crisis-icon">📉</span>
+        <div>
+          <h4>Method (k) Sudden Mandi Price Collapse</h4>
+          <p>A flood of unseasonal grain imports caused spot prices to crash by <strong>-38%</strong> across the APMC! All asset values are locked.</p>
+        </div>
+      </div>
+
+      <div class="verify-lock-box">
+        <div class="verify-lock-title">
+          <span>🔒</span>
+          <span>MANDI VERIFICATION LOCK</span>
+        </div>
+        <p style="font-size:0.78rem; color:var(--text-muted); line-height:1.4; margin-bottom:0.75rem;">
+          To audit and settle this financial ledger, solve and enter the exact financial metrics for <strong>${comm.name}</strong> based on the ledger figures.
+        </p>
+
+        <div style="margin-bottom:0.75rem;">
+          <label style="font-size:0.72rem; color:var(--text-faint); font-weight:700;">1. Calculated Net Profit/Loss % (Include negative sign if loss)</label>
+          <input type="number" id="input-profit-pct" step="0.1" class="verify-input" placeholder="e.g. -14.25%">
+        </div>
+
+        <div style="margin-bottom:0.75rem;">
+          <label style="font-size:0.72rem; color:var(--text-faint); font-weight:700;">2. Break-Even Sales Price (₹ / Quintal)</label>
+          <input type="number" id="input-breakeven" step="1" class="verify-input" placeholder="e.g. 6850">
+        </div>
+
+        <button id="verify-lock-btn" class="btn btn-accent" style="width:100%; justify-content:center; padding:0.8rem; margin-top:0.4rem;">
+          🔓 Settle & Unlock Verification Ledger
+        </button>
+
+        <div id="verify-feedback" style="font-size:0.78rem; text-align:center; margin-top:0.5rem; min-height:1.2rem;"></div>
+      </div>
+    `;
+
+    document.getElementById("verify-lock-btn").addEventListener("click", () => this.verifyLedgerSettlement());
+  }
+
+  verifyLedgerSettlement() {
+    const profitInput = parseFloat(document.getElementById("input-profit-pct").value);
+    const breakEvenInput = parseFloat(document.getElementById("input-breakeven").value);
+    const feedback = document.getElementById("verify-feedback");
+
+    const profitOk = Math.abs(profitInput - this.correctProfitPct) <= 0.8;
+    const breakEvenOk = Math.abs(breakEvenInput - this.correctBreakEven) <= 25;
+
+    if (profitOk && breakEvenOk) {
+      sound.playSuccess();
+      feedback.style.color = "#34d399";
+      feedback.textContent = "Verification Lock Cleared! Accounting ledger mathematically settled.";
+      setTimeout(() => this.completeMission(), 900);
+    } else {
+      sound.playWarning();
+      feedback.style.color = "#f87171";
+      feedback.textContent = `Mathematical discrepancy: Check formulas for Net P/L % (Expected ~${this.correctProfitPct}%) and Break-even Price (Expected ~₹${this.correctBreakEven}).`;
+    }
+  }
+
+  renderLedger() {
+    const tbody = document.getElementById("ledger-tbody");
+    const tickerGrid = document.getElementById("ticker-grid");
+    if (!tbody || !tickerGrid) return;
+
+    tbody.innerHTML = "";
+    tickerGrid.innerHTML = "";
+
+    this.commodities.forEach(c => {
+      const spot = Math.round(c.mandiSpotPrice * this.priceCrashFactor);
+      const buyTotal = c.qtyQuintals * c.buyPricePerQ;
+      const freight = c.qtyQuintals * this.transportKm * this.dieselFreightPerKmPerQ;
+      const storage = c.qtyQuintals * this.coldStorageDays * this.refrigerationPowerCostPerDayPerQ;
+      const totalCost = buyTotal + freight + storage;
+      const basisPerQ = Math.round(totalCost / c.qtyQuintals);
+      const grossRev = c.qtyQuintals * spot;
+      const netProfit = grossRev - totalCost;
+      const profitClass = netProfit >= 0 ? "text-profit" : "text-loss";
+
+      // Ticker card
+      const tick = document.createElement("div");
+      tick.style.cssText = "background:rgba(255,255,255,0.03); border:1px solid var(--border-subtle); border-radius:6px; padding:0.6rem; font-family:var(--font-mono);";
+      tick.innerHTML = `
+        <div style="font-size:0.68rem; color:var(--text-muted);">${c.name.split(" ")[0]}</div>
+        <div style="font-size:1.1rem; font-weight:800; color:${this.priceCrashFactor < 1 ? '#f87171' : '#fff'};">₹${spot}</div>
+        <div style="font-size:0.65rem; color:${this.priceCrashFactor < 1 ? '#ef4444' : '#34d399'};">${this.priceCrashFactor < 1 ? '-38.0% [CRASH]' : '+4.2% [STEADY]'}</div>
+      `;
+      tickerGrid.appendChild(tick);
+
+      // Table row
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td style="font-weight:700; color:#fff;">${c.name}</td>
+        <td>${c.qtyQuintals} Q</td>
+        <td>₹${buyTotal.toLocaleString()}</td>
+        <td>₹${Math.round(freight + storage).toLocaleString()}</td>
+        <td>₹${basisPerQ.toLocaleString()}</td>
+        <td style="color:${this.priceCrashFactor < 1 ? '#f87171' : 'var(--accent-cyan)'}; font-weight:700;">₹${grossRev.toLocaleString()}</td>
+        <td class="${profitClass}">${netProfit >= 0 ? '+' : ''}₹${netProfit.toLocaleString()}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  completeMission() {
+    const modalArea = document.createElement("div");
+    modalArea.style.cssText = `
+      position:fixed; inset:0; background:rgba(5,8,16,0.9); backdrop-filter:blur(12px);
+      z-index:300; display:flex; align-items:center; justify-content:center; padding:1.5rem;
+    `;
+    modalArea.innerHTML = `
+      <div class="value-card-modal" style="max-width:580px; width:100%;">
+        <div style="text-align:center; margin-bottom:1.5rem;">
+          <div style="font-size:2.5rem; margin-bottom:0.25rem;">📈🏆</div>
+          <h2 style="font-size:1.5rem; color:#fff;">Sabarkantha Arbitrage Engine Mastered</h2>
+          <p style="font-size:0.85rem; color:var(--accent-cyan);">Domain 4: Market Execution & Business Loop Cleared</p>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-subtle); border-radius:8px; padding:1rem; margin-bottom:1.25rem; font-size:0.85rem; font-family:var(--font-mono);">
+          <div style="margin-bottom:0.4rem;">
+            <span style="color:var(--text-muted);">Commercial Percentage Mastery:</span>
+            <strong style="color:#34d399;"> Verified (${this.correctProfitPct}%)</strong>
+          </div>
+          <div style="margin-bottom:0.4rem;">
+            <span style="color:var(--text-muted);">Break-Even Derivation:</span>
+            <strong style="color:var(--accent-cyan);"> ₹${this.correctBreakEven}/quintal</strong>
+          </div>
+          <div>
+            <span style="color:var(--text-muted);">Textbook Anchor:</span>
+            <span style="color:#fff;"> NCERT Class 7/8 Comparing Quantities & Profit-Loss applied to real commodities.</span>
+          </div>
+        </div>
+
+        <div class="physical-brief-box" style="margin-bottom:1.5rem;">
+          <div class="physical-brief-header">
+            <span>🔬</span>
+            <span>NEXT 50%: Classroom Physical Build Project</span>
+          </div>
+          <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.6rem;">
+            Launch the <strong>Live Commodity Pit & Cold-Chain Perishability Ledger</strong> in the classroom with tokenized crop vouchers and market shock dice rolls!
+          </p>
+          <button id="view-mandi-lab-brief-btn" class="btn btn-subtle" style="font-size:0.75rem; padding:0.4rem 0.8rem;">
+            Open Classroom Physical Lab Brief 📋
+          </button>
+        </div>
+
+        <button id="exit-mandi-sim-btn" class="btn btn-primary" style="width:100%; justify-content:center; padding:0.8rem;">
+          Return to Mission Command
+        </button>
+      </div>
+    `;
+
+    document.body.appendChild(modalArea);
+    document.getElementById("view-mandi-lab-brief-btn").addEventListener("click", () => {
+      window.dispatchEvent(new CustomEvent("open-physical-brief", { detail: "sim-mandi-arbitrage" }));
+    });
+    document.getElementById("exit-mandi-sim-btn").addEventListener("click", () => {
+      modalArea.remove();
+      if (this.onComplete) this.onComplete();
+    });
+  }
+}
+
+
+/**
+ * Mission 5: Cybersecurity Crisis: Ransomware Attack Simulation
+ * Domain 5: Digital Frontier & Security
+ * Incorporates: First Principles (a), Blind-Variable Crisis (k), Synthesis (b), Physical Build (d)
+ */
+
+
+
+class RansomwareSimulation {
+  constructor(container, onComplete) {
+    this.container = container;
+    this.onComplete = onComplete;
+    this.timerSeconds = 25 * 60; // 25 minutes countdown
+    this.timerInterval = null;
+    this.spreadInterval = null;
+    this.animFrame = null;
+
+    // Defensive Arsenal
+    this.firewallPortsOpen = true; // Port 445 / SMB
+    this.decryptKeysLeft = 3;
+    this.backupRestoring = false;
+    this.backupProgress = 0;
+
+    // Network Topology Graph Nodes
+    this.nodes = [
+      { id: "gateway", name: "Border Router / Gateway", ip: "192.168.1.1", status: "secure", totalFiles: 200, encryptedFiles: 0, xRatio: 0.15, yRatio: 0.5 },
+      { id: "firewall", name: "Next-Gen Enterprise Firewall", ip: "192.168.1.2", status: "secure", totalFiles: 50, encryptedFiles: 0, xRatio: 0.32, yRatio: 0.5 },
+      { id: "ad_server", name: "Active Directory Domain Controller", ip: "192.168.1.10", status: "secure", totalFiles: 1200, encryptedFiles: 0, xRatio: 0.50, yRatio: 0.28 },
+      { id: "workstation_a", name: "Workstation A (Finance)", ip: "192.168.1.101", status: "infected", totalFiles: 450, encryptedFiles: 80, xRatio: 0.48, yRatio: 0.72 },
+      { id: "workstation_b", name: "Workstation B (HR)", ip: "192.168.1.102", status: "secure", totalFiles: 350, encryptedFiles: 0, xRatio: 0.65, yRatio: 0.75 },
+      { id: "database", name: "Hospital Patient Database EHR", ip: "192.168.1.50", status: "secure", totalFiles: 5000, encryptedFiles: 0, xRatio: 0.75, yRatio: 0.30 },
+      { id: "backup_nas", name: "Air-Gapped Vault NAS", ip: "10.0.0.99", status: "secure", totalFiles: 8000, encryptedFiles: 0, xRatio: 0.88, yRatio: 0.65, airgapped: true }
+    ];
+
+    // Edges (Network Links)
+    this.links = [
+      { from: "gateway", to: "firewall", severed: false },
+      { from: "firewall", to: "ad_server", severed: false },
+      { from: "firewall", to: "workstation_a", severed: false },
+      { from: "workstation_a", to: "workstation_b", severed: false },
+      { from: "ad_server", to: "database", severed: false },
+      { from: "workstation_b", to: "database", severed: false },
+      { from: "database", to: "backup_nas", severed: true } // Initially air-gapped
+    ];
+
+    this.selectedNode = null;
+    this.incidentStartTime = Date.now();
+  }
+
+  mount() {
+    this.renderLayout();
+    this.setupCanvas();
+    this.startCrisisTimer();
+    this.startWormPropagation();
+    this.renderControls();
+  }
+
+  destroy() {
+    this.isRunning = false;
+    if (this.timerInterval) clearInterval(this.timerInterval);
+    if (this.spreadInterval) clearInterval(this.spreadInterval);
+    if (this.animFrame) cancelAnimationFrame(this.animFrame);
+    sound.stopAll();
+  }
+
+  renderLayout() {
+    this.container.innerHTML = `
+      <div class="sim-stage-split">
+        <!-- 70% Left: Interactive Cyber Topology Graph & Real-Time Telemetry -->
+        <div class="sim-stage-visual" id="cyber-visual-pane">
+          <div class="sim-canvas-container">
+            <canvas id="cyberCanvas" class="sim-canvas"></canvas>
+
+            <!-- Network Status Bar Overlay -->
+            <div class="network-status-bar">
+              <div style="background:rgba(15,23,42,0.88); border:1px solid rgba(244,63,94,0.4); border-radius:8px; padding:0.5rem 1rem; backdrop-filter:blur(8px); display:flex; align-items:center; gap:0.6rem;">
+                <span class="status-dot danger" style="animation:pulse-urgent 1s infinite alternate;"></span>
+                <span style="font-family:var(--font-mono); font-size:0.8rem; font-weight:700; color:#fca5a5;">INCIDENT LEVEL 1 // DARK-CRYPTO RANSOMWARE ACTIVE</span>
+              </div>
+
+              <div class="sim-timer-badge urgent" id="cyber-timer">25:00</div>
+            </div>
+
+            <!-- Bottom Forensics Telemetry Bar -->
+            <div style="position:absolute; bottom:20px; left:20px; right:20px; background:rgba(15,23,42,0.92); border:1px solid rgba(56,189,248,0.25); border-radius:12px; padding:0.85rem 1.25rem; display:flex; justify-content:space-between; align-items:center; backdrop-filter:blur(10px); z-index:10;">
+              <div>
+                <div style="font-size:0.7rem; color:var(--text-faint); text-transform:uppercase; font-weight:700;">Files Encrypted / Total</div>
+                <div style="font-family:var(--font-mono); font-size:1.4rem; font-weight:800; color:#f87171;" id="encrypted-files-display">80 / 15,250</div>
+              </div>
+              <div>
+                <div style="font-size:0.7rem; color:var(--text-faint); text-transform:uppercase; font-weight:700;">Operational Integrity</div>
+                <div style="font-family:var(--font-mono); font-size:1.4rem; font-weight:800; color:#34d399;" id="integrity-display">88.5%</div>
+              </div>
+              <div>
+                <div style="font-size:0.7rem; color:var(--text-faint); text-transform:uppercase; font-weight:700;">Downtime Cost Incurred</div>
+                <div style="font-family:var(--font-mono); font-size:1.4rem; font-weight:800; color:var(--accent-amber);" id="cost-display">₹14,000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 30% Right: Incident Command Cockpit & Defense Toolbox -->
+        <div class="sim-stage-controls" id="cyber-controls-pane">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <div>
+              <div style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); font-weight:700;">Incident Response Console</div>
+              <span class="level-chip active" style="background:#e11d48; border-color:#f43f5e;">CRISIS IN PROGRESS</span>
+            </div>
+          </div>
+
+          <div id="cyber-tools-area">
+            <!-- Dynamic Controls -->
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  setupCanvas() {
+    this.canvas = document.getElementById("cyberCanvas");
+    this.ctx = this.canvas.getContext("2d");
+    this.resizeCanvas();
+    window.addEventListener("resize", () => this.resizeCanvas());
+
+    this.canvas.addEventListener("click", (e) => this.handleCanvasClick(e));
+    this.animate();
+  }
+
+  resizeCanvas() {
+    const parent = this.canvas.parentElement;
+    this.canvas.width = parent.clientWidth * window.devicePixelRatio;
+    this.canvas.height = parent.clientHeight * window.devicePixelRatio;
+  }
+
+  startCrisisTimer() {
+    const timerEl = document.getElementById("cyber-timer");
+    this.timerInterval = setInterval(() => {
+      if (this.timerSeconds > 0) {
+        this.timerSeconds--;
+        const mins = Math.floor(this.timerSeconds / 60).toString().padStart(2, "0");
+        const secs = (this.timerSeconds % 60).toString().padStart(2, "0");
+        timerEl.textContent = `${mins}:${secs}`;
+      } else {
+        clearInterval(this.timerInterval);
+        sound.playAlarm();
+        alert("25-Minute Containment Window Expired! Master database permanently wiped by threat actor.");
+      }
+    }, 1000);
+  }
+
+  startWormPropagation() {
+    this.spreadInterval = setInterval(() => {
+      let newlyInfected = false;
+
+      // Increment encrypted files on infected nodes
+      this.nodes.forEach(node => {
+        if (node.status === "infected" && node.encryptedFiles < node.totalFiles) {
+          const filesPerTick = Math.min(60, node.totalFiles - node.encryptedFiles);
+          node.encryptedFiles += filesPerTick;
+          if (node.encryptedFiles >= node.totalFiles) {
+            node.status = "locked";
+            sound.playGlitch();
+          }
+        }
+      });
+
+      // Spread along active links
+      this.nodes.forEach(source => {
+        if (source.status === "infected" || source.status === "locked") {
+          this.links.forEach(link => {
+            if (link.severed) return;
+            // If firewall ports are blocked and link passes through firewall, stop SMB spread
+            if (!this.firewallPortsOpen && (link.from === "firewall" || link.to === "firewall")) return;
+
+            let targetId = null;
+            if (link.from === source.id) targetId = link.to;
+            if (link.to === source.id) targetId = link.from;
+
+            if (targetId) {
+              const targetNode = this.nodes.find(n => n.id === targetId);
+              if (targetNode && targetNode.status === "secure" && !targetNode.airgapped) {
+                targetNode.status = "infected";
+                targetNode.encryptedFiles = 10;
+                newlyInfected = true;
+                sound.playWarning();
+              }
+            }
+          });
+        }
+      });
+
+      this.updateTelemetry();
+      this.checkContainmentStatus();
+    }, 1200);
+  }
+
+  handleCanvasClick(e) {
+    const rect = this.canvas.getBoundingClientRect();
+    const clickX = (e.clientX - rect.left) * window.devicePixelRatio;
+    const clickY = (e.clientY - rect.top) * window.devicePixelRatio;
+    const w = this.canvas.width;
+    const h = this.canvas.height;
+
+    // Check if clicked near an edge link to sever it!
+    for (let link of this.links) {
+      const nodeA = this.nodes.find(n => n.id === link.from);
+      const nodeB = this.nodes.find(n => n.id === link.to);
+      if (!nodeA || !nodeB) continue;
+
+      const ax = nodeA.xRatio * w;
+      const ay = nodeA.yRatio * h;
+      const bx = nodeB.xRatio * w;
+      const by = nodeB.yRatio * h;
+
+      const midX = (ax + bx) / 2;
+      const midY = (ay + by) / 2;
+      if (Math.hypot(clickX - midX, clickY - midY) < 25) {
+        sound.playClick();
+        link.severed = !link.severed;
+        return;
+      }
+    }
+
+    // Check if clicked a node
+    const hitNode = this.nodes.find(n => {
+      const nx = n.xRatio * w;
+      const ny = n.yRatio * h;
+      return Math.hypot(clickX - nx, clickY - ny) < 35;
+    });
+
+    if (hitNode) {
+      sound.playClick();
+      this.selectedNode = hitNode;
+      this.renderControls();
+    }
+  }
+
+  renderControls() {
+    const area = document.getElementById("cyber-tools-area");
+    area.innerHTML = `
+      <div class="crisis-banner">
+        <span class="crisis-icon">🛡️</span>
+        <div>
+          <h4>Method (k) Incident Containment</h4>
+          <p>Click on any network cable to <strong>sever subnet links</strong>. Click nodes to isolate or inject RSA decryptors.</p>
+        </div>
+      </div>
+
+      <!-- Defensive Toolbox -->
+      <div style="margin-bottom:1.25rem;">
+        <div style="font-size:0.75rem; text-transform:uppercase; color:var(--text-faint); font-weight:700; margin-bottom:0.5rem;">
+          SYSTEM COUNTERMEASURES
+        </div>
+        <div class="network-tools-tray">
+          <button id="toggle-firewall-btn" class="tool-btn ${!this.firewallPortsOpen ? 'active' : ''}">
+            <span>🧱</span>
+            <span>${this.firewallPortsOpen ? 'Block SMB Port 445' : 'Port 445 Blocked'}</span>
+          </button>
+
+          <button id="restore-backup-btn" class="tool-btn" ${this.backupRestoring ? 'disabled' : ''}>
+            <span>💾</span>
+            <span>${this.backupRestoring ? 'Restoring NAS...' : 'Restore Offline NAS'}</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Selected Node Inspection Panel -->
+      <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-subtle); border-radius:8px; padding:1rem; margin-bottom:1.25rem;">
+        <div style="font-size:0.72rem; text-transform:uppercase; color:var(--accent-cyan); font-weight:700; margin-bottom:0.35rem;">
+          TARGET NODE TELEMETRY
+        </div>
+        ${this.selectedNode ? `
+          <div style="font-weight:700; color:#fff; font-size:0.95rem;">${this.selectedNode.name}</div>
+          <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-muted); margin-bottom:0.6rem;">IP: ${this.selectedNode.ip} | Status: <strong style="color:${this.selectedNode.status === 'secure' ? '#34d399' : '#f87171'};">${this.selectedNode.status.toUpperCase()}</strong></div>
+          <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.8rem;">
+            Encrypted: <strong>${this.selectedNode.encryptedFiles} / ${this.selectedNode.totalFiles}</strong> files
+          </div>
+
+          <div style="display:flex; gap:0.5rem;">
+            <button id="isolate-node-btn" class="btn btn-subtle" style="flex:1; font-size:0.75rem; justify-content:center;">
+              ✂️ Isolate Node
+            </button>
+            <button id="decrypt-node-btn" class="btn btn-accent" style="flex:1; font-size:0.75rem; justify-content:center;" ${this.decryptKeysLeft <= 0 || this.selectedNode.encryptedFiles === 0 ? 'disabled' : ''}>
+              🔑 Decrypt (${this.decryptKeysLeft} keys left)
+            </button>
+          </div>
+        ` : `
+          <div style="font-size:0.8rem; color:var(--text-muted); font-style:italic;">
+            Click on any workstation, database, or server node to inspect telemetry.
+          </div>
+        `}
+      </div>
+
+      <button id="evaluate-forensics-btn" class="btn btn-primary" style="width:100%; justify-content:center; padding:0.8rem;">
+        📋 Run Post-Incident Forensics Audit
+      </button>
+
+      <div id="cyber-feedback" style="font-size:0.8rem; text-align:center; margin-top:0.75rem; min-height:1.2rem;"></div>
+    `;
+
+    document.getElementById("toggle-firewall-btn").addEventListener("click", () => {
+      sound.playClick();
+      this.firewallPortsOpen = !this.firewallPortsOpen;
+      this.renderControls();
+    });
+
+    document.getElementById("restore-backup-btn").addEventListener("click", () => this.initiateBackupRestore());
+
+    if (this.selectedNode) {
+      document.getElementById("isolate-node-btn").addEventListener("click", () => this.isolateSelectedNode());
+      document.getElementById("decrypt-node-btn").addEventListener("click", () => this.decryptSelectedNode());
+    }
+
+    document.getElementById("evaluate-forensics-btn").addEventListener("click", () => this.evaluateForensics());
+  }
+
+  isolateSelectedNode() {
+    sound.playClick();
+    this.links.forEach(l => {
+      if (l.from === this.selectedNode.id || l.to === this.selectedNode.id) {
+        l.severed = true;
+      }
+    });
+    this.renderControls();
+  }
+
+  decryptSelectedNode() {
+    if (this.decryptKeysLeft <= 0 || !this.selectedNode) return;
+    sound.playSuccess();
+    this.decryptKeysLeft--;
+    this.selectedNode.status = "secure";
+    this.selectedNode.encryptedFiles = 0;
+    this.renderControls();
+    this.updateTelemetry();
+  }
+
+  initiateBackupRestore() {
+    sound.playClick();
+    this.backupRestoring = true;
+    this.renderControls();
+    const feedback = document.getElementById("cyber-feedback");
+    feedback.textContent = "Offline NAS sync initiated. Restoring uncorrupted snapshot...";
+
+    setTimeout(() => {
+      this.backupRestoring = false;
+      const db = this.nodes.find(n => n.id === "database");
+      if (db) {
+        db.status = "secure";
+        db.encryptedFiles = 0;
+      }
+      sound.playSuccess();
+      feedback.style.color = "#34d399";
+      feedback.textContent = "Database fully restored from cold backup snapshot!";
+      this.renderControls();
+      this.updateTelemetry();
+    }, 4000);
+  }
+
+  updateTelemetry() {
+    let totalFiles = 0;
+    let encryptedFiles = 0;
+    let healthyCount = 0;
+
+    this.nodes.forEach(n => {
+      totalFiles += n.totalFiles;
+      encryptedFiles += n.encryptedFiles;
+      if (n.status === "secure") healthyCount++;
+    });
+
+    const integrityPct = ((1 - encryptedFiles / totalFiles) * 100).toFixed(1);
+    const downtimeCost = Math.round((Date.now() - this.incidentStartTime) * 0.08);
+
+    const encEl = document.getElementById("encrypted-files-display");
+    const intEl = document.getElementById("integrity-display");
+    const costEl = document.getElementById("cost-display");
+
+    if (encEl) encEl.textContent = `${encryptedFiles.toLocaleString()} / ${totalFiles.toLocaleString()}`;
+    if (intEl) {
+      intEl.textContent = `${integrityPct}%`;
+      intEl.style.color = integrityPct > 80 ? "#34d399" : integrityPct > 50 ? "#f59e0b" : "#ef4444";
+    }
+    if (costEl) costEl.textContent = `₹${downtimeCost.toLocaleString()}`;
+  }
+
+  checkContainmentStatus() {
+    const activeInfections = this.nodes.filter(n => n.status === "infected").length;
+    if (activeInfections === 0 && this.nodes.find(n => n.id === "database").status === "secure") {
+      const feedback = document.getElementById("cyber-feedback");
+      if (feedback) {
+        feedback.style.color = "#34d399";
+        feedback.textContent = "Threat eradicated! Active propagation contained.";
+      }
+    }
+  }
+
+  evaluateForensics() {
+    const db = this.nodes.find(n => n.id === "database");
+    const feedback = document.getElementById("cyber-feedback");
+
+    if (db.status === "locked") {
+      sound.playAlarm();
+      feedback.style.color = "#f87171";
+      feedback.textContent = "Containment Failure: Master Hospital EHR Database remains locked! Restore from NAS.";
+      return;
+    }
+
+    const activeInfections = this.nodes.filter(n => n.status === "infected").length;
+    if (activeInfections > 0) {
+      sound.playWarning();
+      feedback.style.color = "#f59e0b";
+      feedback.textContent = `Warning: ${activeInfections} nodes still actively encrypting files. Sever links or decrypt.`;
+      return;
+    }
+
+    sound.playSuccess();
+    this.completeMission();
+  }
+
+  completeMission() {
+    clearInterval(this.timerInterval);
+    clearInterval(this.spreadInterval);
+
+    const modalArea = document.createElement("div");
+    modalArea.style.cssText = `
+      position:fixed; inset:0; background:rgba(5,8,16,0.9); backdrop-filter:blur(12px);
+      z-index:300; display:flex; align-items:center; justify-content:center; padding:1.5rem;
+    `;
+    modalArea.innerHTML = `
+      <div class="value-card-modal" style="max-width:580px; width:100%;">
+        <div style="text-align:center; margin-bottom:1.5rem;">
+          <div style="font-size:2.5rem; margin-bottom:0.25rem;">🛡️🏆</div>
+          <h2 style="font-size:1.5rem; color:#fff;">Mission 5: Ransomware Defense Mastered</h2>
+          <p style="font-size:0.85rem; color:var(--accent-cyan);">Domain 5: Digital Frontier & Security Cleared</p>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-subtle); border-radius:8px; padding:1rem; margin-bottom:1.25rem; font-size:0.85rem;">
+          <div style="display:flex; justify-content:space-between; margin-bottom:0.4rem;">
+            <span style="color:var(--text-muted);">Master EHR Database:</span>
+            <strong style="color:#34d399;">100% Preserved & Operational</strong>
+          </div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:0.4rem;">
+            <span style="color:var(--text-muted);">Containment Response Time:</span>
+            <strong style="color:var(--accent-cyan);">${Math.floor((25*60 - this.timerSeconds) / 60)}m ${(25*60 - this.timerSeconds) % 60}s</strong>
+          </div>
+          <div style="display:flex; justify-content:space-between;">
+            <span style="color:var(--text-muted);">First-Principles Cryptography:</span>
+            <span style="color:#fff;"> One-way hash functions & air-gap architecture verified.</span>
+          </div>
+        </div>
+
+        <div class="physical-brief-box" style="margin-bottom:1.5rem;">
+          <div class="physical-brief-header">
+            <span>🔬</span>
+            <span>NEXT 50%: Classroom Physical Build Project</span>
+          </div>
+          <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.6rem;">
+            Assemble the <strong>Air-Gapped Physical Network Topology & Fail-Safe Cut-Switch</strong> on a physical breadboard with LED nodes and manual circuit disconnect switches!
+          </p>
+          <button id="view-ransomware-lab-brief-btn" class="btn btn-subtle" style="font-size:0.75rem; padding:0.4rem 0.8rem;">
+            Open Classroom Physical Lab Brief 📋
+          </button>
+        </div>
+
+        <button id="exit-cyber-sim-btn" class="btn btn-primary" style="width:100%; justify-content:center; padding:0.8rem;">
+          Return to Mission Command
+        </button>
+      </div>
+    `;
+
+    document.body.appendChild(modalArea);
+    document.getElementById("view-ransomware-lab-brief-btn").addEventListener("click", () => {
+      window.dispatchEvent(new CustomEvent("open-physical-brief", { detail: "sim-ransomware" }));
+    });
+    document.getElementById("exit-cyber-sim-btn").addEventListener("click", () => {
+      modalArea.remove();
+      if (this.onComplete) this.onComplete();
+    });
+  }
+
+  animate() {
+    this.drawTopology();
+    this.animFrame = requestAnimationFrame(() => this.animate());
+  }
+
+  drawTopology() {
+    if (!this.ctx || !this.canvas) return;
+    const ctx = this.ctx;
+    const w = this.canvas.width;
+    const h = this.canvas.height;
+
+    ctx.clearRect(0, 0, w, h);
+
+    // Draw Links
+    this.links.forEach(link => {
+      const nodeA = this.nodes.find(n => n.id === link.from);
+      const nodeB = this.nodes.find(n => n.id === link.to);
+      if (!nodeA || !nodeB) return;
+
+      const ax = nodeA.xRatio * w;
+      const ay = nodeA.yRatio * h;
+      const bx = nodeB.xRatio * w;
+      const by = nodeB.yRatio * h;
+
+      if (link.severed) {
+        // Severed link
+        ctx.strokeStyle = "rgba(244, 63, 94, 0.4)";
+        ctx.setLineDash([6, 6]);
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(ax, ay);
+        ctx.lineTo(bx, by);
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        // Cut icon marker
+        ctx.fillStyle = "#f43f5e";
+        ctx.font = "12px sans-serif";
+        ctx.fillText("✂️", (ax + bx) / 2, (ay + by) / 2);
+      } else {
+        // Active link
+        const infectedConnection = nodeA.status !== "secure" || nodeB.status !== "secure";
+        ctx.strokeStyle = infectedConnection ? "rgba(239, 68, 68, 0.7)" : "rgba(56, 189, 248, 0.4)";
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.moveTo(ax, ay);
+        ctx.lineTo(bx, by);
+        ctx.stroke();
+      }
+    });
+
+    // Draw Nodes
+    this.nodes.forEach(node => {
+      const nx = node.xRatio * w;
+      const ny = node.yRatio * h;
+
+      let nodeColor = "#10b981"; // Secure
+      if (node.status === "infected") nodeColor = "#f59e0b"; // Compromised pulsing
+      if (node.status === "locked") nodeColor = "#ef4444"; // Encrypted
+
+      // Halo glow
+      ctx.fillStyle = nodeColor;
+      ctx.beginPath();
+      ctx.arc(nx, ny, 26, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.strokeStyle = this.selectedNode && this.selectedNode.id === node.id ? "#fff" : "rgba(255,255,255,0.3)";
+      ctx.lineWidth = 3;
+      ctx.stroke();
+
+      // Node Icon / Type
+      ctx.fillStyle = "#000";
+      ctx.font = "bold 14px sans-serif";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      const icon = node.id.includes("database") ? "💾" : node.id.includes("firewall") ? "🧱" : node.id.includes("ad") ? "👑" : node.id.includes("nas") ? "🔒" : "💻";
+      ctx.fillText(icon, nx, ny);
+
+      // Node Name Label
+      ctx.fillStyle = "#fff";
+      ctx.font = "bold 11px sans-serif";
+      ctx.textBaseline = "top";
+      ctx.fillText(node.name.split(" ")[0], nx, ny + 32);
+    });
+  }
+}
+
+
+/**
+ * Cognition Lab - Core Application Controller
+ */
+
+
+
+
+
+// Import all 6 simulation suites
+
+
+
+
+
+
+
+class CognitionLabApp {
+  constructor() {
+    this.activeView = "none"; // "none" | "explore" | "domain-missions" | "our-domains"
+    this.selectedDomainId = null;
+    this.currentSimulation = null;
+    this.currentSimId = null;
+    this.simClasses = {
+      "sim-plant-npk": PlantNpkSimulation,
+      "sim-heart-pump": HeartPumpSimulation,
+      "sim-bridge-builder": BridgeBuilderSimulation,
+      "sim-urban-heat": UrbanHeatSimulation,
+      "sim-mandi-arbitrage": MandiArbitrageSimulation,
+      "sim-ransomware": RansomwareSimulation
+    };
+  }
+
+  init() {
+    this.renderCriteria();
+    this.setupEventListeners();
+    this.setupModals();
+  }
+
+  // 1. Render the 4 Core Criteria on the Home Page
+  renderCriteria() {
+    const grid = document.getElementById("criteria-grid");
+    if (!grid) return;
+
+    grid.innerHTML = CURRICULUM.criteria.map(c => `
+      <div class="criterion-card" style="--card-accent: ${c.color}; --card-glow: ${c.color}30;">
+        <div class="criterion-header">
+          <span class="criterion-icon">${c.icon}</span>
+          <h3 class="criterion-title">${c.name}</h3>
+        </div>
+        <p class="criterion-desc">${c.description}</p>
+      </div>
+    `).join("");
+  }
+
+  setupEventListeners() {
+    // Two Primary CTA Buttons
+    const btnExplore = document.getElementById("btn-explore-missions");
+    const btnDomains = document.getElementById("btn-our-domains");
+
+    if (btnExplore) {
+      btnExplore.addEventListener("click", () => {
+        sound.playClick();
+        this.showExploreMissions();
+      });
+    }
+
+    if (btnDomains) {
+      btnDomains.addEventListener("click", () => {
+        sound.playClick();
+        this.showOurDomains();
+      });
+    }
+
+    // Audio toggle button
+    const audioBtn = document.getElementById("audio-toggle-btn");
+    if (audioBtn) {
+      audioBtn.addEventListener("click", () => {
+        const enabled = sound.toggle();
+        audioBtn.textContent = enabled ? "🔊 Sound FX: ON" : "🔇 Sound FX: OFF";
+        audioBtn.classList.toggle("btn-accent", enabled);
+        audioBtn.classList.toggle("btn-subtle", !enabled);
+      });
+    }
+
+    // Brand click resets to clean Home view
+    const brand = document.getElementById("nav-brand");
+    if (brand) {
+      brand.addEventListener("click", () => {
+        this.resetToHome();
+      });
+    }
+
+    // Cockpit Navigation
+    const exitCockpitBtn = document.getElementById("exit-sim-cockpit-btn");
+    if (exitCockpitBtn) {
+      exitCockpitBtn.addEventListener("click", () => {
+        sound.playClick();
+        this.exitSimulation();
+      });
+    }
+
+    const cockpitPhysicalBtn = document.getElementById("cockpit-physical-brief-btn");
+    if (cockpitPhysicalBtn) {
+      cockpitPhysicalBtn.addEventListener("click", () => {
+        if (this.currentSimId) {
+          sound.playClick();
+          this.openPhysicalModal(this.currentSimId);
+        }
+      });
+    }
+
+    // Global event listener for opening physical briefs
+    window.addEventListener("open-physical-brief", (e) => {
+      this.openPhysicalModal(e.detail);
+    });
+  }
+
+  // 2. Explore Missions: Domain Selection Flow
+  showExploreMissions() {
+    this.activeView = "explore";
+    this.selectedDomainId = null;
+
+    const btnExplore = document.getElementById("btn-explore-missions");
+    const btnDomains = document.getElementById("btn-our-domains");
+    if (btnExplore) btnExplore.classList.add("active");
+    if (btnDomains) btnDomains.classList.remove("active");
+
+    const container = document.getElementById("interactive-exploration-container");
+    if (!container) return;
+
+    container.innerHTML = `
+      <div class="interactive-view-wrapper">
+        <div class="explore-missions-header">
+          <div class="explore-kicker">// SIMULATION MISSIONS</div>
+          <h2 class="explore-title">Which domain do you wish to explore?</h2>
+          <p class="explore-subtitle">
+            Select any of the 5 curriculum domains below to view and launch active video-game crisis simulations.
+          </p>
+        </div>
+
+        <div class="domain-picker-grid">
+          ${CURRICULUM.domains.map(d => {
+            const missions = CURRICULUM.missions.filter(m => m.domainId === d.id);
+            const count = missions.length;
+            const icon = d.id === "domain-1" ? "🌿" :
+                         d.id === "domain-2" ? "🌉" :
+                         d.id === "domain-3" ? "🏙️" :
+                         d.id === "domain-4" ? "📈" : "🛡️";
+
+            return `
+              <div class="domain-pick-card" data-domain-id="${d.id}" style="--domain-color: ${d.color}; --domain-glow: ${d.color}33;">
+                <span class="domain-pick-badge">DOMAIN 0${d.number}</span>
+                <div class="domain-pick-icon">${icon}</div>
+                <h3 class="domain-pick-name">${d.name}</h3>
+                <div class="domain-pick-meta">${count} ${count === 1 ? 'Mission' : 'Missions'} Available</div>
+              </div>
+            `;
+          }).join("")}
+        </div>
+      </div>
+    `;
+
+    // Wire clicks on domain pick cards
+    container.querySelectorAll(".domain-pick-card").forEach(card => {
+      card.addEventListener("click", (e) => {
+        sound.playClick();
+        const domainId = e.currentTarget.dataset.domainId;
+        this.showDomainMissions(domainId);
+      });
+    });
+
+    container.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  // 3. Display Missions under Selected Domain
+  showDomainMissions(domainId) {
+    this.activeView = "domain-missions";
+    this.selectedDomainId = domainId;
+
+    const domain = CURRICULUM.domains.find(d => d.id === domainId);
+    if (!domain) return;
+
+    const missions = CURRICULUM.missions.filter(m => m.domainId === domainId);
+    const container = document.getElementById("interactive-exploration-container");
+    if (!container) return;
+
+    const icon = domain.id === "domain-1" ? "🌿" :
+                 domain.id === "domain-2" ? "🌉" :
+                 domain.id === "domain-3" ? "🏙️" :
+                 domain.id === "domain-4" ? "📈" : "🛡️";
+
+    container.innerHTML = `
+      <div class="interactive-view-wrapper domain-missions-wrapper">
+        <div class="domain-missions-nav-bar">
+          <button id="back-to-domains-btn" class="btn btn-subtle" style="font-size:0.85rem; padding:0.5rem 1.2rem; border-radius:9999px;">
+            ← Back to Domains
+          </button>
+          <div class="domain-missions-info">
+            <span class="domain-missions-icon">${icon}</span>
+            <div>
+              <span style="font-family:var(--font-mono); font-size:0.72rem; color:${domain.color}; font-weight:700; letter-spacing:0.12em; text-transform:uppercase;">
+                DOMAIN 0${domain.number}
+              </span>
+              <h2 class="domain-missions-title">${domain.name}</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="sim-grid">
+          ${missions.map(m => {
+            const missionIcon = m.id === "sim-plant-npk" ? "🌿" :
+                                m.id === "sim-heart-pump" ? "🫀" :
+                                m.id === "sim-bridge-builder" ? "🌉" :
+                                m.id === "sim-urban-heat" ? "🏙️" :
+                                m.id === "sim-mandi-arbitrage" ? "📈" : "🛡️";
+
+            return `
+              <div class="sim-card" data-sim-id="${m.id}">
+                <div class="sim-card-banner">
+                  <span class="sim-domain-badge" style="color:${domain.color};">D${domain.number}</span>
+                  <div class="sim-banner-art">${missionIcon}</div>
+                </div>
+                <div class="sim-card-body">
+                  <div class="sim-meta-kicker">// SIMULATION LAB / V1.0</div>
+                  <h3 class="sim-title">${m.title}</h3>
+                  <div class="sim-domain-subheading" style="color:${domain.color};">
+                    ${m.domainName}
+                  </div>
+                  <div class="sim-subjects">
+                    ${m.subjects.map(s => `<span class="subject-tag">${s}</span>`).join("")}
+                  </div>
+                  <p class="sim-desc">${m.summary}</p>
+                  
+                  <div class="sim-meta-block">
+                    <div class="meta-row">
+                      <span class="meta-label">ACTIVE 10 METHODS:</span>
+                      <div class="meta-methods">
+                        ${m.activeMethods.map(code => {
+                          const method = CURRICULUM.methods.find(me => me.code === code);
+                          return `<span class="method-code-badge" title="${method ? method.name : code}">${code}</span>`;
+                        }).join("")}
+                      </div>
+                    </div>
+                    <div class="meta-row">
+                      <span class="meta-label">LAB DURATION:</span>
+                      <span class="meta-time-val">${m.durationMinutes} MIN</span>
+                    </div>
+                  </div>
+
+                  <div class="sim-card-actions">
+                    <button class="btn btn-primary launch-sim-btn" data-sim-id="${m.id}" style="width:100%; justify-content:center;">
+                      🕹️ Launch Simulation
+                    </button>
+                  </div>
+                </div>
+              </div>
+            `;
+          }).join("")}
+        </div>
+      </div>
+    `;
+
+    // Wire back to domains button
+    const backBtn = document.getElementById("back-to-domains-btn");
+    if (backBtn) {
+      backBtn.addEventListener("click", () => {
+        sound.playClick();
+        this.showExploreMissions();
+      });
+    }
+
+    // Wire launch simulation buttons
+    container.querySelectorAll(".launch-sim-btn").forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        const simId = e.currentTarget.dataset.simId;
+        this.launchSimulation(simId);
+      });
+    });
+
+    container.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  // 4. Our Domains: Show List of Domain Names directly & Select to View Subjects
+  showOurDomains() {
+    this.activeView = "our-domains";
+    this.selectedDomainId = null;
+
+    const btnExplore = document.getElementById("btn-explore-missions");
+    const btnDomains = document.getElementById("btn-our-domains");
+    if (btnDomains) btnDomains.classList.add("active");
+    if (btnExplore) btnExplore.classList.remove("active");
+
+    const container = document.getElementById("interactive-exploration-container");
+    if (!container) return;
+
+    container.innerHTML = `
+      <div class="interactive-view-wrapper">
+        <div class="our-domains-header">
+          <div class="our-domains-title-block">
+            <div class="our-domains-kicker">// INTERDISCIPLINARY CURRICULUM ARCHITECTURE</div>
+            <h2 class="our-domains-title">Our Domains</h2>
+          </div>
+          <button id="back-to-home-btn" class="btn btn-subtle" style="font-size:0.85rem; padding:0.55rem 1.25rem; border-radius:9999px;">
+            ← Back to Home Page
+          </button>
+        </div>
+
+        <!-- Directly show the list of just the domain names -->
+        <div class="our-domains-name-grid">
+          ${CURRICULUM.domains.map((d, index) => {
+            const icon = d.id === "domain-1" ? "🌿" :
+                         d.id === "domain-2" ? "🌉" :
+                         d.id === "domain-3" ? "🏙️" :
+                         d.id === "domain-4" ? "📈" : "🛡️";
+
+            return `
+              <div class="domain-name-item" data-domain-id="${d.id}" style="--domain-idx: ${index}; --domain-color: ${d.color}; --domain-glow: ${d.color}26;">
+                <div class="domain-name-item-left">
+                  <span class="domain-name-icon">${icon}</span>
+                  <div>
+                    <span class="domain-name-badge">DOMAIN 0${d.number}</span>
+                    <h3 class="domain-name-text">${d.name}</h3>
+                  </div>
+                </div>
+                <div class="domain-name-item-arrow">
+                  <span>View Subjects</span>
+                  <span class="arrow-icon">→</span>
+                </div>
+              </div>
+            `;
+          }).join("")}
+        </div>
+      </div>
+    `;
+
+    // Wire Back to Home button
+    const backBtn = document.getElementById("back-to-home-btn");
+    if (backBtn) {
+      backBtn.addEventListener("click", () => {
+        sound.playClick();
+        this.resetToHome();
+      });
+    }
+
+    // Wire selecting a particular domain name to show its subjects
+    container.querySelectorAll(".domain-name-item").forEach(item => {
+      item.addEventListener("click", (e) => {
+        sound.playClick();
+        const domainId = e.currentTarget.dataset.domainId;
+        this.showDomainSubjects(domainId);
+      });
+    });
+
+    container.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  // 5. Show the names of all the subjects under the selected domain
+  showDomainSubjects(domainId) {
+    this.activeView = "domain-subjects";
+    this.selectedDomainId = domainId;
+
+    const domain = CURRICULUM.domains.find(d => d.id === domainId);
+    if (!domain) return;
+
+    const container = document.getElementById("interactive-exploration-container");
+    if (!container) return;
+
+    const icon = domain.id === "domain-1" ? "🌿" :
+                 domain.id === "domain-2" ? "🌉" :
+                 domain.id === "domain-3" ? "🏙️" :
+                 domain.id === "domain-4" ? "📈" : "🛡️";
+
+    container.innerHTML = `
+      <div class="interactive-view-wrapper domain-subjects-view">
+        <div class="domain-subjects-top-bar">
+          <button id="back-to-domains-list-btn" class="btn btn-subtle" style="font-size:0.85rem; padding:0.55rem 1.25rem; border-radius:9999px;">
+            ← Back to Domains
+          </button>
+          <button id="back-to-home-from-sub-btn" class="btn btn-subtle" style="font-size:0.85rem; padding:0.55rem 1.25rem; border-radius:9999px;">
+            ← Back to Home Page
+          </button>
+        </div>
+
+        <div class="domain-subjects-header-card" style="--domain-color: ${domain.color}; --domain-glow: ${domain.color}26;">
+          <div class="domain-subjects-title-row">
+            <span class="domain-subjects-icon">${icon}</span>
+            <div>
+              <span class="domain-name-badge" style="color:${domain.color};">DOMAIN 0${domain.number}</span>
+              <h2 class="domain-subjects-title">${domain.name}</h2>
+            </div>
+          </div>
+
+          <div class="domain-subjects-section-title">
+            <span>📚</span>
+            <span>SUBJECTS TAUGHT UNDER THIS DOMAIN (${domain.subjects.length}):</span>
+          </div>
+
+          <div class="subjects-cards-grid">
+            ${domain.subjects.map((subject, sIdx) => `
+              <div class="animated-subject-card" style="--subject-idx: ${sIdx}; --domain-color: ${domain.color}; --domain-glow: ${domain.color}26;">
+                <span class="subject-card-icon">📖</span>
+                <span class="subject-card-name">${subject}</span>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Wire Back to Domains list button
+    const backDomainsBtn = document.getElementById("back-to-domains-list-btn");
+    if (backDomainsBtn) {
+      backDomainsBtn.addEventListener("click", () => {
+        sound.playClick();
+        this.showOurDomains();
+      });
+    }
+
+    // Wire Back to Home Page button
+    const backHomeBtn = document.getElementById("back-to-home-from-sub-btn");
+    if (backHomeBtn) {
+      backHomeBtn.addEventListener("click", () => {
+        sound.playClick();
+        this.resetToHome();
+      });
+    }
+
+    container.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  // 5. Reset to clean Home state
+  resetToHome() {
+    if (this.currentSimulation) {
+      this.exitSimulation();
+    }
+    sound.stopAll();
+    this.activeView = "none";
+    this.selectedDomainId = null;
+
+    const btnExplore = document.getElementById("btn-explore-missions");
+    const btnDomains = document.getElementById("btn-our-domains");
+    if (btnExplore) btnExplore.classList.remove("active");
+    if (btnDomains) btnDomains.classList.remove("active");
+
+    const container = document.getElementById("interactive-exploration-container");
+    if (container) container.innerHTML = "";
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  // 6. Launch Simulation Cockpit
+  launchSimulation(simId) {
+    sound.playSuccess();
+    const mission = CURRICULUM.missions.find(m => m.id === simId);
+    if (!mission) return;
+
+    this.currentSimId = simId;
+    const viewport = document.getElementById("simulation-viewport");
+    const stage = document.getElementById("sim-stage-container");
+    const titleEl = document.getElementById("cockpit-sim-title");
+    const domainEl = document.getElementById("cockpit-sim-domain");
+
+    titleEl.textContent = mission.title;
+    domainEl.textContent = mission.domainName;
+
+    // Reset cockpit tabs
+    const tabSim = document.getElementById("cockpit-tab-sim");
+    const tabDeconstruct = document.getElementById("cockpit-tab-deconstruct");
+    const deconstructPane = document.getElementById("sim-deconstruction-pane");
+
+    if (tabSim && tabDeconstruct && deconstructPane) {
+      tabSim.classList.add("active");
+      tabDeconstruct.classList.remove("active");
+      stage.style.display = "block";
+      deconstructPane.style.display = "none";
+    }
+
+    // Destroy existing simulation if running
+    if (this.currentSimulation && this.currentSimulation.destroy) {
+      this.currentSimulation.destroy();
+    }
+
+    viewport.classList.add("active");
+    stage.innerHTML = "";
+
+    const SimClass = this.simClasses[simId];
+    if (SimClass) {
+      this.currentSimulation = new SimClass(stage, () => {
+        this.exitSimulation();
+      });
+      this.currentSimulation.mount();
+    }
+  }
+
+  exitSimulation() {
+    sound.stopAll();
+    if (this.currentSimulation && this.currentSimulation.destroy) {
+      this.currentSimulation.destroy();
+      this.currentSimulation = null;
+    }
+    sound.stopAll();
+    const viewport = document.getElementById("simulation-viewport");
+    viewport.classList.remove("active");
+
+    // Re-render current view if needed
+    if (this.selectedDomainId) {
+      this.showDomainMissions(this.selectedDomainId);
+    }
+  }
+
+  setupModals() {
+    const curriculumModal = document.getElementById("curriculum-modal");
+    const physicalModal = document.getElementById("physical-modal");
+
+    document.querySelectorAll(".modal-close-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        sound.playClick();
+        curriculumModal.classList.remove("active");
+        physicalModal.classList.remove("active");
+      });
+    });
+
+    // Backdrop click close
+    [curriculumModal, physicalModal].forEach(modal => {
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.classList.remove("active");
+        }
+      });
+    });
+  }
+
+  openCurriculumModal() {
+    const modal = document.getElementById("curriculum-modal");
+    const body = document.getElementById("curriculum-modal-body");
+
+    body.innerHTML = `
+      <div class="curriculum-section-title">
+        <span>🏆</span>
+        <span>The 4 Core Criteria of Cognition</span>
+      </div>
+      <div class="criteria-list">
+        ${CURRICULUM.criteria.map(c => `
+          <div class="criteria-item">
+            <div style="display:flex; align-items:center; gap:0.5rem; color:${c.color}; font-weight:700; margin-bottom:0.35rem;">
+              <span>${c.icon}</span>
+              <span>${c.name}</span>
+            </div>
+            <p style="font-size:0.8rem; color:var(--text-muted);">${c.description}</p>
+          </div>
+        `).join("")}
+      </div>
+
+      <div class="curriculum-section-title">
+        <span>⚡</span>
+        <span>The 10 Revolutionary Teaching Methods</span>
+      </div>
+      <div class="methods-grid">
+        ${CURRICULUM.methods.map(m => `
+          <div class="method-item">
+            <div class="method-item-header">
+              <span class="method-code-badge">${m.code}</span>
+              <span style="color:#fff;">${m.name}</span>
+            </div>
+            <div style="font-size:0.72rem; color:var(--accent-cyan); margin-bottom:0.25rem;">${m.tagline}</div>
+            <p style="font-size:0.78rem; color:var(--text-muted); line-height:1.4;">${m.description}</p>
+          </div>
+        `).join("")}
+      </div>
+
+      <div class="curriculum-section-title">
+        <span>🌐</span>
+        <span>The 5 Interdisciplinary Domains</span>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:0.85rem;">
+        ${CURRICULUM.domains.map(d => `
+          <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-subtle); border-radius:8px; padding:0.85rem;">
+            <div style="color:${d.color}; font-weight:700; font-size:0.85rem; margin-bottom:0.35rem;">Domain ${d.number}: ${d.name}</div>
+            <div style="font-size:0.72rem; color:var(--text-muted);">${d.subjects.join(" • ")}</div>
+          </div>
+        `).join("")}
+      </div>
+    `;
+
+    modal.classList.add("active");
+  }
+
+  openPhysicalModal(filterSimId) {
+    const modal = document.getElementById("physical-modal");
+    const body = document.getElementById("physical-modal-body");
+
+    const simKeys = filterSimId ? [filterSimId] : Object.keys(PHYSICAL_PROJECTS);
+
+    body.innerHTML = `
+      <div style="margin-bottom:1.5rem;">
+        <div class="badge-pill" style="margin-bottom:0.5rem;">THE 50% DUAL-MODEL FRAMEWORK</div>
+        <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.5;">
+          The video game simulation is 50% of the learning loop. After students conquer the digital crisis, they transition directly into the physical lab to design, engineer, and validate real hardware and chemical models.
+        </p>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:1.75rem;">
+        ${simKeys.map(key => {
+          const p = PHYSICAL_PROJECTS[key];
+          if (!p) return "";
+          return `
+            <div style="background:rgba(255,255,255,0.02); border:1px solid rgba(16,185,129,0.3); border-radius:12px; padding:1.5rem;">
+              <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
+                <div>
+                  <span style="font-size:0.7rem; font-weight:700; text-transform:uppercase; color:var(--accent-emerald);">${p.domain}</span>
+                  <h3 style="font-size:1.2rem; color:#fff; margin-top:0.2rem;">${p.projectTitle}</h3>
+                  <div style="font-size:0.78rem; color:var(--text-faint);">Paired with Digital: <strong>${p.simTitle}</strong></div>
+                </div>
+                <span class="level-chip" style="background:rgba(16,185,129,0.15); color:#34d399; border-color:rgba(16,185,129,0.4);">${p.duration}</span>
+              </div>
+
+              <!-- Materials -->
+              <div style="margin-bottom:1rem;">
+                <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; color:var(--accent-cyan); margin-bottom:0.4rem;">📦 Physical Materials Required</div>
+                <ul class="physical-brief-list">
+                  ${p.materials.map(m => `<li>${m}</li>`).join("")}
+                </ul>
+              </div>
+
+              <!-- Protocol Steps -->
+              <div style="margin-bottom:1rem;">
+                <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; color:var(--accent-amber); margin-bottom:0.4rem;">⚙️ Engineering & Build Protocol</div>
+                <div style="display:flex; flex-direction:column; gap:0.4rem; font-size:0.8rem; color:var(--text-muted);">
+                  ${p.engineeringProtocol.map(step => `
+                    <div style="background:rgba(0,0,0,0.25); padding:0.5rem 0.75rem; border-radius:6px; border-left:3px solid var(--accent-emerald);">${step}</div>
+                  `).join("")}
+                </div>
+              </div>
+
+              <!-- First Principles Connection -->
+              <div style="background:rgba(56,189,248,0.05); border:1px solid rgba(56,189,248,0.2); border-radius:8px; padding:0.85rem; font-size:0.8rem;">
+                <strong style="color:var(--accent-cyan);">🧠 First-Principles Cognitive Connection:</strong>
+                <span style="color:var(--text-muted); margin-left:0.25rem;">${p.firstPrinciplesConnection}</span>
+              </div>
+            </div>
+          `;
+        }).join("")}
+      </div>
+    `;
+
+    modal.classList.add("active");
+  }
+}
+
+// Instantiate on DOM ready
+document.addEventListener("DOMContentLoaded", () => {
+  const app = new CognitionLabApp();
+  app.init();
+});
