@@ -201,7 +201,7 @@ const CURRICULUM = {
       durationMinutes: 25,
       activeMethods: ["a", "b", "i", "d"],
       activeCriteria: ["cognitive", "technical_mastery", "societal_vector"],
-      summary: "Engineer a structural truss bridge across a 30m chasm with a strict ₹500 virtual budget. Subject your design to Richter Magnitude 1–9 seismic shake-table stress tests with real-time tensor failure visualizations.",
+      summary: "Engineer a structural truss bridge across a 30m chasm with a strict ₹700 virtual budget. Subject your design to 7 Vehicle stress tests with real-time tensor failure visualizations.",
       pilotBadge: "Mission 2"
     },
     {
@@ -330,13 +330,13 @@ const PHYSICAL_PROJECTS = {
       "Standard birch/balsa craft sticks (114mm x 10mm x 2mm)",
       "Quick-setting PVA wood glue & cardstock gusset plates",
       "30cm foam-board abutments (spanning a 25cm physical canyon)",
-      "Budget currency ledger: Sticks cost ₹10 each, Gusset joints cost ₹5 each (Max ₹500 cap)",
+      "Budget currency ledger: Sticks cost ₹10 each, Gusset joints cost ₹5 each (Max ₹700 cap)",
       "Motorized variable-speed DC eccentric motor shake-table (or smartphone vibration accelerometer rig)",
       "1kg calibrated lead weights / sand bags",
       "Precision digital scale and dial caliper"
     ],
     engineeringProtocol: [
-      "Step 1 (Budget Audit): Formulate cutting schedule and bill of materials within the ₹500 physical currency limit.",
+      "Step 1 (Budget Audit): Formulate cutting schedule and bill of materials within the ₹700 physical currency limit.",
       "Step 2 (Truss Assembly): Construct identical left and right planar trusses (Warren, Pratt, or Howe configuration) using triangle geometry.",
       "Step 3 (Cross-Bracing & Decking): Connect trusses with transverse sway struts and tension cross-ties to prevent torsional buckling.",
       "Step 4 (Static Load Verification): Place bridge across abutments. Incrementally load 500g and 1000g center weights; measure deflection with ruler.",

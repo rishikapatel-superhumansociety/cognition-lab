@@ -201,7 +201,7 @@ export const CURRICULUM = {
       durationMinutes: 25,
       activeMethods: ["a", "b", "i", "d"],
       activeCriteria: ["cognitive", "technical_mastery", "societal_vector"],
-      summary: "Engineer a structural truss bridge across a 30m chasm with a strict ₹500 virtual budget. Subject your design to Richter Magnitude 1–9 seismic shake-table stress tests with real-time tensor failure visualizations.",
+      summary: "Engineer a structural truss bridge across a 30m chasm with a strict ₹700 virtual budget. Subject your design to 7 Vehicle stress tests with real-time tensor failure visualizations.",
       pilotBadge: "Mission 2"
     },
     {
