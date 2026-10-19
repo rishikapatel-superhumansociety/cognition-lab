@@ -5672,7 +5672,7 @@ enterPostEvaluationMode() {
   }
   const cockpitTitle = document.getElementById("cockpit-sim-title");
   if (cockpitTitle) {
-    cockpitTitle.textContent = "Earthquake-Proof Bridge Under Budget";
+    cockpitTitle.textContent = "Himmatnagar-Ahmedabad Bridge Under Budget";
     cockpitTitle.style.display = "block";
   }
 

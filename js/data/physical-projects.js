@@ -58,7 +58,7 @@ export const PHYSICAL_PROJECTS = {
   },
 
   "sim-bridge-builder": {
-    simTitle: "Earthquake-Proof Bridge Under Budget",
+    simTitle: "Himmatnagar-Ahmedabad Bridge Under Budget",
     projectTitle: "The Balsa & Gusset-Plate Shake-Table Truss Challenge",
     domain: "Domain 2: Physical Build",
     duration: "60-90 Minutes Lab Session",

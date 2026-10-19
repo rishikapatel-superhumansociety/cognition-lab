@@ -188,7 +188,7 @@ export const CURRICULUM = {
     },
     {
       id: "sim-bridge-builder",
-      title: "Earthquake-Proof Bridge Under Budget",
+      title: "Himmatnagar-Ahmedabad Bridge Under Budget",
       domainId: "domain-2",
       domainName: "Domain 2: The Physical Build Loop",
       subjects: ["Physics", "Civil Engineering", "Applied Mathematics"],

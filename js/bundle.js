@@ -188,7 +188,7 @@ const CURRICULUM = {
     },
     {
       id: "sim-bridge-builder",
-      title: "Earthquake-Proof Bridge Under Budget",
+      title: "Himmatnagar-Ahmedabad Bridge Under Budget",
       domainId: "domain-2",
       domainName: "Domain 2: The Physical Build Loop",
       subjects: ["Physics", "Civil Engineering", "Applied Mathematics"],
@@ -322,7 +322,7 @@ const PHYSICAL_PROJECTS = {
   },
 
   "sim-bridge-builder": {
-    simTitle: "Earthquake-Proof Bridge Under Budget",
+    simTitle: "Himmatnagar-Ahmedabad Bridge Under Budget",
     projectTitle: "The Balsa & Gusset-Plate Shake-Table Truss Challenge",
     domain: "Domain 2: Physical Build",
     duration: "60-90 Minutes Lab Session",
@@ -7979,7 +7979,7 @@ enterPostEvaluationMode() {
   }
   const cockpitTitle = document.getElementById("cockpit-sim-title");
   if (cockpitTitle) {
-    cockpitTitle.textContent = "Earthquake-Proof Bridge Under Budget";
+    cockpitTitle.textContent = "Himmatnagar-Ahmedabad Bridge Under Budget";
     cockpitTitle.style.display = "block";
   }
 
