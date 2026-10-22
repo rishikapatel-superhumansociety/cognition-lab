@@ -5,6 +5,7 @@
 import { CURRICULUM } from "./data/curriculum.js";
 import { PHYSICAL_PROJECTS } from "./data/physical-projects.js";
 import { sound } from "./sound.js";
+import { HeroMotionController } from "./hero-motion.js";
 
 // Import all 6 simulation suites
 import { PlantNpkSimulation } from "./simulations/plant-npk.js";
@@ -20,6 +21,7 @@ class CognitionLabApp {
     this.selectedDomainId = null;
     this.currentSimulation = null;
     this.currentSimId = null;
+    this.heroMotion = null;
     this.simClasses = {
       "sim-plant-npk": PlantNpkSimulation,
       "sim-heart-pump": HeartPumpSimulation,
@@ -34,6 +36,16 @@ class CognitionLabApp {
     this.renderCriteria();
     this.setupEventListeners();
     this.setupModals();
+    this.initHeroMotion();
+  }
+
+  initHeroMotion() {
+    try {
+      this.heroMotion = new HeroMotionController();
+      this.heroMotion.init();
+    } catch (e) {
+      console.warn("HeroMotionController initialization:", e);
+    }
   }
 
   // 1. Render the 4 Core Criteria on the Home Page
@@ -43,13 +55,20 @@ class CognitionLabApp {
 
     grid.innerHTML = CURRICULUM.criteria.map(c => `
       <div class="criterion-card" style="--card-accent: ${c.color}; --card-glow: ${c.color}30;">
+        <div class="card-specular-shine"></div>
         <div class="criterion-header">
-          <span class="criterion-icon">${c.icon}</span>
+          <div class="criterion-icon-badge">
+            <span class="criterion-icon">${c.icon}</span>
+          </div>
           <h3 class="criterion-title">${c.name}</h3>
         </div>
         <p class="criterion-desc">${c.description}</p>
       </div>
     `).join("");
+
+    if (this.heroMotion && typeof this.heroMotion.attachCardListeners === "function") {
+      this.heroMotion.attachCardListeners();
+    }
   }
 
   setupEventListeners() {
