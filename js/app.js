@@ -95,7 +95,7 @@ class CognitionLabApp {
     if (audioBtn) {
       audioBtn.addEventListener("click", () => {
         const enabled = sound.toggle();
-        audioBtn.textContent = enabled ? "🔊 Sound FX: ON" : "🔇 Sound FX: OFF";
+        audioBtn.textContent = enabled ? "Sound FX: ON" : "Sound FX: OFF";
         audioBtn.classList.toggle("btn-accent", enabled);
         audioBtn.classList.toggle("btn-subtle", !enabled);
       });
@@ -161,15 +161,11 @@ class CognitionLabApp {
           ${CURRICULUM.domains.map(d => {
             const missions = CURRICULUM.missions.filter(m => m.domainId === d.id);
             const count = missions.length;
-            const icon = d.id === "domain-1" ? "🌿" :
-                         d.id === "domain-2" ? "🌉" :
-                         d.id === "domain-3" ? "🏙️" :
-                         d.id === "domain-4" ? "📈" : "🛡️";
 
             return `
               <div class="domain-pick-card" data-domain-id="${d.id}" style="--domain-color: ${d.color}; --domain-glow: ${d.color}33;">
                 <span class="domain-pick-badge">DOMAIN 0${d.number}</span>
-                <div class="domain-pick-icon">${icon}</div>
+                <div class="domain-pick-icon" style="font-family:var(--font-mono); font-weight:800; font-size:1.35rem; color:${d.color};">0${d.number}</div>
                 <h3 class="domain-pick-name">${d.name}</h3>
                 <div class="domain-pick-meta">${count} ${count === 1 ? 'Mission' : 'Missions'} Available</div>
               </div>
@@ -203,11 +199,6 @@ class CognitionLabApp {
     const container = document.getElementById("interactive-exploration-container");
     if (!container) return;
 
-    const icon = domain.id === "domain-1" ? "🌿" :
-                 domain.id === "domain-2" ? "🌉" :
-                 domain.id === "domain-3" ? "🏙️" :
-                 domain.id === "domain-4" ? "📈" : "🛡️";
-
     container.innerHTML = `
       <div class="interactive-view-wrapper domain-missions-wrapper">
         <div class="domain-missions-nav-bar">
@@ -215,7 +206,7 @@ class CognitionLabApp {
             ← Back to Domains
           </button>
           <div class="domain-missions-info">
-            <span class="domain-missions-icon">${icon}</span>
+            <span class="domain-missions-icon" style="font-family:var(--font-mono); font-weight:800; font-size:1rem; color:${domain.color};">0${domain.number}</span>
             <div>
               <span style="font-family:var(--font-mono); font-size:0.72rem; color:${domain.color}; font-weight:700; letter-spacing:0.12em; text-transform:uppercase;">
                 DOMAIN 0${domain.number}
@@ -227,17 +218,11 @@ class CognitionLabApp {
 
         <div class="sim-grid">
           ${missions.map(m => {
-            const missionIcon = m.id === "sim-plant-npk" ? "🌿" :
-                                m.id === "sim-heart-pump" ? "🫀" :
-                                m.id === "sim-bridge-builder" ? "🌉" :
-                                m.id === "sim-urban-heat" ? "🏙️" :
-                                m.id === "sim-mandi-arbitrage" ? "📈" : "🛡️";
-
             return `
               <div class="sim-card" data-sim-id="${m.id}">
                 <div class="sim-card-banner">
                   <span class="sim-domain-badge" style="color:${domain.color};">D${domain.number}</span>
-                  <div class="sim-banner-art">${missionIcon}</div>
+                  <div class="sim-banner-art" style="font-family:var(--font-mono); font-weight:800; font-size:0.85rem; color:${domain.color}; letter-spacing:0.08em;">LAB // 0${domain.number}</div>
                 </div>
                 <div class="sim-card-body">
                   <div class="sim-meta-kicker">// SIMULATION LAB / V1.0</div>
@@ -268,7 +253,7 @@ class CognitionLabApp {
 
                   <div class="sim-card-actions">
                     <button class="btn btn-primary launch-sim-btn" data-sim-id="${m.id}" style="width:100%; justify-content:center;">
-                      🕹️ Launch Simulation
+                      Launch Simulation
                     </button>
                   </div>
                 </div>
@@ -327,15 +312,10 @@ class CognitionLabApp {
         <!-- Directly show the list of just the domain names -->
         <div class="our-domains-name-grid">
           ${CURRICULUM.domains.map((d, index) => {
-            const icon = d.id === "domain-1" ? "🌿" :
-                         d.id === "domain-2" ? "🌉" :
-                         d.id === "domain-3" ? "🏙️" :
-                         d.id === "domain-4" ? "📈" : "🛡️";
-
             return `
               <div class="domain-name-item" data-domain-id="${d.id}" style="--domain-idx: ${index}; --domain-color: ${d.color}; --domain-glow: ${d.color}26;">
                 <div class="domain-name-item-left">
-                  <span class="domain-name-icon">${icon}</span>
+                  <span class="domain-name-icon" style="font-family:var(--font-mono); font-weight:700; font-size:0.85rem; color:${d.color};">0${d.number}</span>
                   <div>
                     <span class="domain-name-badge">DOMAIN 0${d.number}</span>
                     <h3 class="domain-name-text">${d.name}</h3>
@@ -384,11 +364,6 @@ class CognitionLabApp {
     const container = document.getElementById("interactive-exploration-container");
     if (!container) return;
 
-    const icon = domain.id === "domain-1" ? "🌿" :
-                 domain.id === "domain-2" ? "🌉" :
-                 domain.id === "domain-3" ? "🏙️" :
-                 domain.id === "domain-4" ? "📈" : "🛡️";
-
     container.innerHTML = `
       <div class="interactive-view-wrapper domain-subjects-view">
         <div class="domain-subjects-top-bar">
@@ -402,7 +377,7 @@ class CognitionLabApp {
 
         <div class="domain-subjects-header-card" style="--domain-color: ${domain.color}; --domain-glow: ${domain.color}26;">
           <div class="domain-subjects-title-row">
-            <span class="domain-subjects-icon">${icon}</span>
+            <span class="domain-subjects-icon" style="font-family:var(--font-mono); font-weight:700; font-size:0.85rem; color:${domain.color};">0${domain.number}</span>
             <div>
               <span class="domain-name-badge" style="color:${domain.color};">DOMAIN 0${domain.number}</span>
               <h2 class="domain-subjects-title">${domain.name}</h2>
@@ -410,14 +385,13 @@ class CognitionLabApp {
           </div>
 
           <div class="domain-subjects-section-title">
-            <span>📚</span>
             <span>SUBJECTS TAUGHT UNDER THIS DOMAIN (${domain.subjects.length}):</span>
           </div>
 
           <div class="subjects-cards-grid">
             ${domain.subjects.map((subject, sIdx) => `
               <div class="animated-subject-card" style="--subject-idx: ${sIdx}; --domain-color: ${domain.color}; --domain-glow: ${domain.color}26;">
-                <span class="subject-card-icon">📖</span>
+                <span class="subject-card-dot" style="width:6px; height:6px; border-radius:50%; background:${domain.color}; display:inline-block; margin-right:0.4rem; vertical-align:middle;"></span>
                 <span class="subject-card-name">${subject}</span>
               </div>
             `).join("")}
@@ -555,7 +529,6 @@ class CognitionLabApp {
 
     body.innerHTML = `
       <div class="curriculum-section-title">
-        <span>🏆</span>
         <span>The 4 Core Criteria of Cognition</span>
       </div>
       <div class="criteria-list">
@@ -571,7 +544,6 @@ class CognitionLabApp {
       </div>
 
       <div class="curriculum-section-title">
-        <span>⚡</span>
         <span>The 10 Revolutionary Teaching Methods</span>
       </div>
       <div class="methods-grid">
@@ -588,7 +560,6 @@ class CognitionLabApp {
       </div>
 
       <div class="curriculum-section-title">
-        <span>🌐</span>
         <span>The 5 Interdisciplinary Domains</span>
       </div>
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:0.85rem;">
@@ -635,7 +606,7 @@ class CognitionLabApp {
 
               <!-- Materials -->
               <div style="margin-bottom:1rem;">
-                <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; color:var(--accent-cyan); margin-bottom:0.4rem;">📦 Physical Materials Required</div>
+                <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; color:var(--accent-cyan); margin-bottom:0.4rem;">Physical Materials Required</div>
                 <ul class="physical-brief-list">
                   ${p.materials.map(m => `<li>${m}</li>`).join("")}
                 </ul>
@@ -643,7 +614,7 @@ class CognitionLabApp {
 
               <!-- Protocol Steps -->
               <div style="margin-bottom:1rem;">
-                <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; color:var(--accent-amber); margin-bottom:0.4rem;">⚙️ Engineering & Build Protocol</div>
+                <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; color:var(--accent-amber); margin-bottom:0.4rem;">Engineering & Build Protocol</div>
                 <div style="display:flex; flex-direction:column; gap:0.4rem; font-size:0.8rem; color:var(--text-muted);">
                   ${p.engineeringProtocol.map(step => `
                     <div style="background:rgba(0,0,0,0.25); padding:0.5rem 0.75rem; border-radius:6px; border-left:3px solid var(--accent-emerald);">${step}</div>
@@ -653,7 +624,7 @@ class CognitionLabApp {
 
               <!-- First Principles Connection -->
               <div style="background:rgba(56,189,248,0.05); border:1px solid rgba(56,189,248,0.2); border-radius:8px; padding:0.85rem; font-size:0.8rem;">
-                <strong style="color:var(--accent-cyan);">🧠 First-Principles Cognitive Connection:</strong>
+                <strong style="color:var(--accent-cyan);">First-Principles Cognitive Connection:</strong>
                 <span style="color:var(--text-muted); margin-left:0.25rem;">${p.firstPrinciplesConnection}</span>
               </div>
             </div>

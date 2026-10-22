@@ -10,7 +10,7 @@ export const CURRICULUM = {
       id: "cognitive",
       name: "1. Cognitive Dimension",
       short: "Cognitive",
-      icon: "🧠",
+      icon: "01",
       color: "#38bdf8",
       description: "Mapping every lesson to high-level thinking—Apply, Analyze, Design, and Evaluate—instead of rote memorization."
     },
@@ -18,7 +18,7 @@ export const CURRICULUM = {
       id: "soft_skills",
       name: "2. Humanistic & Soft Skills",
       short: "Humanistic",
-      icon: "🤝",
+      icon: "02",
       color: "#34d399",
       description: "Embedding Critical Thinking, Ethics, Environmental Sustainability, Teamwork, and Lifelong Learning into daily challenges."
     },
@@ -26,7 +26,7 @@ export const CURRICULUM = {
       id: "technical_mastery",
       name: "3. Technical Mastery",
       short: "Technical",
-      icon: "⚙️",
+      icon: "03",
       color: "#f59e0b",
       description: "Developing Deep Domain Expertise, Software/Hardware Tool Proficiencies, and industry-specific methodologies."
     },
@@ -34,7 +34,7 @@ export const CURRICULUM = {
       id: "societal_vector",
       name: "4. Societal & Career Vector",
       short: "Societal",
-      icon: "🚀",
+      icon: "04",
       color: "#a855f7",
       description: "Pre-mapping Career Progression, Leadership Roles, Entrepreneurship, Professional Ethics, and direct contributions to society."
     }

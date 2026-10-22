@@ -89,7 +89,7 @@ export class MandiArbitrageSimulation {
 
           <!-- Formula Ledger Math Card (Class 7/8 Comparing Quantities Anchor) -->
           <div style="background:rgba(255,255,255,0.02); border:1px solid var(--border-subtle); border-radius:8px; padding:1rem; font-family:var(--font-mono); font-size:0.78rem;">
-            <div style="color:var(--accent-amber); font-weight:700; margin-bottom:0.35rem;">📐 FIRST-PRINCIPLES COMMERCIAL ARITHMETIC FORMULAS:</div>
+            <div style="color:var(--accent-amber); font-weight:700; margin-bottom:0.35rem;"> FIRST-PRINCIPLES COMMERCIAL ARITHMETIC FORMULAS:</div>
             <div style="color:var(--text-muted); display:grid; grid-template-columns:repeat(2, 1fr); gap:0.5rem;">
               <div>• Total Cost $TC = (Qty \times BuyPrice) + Freight + Storage$</div>
               <div>• Net Freight $F = Qty \times Radius(km) \times DieselRate$</div>
@@ -134,7 +134,7 @@ export class MandiArbitrageSimulation {
         <!-- Transport Radius Slider -->
         <div class="control-group">
           <div class="control-header">
-            <span class="control-title">🚛 Transport Radius (km)</span>
+            <span class="control-title">Transport Radius (km)</span>
             <span class="control-value" id="val-radius">${this.transportKm} km</span>
           </div>
           <input type="range" class="slider-range" id="slider-radius" min="40" max="350" value="${this.transportKm}">
@@ -147,7 +147,7 @@ export class MandiArbitrageSimulation {
         <!-- Cold Storage Days Slider -->
         <div class="control-group">
           <div class="control-header">
-            <span class="control-title">❄️ Cold Storage Hold (Days)</span>
+            <span class="control-title">Cold Storage Hold (Days)</span>
             <span class="control-value" id="val-days">${this.coldStorageDays} Days</span>
           </div>
           <input type="range" class="slider-range" id="slider-days" min="2" max="60" value="${this.coldStorageDays}">
@@ -158,7 +158,7 @@ export class MandiArbitrageSimulation {
         </div>
 
         <button id="trigger-crisis-btn" class="btn btn-primary" style="width:100%; justify-content:center; padding:0.85rem; margin-top:0.75rem; background:linear-gradient(135deg, #d97706, #b45309);">
-          ⚡ Execute Settlement & Advance Clock
+          Execute Settlement & Advance Clock
         </button>
       `;
 
@@ -214,7 +214,7 @@ export class MandiArbitrageSimulation {
 
     area.innerHTML = `
       <div class="crisis-banner">
-        <span class="crisis-icon">📉</span>
+        <span class="crisis-icon">!</span>
         <div>
           <h4>Method (k) Sudden Mandi Price Collapse</h4>
           <p>A flood of unseasonal grain imports caused spot prices to crash by <strong>-38%</strong> across the APMC! All asset values are locked.</p>
@@ -223,7 +223,7 @@ export class MandiArbitrageSimulation {
 
       <div class="verify-lock-box">
         <div class="verify-lock-title">
-          <span>🔒</span>
+          
           <span>MANDI VERIFICATION LOCK</span>
         </div>
         <p style="font-size:0.78rem; color:var(--text-muted); line-height:1.4; margin-bottom:0.75rem;">
@@ -241,7 +241,7 @@ export class MandiArbitrageSimulation {
         </div>
 
         <button id="verify-lock-btn" class="btn btn-accent" style="width:100%; justify-content:center; padding:0.8rem; margin-top:0.4rem;">
-          🔓 Settle & Unlock Verification Ledger
+          Settle & Unlock Verification Ledger
         </button>
 
         <div id="verify-feedback" style="font-size:0.78rem; text-align:center; margin-top:0.5rem; min-height:1.2rem;"></div>
@@ -324,7 +324,7 @@ export class MandiArbitrageSimulation {
     modalArea.innerHTML = `
       <div class="value-card-modal" style="max-width:580px; width:100%;">
         <div style="text-align:center; margin-bottom:1.5rem;">
-          <div style="font-size:2.5rem; margin-bottom:0.25rem;">📈🏆</div>
+          <div style="font-size:2.5rem; margin-bottom:0.25rem;"></div>
           <h2 style="font-size:1.5rem; color:#fff;">Sabarkantha Arbitrage Engine Mastered</h2>
           <p style="font-size:0.85rem; color:var(--accent-cyan);">Domain 4: Market Execution & Business Loop Cleared</p>
         </div>
@@ -346,14 +346,14 @@ export class MandiArbitrageSimulation {
 
         <div class="physical-brief-box" style="margin-bottom:1.5rem;">
           <div class="physical-brief-header">
-            <span>🔬</span>
+            
             <span>NEXT 50%: Classroom Physical Build Project</span>
           </div>
           <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.6rem;">
             Launch the <strong>Live Commodity Pit & Cold-Chain Perishability Ledger</strong> in the classroom with tokenized crop vouchers and market shock dice rolls!
           </p>
           <button id="view-mandi-lab-brief-btn" class="btn btn-subtle" style="font-size:0.75rem; padding:0.4rem 0.8rem;">
-            Open Classroom Physical Lab Brief 📋
+            Open Classroom Physical Lab Brief
           </button>
         </div>
 

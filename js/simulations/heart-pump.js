@@ -73,9 +73,9 @@ export class HeartPumpSimulation {
 
             <!-- Bio-Mimicry Model Selector Bar -->
             <div style="position:absolute; top:15px; left:15px; display:flex; gap:0.5rem; background:rgba(15,23,42,0.85); backdrop-filter:blur(8px); padding:0.4rem; border-radius:8px; border:1px solid var(--border-subtle); z-index:10;">
-              <button id="model-human-btn" class="filter-chip active">🫀 Human (4-Chamber)</button>
-              <button id="model-fish-btn" class="filter-chip">🐟 Fish (2-Chamber)</button>
-              <button id="model-frog-btn" class="filter-chip">🐸 Amphibian (3-Chamber)</button>
+              <button id="model-human-btn" class="filter-chip active">Human (4-Chamber)</button>
+              <button id="model-fish-btn" class="filter-chip">Fish (2-Chamber)</button>
+              <button id="model-frog-btn" class="filter-chip">Amphibian (3-Chamber)</button>
             </div>
 
             <!-- Real-time Pressure & Flow Telemetry Overlay -->
@@ -106,7 +106,7 @@ export class HeartPumpSimulation {
             <div style="display:flex; align-items:center; gap:0.6rem;">
               <div class="sim-timer-badge" id="heart-timer" style="font-size:0.85rem; padding:0.25rem 0.65rem;">25:00</div>
               <button id="theory-btn" class="btn btn-subtle" style="font-size:0.75rem; padding:0.35rem 0.7rem;">
-                📚 Mini-Lecture
+                Mini-Lecture
               </button>
             </div>
           </div>
@@ -179,7 +179,7 @@ export class HeartPumpSimulation {
       <!-- Heart Rate Control -->
       <div class="control-group">
         <div class="control-header">
-          <span class="control-title">💓 Heart Rate (HR)</span>
+          <span class="control-title">Heart Rate (HR)</span>
           <span class="control-value" id="val-hr">${this.heartRate} BPM</span>
         </div>
         <input type="range" class="slider-range" id="slider-hr" min="60" max="180" value="${this.heartRate}">
@@ -193,7 +193,7 @@ export class HeartPumpSimulation {
       <!-- Stroke Volume Control -->
       <div class="control-group">
         <div class="control-header">
-          <span class="control-title">💧 Stroke Volume (SV)</span>
+          <span class="control-title">Stroke Volume (SV)</span>
           <span class="control-value" id="val-sv">${this.strokeVolume} mL</span>
         </div>
         <input type="range" class="slider-range" id="slider-sv" min="50" max="120" value="${this.strokeVolume}">
@@ -207,7 +207,7 @@ export class HeartPumpSimulation {
       <!-- Coronary Arterial Stenosis -->
       <div class="control-group">
         <div class="control-header">
-          <span class="control-title">🫀 Arterial Stenosis / Blockage</span>
+          <span class="control-title">Arterial Stenosis / Blockage</span>
           <span class="control-value" id="val-blockage">${this.blockage}%</span>
         </div>
         <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:0.5rem; margin-top:0.4rem;">
@@ -353,7 +353,7 @@ export class HeartPumpSimulation {
     modalArea.innerHTML = `
       <div class="value-card-modal" style="max-width:580px; width:100%;">
         <div style="text-align:center; margin-bottom:1.5rem;">
-          <div style="font-size:2.5rem; margin-bottom:0.25rem;">🫀🏆</div>
+          <div style="font-size:2.5rem; margin-bottom:0.25rem;"></div>
           <h2 style="font-size:1.5rem; color:#fff;">Mission 1: Bio-Mimicry Heart Pump Mastered</h2>
           <p style="font-size:0.85rem; color:var(--accent-cyan);">Domain 1: Bio-Tech & Living Systems Cleared</p>
         </div>
@@ -367,14 +367,14 @@ export class HeartPumpSimulation {
 
         <div class="physical-brief-box" style="margin-bottom:1.5rem;">
           <div class="physical-brief-header">
-            <span>🔬</span>
+            
             <span>NEXT 50%: Classroom Physical Build Project</span>
           </div>
           <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.6rem;">
             Construct the <strong>Dual-Chamber Syringe & Ball-Valve Mechanical Hemodynamic Rig</strong> in the classroom to physically measure manometer pressure with one-way valves.
           </p>
           <button id="view-heart-lab-brief-btn" class="btn btn-subtle" style="font-size:0.75rem; padding:0.4rem 0.8rem;">
-            Open Classroom Physical Lab Brief 📋
+            Open Classroom Physical Lab Brief
           </button>
         </div>
 
@@ -404,8 +404,8 @@ export class HeartPumpSimulation {
     modalArea.innerHTML = `
       <div class="value-card-modal" style="max-width:640px; width:100%;">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
-          <h3 style="color:#fff; font-size:1.25rem;">📚 Mini-Lecture: Heart Hemodynamics & Comparative Physiology</h3>
-          <button id="close-theory-btn" class="modal-close-btn" style="position:static;">✕</button>
+          <h3 style="color:#fff; font-size:1.25rem;">Mini-Lecture: Heart Hemodynamics & Comparative Physiology</h3>
+          <button id="close-theory-btn" class="modal-close-btn" style="position:static;">&times;</button>
         </div>
         <div style="font-size:0.85rem; color:var(--text-muted); line-height:1.5; max-height:60vh; overflow-y:auto; padding-right:0.5rem;">
           <p style="margin-bottom:0.75rem;">

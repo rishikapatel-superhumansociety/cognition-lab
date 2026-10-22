@@ -239,7 +239,7 @@ export class RansomwareSimulation {
     const area = document.getElementById("cyber-tools-area");
     area.innerHTML = `
       <div class="crisis-banner">
-        <span class="crisis-icon">🛡️</span>
+        <span class="crisis-icon">!</span>
         <div>
           <h4>Method (k) Incident Containment</h4>
           <p>Click on any network cable to <strong>sever subnet links</strong>. Click nodes to isolate or inject RSA decryptors.</p>
@@ -253,12 +253,12 @@ export class RansomwareSimulation {
         </div>
         <div class="network-tools-tray">
           <button id="toggle-firewall-btn" class="tool-btn ${!this.firewallPortsOpen ? 'active' : ''}">
-            <span>🧱</span>
+            
             <span>${this.firewallPortsOpen ? 'Block SMB Port 445' : 'Port 445 Blocked'}</span>
           </button>
 
           <button id="restore-backup-btn" class="tool-btn" ${this.backupRestoring ? 'disabled' : ''}>
-            <span>💾</span>
+            
             <span>${this.backupRestoring ? 'Restoring NAS...' : 'Restore Offline NAS'}</span>
           </button>
         </div>
@@ -278,10 +278,10 @@ export class RansomwareSimulation {
 
           <div style="display:flex; gap:0.5rem;">
             <button id="isolate-node-btn" class="btn btn-subtle" style="flex:1; font-size:0.75rem; justify-content:center;">
-              ✂️ Isolate Node
+              Isolate Node
             </button>
             <button id="decrypt-node-btn" class="btn btn-accent" style="flex:1; font-size:0.75rem; justify-content:center;" ${this.decryptKeysLeft <= 0 || this.selectedNode.encryptedFiles === 0 ? 'disabled' : ''}>
-              🔑 Decrypt (${this.decryptKeysLeft} keys left)
+              Decrypt (${this.decryptKeysLeft} keys left)
             </button>
           </div>
         ` : `
@@ -292,7 +292,7 @@ export class RansomwareSimulation {
       </div>
 
       <button id="evaluate-forensics-btn" class="btn btn-primary" style="width:100%; justify-content:center; padding:0.8rem;">
-        📋 Run Post-Incident Forensics Audit
+        Run Post-Incident Forensics Audit
       </button>
 
       <div id="cyber-feedback" style="font-size:0.8rem; text-align:center; margin-top:0.75rem; min-height:1.2rem;"></div>
@@ -428,7 +428,7 @@ export class RansomwareSimulation {
     modalArea.innerHTML = `
       <div class="value-card-modal" style="max-width:580px; width:100%;">
         <div style="text-align:center; margin-bottom:1.5rem;">
-          <div style="font-size:2.5rem; margin-bottom:0.25rem;">🛡️🏆</div>
+          <div style="font-size:2.5rem; margin-bottom:0.25rem;"></div>
           <h2 style="font-size:1.5rem; color:#fff;">Mission 5: Ransomware Defense Mastered</h2>
           <p style="font-size:0.85rem; color:var(--accent-cyan);">Domain 5: Digital Frontier & Security Cleared</p>
         </div>
@@ -450,14 +450,14 @@ export class RansomwareSimulation {
 
         <div class="physical-brief-box" style="margin-bottom:1.5rem;">
           <div class="physical-brief-header">
-            <span>🔬</span>
+            
             <span>NEXT 50%: Classroom Physical Build Project</span>
           </div>
           <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.6rem;">
             Assemble the <strong>Air-Gapped Physical Network Topology & Fail-Safe Cut-Switch</strong> on a physical breadboard with LED nodes and manual circuit disconnect switches!
           </p>
           <button id="view-ransomware-lab-brief-btn" class="btn btn-subtle" style="font-size:0.75rem; padding:0.4rem 0.8rem;">
-            Open Classroom Physical Lab Brief 📋
+            Open Classroom Physical Lab Brief
           </button>
         </div>
 
@@ -515,7 +515,7 @@ export class RansomwareSimulation {
         // Cut icon marker
         ctx.fillStyle = "#f43f5e";
         ctx.font = "12px sans-serif";
-        ctx.fillText("✂️", (ax + bx) / 2, (ay + by) / 2);
+        ctx.fillText("X", (ax + bx) / 2, (ay + by) / 2);
       } else {
         // Active link
         const infectedConnection = nodeA.status !== "secure" || nodeB.status !== "secure";
@@ -552,7 +552,7 @@ export class RansomwareSimulation {
       ctx.font = "bold 14px sans-serif";
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
-      const icon = node.id.includes("database") ? "💾" : node.id.includes("firewall") ? "🧱" : node.id.includes("ad") ? "👑" : node.id.includes("nas") ? "🔒" : "💻";
+      const icon = node.id.includes("database") ? "DB" : node.id.includes("firewall") ? "FW" : node.id.includes("ad") ? "ROOT" : node.id.includes("nas") ? "" : "NODE";
       ctx.fillText(icon, nx, ny);
 
       // Node Name Label

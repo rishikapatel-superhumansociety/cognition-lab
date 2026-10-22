@@ -212,7 +212,7 @@ export class PlantNpkSimulation {
       <!-- Nitrogen Slider -->
       <div class="control-group">
         <div class="control-header">
-          <span class="control-title">🌿 Nitrogen (N) - Leaf Chlorophyll</span>
+          <span class="control-title">Nitrogen (N) - Leaf Chlorophyll</span>
           <span class="control-value" id="val-n">${this.n} ppm</span>
         </div>
         <input type="range" class="slider-range" id="slider-n" min="0" max="100" value="${this.n}">
@@ -226,7 +226,7 @@ export class PlantNpkSimulation {
       <!-- Phosphorus Slider -->
       <div class="control-group">
         <div class="control-header">
-          <span class="control-title">🌱 Phosphorus (P) - Root Biomass</span>
+          <span class="control-title">Phosphorus (P) - Root Biomass</span>
           <span class="control-value" id="val-p">${this.p} ppm</span>
         </div>
         <input type="range" class="slider-range" id="slider-p" min="0" max="100" value="${this.p}">
@@ -240,7 +240,7 @@ export class PlantNpkSimulation {
       <!-- Potassium Slider -->
       <div class="control-group">
         <div class="control-header">
-          <span class="control-title">🛡️ Potassium (K) - Cell Wall Rigidity</span>
+          <span class="control-title">Potassium (K) - Cell Wall Rigidity</span>
           <span class="control-value" id="val-k">${this.k} ppm</span>
         </div>
         <input type="range" class="slider-range" id="slider-k" min="0" max="100" value="${this.k}">
@@ -253,7 +253,7 @@ export class PlantNpkSimulation {
 
       <!-- Validation & Value Card -->
       <button id="submit-value-card-btn" class="btn btn-primary" style="width:100%; justify-content:center; padding:0.8rem; margin-top:0.5rem;">
-        📝 Enter Values into Ecosystem Value Card
+        Enter Values into Ecosystem Value Card
       </button>
 
       <div id="feedback-msg" style="margin-top:0.75rem; font-size:0.8rem; text-align:center; min-height:1.2rem;"></div>
@@ -323,7 +323,7 @@ export class PlantNpkSimulation {
     modalArea.innerHTML = `
       <div class="value-card-modal" style="max-width:500px; width:100%;">
         <div style="text-align:center; margin-bottom:1rem;">
-          <div style="font-size:2rem; margin-bottom:0.25rem;">🌿</div>
+          <div style="font-size:2rem; margin-bottom:0.25rem;"></div>
           <h3 style="font-size:1.35rem; color:#fff;">Ecosystem Value Card</h3>
           <p style="font-size:0.82rem; color:var(--text-muted);">Verified Agronomic Nutrient Formula Settled</p>
         </div>
@@ -347,7 +347,7 @@ export class PlantNpkSimulation {
         </div>
 
         <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-subtle); border-radius:8px; padding:0.85rem; margin-bottom:1.25rem; font-size:0.8rem; color:var(--text-muted); line-height:1.4;">
-          ✅ <strong>First-Principles Audit:</strong> N:P:K stoichiometry at 5:3:2 creates an optimal nitrogen assimilation rate without cation antagonism in loamy soil.
+          <strong>First-Principles Audit:</strong> N:P:K stoichiometry at 5:3:2 creates an optimal nitrogen assimilation rate without cation antagonism in loamy soil.
         </div>
 
         <button id="advance-level-2-btn" class="btn btn-accent" style="width:100%; justify-content:center; padding:0.8rem;">
@@ -387,7 +387,7 @@ export class PlantNpkSimulation {
     const area = document.getElementById("controls-dynamic-area");
     area.innerHTML = `
       <div class="crisis-banner">
-        <span class="crisis-icon">⚠️</span>
+        <span class="crisis-icon">!</span>
         <div>
           <h4>Method (k) Blind-Variable Crisis</h4>
           <p>Unseasonal torrential cloudburst! Soluble potassium has leached completely from the subsoil. <strong>The Potassium (K) supply slider is permanently locked at 0 ppm!</strong></p>
@@ -401,7 +401,7 @@ export class PlantNpkSimulation {
       <!-- Nitrogen Slider -->
       <div class="control-group">
         <div class="control-header">
-          <span class="control-title">🌿 Nitrogen (N) Adjustment</span>
+          <span class="control-title">Nitrogen (N) Adjustment</span>
           <span class="control-value" id="val-n-l2">${this.n} ppm</span>
         </div>
         <input type="range" class="slider-range" id="slider-n-l2" min="0" max="100" value="${this.n}">
@@ -415,7 +415,7 @@ export class PlantNpkSimulation {
       <!-- Phosphorus Slider -->
       <div class="control-group">
         <div class="control-header">
-          <span class="control-title">🌱 Phosphorus (P) Adjustment</span>
+          <span class="control-title">Phosphorus (P) Adjustment</span>
           <span class="control-value" id="val-p-l2">${this.p} ppm</span>
         </div>
         <input type="range" class="slider-range" id="slider-p-l2" min="0" max="100" value="${this.p}">
@@ -429,7 +429,7 @@ export class PlantNpkSimulation {
       <!-- Potassium Slider (LOCKED) -->
       <div class="control-group" style="opacity:0.6; position:relative;">
         <div class="control-header">
-          <span class="control-title">🔒 Potassium (K) - LEACHED & LOCKED</span>
+          <span class="control-title">Potassium (K) - LEACHED & LOCKED</span>
           <span class="control-value" style="color:#ef4444;">0 ppm [LOCKED]</span>
         </div>
         <input type="range" class="slider-range" disabled min="0" max="100" value="0">
@@ -441,7 +441,7 @@ export class PlantNpkSimulation {
       <!-- Organic Bio-Buffer Amendment -->
       <div class="control-group">
         <div class="control-header">
-          <span class="control-title">🍂 Organic Bio-Buffer Amendment</span>
+          <span class="control-title">Organic Bio-Buffer Amendment</span>
           <span class="control-value" id="val-bio">${this.bioBuffer}%</span>
         </div>
         <input type="range" class="slider-range" id="slider-bio" min="0" max="100" value="${this.bioBuffer}">
@@ -453,7 +453,7 @@ export class PlantNpkSimulation {
       </div>
 
       <button id="submit-scorecard-btn" class="btn btn-primary" style="width:100%; justify-content:center; padding:0.8rem; margin-top:0.5rem;">
-        📊 Settle Crisis Scorecard
+        Settle Crisis Scorecard
       </button>
 
       <div id="feedback-msg-l2" style="margin-top:0.75rem; font-size:0.8rem; text-align:center; min-height:1.2rem;"></div>
@@ -518,7 +518,7 @@ export class PlantNpkSimulation {
     modalArea.innerHTML = `
       <div class="value-card-modal" style="max-width:520px; width:100%;">
         <div style="text-align:center; margin-bottom:1rem;">
-          <div style="font-size:2rem; margin-bottom:0.25rem;">🏆</div>
+          <div style="font-size:2rem; margin-bottom:0.25rem;"></div>
           <h3 style="font-size:1.35rem; color:#fff;">Crisis Resilience Scorecard</h3>
           <p style="font-size:0.82rem; color:var(--text-muted);">Method (k) Blind-Variable Solved</p>
         </div>
@@ -573,18 +573,18 @@ export class PlantNpkSimulation {
       </div>
 
       <div style="background:rgba(244,63,94,0.08); border:1px solid rgba(244,63,94,0.3); border-radius:8px; padding:0.85rem; margin-bottom:1.25rem; font-size:0.82rem; color:#fca5a5;">
-        ⚠️ <strong>Critical Dilemma:</strong> Your choice will affect human lives. You can only save one vulnerable group with this final bag of grain. There is no mathematical "right" or "wrong" answer.
+        <strong>Critical Dilemma:</strong> Your choice will affect human lives. You can only save one vulnerable group with this final bag of grain. There is no mathematical "right" or "wrong" answer.
       </div>
 
       <div class="ethical-deck">
         <div class="ethical-card" id="card-infants">
-          <div class="ethical-card-icon">👶</div>
+          <div class="ethical-card-icon">1</div>
           <h3>Save 5 Infants</h3>
           <p>Allocate grain for emergency nutritional milk/paste. High developmental vulnerability, entire lifespan ahead.</p>
         </div>
 
         <div class="ethical-card" id="card-elders">
-          <div class="ethical-card-icon">👵</div>
+          <div class="ethical-card-icon">2</div>
           <h3>Save 5 Elders</h3>
           <p>Allocate grain for senior community knowledge-bearers, agricultural custodians, and family pillars.</p>
         </div>
@@ -643,7 +643,7 @@ export class PlantNpkSimulation {
     modalArea.innerHTML = `
       <div class="value-card-modal" style="max-width:580px; width:100%; text-align:left;">
         <div style="text-align:center; margin-bottom:1.5rem;">
-          <div style="font-size:2.5rem; margin-bottom:0.25rem;">🌱🎓</div>
+          <div style="font-size:2.5rem; margin-bottom:0.25rem;"></div>
           <h2 style="font-size:1.5rem; color:#fff;">Plant Soil Ecosystem Mastered</h2>
           <p style="font-size:0.85rem; color:var(--accent-cyan);">Curriculum Loop: 4 Criteria & 4 Revolutionary Methods Cleared</p>
         </div>
@@ -660,14 +660,14 @@ export class PlantNpkSimulation {
 
         <div class="physical-brief-box" style="margin-bottom:1.5rem;">
           <div class="physical-brief-header">
-            <span>🔬</span>
+            
             <span>NEXT 50%: Classroom Physical Build Project</span>
           </div>
           <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.6rem;">
             Digital simulation complete! You are now prepared to build the <strong>Closed-Loop Hydroponic Wick Column</strong> with physical pH & NPK chemical titrants in the lab.
           </p>
           <button id="view-lab-brief-btn" class="btn btn-subtle" style="font-size:0.75rem; padding:0.4rem 0.8rem;">
-            Open Classroom Physical Lab Brief 📋
+            Open Classroom Physical Lab Brief
           </button>
         </div>
 

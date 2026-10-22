@@ -38,19 +38,19 @@ export const SIMULATION_CONFIG = {
     chordContinuousBonus: 0.35
   },
   vehicles: [
-    { id: "scooter", name: "Delivery Scooter", icon: "🛵", load: 100, simulationLoad: 100, speed: 0.0048 },
-    { id: "motorcycle", name: "Sport Motorcycle", icon: "🏍️", load: 200, simulationLoad: 200, speed: 0.0050 },
-    { id: "car", name: "Commuter Car", icon: "🚗", load: 500, simulationLoad: 500, speed: 0.0052 },
-    { id: "suv", name: "Heavy SUV", icon: "🚙", load: 750, simulationLoad: 750, speed: 0.0048 },
-    { id: "bus", name: "School Bus", icon: "🚌", load: 1200, simulationLoad: 1200, speed: 0.0042 },
-    { id: "truck", name: "Heavy Cargo Truck", icon: "🚚", load: 2000, simulationLoad: 2000, speed: 0.0035 },
-    { id: "transport", name: "Heavy Transport Truck", icon: "🚛", load: 3500, simulationLoad: 3500, speed: 0.0028 }
+    { id: "scooter", name: "Delivery Scooter", icon: "", load: 100, simulationLoad: 100, speed: 0.0048 },
+    { id: "motorcycle", name: "Sport Motorcycle", icon: "", load: 200, simulationLoad: 200, speed: 0.0050 },
+    { id: "car", name: "Commuter Car", icon: "", load: 500, simulationLoad: 500, speed: 0.0052 },
+    { id: "suv", name: "Heavy SUV", icon: "", load: 750, simulationLoad: 750, speed: 0.0048 },
+    { id: "bus", name: "School Bus", icon: "", load: 1200, simulationLoad: 1200, speed: 0.0042 },
+    { id: "truck", name: "Heavy Cargo Truck", icon: "", load: 2000, simulationLoad: 2000, speed: 0.0035 },
+    { id: "transport", name: "Heavy Transport Truck", icon: "", load: 3500, simulationLoad: 3500, speed: 0.0028 }
   ],
   earthquake: {
     levels: [
-      { level: 1, name: "Gentle to Moderate Shake", icon: "🌱", demand: 0.15, durationMs: 4000, frequency: 1.6, amplitude: 7 },
-      { level: 2, name: "Strong Shake", icon: "⚡", demand: 0.35, durationMs: 4500, frequency: 2.8, amplitude: 14 },
-      { level: 3, name: "Severe Shake", icon: "🌋", demand: 0.60, durationMs: 5000, frequency: 4.2, amplitude: 22 }
+      { level: 1, name: "Gentle to Moderate Shake", icon: "", demand: 0.15, durationMs: 4000, frequency: 1.6, amplitude: 7 },
+      { level: 2, name: "Strong Shake", icon: "", demand: 0.35, durationMs: 4500, frequency: 2.8, amplitude: 14 },
+      { level: 3, name: "Severe Shake", icon: "", demand: 0.60, durationMs: 5000, frequency: 4.2, amplitude: 22 }
     ]
   },
   failure: {
@@ -777,7 +777,7 @@ return {
       weight: 8,
       ratio: 0.00,
       maxVehicleSupported: "None",
-      vehicleIcon: "🌉"
+      vehicleIcon: ""
     },
     2: {
       designNumber: 2,
@@ -785,7 +785,7 @@ return {
       weight: 54,
       ratio: 2.78,
       maxVehicleSupported: "Delivery Scooter (100g)",
-      vehicleIcon: "🛵"
+      vehicleIcon: ""
     },
     3: {
       designNumber: 3,
@@ -793,7 +793,7 @@ return {
       weight: 58,
       ratio: 6.03,
       maxVehicleSupported: "Sport Motorcycle (200g)",
-      vehicleIcon: "🏍️"
+      vehicleIcon: ""
     },
     4: {
       designNumber: 4,
@@ -801,7 +801,7 @@ return {
       weight: 74,
       ratio: 8.38,
       maxVehicleSupported: "Commuter Car (500g)",
-      vehicleIcon: "🚗"
+      vehicleIcon: ""
     },
     5: {
       designNumber: 5,
@@ -809,7 +809,7 @@ return {
       weight: 102,
       ratio: 9.31,
       maxVehicleSupported: "Heavy SUV (750g)",
-      vehicleIcon: "🚙"
+      vehicleIcon: ""
     },
     6: {
       designNumber: 6,
@@ -817,7 +817,7 @@ return {
       weight: 183,
       ratio: 8.74,
       maxVehicleSupported: "School Bus (1200g)",
-      vehicleIcon: "🚌"
+      vehicleIcon: ""
     },
     7: {
       designNumber: 7,
@@ -825,7 +825,7 @@ return {
       weight: 204,
       ratio: 13.24,
       maxVehicleSupported: "Heavy Cargo Truck (2000g)",
-      vehicleIcon: "🚚"
+      vehicleIcon: ""
     },
     8: {
       designNumber: 8,
@@ -833,7 +833,7 @@ return {
       weight: 290,
       ratio: 14.48,
       maxVehicleSupported: "Heavy Transport Truck (3500g)",
-      vehicleIcon: "🚛"
+      vehicleIcon: ""
     }
   };
 
@@ -1322,7 +1322,7 @@ this.validationHighlightMembers = new Set();
       <button id="skip-cinematic-btn" style="position:absolute; top:18px; right:20px; pointer-events:auto; background:rgba(15,23,42,0.85); color:var(--text-muted, #94a3b8); border:1px solid rgba(255,255,255,0.15); border-radius:6px; padding:0.45rem 0.9rem; font-size:0.75rem; font-weight:600; cursor:pointer; backdrop-filter:blur(8px); transition:all 0.2s;"
         onmouseover="this.style.color='#fff'; this.style.borderColor='rgba(56,189,248,0.5)';"
         onmouseout="this.style.color='#94a3b8'; this.style.borderColor='rgba(255,255,255,0.15)';">
-        Skip Video ⏭
+        Skip Video
       </button>
       <div id="video-event-text" style="pointer-events:none; position:absolute; width:100%; text-align:center; transition:all 0.3s ease;"></div>
     `;
@@ -1368,11 +1368,11 @@ this.validationHighlightMembers = new Set();
     if (seconds >= 4.0 && seconds < 6.0) {
       textEl.innerHTML = `
         <div style="display:inline-flex; align-items:center; gap:0.75rem; background:rgba(220,38,38,0.94); border:2px solid #fca5a5; box-shadow:0 0 40px rgba(239,68,68,0.85); border-radius:12px; padding:0.8rem 2.2rem; transform:scale(1.05); animation:pulse-warning 0.2s infinite alternate;">
-          <span style="font-size:1.8rem;">⚠️</span>
+          <span style="font-size:1.8rem;">️</span>
           <span style="font-family:var(--font-heading, sans-serif); font-size:2.2rem; font-weight:900; letter-spacing:0.18em; color:#fff; text-shadow:0 2px 10px rgba(0,0,0,0.8);">
             EARTHQUAKE
           </span>
-          <span style="font-size:1.8rem;">⚠️</span>
+          <span style="font-size:1.8rem;">️</span>
         </div>
       `;
     } else if (seconds >= 6.0 && seconds <= 8.0) {
@@ -2010,7 +2010,7 @@ this.validationHighlightMembers = new Set();
 
           <div style="display:flex; justify-content:space-between; align-items:center;">
             <div style="display:flex; align-items:center; gap:0.5rem; font-size:0.78rem; color:var(--accent-cyan, #38bdf8);">
-              <span id="audio-wave-anim">🔊 Speaking...</span>
+              <span id="audio-wave-anim">Speaking...</span>
               <button id="btn-replay-voice" style="background:none; border:none; color:var(--accent-cyan, #38bdf8); font-size:0.75rem; font-weight:700; cursor:pointer; text-decoration:underline; margin-left:0.5rem;">Replay Voice ↺</button>
             </div>
             
@@ -2057,7 +2057,7 @@ this.validationHighlightMembers = new Set();
           mouth.setAttribute("d", mouthShapes[shapeIdx]);
         }, 110);
       }
-      if (audioIndicator) audioIndicator.textContent = "🔊 Speaking...";
+      if (audioIndicator) audioIndicator.textContent = "Speaking...";
     };
 
     const stopMouth = () => {
@@ -2066,7 +2066,7 @@ this.validationHighlightMembers = new Set();
         this.mouthInterval = null;
       }
       if (mouth) mouth.setAttribute("d", "M121,166 Q130,167 139,166 Q130,167 121,166 Z");
-      if (audioIndicator) audioIndicator.textContent = "✅ Finished Speaking";
+      if (audioIndicator) audioIndicator.textContent = "Finished Speaking";
     };
 
     document.getElementById("btn-replay-voice")?.addEventListener("click", () => {
@@ -2145,12 +2145,12 @@ this.validationHighlightMembers = new Set();
         
         <div style="display:inline-flex; align-items:center; justify-content:center; gap:0.6rem; padding:0.45rem 1.6rem; background:rgba(56,189,248,0.12); border:1.5px solid var(--accent-cyan, #38bdf8); border-radius:30px; margin-bottom:1.5rem; box-shadow:0 0 20px rgba(56,189,248,0.3);">
           <span style="font-family:var(--font-mono, monospace); font-size:1.15rem; font-weight:900; letter-spacing:0.2em; color:var(--accent-cyan, #38bdf8); text-transform:uppercase;">
-            ★ LEVEL 1 ★
+            LEVEL 1
           </span>
         </div>
 
         <div style="display:flex; align-items:center; justify-content:center; gap:0.5rem; margin-bottom:1rem;">
-          <span style="font-size:1.2rem;">🚨</span>
+          <span style="font-size:1.2rem;"></span>
           <span style="font-family:var(--font-mono, monospace); font-size:0.8rem; font-weight:800; letter-spacing:0.15em; color:#f87171; text-transform:uppercase;">
             Emergency Infrastructure Directive
           </span>
@@ -2162,10 +2162,10 @@ this.validationHighlightMembers = new Set();
 
         <div style="display:flex; justify-content:center; gap:0.75rem; margin-bottom:2rem; flex-wrap:wrap;">
           <span style="font-size:0.75rem; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:6px; padding:0.35rem 0.75rem; color:#94a3b8; font-family:var(--font-mono, monospace);">
-            📍 Sector: Sabarkantha Chasm
+            Sector: Sabarkantha Chasm
           </span>
           <span style="font-size:0.75rem; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:6px; padding:0.35rem 0.75rem; color:#94a3b8; font-family:var(--font-mono, monospace);">
-            🚚 Route: Himmatnagar ⇄ Ahmedabad
+            Route: Himmatnagar ⇄ Ahmedabad
           </span>
         </div>
 
@@ -2611,19 +2611,19 @@ startMission() {
           <!-- View Switcher (Soft Pill Capsule) -->
           <div style="display:flex; background:rgba(2,6,23,0.65); padding:0.25rem; border-radius:12px; border:1px solid rgba(255,255,255,0.08); gap:0.35rem;" id="bridge-view-switcher">
             <button id="btn-view-left" class="btn btn-subtle active" style="font-size:0.75rem; font-weight:700; padding:0.35rem 0.8rem; border-radius:8px; cursor:pointer; transition:all 0.2s;">
-              📐 Left View
+              Left View
             </button>
             <button id="btn-view-right" class="btn btn-subtle" style="font-size:0.75rem; font-weight:700; padding:0.35rem 0.8rem; border-radius:8px; cursor:pointer; transition:all 0.2s;">
-              📐 Right View
+              Right View
             </button>
             <button id="btn-view-front" class="btn btn-subtle" style="font-size:0.75rem; font-weight:700; padding:0.35rem 0.8rem; border-radius:8px; cursor:pointer; transition:all 0.2s;">
-              👁️ Front View
+              Front View
             </button>
             <button id="btn-view-aerial" class="btn btn-subtle" style="font-size:0.75rem; font-weight:700; padding:0.35rem 0.8rem; border-radius:8px; cursor:pointer; transition:all 0.2s;" title="Top Aerial 3D View of your bridge">
-              🚁 Aerial View
+              Aerial View
             </button>
             <button id="btn-copy-left-to-right" class="btn btn-subtle" title="Copy Left View design to Right View so both sides match" style="font-size:0.75rem; font-weight:700; padding:0.35rem 0.8rem; border-radius:8px; cursor:pointer; background:rgba(56,189,248,0.15); color:#38bdf8; border:1px solid rgba(56,189,248,0.35); transition:all 0.2s;">
-              📋 Copy Left → Right
+              Copy Left → Right
             </button>
           </div>
 
@@ -2631,42 +2631,42 @@ startMission() {
           <div style="display:flex; gap:0.5rem; align-items:center;">
             <!-- Level Indicator Badge (Hidden in Level 1 as requested) -->
             <div id="mission-level-badge" style="display:none; align-items:center; gap:0.35rem; background:rgba(99,102,241,0.14); border:1px solid rgba(99,102,241,0.4); color:#a5b4fc; font-weight:800; font-size:0.76rem; padding:0.35rem 0.75rem; border-radius:20px; transition:all 0.25s;">
-              <span id="mission-level-icon">🎮</span>
+              <span id="mission-level-icon"></span>
               <span id="mission-level-text">LEVEL 1: Design</span>
             </div>
 
             <!-- 17-Minute Mission Timer Badge -->
             <div id="mission-timer-badge" style="display:flex; align-items:center; gap:0.35rem; background:rgba(56,189,248,0.12); border:1px solid rgba(56,189,248,0.35); color:#38bdf8; font-weight:800; font-size:0.80rem; padding:0.35rem 0.8rem; border-radius:20px; box-shadow:0 0 16px rgba(56,189,248,0.2);">
-              <span>⏱️</span>
+              <span>️</span>
               <span id="mission-timer-display" style="font-family:monospace; font-size:0.92rem; font-weight:900;">17:00</span>
             </div>
 
             <button id="btn-blueprint-home" class="btn btn-subtle" style="font-size:0.74rem; font-weight:800; padding:0.35rem 0.75rem; border-radius:18px; border:1px solid rgba(255,255,255,0.2); color:#f8fafc; background:rgba(255,255,255,0.08); cursor:pointer; display:none; align-items:center; gap:0.35rem; transition:all 0.2s;" title="Exit simulation and return to Mission Hub">
-              <span>🏠</span> <span>Mission Hub</span>
+               <span>Mission Hub</span>
             </button>
 
             <button id="btn-top-view-design" class="btn btn-subtle" style="font-size:0.74rem; font-weight:800; padding:0.35rem 0.75rem; border-radius:18px; border:1px solid rgba(56,189,248,0.4); color:#38bdf8; background:rgba(56,189,248,0.12); cursor:pointer;" title="View your saved bridge design">
-              <span>📐 View Design</span>
+              <span>View Design</span>
             </button>
             
 
             <button id="btn-new-project" class="btn btn-subtle" style="font-size:0.72rem; font-weight:700; padding:0.35rem 0.65rem; border-radius:18px; border:1px solid rgba(255,255,255,0.15); color:#94a3b8; cursor:pointer;" title="Start a fresh bridge design">
-              ✨ New
+              New
             </button>
 
             <div id="top-budget-badge" style="display:flex; align-items:center; gap:0.3rem; background:rgba(16,185,129,0.1); border:1px solid rgba(52,211,153,0.3); color:#34d399; font-weight:700; font-size:0.76rem; padding:0.35rem 0.7rem; border-radius:20px;">
-  <span>💰</span>
+  
   <span id="budget-amount-display">₹${this.budget}</span>
 </div>
             <div id="top-weight-badge" style="display:flex; align-items:center; gap:0.3rem; background:rgba(56,189,248,0.1); border:1px solid rgba(56,189,248,0.3); color:#7dd3fc; font-weight:700; font-size:0.76rem; padding:0.35rem 0.7rem; border-radius:20px;">
-              <span>⚖️</span>
+              
               <span id="weight-amount-display">${this.getTotalWeight()}g</span>
             </div>
 
             <!-- Classroom Audio Volume Widget -->
             <div id="classroom-audio-widget" style="position:relative; display:flex; align-items:center;">
               <button id="btn-audio-toggle" class="btn btn-subtle" style="font-size:0.72rem; font-weight:800; padding:0.35rem 0.65rem; border-radius:18px; border:1px solid rgba(255,255,255,0.15); color:#cbd5e1; background:rgba(15,23,42,0.7); cursor:pointer; display:flex; align-items:center; gap:0.35rem;" title="Adjust simulation volume or enable Classroom Mode">
-                <span id="audio-icon-display">🔊</span>
+                <span id="audio-icon-display"></span>
                 <span id="audio-vol-percent">35%</span>
               </button>
               <div id="audio-controls-popover" style="display:none; position:absolute; top:calc(100% + 6px); right:0; background:#0b1329; border:1px solid rgba(56,189,248,0.4); border-radius:14px; padding:0.8rem 1rem; width:220px; z-index:200; box-shadow:0 15px 35px rgba(0,0,0,0.8); flex-direction:column; gap:0.6rem;">
@@ -2677,7 +2677,7 @@ startMission() {
                 <input type="range" id="audio-volume-slider" min="0" max="100" value="35" style="width:100%; accent-color:#38bdf8; cursor:pointer;" />
                 <div style="display:flex; gap:0.4rem; margin-top:0.2rem;">
                   <button id="btn-classroom-mode" class="btn btn-subtle" style="flex:1; font-size:0.65rem; font-weight:800; padding:0.3rem 0.4rem; border-radius:6px; border:1px solid rgba(56,189,248,0.3); color:#38bdf8; background:rgba(56,189,248,0.1); cursor:pointer;" title="Quiet 15% volume for computer lab">
-                    🏫 Classroom (15%)
+                    Classroom (15%)
                   </button>
                   <button id="btn-mute-toggle" class="btn btn-subtle" style="font-size:0.65rem; font-weight:700; padding:0.3rem 0.5rem; border-radius:6px; border:1px solid rgba(255,255,255,0.12); color:#94a3b8; cursor:pointer;">
                     Mute
@@ -2707,7 +2707,7 @@ startMission() {
             <!-- Header -->
             <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:0.6rem;">
               <div style="display:flex; align-items:center; gap:0.6rem;">
-                <span id="veh-res-icon" style="font-size:1.8rem;">🛵</span>
+                <span id="veh-res-icon" style="font-size:1.8rem;"></span>
                 <div style="text-align:left;">
                   <div id="veh-res-name" style="font-size:1rem; font-weight:900; color:#fff;">Delivery Scooter</div>
                   <div id="veh-res-stage" style="font-size:0.72rem; color:#94a3b8;">Vehicle 1 of 7</div>
@@ -2760,7 +2760,7 @@ startMission() {
               <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.12em; color:#38bdf8;">
                 BRIDGE EVALUATION RESULT
               </div>
-              <span id="swr-vehicle-icon" style="font-size:1.6rem;">🌉</span>
+              <span id="swr-vehicle-icon" style="font-size:1.6rem;"></span>
             </div>
 
             <!-- Hero Metric: Strength-to-Weight Ratio -->
@@ -2809,7 +2809,7 @@ startMission() {
         <!-- Structural Directive -->
         <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:0.85rem;">
           <div style="font-size:0.65rem; text-transform:uppercase; color:var(--accent-cyan, #38bdf8); font-weight:800; letter-spacing:0.08em; margin-bottom:0.3rem; display:flex; align-items:center; gap:0.4rem;">
-            <span>🚨</span> STRUCTURAL DIRECTIVE
+            <span></span> STRUCTURAL DIRECTIVE
           </div>
           <p id="structural-directive-text" style="font-size:0.80rem; color:#cbd5e1; line-height:1.4; margin:0;">
             “Build a bridge connecting Himmatnagar and Ahmedabad. You have <strong>17 minutes</strong> to design before official vehicle and earthquake load challenges.”
@@ -2819,13 +2819,13 @@ startMission() {
         <!-- PRIMARY ACTION BUTTONS: SUBMIT DESIGN & MATERIAL SHOP -->
         <div style="display:flex; flex-direction:column; gap:0.5rem;">
           <button id="btn-submit-design" class="btn" style="width:100%; display:flex; align-items:center; justify-content:center; gap:0.6rem; padding:0.85rem; font-size:0.92rem; font-weight:900; background:linear-gradient(135deg, #10b981, #059669); color:#fff; border:none; border-radius:12px; cursor:pointer; box-shadow:0 4px 20px rgba(16,185,129,0.35); transition:all 0.2s;">
-            <span style="font-size:1.2rem;">📋</span>
+            <span style="font-size:1.2rem;"></span>
             <span>SUBMIT DESIGN</span>
           </button>
 
           <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.45rem;">
             <button id="btn-open-material-shop" class="btn" style="display:flex; align-items:center; justify-content:center; gap:0.4rem; padding:0.65rem 0.5rem; font-size:0.80rem; font-weight:800; background:linear-gradient(135deg, #0284c7, #6366f1); color:#fff; border:none; border-radius:10px; cursor:pointer; box-shadow:0 4px 15px rgba(99,102,241,0.25);">
-              <span>🛒</span>
+              <span></span>
               <span>Shop</span>
               <span id="shop-badge-cart" style="background:#fbbf24; color:#0f172a; font-size:0.70rem; font-weight:900; padding:0.1rem 0.4rem; border-radius:10px;">
                 ₹${this.budget}
@@ -2833,7 +2833,7 @@ startMission() {
             </button>
 
             <button id="btn-sidebar-view-design" class="btn btn-subtle" style="display:flex; align-items:center; justify-content:center; gap:0.4rem; padding:0.65rem 0.5rem; font-size:0.80rem; font-weight:700; border-radius:10px; border:1px solid rgba(56,189,248,0.3); color:#7dd3fc; background:rgba(56,189,248,0.08); cursor:pointer;">
-              <span>📐</span>
+              <span></span>
               <span>View Design</span>
               <span id="saved-designs-count-badge" style="background:rgba(56,189,248,0.3); font-size:0.68rem; padding:0.1rem 0.4rem; border-radius:10px;">${this.project.savedDesigns.length}</span>
             </button>
@@ -2844,7 +2844,7 @@ startMission() {
         <div style="background:rgba(15,23,42,0.6); border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:0.85rem; display:flex; flex-direction:column; gap:0.6rem;">
           <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.3rem;">
             <span style="font-size:0.68rem; font-weight:800; text-transform:uppercase; color:#94a3b8; letter-spacing:0.06em;">
-              🛠️ TOOLBOX
+              ️ TOOLBOX
             </span>
             <div style="display:flex; gap:0.3rem; align-items:center;">
               <button id="btn-tool-undo" class="btn btn-subtle" style="font-size:0.68rem; font-weight:800; padding:0.25rem 0.5rem; border-radius:8px; border:1px solid rgba(255,255,255,0.15); color:#cbd5e1; background:rgba(255,255,255,0.05); cursor:pointer;" title="Undo last placement (Ctrl+Z)">
@@ -2854,7 +2854,7 @@ startMission() {
                 ↪️ Redo
               </button>
               <button id="btn-tool-dismantle" class="btn btn-subtle" style="font-size:0.68rem; font-weight:800; padding:0.25rem 0.5rem; border-radius:8px; border:1px solid rgba(239,68,68,0.4); color:#f87171; background:rgba(239,68,68,0.1); cursor:pointer;" title="Remove element and refund ₹">
-                🪛 Dismantle
+                 Dismantle
               </button>
             </div>
           </div>
@@ -2903,7 +2903,7 @@ startMission() {
         
         <div style="display:flex; align-items:center; gap:0.9rem;">
           <div style="font-size:2.2rem; background:rgba(56,189,248,0.12); border:1px solid rgba(56,189,248,0.3); border-radius:16px; width:56px; height:56px; display:flex; align-items:center; justify-content:center;">
-            👷‍♀️
+            
           </div>
           <div>
             <h3 style="margin:0; font-size:1.25rem; font-weight:900; color:#fff;">Civil Engineer Registration</h3>
@@ -2913,7 +2913,7 @@ startMission() {
 
         <!-- Timed Challenge Notice Banner -->
         <div style="background:rgba(56,189,248,0.08); border:1px solid rgba(56,189,248,0.25); border-radius:14px; padding:0.9rem 1.1rem; display:flex; align-items:center; gap:0.8rem;">
-          <span style="font-size:1.6rem;">⏱️</span>
+          <span style="font-size:1.6rem;">️</span>
           <div>
             <div style="font-size:0.82rem; font-weight:800; color:#38bdf8;">17-Minute Timed Challenge</div>
             <div style="font-size:0.73rem; color:#cbd5e1; margin-top:0.15rem; line-height:1.4;">
@@ -2924,7 +2924,7 @@ startMission() {
 
         <!-- Error Alert Banner -->
         <div id="reg-error-msg" style="display:none; background:rgba(239,68,68,0.15); border:1px solid rgba(239,68,68,0.5); color:#fca5a5; font-size:0.78rem; font-weight:700; padding:0.6rem 0.9rem; border-radius:10px;">
-          ⚠️ Student Name is compulsory!
+          ️ Student Name is compulsory!
         </div>
 
         <!-- Form Fields -->
@@ -2946,7 +2946,7 @@ startMission() {
 
         <!-- Action Button -->
         <button id="btn-start-timed-mission" class="btn btn-primary" style="padding:0.85rem; font-size:0.95rem; font-weight:900; border-radius:12px; background:linear-gradient(135deg, #0284c7, #6366f1); border:none; box-shadow:0 4px 20px rgba(99,102,241,0.4); cursor:pointer; display:flex; align-items:center; justify-content:center; gap:0.5rem;">
-          <span>🚀 Start Mission & Begin 17-Minute Timer</span>
+          <span> Start Mission & Begin 17-Minute Timer</span>
         </button>
       </div>
     </div>
@@ -2954,7 +2954,7 @@ startMission() {
     <!-- SUBMIT CONFIRMATION MODAL -->
     <div id="submit-confirm-modal" style="position:absolute; inset:0; background:rgba(3,7,18,0.88); backdrop-filter:blur(10px); display:none; justify-content:center; align-items:center; z-index:310; padding:1.5rem;">
       <div style="background:#0c1224; border:1px solid rgba(52,211,153,0.4); border-radius:20px; width:100%; max-width:520px; padding:2rem; display:flex; flex-direction:column; gap:1.2rem; box-shadow:0 25px 70px rgba(0,0,0,0.85); text-align:center;">
-        <div style="font-size:3.2rem; margin-bottom:-0.3rem;">📋</div>
+        <div style="font-size:3.2rem; margin-bottom:-0.3rem;"></div>
         <h3 style="margin:0; font-size:1.35rem; font-weight:900; color:#fff;">Submit Your Bridge Design?</h3>
         <p style="margin:0; font-size:0.85rem; color:#cbd5e1; line-height:1.55;">
           Are you sure you want to submit your design? You still have <strong id="confirm-modal-time-left" style="color:#38bdf8; font-family:monospace; font-size:1.05rem;">17:00</strong> remaining.<br><br>
@@ -2976,7 +2976,7 @@ startMission() {
       <div style="background:#0c1224; border:1px solid rgba(56,189,248,0.45); border-radius:22px; width:100%; max-width:540px; padding:2rem 2.2rem; display:flex; flex-direction:column; gap:1.2rem; box-shadow:0 30px 90px rgba(0,0,0,0.9); text-align:center;">
         
         <div style="width:64px; height:64px; margin:0 auto; background:linear-gradient(135deg, rgba(56,189,248,0.2), rgba(16,185,129,0.2)); border:1px solid rgba(52,211,153,0.5); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2rem; box-shadow:0 0 25px rgba(16,185,129,0.3);">
-          📋
+          
         </div>
 
         <div>
@@ -3013,7 +3013,7 @@ startMission() {
 
         <!-- Start Level 2 Button -->
         <button id="btn-start-level-2" class="btn btn-primary" style="padding:0.95rem; font-size:1.05rem; font-weight:900; border-radius:14px; background:linear-gradient(135deg, #0284c7, #6366f1); border:none; box-shadow:0 4px 25px rgba(99,102,241,0.45); cursor:pointer; display:flex; align-items:center; justify-content:center; gap:0.6rem; transition:transform 0.15s, box-shadow 0.15s;">
-          <span>🚀</span>
+          <span></span>
           <span>Start Level 2</span>
         </button>
       </div>
@@ -3026,7 +3026,7 @@ startMission() {
       <!-- Top Cinematic Header Bar -->
       <div style="position:relative; z-index:10; display:flex; justify-content:space-between; align-items:center; padding:1.2rem 1.8rem; background:linear-gradient(180deg, rgba(3,7,18,0.85) 0%, rgba(3,7,18,0) 100%); pointer-events:none;">
         <div style="display:flex; align-items:center; gap:0.6rem;">
-          <span style="font-size:1.4rem;">✨</span>
+          <span style="font-size:1.4rem;"></span>
           <div>
             <div style="font-size:0.70rem; font-weight:900; text-transform:uppercase; letter-spacing:0.14em; color:#38bdf8;">
               STAGE 2 CINEMATIC
@@ -3053,7 +3053,7 @@ startMission() {
         
         <div style="display:flex; justify-content:space-between; align-items:center; padding:1.1rem 1.6rem; border-bottom:1px solid rgba(255,255,255,0.08); background:rgba(15,23,42,0.85);">
           <div style="display:flex; align-items:center; gap:0.75rem;">
-            <span style="font-size:1.6rem;">🛒</span>
+            <span style="font-size:1.6rem;"></span>
             <div>
               <h3 style="margin:0; font-size:1.15rem; font-weight:800; color:#fff;">Civil Engineering Material Shop</h3>
               <p style="margin:0.2rem 0 0 0; font-size:0.75rem; color:#94a3b8;">Purchase components to construct the bridge. Dismantling placed items refunds your budget.</p>
@@ -3066,7 +3066,7 @@ startMission() {
               <span id="shop-modal-budget-display" style="font-size:1.15rem; font-weight:900; color:#34d399; font-family:monospace;">₹${this.budget}</span>
             </div>
             <button id="btn-close-material-shop" class="btn btn-subtle" style="font-size:1.2rem; line-height:1; padding:0.35rem 0.65rem; border-radius:8px; cursor:pointer;">
-              ✕
+              &times;
             </button>
           </div>
         </div>
@@ -3089,14 +3089,14 @@ startMission() {
         
         <div style="display:flex; justify-content:space-between; align-items:center; padding:1.1rem 1.6rem; border-bottom:1px solid rgba(255,255,255,0.08); background:rgba(15,23,42,0.9);">
           <div style="display:flex; align-items:center; gap:0.75rem;">
-            <span style="font-size:1.6rem;">📐</span>
+            <span style="font-size:1.6rem;"></span>
             <div>
               <h3 style="margin:0; font-size:1.15rem; font-weight:800; color:#fff;">Saved Bridge Design Vault</h3>
               <p style="margin:0.2rem 0 0 0; font-size:0.75rem; color:#94a3b8;">Review your bridge designs saved before every test. You can inspect your blueprints anytime.</p>
             </div>
           </div>
           <button id="btn-close-view-design" class="btn btn-subtle" style="font-size:1.2rem; line-height:1; padding:0.35rem 0.65rem; border-radius:8px; cursor:pointer;">
-            ✕
+            &times;
           </button>
         </div>
 
@@ -3132,7 +3132,7 @@ startMission() {
     <div id="validation-warning-modal" style="position:absolute; inset:0; background:rgba(3,7,18,0.85); backdrop-filter:blur(10px); display:none; justify-content:center; align-items:center; z-index:230; padding:1.5rem;">
       <div style="background:#0c1224; border:1px solid rgba(239,68,68,0.4); border-radius:18px; width:100%; max-width:680px; display:flex; flex-direction:column; box-shadow:0 25px 70px rgba(0,0,0,0.85); overflow:hidden;">
         <div style="padding:1.1rem 1.5rem; background:rgba(239,68,68,0.12); border-bottom:1px solid rgba(239,68,68,0.25); display:flex; align-items:center; gap:0.75rem;">
-          <span style="font-size:1.6rem;">⚠️</span>
+          <span style="font-size:1.6rem;">️</span>
           <div>
             <h3 style="margin:0; font-size:1.1rem; font-weight:800; color:#fff;">Construction Validation Recommendations</h3>
             <p style="margin:0.2rem 0 0 0; font-size:0.75rem; color:#fca5a5;">Please address these structural items before testing with live vehicles:</p>
@@ -3145,7 +3145,7 @@ startMission() {
 
         <div style="padding:1rem 1.5rem; border-top:1px solid rgba(255,255,255,0.08); background:rgba(15,23,42,0.8); display:flex; justify-content:space-between; align-items:center;">
           <button id="btn-val-view-design" class="btn btn-subtle" style="font-size:0.8rem; padding:0.45rem 1rem; color:#38bdf8; border-color:rgba(56,189,248,0.3); cursor:pointer;">
-            📁 View Saved Design in Vault
+             View Saved Design in Vault
           </button>
           <button id="btn-close-validation" class="btn btn-primary" style="padding:0.5rem 1.5rem; font-weight:700; border-radius:10px; background:linear-gradient(135deg, #0284c7, #6366f1); border:none; cursor:pointer;">
             Got it! Return to Blueprint
@@ -3160,14 +3160,14 @@ startMission() {
         
         <div style="padding:1.2rem 1.6rem; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); border-bottom:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center;">
           <div style="display:flex; align-items:center; gap:0.85rem;">
-            <span style="font-size:1.8rem;" id="report-header-badge">🏆</span>
+            <span style="font-size:1.8rem;" id="report-header-badge"></span>
             <div>
-              <h3 style="margin:0; font-size:1.25rem; font-weight:900; color:#fff;" id="report-title">🌉 Overall Bridge Report</h3>
+              <h3 style="margin:0; font-size:1.25rem; font-weight:900; color:#fff;" id="report-title"> Overall Bridge Report</h3>
               <p style="margin:0.2rem 0 0 0; font-size:0.75rem; color:#94a3b8;" id="report-subtitle">Simple report for young bridge builders (Ages 7–9)</p>
             </div>
           </div>
           <button id="btn-close-report" class="btn btn-subtle" style="font-size:1.2rem; line-height:1; padding:0.35rem 0.65rem; border-radius:8px; cursor:pointer;">
-            ✕
+            &times;
           </button>
         </div>
 
@@ -3175,23 +3175,23 @@ startMission() {
           <!-- 4 Metric Cards -->
           <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:0.8rem;">
             <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:0.85rem; text-align:center;">
-              <div style="font-size:0.68rem; color:#94a3b8; text-transform:uppercase; font-weight:700;">💰 MONEY LEFT</div>
+              <div style="font-size:0.68rem; color:#94a3b8; text-transform:uppercase; font-weight:700;"> MONEY LEFT</div>
               <div id="report-budget-val" style="font-size:1.25rem; font-weight:900; color:#34d399; font-family:monospace; margin-top:0.25rem;">₹450</div>
               <div id="report-budget-spent" style="font-size:0.68rem; color:#64748b; margin-top:0.15rem;">Spent: ₹250 / ₹700</div>
             </div>
             <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:0.85rem; text-align:center;">
-              <div style="font-size:0.68rem; color:#94a3b8; text-transform:uppercase; font-weight:700;">⚖️ BRIDGE WEIGHT</div>
+              <div style="font-size:0.68rem; color:#94a3b8; text-transform:uppercase; font-weight:700;">️ BRIDGE WEIGHT</div>
               <div id="report-mass-val" style="font-size:1.25rem; font-weight:900; color:#fbbf24; font-family:monospace; margin-top:0.25rem;">124 g</div>
               <div id="report-mass-sub" style="font-size:0.68rem; color:#64748b; margin-top:0.15rem;">Light & strong sticks</div>
             </div>
             <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:0.85rem; text-align:center;">
-              <div style="font-size:0.68rem; color:#94a3b8; text-transform:uppercase; font-weight:700;">🚗 HEAVIEST CAR CROSSED</div>
-              <div id="report-vehicle-val" style="font-size:1.05rem; font-weight:900; color:#38bdf8; margin-top:0.35rem;">🚌 Bus (400g)</div>
+              <div style="font-size:0.68rem; color:#94a3b8; text-transform:uppercase; font-weight:700;"> HEAVIEST CAR CROSSED</div>
+              <div id="report-vehicle-val" style="font-size:1.05rem; font-weight:900; color:#38bdf8; margin-top:0.35rem;"> Bus (400g)</div>
               <div id="report-vehicle-sub" style="font-size:0.68rem; color:#64748b; margin-top:0.15rem;">Passed the test!</div>
             </div>
             <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:0.85rem; text-align:center;">
-              <div style="font-size:0.68rem; color:#94a3b8; text-transform:uppercase; font-weight:700;">🛡️ EARTHQUAKE SHAKES</div>
-              <div id="report-earthquake-val" style="font-size:1.05rem; font-weight:900; color:#c084fc; margin-top:0.35rem;">⚡ Level 2</div>
+              <div style="font-size:0.68rem; color:#94a3b8; text-transform:uppercase; font-weight:700;">️ EARTHQUAKE SHAKES</div>
+              <div id="report-earthquake-val" style="font-size:1.05rem; font-weight:900; color:#c084fc; margin-top:0.35rem;"> Level 2</div>
               <div id="report-earthquake-sub" style="font-size:0.68rem; color:#64748b; margin-top:0.15rem;">Survived the shake!</div>
             </div>
           </div>
@@ -3199,16 +3199,16 @@ startMission() {
           <!-- Bridge Strength Score Banner -->
           <div style="background:linear-gradient(135deg, rgba(56,189,248,0.12), rgba(99,102,241,0.12)); border:1px solid rgba(56,189,248,0.3); border-radius:14px; padding:1rem 1.4rem; display:flex; justify-content:space-between; align-items:center;">
             <div>
-              <div style="font-size:0.72rem; text-transform:uppercase; color:#7dd3fc; font-weight:800; letter-spacing:0.06em;">⭐ BRIDGE STRENGTH SCORE</div>
+              <div style="font-size:0.72rem; text-transform:uppercase; color:#7dd3fc; font-weight:800; letter-spacing:0.06em;"> BRIDGE STRENGTH SCORE</div>
               <div id="report-strength-headline" style="font-size:1.15rem; font-weight:900; color:#fff; margin-top:0.15rem;">Strength Score: <span id="report-str-weight-ratio" style="color:#38bdf8; font-family:monospace; font-size:1.35rem;">3.22</span></div>
               <div id="report-strength-desc" style="font-size:0.78rem; color:#94a3b8; margin-top:0.2rem;">Your bridge carries over 3 times its own weight! That makes it super strong.</div>
             </div>
-            <div id="report-strength-stars" style="font-size:2.4rem;">⭐⭐⭐</div>
+            <div id="report-strength-stars" style="font-size:2.4rem;"></div>
           </div>
 
           <!-- Vehicles Passed Progression List -->
           <div style="background:rgba(15,23,42,0.6); border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:1rem;">
-            <div style="font-size:0.72rem; text-transform:uppercase; color:#94a3b8; font-weight:800; margin-bottom:0.6rem;">🚗 VEHICLE TEST RESULTS</div>
+            <div style="font-size:0.72rem; text-transform:uppercase; color:#94a3b8; font-weight:800; margin-bottom:0.6rem;"> VEHICLE TEST RESULTS</div>
             <div id="report-vehicles-grid" style="display:flex; flex-wrap:wrap; gap:0.5rem;">
               <!-- Populated dynamically -->
             </div>
@@ -3220,7 +3220,7 @@ startMission() {
             <!-- 1. What Happened -->
             <div style="background:rgba(239,68,68,0.08); border:1px solid rgba(239,68,68,0.25); border-radius:14px; padding:0.9rem 1.1rem;">
               <div style="font-size:0.72rem; text-transform:uppercase; color:#fca5a5; font-weight:800; letter-spacing:0.06em; display:flex; align-items:center; gap:0.4rem;">
-                <span id="report-what-icon">💥</span> <span id="report-what-title">1. WHAT HAPPENED</span>
+                <span id="report-what-icon"></span> <span id="report-what-title">1. WHAT HAPPENED</span>
               </div>
               <div id="report-what-failed-text" style="font-size:0.84rem; color:#f1f5f9; line-height:1.5; margin-top:0.35rem;">
                 <!-- Populated dynamically -->
@@ -3230,7 +3230,7 @@ startMission() {
             <!-- 2. Why It Happened -->
             <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:0.9rem 1.1rem;">
               <div style="font-size:0.72rem; text-transform:uppercase; color:#fbbf24; font-weight:800; letter-spacing:0.06em; display:flex; align-items:center; gap:0.4rem;">
-                <span>🤔</span> <span id="report-why-title">2. WHY IT HAPPENED</span>
+                <span></span> <span id="report-why-title">2. WHY IT HAPPENED</span>
               </div>
               <div id="report-why-failed-text" style="font-size:0.84rem; color:#f1f5f9; line-height:1.5; margin-top:0.35rem;">
                 <!-- Populated dynamically -->
@@ -3240,7 +3240,7 @@ startMission() {
             <!-- 3. How Can It Be Better -->
             <div style="background:rgba(16,185,129,0.08); border:1px solid rgba(52,211,153,0.25); border-radius:14px; padding:0.9rem 1.1rem;">
               <div style="font-size:0.72rem; text-transform:uppercase; color:#6ee7b7; font-weight:800; letter-spacing:0.06em; display:flex; align-items:center; gap:0.4rem;">
-                <span>💡</span> <span id="report-better-title">3. HOW TO MAKE YOUR BRIDGE BETTER</span>
+                <span></span> <span id="report-better-title">3. HOW TO MAKE YOUR BRIDGE BETTER</span>
               </div>
               <div id="report-educational-takeaways" style="margin-top:0.4rem; display:flex; flex-direction:column; gap:0.35rem; font-size:0.82rem; color:#e2e8f0; line-height:1.5;">
                 <!-- Populated dynamically with simple tips -->
@@ -3253,10 +3253,10 @@ startMission() {
 
         <div style="padding:1rem 1.8rem; border-top:1px solid rgba(255,255,255,0.08); background:rgba(15,23,42,0.95); display:flex; justify-content:space-between; align-items:center;">
           <button id="btn-report-view-design" class="btn btn-subtle" style="font-weight:700; border-radius:10px; border:1px solid rgba(56,189,248,0.3); color:#38bdf8;">
-            📐 Look at Blueprint
+             Look at Blueprint
           </button>
           <button id="btn-redesign-bridge" class="btn btn-primary" style="padding:0.65rem 2rem; font-weight:800; font-size:0.92rem; border-radius:12px; background:linear-gradient(135deg, #10b981, #059669); border:none; box-shadow:0 4px 20px rgba(16,185,129,0.35); cursor:pointer;">
-            ✏️ Return to Blueprint
+            ️ Return to Blueprint
           </button>
         </div>
       </div>
@@ -3501,9 +3501,9 @@ setupTestingAndVaultEvents() {
     if (audioValLabel) audioValLabel.textContent = `${pct}%`;
     if (audioVolPercent) audioVolPercent.textContent = `${pct}%`;
     if (audioIcon) {
-      if (pct === 0) audioIcon.textContent = "🔇";
-      else if (pct <= 25) audioIcon.textContent = "🔈";
-      else audioIcon.textContent = "🔊";
+      if (pct === 0) audioIcon.textContent = "";
+      else if (pct <= 25) audioIcon.textContent = "";
+      else audioIcon.textContent = "";
     }
     if (classroomBtn) {
       if (pct <= 20 && pct > 0) {
@@ -3546,7 +3546,7 @@ setupTestingAndVaultEvents() {
     classroomBtn.addEventListener("click", () => {
       sound.setClassroomMode(true);
       syncAudioUI(sound.getVolume());
-      this.showToast("🏫 Classroom Mode Active: 15% whisper volume set.", "info");
+      this.showToast("Classroom Mode Active: 15% whisper volume set.", "info");
     });
   }
 
@@ -3554,10 +3554,10 @@ setupTestingAndVaultEvents() {
     muteBtn.addEventListener("click", () => {
       if (sound.getVolume() > 0) {
         sound.setVolume(0);
-        this.showToast("🔇 Audio Muted.", "info");
+        this.showToast(" Audio Muted.", "info");
       } else {
         sound.setVolume(0.35);
-        this.showToast("🔊 Audio Unmuted (35%).", "info");
+        this.showToast(" Audio Unmuted (35%).", "info");
       }
       syncAudioUI(sound.getVolume());
     });
@@ -3605,7 +3605,7 @@ handleRegistrationSubmit() {
   if (!nameVal) {
     if (errMsg) {
       errMsg.style.display = "block";
-      errMsg.textContent = "⚠️ Student Name is compulsory! Please enter your name to proceed.";
+      errMsg.textContent = "️ Student Name is compulsory! Please enter your name to proceed.";
     }
     if (nameInput) {
       nameInput.focus();
@@ -3721,7 +3721,7 @@ submitDesign(isAutoSubmit = false) {
     btnSubmit.style.color = "#94a3b8";
     btnSubmit.style.borderColor = "rgba(255,255,255,0.1)";
     btnSubmit.style.cursor = "not-allowed";
-    btnSubmit.innerHTML = `<span>🔒</span> <span>DESIGN SUBMITTED</span>`;
+    btnSubmit.innerHTML = `<span></span> <span>DESIGN SUBMITTED</span>`;
   }
   this.activeTool = null;
   this.selectedFirstDot = null;
@@ -3730,7 +3730,7 @@ submitDesign(isAutoSubmit = false) {
 
   const timerBadge = document.getElementById("mission-timer-badge");
   if (timerBadge) {
-    timerBadge.innerHTML = `<span>📋</span> <span>SUBMITTED (${this.formatTime(this.missionTimerSeconds)})</span>`;
+    timerBadge.innerHTML = `<span></span> <span>SUBMITTED (${this.formatTime(this.missionTimerSeconds)})</span>`;
     timerBadge.style.color = "#34d399";
     timerBadge.style.borderColor = "rgba(52, 211, 153, 0.5)";
   }
@@ -3752,7 +3752,7 @@ submitDesign(isAutoSubmit = false) {
 
   if (isAutoSubmit) {
     sound.playAlarm();
-    this.showToast(`⏱️ 17 minutes over! Auto-submitted & saved design for ${studentDisplayName}${teamDisplayName} into View Design section!`, "warning");
+    this.showToast(`️ 17 minutes over! Auto-submitted & saved design for ${studentDisplayName}${teamDisplayName} into View Design section!`, "warning");
   } else {
     sound.playSuccess();
     this.showToast(`✓ Bridge design submitted & saved to View Design section for ${studentDisplayName}${teamDisplayName}!`, "success");
@@ -4009,7 +4009,7 @@ deleteSavedDesign(snapshotId) {
         if (infoEl) infoEl.textContent = "No saved designs in vault";
       }
     }
-    this.showToast("🗑️ Design deleted from vault", "info");
+    this.showToast("️ Design deleted from vault", "info");
     this.renderSavedDesignsList();
     this.updateTelemetryUI();
   }
@@ -4050,12 +4050,12 @@ renderSavedDesignsList() {
       <div class="saved-design-item" data-id="${snap.id}" style="background:${isSelected ? 'rgba(56,189,248,0.15)' : 'rgba(255,255,255,0.03)'}; border:1px solid ${isSelected ? 'rgba(56,189,248,0.5)' : 'rgba(255,255,255,0.08)'}; border-radius:10px; padding:0.65rem 0.75rem; cursor:pointer; transition:all 0.2s; margin-bottom:0.45rem;">
         <div style="display:flex; justify-content:space-between; align-items:flex-start;">
           <div style="font-size:0.82rem; font-weight:800; color:#fff; display:flex; align-items:center; gap:0.35rem;">
-            <span>👷</span>
+            <span></span>
             <span style="color:#38bdf8;">${student}</span>
             ${team ? `<span style="color:#a78bfa; font-weight:700;">${team}</span>` : ""}
           </div>
           <button class="btn-delete-saved-design" data-delete-id="${snap.id}" title="Delete this blueprint" style="background:rgba(239,68,68,0.12); border:1px solid rgba(239,68,68,0.35); color:#fca5a5; border-radius:6px; font-size:0.7rem; padding:0.15rem 0.4rem; cursor:pointer; transition:all 0.2s;">
-            🗑️
+            ️
           </button>
         </div>
         <div style="font-size:0.72rem; font-weight:700; color:#e2e8f0; margin-top:0.2rem;">${cleanLabel}</div>
@@ -4090,7 +4090,7 @@ renderSavedDesignsList() {
         BridgeStorage.clearPermanentVault();
         if (this.project.savedDesigns) this.project.savedDesigns = [];
         this.currentPreviewSnapshot = null;
-        this.showToast("🗑️ All designs deleted from vault", "info");
+        this.showToast("️ All designs deleted from vault", "info");
         this.renderSavedDesignsList();
         this.updateTelemetryUI();
         const canvas = document.getElementById("saved-design-preview-canvas");
@@ -4138,7 +4138,7 @@ drawSavedDesignPreview(snapshot, viewName = "left") {
     const team = (snapshot.teamName && snapshot.teamName.trim().length > 0) ? ` • ${snapshot.teamName.trim()}` : "";
     const swr = BridgeStructuralAnalysis.calculateStrengthToWeightRatio(snapshot);
     const cleanLabel = (snapshot.label || "").replace(/#\d+\s*/g, "").trim();
-    infoEl.innerHTML = `<span style="color:#38bdf8; font-weight:800;">👷 ${student}</span>${team ? `<span style="color:#a78bfa; font-weight:700;">${team}</span>` : ""} — <strong>${cleanLabel}</strong> • Mass: <span style="color:#fbbf24;">${swr.weight}g</span> • Max Load: <span style="color:#38bdf8;">${swr.strength}g</span> • <strong style="color:#34d399; font-size:0.85rem;">SWR: ${swr.ratio.toFixed(2)}</strong>`;
+    infoEl.innerHTML = `<span style="color:#38bdf8; font-weight:800;"> ${student}</span>${team ? `<span style="color:#a78bfa; font-weight:700;">${team}</span>` : ""} — <strong>${cleanLabel}</strong> • Mass: <span style="color:#fbbf24;">${swr.weight}g</span> • Max Load: <span style="color:#38bdf8;">${swr.strength}g</span> • <strong style="color:#34d399; font-size:0.85rem;">SWR: ${swr.ratio.toFixed(2)}</strong>`;
   }
 
   const canvas = document.getElementById("saved-design-preview-canvas");
@@ -4302,7 +4302,7 @@ updateLevelUI() {
       levelBadge.style.borderColor = "rgba(52,211,153,0.5)";
       levelBadge.style.color = "#34d399";
     }
-    if (levelIcon) levelIcon.textContent = "🚦";
+    if (levelIcon) levelIcon.textContent = "";
     if (levelText) levelText.textContent = "LEVEL 2: Vehicle Challenge";
     if (directiveText) {
       directiveText.innerHTML = "“<strong>LEVEL 2: VEHICLE TEST CHALLENGE ACTIVE!</strong> Your bridge design is submitted and locked. Vehicles of varying weight will now travel across your bridge to test deflection, load distribution, and structural integrity.”";
@@ -4355,7 +4355,7 @@ updateLevelUI() {
       }
     }
     if (btnAerial) {
-      btnAerial.innerHTML = "<span>🚁 Aerial View</span>";
+      btnAerial.innerHTML = "<span>Aerial View</span>";
     }
     if (viewSwitcher) viewSwitcher.style.display = "flex";
     if (btnAerial) btnAerial.style.display = "inline-flex";
@@ -4365,7 +4365,7 @@ updateLevelUI() {
       levelBadge.style.borderColor = "rgba(99,102,241,0.4)";
       levelBadge.style.color = "#a5b4fc";
     }
-    if (levelIcon) levelIcon.textContent = "🎮";
+    if (levelIcon) levelIcon.textContent = "";
     if (levelText) levelText.textContent = "LEVEL 1: Design";
     if (directiveText) {
       directiveText.innerHTML = "“Build a bridge connecting Himmatnagar and Ahmedabad. You have <strong>17 minutes</strong> to design before official vehicle and earthquake load challenges.”";
@@ -5089,7 +5089,7 @@ openValidationNoticeModal(validationResult) {
     return `
       <div style="background:${isErr ? 'rgba(239,68,68,0.08)' : 'rgba(245,158,11,0.08)'}; border:1px solid ${isErr ? 'rgba(239,68,68,0.3)' : 'rgba(245,158,11,0.3)'}; border-radius:12px; padding:0.85rem 1rem;">
         <div style="display:flex; align-items:center; gap:0.5rem; font-weight:800; font-size:0.85rem; color:${isErr ? '#fca5a5' : '#fde68a'};">
-          <span>${isErr ? '🚫' : '⚠️'}</span>
+          <span>${isErr ? '' : '️'}</span>
           <span>${iss.title}</span>
         </div>
         <p style="margin:0.35rem 0 0 0; font-size:0.78rem; color:#cbd5e1; line-height:1.45;">
@@ -5438,7 +5438,7 @@ triggerBridgeCollapse(vehicle, breakCol) {
   // Red status alert in HUD
   const statusEl = document.getElementById("test-status-pill");
   if (statusEl) {
-    statusEl.textContent = `💥 OVERLOAD COLLAPSE! ${vehicle.name} (${vehicle.simulationLoad}g) exceeded bridge capacity.`;
+    statusEl.textContent = ` OVERLOAD COLLAPSE! ${vehicle.name} (${vehicle.simulationLoad}g) exceeded bridge capacity.`;
     statusEl.style.color = "#f87171";
     statusEl.style.borderColor = "rgba(239,68,68,0.5)";
     statusEl.style.background = "rgba(239,68,68,0.2)";
@@ -5520,7 +5520,7 @@ showVehicleCrossingResult(vehicle) {
     if (countEl) countEl.textContent = "Click below to test the next vehicle.";
   } else {
     // All 7 vehicles passed!
-    if (msgEl) msgEl.textContent = `🎉 All 7 vehicle load tests passed! Bridge withstood the maximum 3500g load.`;
+    if (msgEl) msgEl.textContent = ` All 7 vehicle load tests passed! Bridge withstood the maximum 3500g load.`;
     if (btnNext) {
       btnNext.textContent = `View Bridge Evaluation Result ➔`;
       btnNext.onclick = () => {
@@ -5695,7 +5695,7 @@ enterPostEvaluationMode() {
     viewSwitcher.appendChild(btnAerial);
   }
   if (btnAerial) {
-    btnAerial.innerHTML = "<span>🚁 Aerial View</span>";
+    btnAerial.innerHTML = "<span>Aerial View</span>";
   }
 
   if (viewSwitcher) viewSwitcher.style.display = "flex";
@@ -5712,7 +5712,7 @@ enterPostEvaluationMode() {
   const btnBlueprintHome = document.getElementById("btn-blueprint-home");
   if (btnBlueprintHome) {
     btnBlueprintHome.style.display = "inline-flex";
-    btnBlueprintHome.innerHTML = "<span>🏠</span> <span>Mission Hub</span>";
+    btnBlueprintHome.innerHTML = " <span>Mission Hub</span>";
   }
 
   // REMOVE all other buttons & badges:
@@ -5764,7 +5764,7 @@ showStrengthToWeightResult(swrData) {
   if (strengthVal) strengthVal.textContent = `${strength} g`;
   if (weightVal) weightVal.textContent = `${originalWeight} g`;
   if (vehicleName) vehicleName.textContent = (swrData && swrData.maxVehicleSupported && swrData.maxVehicleSupported !== "None") ? `Holds ${swrData.maxVehicleSupported}` : "No Load Supported";
-  if (vehicleIcon) vehicleIcon.textContent = (swrData && swrData.vehicleIcon) || (swrData && swrData.designNumber === 1 ? "🚫" : "🌉");
+  if (vehicleIcon) vehicleIcon.textContent = (swrData && swrData.vehicleIcon) || (swrData && swrData.designNumber === 1 ? "" : "");
 
   resultOverlay.style.display = "flex";
 
@@ -5781,7 +5781,7 @@ inspectFailedSegment(critComp) {
   this.stopTestingSequence();
   this.inspectedFailedSegment = critComp;
   this.switchView("left");
-  this.showToast("🔍 Inspecting failed segment on blueprint in pulsing red!", "warning");
+  this.showToast(" Inspecting failed segment on blueprint in pulsing red!", "warning");
   this.redrawCanvas();
 }
 
@@ -5797,7 +5797,7 @@ runEarthquakeTest(levelIdx) {
     if (typeof sound.playSuccess === "function") sound.playSuccess();
     this.project.testResults.maximumEarthquakeLevel = 3;
     BridgeStorage.saveProject(this.project);
-    this.showToast("🏆 INCREDIBLE! Your bridge survived all 3 Earthquake Levels!", "success");
+    this.showToast(" INCREDIBLE! Your bridge survived all 3 Earthquake Levels!", "success");
     setTimeout(() => {
       this.showFinalReport({
         success: true,
@@ -5922,7 +5922,7 @@ redesignBridge() {
   this.updateTimerDisplay();
   this.renderToolbox();
   this.updateUndoRedoButtons();
-  this.showToast("🔒 Returned to Blueprint. Design is submitted and locked.", "info");
+  this.showToast(" Returned to Blueprint. Design is submitted and locked.", "info");
   this.redrawCanvas();
 }
 
@@ -5950,7 +5950,7 @@ startNewProject() {
       btnSubmit.style.color = "#fff";
       btnSubmit.style.borderColor = "";
       btnSubmit.style.cursor = "pointer";
-      btnSubmit.innerHTML = `<span style="font-size:1.2rem;">📋</span> <span>SUBMIT DESIGN</span>`;
+      btnSubmit.innerHTML = `<span style="font-size:1.2rem;"></span> <span>SUBMIT DESIGN</span>`;
     }
 
     this.project = BridgeStorage.createNewProject();
@@ -5958,7 +5958,7 @@ startNewProject() {
     this.purchased = this.project.purchased;
     this.placedElements = this.project.placedElements;
     this.saveCurrentState();
-    this.showToast("✨ Started new project with ₹700 budget!", "success");
+    this.showToast(" Started new project with ₹700 budget!", "success");
     this.renderToolbox();
     this.updateTelemetryUI();
     this.updateTimerDisplay();
@@ -5977,7 +5977,7 @@ drawVehicleSprite(ctx, vehicle, x, y) {
   ctx.translate(x, y);
 
   if (vehicle.id === "scooter") {
-    // 🛵 Scooter
+    //  Scooter
     ctx.fillStyle = "#38bdf8";
     ctx.fillRect(-12, -8, 20, 4); // Footboard
     ctx.fillStyle = "#0284c7";
@@ -5993,7 +5993,7 @@ drawVehicleSprite(ctx, vehicle, x, y) {
     ctx.beginPath(); ctx.arc(-10, 0, 1.8, 0, Math.PI * 2); ctx.fill();
     ctx.beginPath(); ctx.arc(10, 0, 1.8, 0, Math.PI * 2); ctx.fill();
   } else if (vehicle.id === "motorcycle") {
-    // 🏍️ Motorcycle
+    // ️ Motorcycle
     ctx.fillStyle = "#ef4444";
     ctx.beginPath();
     ctx.moveTo(-10, -6); ctx.lineTo(6, -6); ctx.lineTo(12, -18); ctx.lineTo(-2, -16);
@@ -6006,7 +6006,7 @@ drawVehicleSprite(ctx, vehicle, x, y) {
     ctx.beginPath(); ctx.arc(-14, 0, 2.5, 0, Math.PI * 2); ctx.fill();
     ctx.beginPath(); ctx.arc(14, 0, 2.5, 0, Math.PI * 2); ctx.fill();
   } else if (vehicle.id === "car") {
-    // 🚗 Car
+    //  Car
     ctx.fillStyle = "#3b82f6";
     ctx.beginPath();
     ctx.roundRect(-22, -14, 44, 10, [4, 4, 2, 2]);
@@ -6031,7 +6031,7 @@ drawVehicleSprite(ctx, vehicle, x, y) {
     ctx.beginPath(); ctx.arc(-12, 0, 2.5, 0, Math.PI * 2); ctx.fill();
     ctx.beginPath(); ctx.arc(12, 0, 2.5, 0, Math.PI * 2); ctx.fill();
   } else if (vehicle.id === "suv") {
-    // 🚙 SUV
+    //  SUV
     ctx.fillStyle = "#059669";
     ctx.beginPath();
     ctx.roundRect(-24, -18, 48, 14, [4, 4, 2, 2]);
@@ -6055,7 +6055,7 @@ drawVehicleSprite(ctx, vehicle, x, y) {
     ctx.beginPath(); ctx.arc(-13, 0, 3, 0, Math.PI * 2); ctx.fill();
     ctx.beginPath(); ctx.arc(13, 0, 3, 0, Math.PI * 2); ctx.fill();
   } else if (vehicle.id === "bus") {
-    // 🚌 Small Bus
+    //  Small Bus
     ctx.fillStyle = "#eab308";
     ctx.beginPath();
     ctx.roundRect(-34, -28, 68, 22, [5, 5, 2, 2]);
@@ -6076,7 +6076,7 @@ drawVehicleSprite(ctx, vehicle, x, y) {
     ctx.beginPath(); ctx.arc(-18, 0, 2.5, 0, Math.PI * 2); ctx.fill();
     ctx.beginPath(); ctx.arc(18, 0, 2.5, 0, Math.PI * 2); ctx.fill();
   } else if (vehicle.id === "truck" || vehicle.id === "transport") {
-    // 🚚 / 🚛 Heavy Truck / Heavy Transport
+    //  /  Heavy Truck / Heavy Transport
     const isTrans = vehicle.id === "transport";
     ctx.fillStyle = isTrans ? "#c026d3" : "#ea580c";
     // Cab
@@ -6180,7 +6180,7 @@ getNodeCanvasPos(dot) {
     btnDismantle?.addEventListener("click", () => {
       if (this.hasSubmitted) {
         sound.playBuzzer();
-        this.showToast("🔒 Design is submitted and locked! Cannot dismantle.", "warning");
+        this.showToast(" Design is submitted and locked! Cannot dismantle.", "warning");
         return;
       }
       sound.playClick();
@@ -6201,7 +6201,7 @@ getNodeCanvasPos(dot) {
     btnUndo?.addEventListener("click", () => {
       if (this.hasSubmitted) {
         sound.playBuzzer();
-        this.showToast("🔒 Design is submitted and locked! Cannot undo.", "warning");
+        this.showToast(" Design is submitted and locked! Cannot undo.", "warning");
         return;
       }
       this.undo();
@@ -6210,7 +6210,7 @@ getNodeCanvasPos(dot) {
     btnRedo?.addEventListener("click", () => {
       if (this.hasSubmitted) {
         sound.playBuzzer();
-        this.showToast("🔒 Design is submitted and locked! Cannot redo.", "warning");
+        this.showToast(" Design is submitted and locked! Cannot redo.", "warning");
         return;
       }
       this.redo();
@@ -6253,7 +6253,7 @@ getNodeCanvasPos(dot) {
   undo() {
     if (this.hasSubmitted) {
       sound.playBuzzer();
-      this.showToast("🔒 Design is submitted and locked! Cannot undo.", "warning");
+      this.showToast(" Design is submitted and locked! Cannot undo.", "warning");
       return;
     }
     if (!this.undoStack || this.undoStack.length === 0) {
@@ -6292,7 +6292,7 @@ getNodeCanvasPos(dot) {
   redo() {
     if (this.hasSubmitted) {
       sound.playBuzzer();
-      this.showToast("🔒 Design is submitted and locked! Cannot redo.", "warning");
+      this.showToast(" Design is submitted and locked! Cannot redo.", "warning");
       return;
     }
     if (!this.redoStack || this.redoStack.length === 0) {
@@ -6433,7 +6433,7 @@ getNodeCanvasPos(dot) {
               purchasedQty === 0
                 ? `
                 <button class="btn btn-purchase-single" data-item-id="${item.id}" ${canAfford ? "" : "disabled"} style="width:100%; padding:0.5rem; font-weight:800; font-size:0.8rem; background:${canAfford ? "linear-gradient(135deg, #10b981, #059669)" : "rgba(255,255,255,0.05)"}; color:${canAfford ? "#fff" : "#64748b"}; border:1px solid ${canAfford ? "#34d399" : "transparent"}; border-radius:8px; cursor:${canAfford ? "pointer" : "not-allowed"};">
-                  ${canAfford ? `💳 Purchase 1 (₹${item.price})` : "Insufficient Budget"}
+                  ${canAfford ? ` Purchase 1 (₹${item.price})` : "Insufficient Budget"}
                 </button>
               `
                 : `
@@ -6487,14 +6487,14 @@ getNodeCanvasPos(dot) {
   buyItem(id) {
     if (this.hasSubmitted) {
       sound.playBuzzer();
-      this.showToast("🔒 Design is submitted and locked! Open a new project to purchase materials.", "warning");
+      this.showToast(" Design is submitted and locked! Open a new project to purchase materials.", "warning");
       return;
     }
     const item = MATERIAL_CATALOG[id];
     if (!item) return;
     if (this.budget < item.price) {
       sound.playBuzzer();
-      this.showToast("⚠️ Not enough budget! Need ₹" + item.price, "error");
+      this.showToast("️ Not enough budget! Need ₹" + item.price, "error");
       return;
     }
 
@@ -6510,7 +6510,7 @@ getNodeCanvasPos(dot) {
   refundUnplacedItem(id) {
     if (this.hasSubmitted) {
       sound.playBuzzer();
-      this.showToast("🔒 Design is submitted and locked! Modifications are not allowed.", "warning");
+      this.showToast(" Design is submitted and locked! Modifications are not allowed.", "warning");
       return;
     }
     const item = MATERIAL_CATALOG[id];
@@ -6522,7 +6522,7 @@ getNodeCanvasPos(dot) {
 
     if (unplaced <= 0) {
       sound.playBuzzer();
-      this.showToast(`⚠️ All ${bought} ${item.name}(s) are placed on the bridge! Use Dismantle to remove them first.`, "warn");
+      this.showToast(`️ All ${bought} ${item.name}(s) are placed on the bridge! Use Dismantle to remove them first.`, "warn");
       return;
     }
 
@@ -6571,12 +6571,12 @@ getNodeCanvasPos(dot) {
         banner.style.background = "rgba(15,23,42,0.85)";
         banner.style.borderColor = "rgba(239,68,68,0.3)";
         banner.style.color = "#94a3b8";
-        banner.innerHTML = "🔒 <strong>DESIGN SUBMITTED & LOCKED:</strong> This bridge is sealed for testing and cannot be modified. Start a new project to build another bridge!";
+        banner.innerHTML = " <strong>DESIGN SUBMITTED & LOCKED:</strong> This bridge is sealed for testing and cannot be modified. Start a new project to build another bridge!";
       } else if (this.activeTool === "dismantle") {
         banner.style.background = "rgba(239,68,68,0.12)";
         banner.style.borderColor = "#ef4444";
         banner.style.color = "#fca5a5";
-        banner.innerHTML = "🪛 <strong>DISMANTLE ACTIVE:</strong> Click any placed wooden member, chord, road deck, or screw to remove it and refund ₹ directly back to your budget!";
+        banner.innerHTML = " <strong>DISMANTLE ACTIVE:</strong> Click any placed wooden member, chord, road deck, or screw to remove it and refund ₹ directly back to your budget!";
       } else if (this.activeTool && MATERIAL_CATALOG[this.activeTool]) {
         const item = MATERIAL_CATALOG[this.activeTool];
         const unplaced = this.getUnplacedCount(this.activeTool);
@@ -6623,7 +6623,7 @@ getNodeCanvasPos(dot) {
       btn.addEventListener("click", () => {
         if (this.hasSubmitted) {
           sound.playBuzzer();
-          this.showToast("🔒 Design is submitted and locked! Start a new project to build another bridge.", "warning");
+          this.showToast(" Design is submitted and locked! Start a new project to build another bridge.", "warning");
           return;
         }
         const id = btn.getAttribute("data-item-id");
@@ -6746,7 +6746,7 @@ getNodeCanvasPos(dot) {
           <div style="display:flex; align-items:center; gap:0.6rem; width:100%; justify-content:space-between;">
             <div style="display:flex; align-items:center; gap:0.5rem; flex:1; min-width:0;">
               <span style="display:inline-flex; align-items:center; gap:0.35rem; color:#38bdf8; font-weight:800; font-size:0.74rem; text-transform:uppercase; letter-spacing:0.06em; white-space:nowrap;">
-                <span>🚨</span> STRUCTURAL DIRECTIVE:
+                <span></span> STRUCTURAL DIRECTIVE:
               </span>
               <span id="level2-directive-bottom-text" style="color:#e2e8f0; font-size:0.78rem; font-weight:600; line-height:1.3; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">
                 Level 2: Vehicle Test Challenge active. Bridge design submitted and locked. Real-time stress and load distribution testing across Himatnagar—Ahmedabad span.
@@ -6764,7 +6764,7 @@ getNodeCanvasPos(dot) {
         legendDisplay.innerHTML = `
           <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
             <span style="display:inline-flex; align-items:center; gap:0.4rem; color:#38bdf8; font-weight:700; font-size:0.76rem;">
-              <span>🚁</span>
+              <span></span>
               <span>TOP AERIAL 3D PERSPECTIVE — DYNAMIC VEHICLE LOAD CROSSING</span>
             </span>
           </div>
@@ -6776,7 +6776,7 @@ getNodeCanvasPos(dot) {
         legendDisplay.innerHTML = `
           <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
             <span style="display:inline-flex; align-items:center; gap:0.4rem; color:#38bdf8; font-weight:700; font-size:0.76rem;">
-              <span>📐</span>
+              <span></span>
               <span>LEFT SIDE TRUSS ELEVATION</span>
             </span>
             <span style="font-family:monospace; font-size:0.74rem; color:#94a3b8; font-weight:700;">
@@ -6791,7 +6791,7 @@ getNodeCanvasPos(dot) {
         legendDisplay.innerHTML = `
           <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
             <span style="display:inline-flex; align-items:center; gap:0.4rem; color:#c084fc; font-weight:700; font-size:0.76rem;">
-              <span>📐</span>
+              <span></span>
               <span>RIGHT SIDE TRUSS ELEVATION</span>
             </span>
             <span style="font-family:monospace; font-size:0.74rem; color:#94a3b8; font-weight:700;">
@@ -6806,7 +6806,7 @@ getNodeCanvasPos(dot) {
         legendDisplay.innerHTML = `
           <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
             <span style="display:inline-flex; align-items:center; gap:0.4rem; color:#10b981; font-weight:700; font-size:0.76rem;">
-              <span>👁️</span>
+              <span>️</span>
               <span>FRONT VIEW: PORTAL ENTRANCE & ROADWAY</span>
             </span>
             <span style="font-family:monospace; font-size:0.74rem; color:#fbbf24; font-weight:700;">
@@ -6869,7 +6869,7 @@ getNodeCanvasPos(dot) {
             tooltip.style.display = "block";
             tooltip.style.left = `${mx + 14}px`;
             tooltip.style.top = `${my - 28}px`;
-            tooltip.innerHTML = `<span style="color:#ef4444; font-weight:800;">🗑️ Tap to Dismantle</span> — Refund <span style="color:#34d399; font-weight:800;">₹${found.price}</span>`;
+            tooltip.innerHTML = `<span style="color:#ef4444; font-weight:800;">️ Tap to Dismantle</span> — Refund <span style="color:#34d399; font-weight:800;">₹${found.price}</span>`;
           }
           return;
         } else {
@@ -6918,7 +6918,7 @@ getNodeCanvasPos(dot) {
       if (this.isPostEvaluationMode) return;
       if (this.hasSubmitted) {
         sound.playBuzzer();
-        this.showToast("🔒 Design is submitted and locked! Start a new project to build another bridge.", "warning");
+        this.showToast(" Design is submitted and locked! Start a new project to build another bridge.", "warning");
         return;
       }
       // 1. Dismantle Click
@@ -6934,14 +6934,14 @@ getNodeCanvasPos(dot) {
 
       // If no active tool, advise user
       if (!this.activeTool) {
-        this.showToast("👈 Select a tool from the Construction Toolbox on the right to start building!", "info");
+        this.showToast(" Select a tool from the Construction Toolbox on the right to start building!", "info");
         return;
       }
 
       // 2. Road Deck placement in Front View: Lays over the whole dot grid of front view!
       if (this.activeTool === "road_deck") {
         if (this.currentView !== "front") {
-          this.showToast("👉 Switch to <strong>Front View</strong> to lay the Road Deck over the dot grid!", "warn");
+          this.showToast(" Switch to <strong>Front View</strong> to lay the Road Deck over the dot grid!", "warn");
           return;
         }
         this.placeRoadDeckFront();
@@ -7094,7 +7094,7 @@ getNodeCanvasPos(dot) {
   dismantleElement(item) {
     if (this.hasSubmitted) {
       sound.playBuzzer();
-      this.showToast("🔒 Design is submitted and locked! Cannot dismantle components.", "warning");
+      this.showToast(" Design is submitted and locked! Cannot dismantle components.", "warning");
       return;
     }
     const list = this.placedElements[this.currentView];
@@ -7109,7 +7109,7 @@ getNodeCanvasPos(dot) {
     this.budget += item.price;
     this.purchased[item.type] = Math.max(0, (this.purchased[item.type] || 1) - 1);
 
-    this.showToast(`🗑️ Dismantled component! <span style="color:#34d399; font-weight:800;">+₹${item.price} Refunded</span> to Budget.`, "refund");
+    this.showToast(`️ Dismantled component! <span style="color:#34d399; font-weight:800;">+₹${item.price} Refunded</span> to Budget.`, "refund");
     this.hoveredPlacedId = null;
     this.renderToolbox();
     this.saveCurrentState();
@@ -7120,7 +7120,7 @@ getNodeCanvasPos(dot) {
   handleHorizontalPlacement(dot) {
     if (this.hasSubmitted) {
       sound.playBuzzer();
-      this.showToast("🔒 Design is submitted and locked! Cannot modify bridge.", "warning");
+      this.showToast(" Design is submitted and locked! Cannot modify bridge.", "warning");
       return;
     }
     if (!this.selectedFirstDot) {
@@ -7142,7 +7142,7 @@ getNodeCanvasPos(dot) {
 
     if (d1.row !== d2.row || Math.abs(d1.col - d2.col) !== 1) {
       sound.playBuzzer();
-      this.showToast("⚠️ Horizontal beams must connect two adjacent dots on the SAME row!", "error");
+      this.showToast("️ Horizontal beams must connect two adjacent dots on the SAME row!", "error");
       this.redrawCanvas();
       return;
     }
@@ -7155,14 +7155,14 @@ getNodeCanvasPos(dot) {
     );
     if (exists) {
       sound.playBuzzer();
-      this.showToast("⚠️ A horizontal beam already exists between these dots!", "warn");
+      this.showToast("️ A horizontal beam already exists between these dots!", "warn");
       this.redrawCanvas();
       return;
     }
 
     if (this.getUnplacedCount("horizontal") <= 0) {
       sound.playBuzzer();
-      this.showToast("🛒 No Horizontal Beams in inventory! Open Material Shop to purchase one for ₹3.", "warn");
+      this.showToast(" No Horizontal Beams in inventory! Open Material Shop to purchase one for ₹3.", "warn");
       this.redrawCanvas();
       return;
     }
@@ -7179,7 +7179,7 @@ getNodeCanvasPos(dot) {
     this.placedElements[this.currentView].push(newH);
     this.pushUndoAction({ type: "place", view: this.currentView, element: newH });
 
-    this.showToast("🪵 Horizontal Timber Beam installed!", "success");
+    this.showToast(" Horizontal Timber Beam installed!", "success");
     this.renderToolbox();
     this.saveCurrentState();
     this.redrawCanvas();
@@ -7188,7 +7188,7 @@ getNodeCanvasPos(dot) {
   handleVerticalPlacement(dot) {
     if (this.hasSubmitted) {
       sound.playBuzzer();
-      this.showToast("🔒 Design is submitted and locked! Cannot modify bridge.", "warning");
+      this.showToast(" Design is submitted and locked! Cannot modify bridge.", "warning");
       return;
     }
     if (!this.selectedFirstDot) {
@@ -7210,7 +7210,7 @@ getNodeCanvasPos(dot) {
 
     if (d1.col !== d2.col || Math.abs(d1.row - d2.row) !== 1) {
       sound.playBuzzer();
-      this.showToast("⚠️ Vertical beams must connect two adjacent dots on the SAME column!", "error");
+      this.showToast("️ Vertical beams must connect two adjacent dots on the SAME column!", "error");
       this.redrawCanvas();
       return;
     }
@@ -7223,14 +7223,14 @@ getNodeCanvasPos(dot) {
     );
     if (exists) {
       sound.playBuzzer();
-      this.showToast("⚠️ A vertical beam already exists between these dots!", "warn");
+      this.showToast("️ A vertical beam already exists between these dots!", "warn");
       this.redrawCanvas();
       return;
     }
 
     if (this.getUnplacedCount("vertical") <= 0) {
       sound.playBuzzer();
-      this.showToast("🛒 No Vertical Beams in inventory! Open Material Shop to purchase one for ₹3.", "warn");
+      this.showToast(" No Vertical Beams in inventory! Open Material Shop to purchase one for ₹3.", "warn");
       this.redrawCanvas();
       return;
     }
@@ -7247,7 +7247,7 @@ getNodeCanvasPos(dot) {
     this.placedElements[this.currentView].push(newV);
     this.pushUndoAction({ type: "place", view: this.currentView, element: newV });
 
-    this.showToast("🪵 Vertical Timber Post installed!", "success");
+    this.showToast(" Vertical Timber Post installed!", "success");
     this.renderToolbox();
     this.saveCurrentState();
     this.redrawCanvas();
@@ -7256,7 +7256,7 @@ getNodeCanvasPos(dot) {
   handleDiagonalPlacement(dot) {
     if (this.hasSubmitted) {
       sound.playBuzzer();
-      this.showToast("🔒 Design is submitted and locked! Cannot modify bridge.", "warning");
+      this.showToast(" Design is submitted and locked! Cannot modify bridge.", "warning");
       return;
     }
     if (!this.selectedFirstDot) {
@@ -7278,7 +7278,7 @@ getNodeCanvasPos(dot) {
 
     if (Math.abs(d1.col - d2.col) !== 1 || Math.abs(d1.row - d2.row) !== 1) {
       sound.playBuzzer();
-      this.showToast("⚠️ Diagonal beams must connect two diagonally adjacent dots across a grid square!", "error");
+      this.showToast("️ Diagonal beams must connect two diagonally adjacent dots across a grid square!", "error");
       this.redrawCanvas();
       return;
     }
@@ -7291,14 +7291,14 @@ getNodeCanvasPos(dot) {
     );
     if (exists) {
       sound.playBuzzer();
-      this.showToast("⚠️ A diagonal beam already exists here!", "warn");
+      this.showToast("️ A diagonal beam already exists here!", "warn");
       this.redrawCanvas();
       return;
     }
 
     if (this.getUnplacedCount("diagonal") <= 0) {
       sound.playBuzzer();
-      this.showToast("🛒 No Diagonal Beams in inventory! Open Material Shop to purchase one for ₹3.", "warn");
+      this.showToast(" No Diagonal Beams in inventory! Open Material Shop to purchase one for ₹3.", "warn");
       this.redrawCanvas();
       return;
     }
@@ -7315,7 +7315,7 @@ getNodeCanvasPos(dot) {
     this.placedElements[this.currentView].push(newD);
     this.pushUndoAction({ type: "place", view: this.currentView, element: newD });
 
-    this.showToast("📐 Diagonal Timber Strut installed!", "success");
+    this.showToast(" Diagonal Timber Strut installed!", "success");
     this.renderToolbox();
     this.saveCurrentState();
     this.redrawCanvas();
@@ -7324,17 +7324,17 @@ getNodeCanvasPos(dot) {
   handleTopChordPlacement(dot) {
     if (this.hasSubmitted) {
       sound.playBuzzer();
-      this.showToast("🔒 Design is submitted and locked! Cannot modify bridge.", "warning");
+      this.showToast(" Design is submitted and locked! Cannot modify bridge.", "warning");
       return;
     }
     if (this.currentView === "front") {
-      this.showToast("⚠️ Chords are installed in Side Views (Left & Right Truss).", "warn");
+      this.showToast("️ Chords are installed in Side Views (Left & Right Truss).", "warn");
       return;
     }
 
     if (dot.row < 1 || dot.row > 4) {
       sound.playBuzzer();
-      this.showToast("⚠️ Top Chord can only be installed on Rows 1, 2, 3, or 4! Use Bottom Chord for Row 0 (Deck).", "error");
+      this.showToast("️ Top Chord can only be installed on Rows 1, 2, 3, or 4! Use Bottom Chord for Row 0 (Deck).", "error");
       return;
     }
 
@@ -7343,13 +7343,13 @@ getNodeCanvasPos(dot) {
     );
     if (exists) {
       sound.playBuzzer();
-      this.showToast(`⚠️ Top Chord is already installed across Row ${dot.row}!`, "warn");
+      this.showToast(`️ Top Chord is already installed across Row ${dot.row}!`, "warn");
       return;
     }
 
     if (this.getUnplacedCount("top_chord") <= 0) {
       sound.playBuzzer();
-      this.showToast("🛒 No Top Chord Beams in inventory! Open Material Shop to purchase one for ₹20.", "warn");
+      this.showToast(" No Top Chord Beams in inventory! Open Material Shop to purchase one for ₹20.", "warn");
       return;
     }
 
@@ -7366,7 +7366,7 @@ getNodeCanvasPos(dot) {
     this.placedElements[this.currentView].push(newTC);
     this.pushUndoAction({ type: "place", view: this.currentView, element: newTC });
 
-    this.showToast(`🟦 Heavy Top Chord Beam installed across Row ${dot.row} (Dots 0–12)!`, "success");
+    this.showToast(` Heavy Top Chord Beam installed across Row ${dot.row} (Dots 0–12)!`, "success");
     this.renderToolbox();
     this.saveCurrentState();
     this.redrawCanvas();
@@ -7375,17 +7375,17 @@ getNodeCanvasPos(dot) {
   handleBottomChordPlacement(dot) {
     if (this.hasSubmitted) {
       sound.playBuzzer();
-      this.showToast("🔒 Design is submitted and locked! Cannot modify bridge.", "warning");
+      this.showToast(" Design is submitted and locked! Cannot modify bridge.", "warning");
       return;
     }
     if (this.currentView === "front") {
-      this.showToast("⚠️ Chords are installed in Side Views (Left & Right Truss).", "warn");
+      this.showToast("️ Chords are installed in Side Views (Left & Right Truss).", "warn");
       return;
     }
 
     if (dot.row !== 0) {
       sound.playBuzzer();
-      this.showToast("⚠️ Bottom Chord can only be installed on Row 0 (Deck Baseline)! Use Top Chord for upper rows.", "error");
+      this.showToast("️ Bottom Chord can only be installed on Row 0 (Deck Baseline)! Use Top Chord for upper rows.", "error");
       return;
     }
 
@@ -7394,13 +7394,13 @@ getNodeCanvasPos(dot) {
     );
     if (exists) {
       sound.playBuzzer();
-      this.showToast("⚠️ Bottom Chord is already installed across Row 0 (Deck Baseline)!", "warn");
+      this.showToast("️ Bottom Chord is already installed across Row 0 (Deck Baseline)!", "warn");
       return;
     }
 
     if (this.getUnplacedCount("bottom_chord") <= 0) {
       sound.playBuzzer();
-      this.showToast("🛒 No Bottom Chord Beams in inventory! Open Material Shop to purchase one for ₹20.", "warn");
+      this.showToast(" No Bottom Chord Beams in inventory! Open Material Shop to purchase one for ₹20.", "warn");
       return;
     }
 
@@ -7417,7 +7417,7 @@ getNodeCanvasPos(dot) {
     this.placedElements[this.currentView].push(newBC);
     this.pushUndoAction({ type: "place", view: this.currentView, element: newBC });
 
-    this.showToast("🟦 Heavy Bottom Chord Beam installed across Row 0 (Anchor A to Anchor B)!", "success");
+    this.showToast(" Heavy Bottom Chord Beam installed across Row 0 (Anchor A to Anchor B)!", "success");
     this.renderToolbox();
     this.saveCurrentState();
     this.redrawCanvas();
@@ -7426,7 +7426,7 @@ getNodeCanvasPos(dot) {
   handleJointPlacement(dot) {
     if (this.hasSubmitted) {
       sound.playBuzzer();
-      this.showToast("🔒 Design is submitted and locked! Cannot modify bridge.", "warning");
+      this.showToast(" Design is submitted and locked! Cannot modify bridge.", "warning");
       return;
     }
     const exists = (this.placedElements[this.currentView] || []).some(
@@ -7434,13 +7434,13 @@ getNodeCanvasPos(dot) {
     );
     if (exists) {
       sound.playBuzzer();
-      this.showToast(`⚠️ A metallic joint screw is already secured at Row ${dot.row}, Dot ${dot.col}!`, "warn");
+      this.showToast(`️ A metallic joint screw is already secured at Row ${dot.row}, Dot ${dot.col}!`, "warn");
       return;
     }
 
     if (this.getUnplacedCount("joint") <= 0) {
       sound.playBuzzer();
-      this.showToast("🛒 No Joint Fasteners in inventory! Open Material Shop to purchase one for ₹2.", "warn");
+      this.showToast(" No Joint Fasteners in inventory! Open Material Shop to purchase one for ₹2.", "warn");
       return;
     }
 
@@ -7456,7 +7456,7 @@ getNodeCanvasPos(dot) {
     this.placedElements[this.currentView].push(newJoint);
     this.pushUndoAction({ type: "place", view: this.currentView, element: newJoint });
 
-    this.showToast(`🔩 Metallic Grey Screw Fastener secured at Row ${dot.row}, Dot ${dot.col}!`, "success");
+    this.showToast(` Metallic Grey Screw Fastener secured at Row ${dot.row}, Dot ${dot.col}!`, "success");
     this.renderToolbox();
     this.saveCurrentState();
     this.redrawCanvas();
@@ -7465,19 +7465,19 @@ getNodeCanvasPos(dot) {
   placeRoadDeckFront() {
     if (this.hasSubmitted) {
       sound.playBuzzer();
-      this.showToast("🔒 Design is submitted and locked! Cannot modify bridge.", "warning");
+      this.showToast(" Design is submitted and locked! Cannot modify bridge.", "warning");
       return;
     }
     const exists = (this.placedElements["front"] || []).some((m) => m.type === "road_deck");
     if (exists) {
       sound.playBuzzer();
-      this.showToast("⚠️ Complete Road Deck is already laid over the whole Front View dot grid!", "warn");
+      this.showToast("️ Complete Road Deck is already laid over the whole Front View dot grid!", "warn");
       return;
     }
 
     if (this.getUnplacedCount("road_deck") <= 0) {
       sound.playBuzzer();
-      this.showToast("🛒 No Road Deck in inventory! Open Material Shop to purchase one for ₹30.", "warn");
+      this.showToast(" No Road Deck in inventory! Open Material Shop to purchase one for ₹30.", "warn");
       return;
     }
 
@@ -7491,7 +7491,7 @@ getNodeCanvasPos(dot) {
     this.placedElements["front"].push(newRoad);
     this.pushUndoAction({ type: "place", view: "front", element: newRoad });
 
-    this.showToast("🛣️ Complete Road Deck laid over the whole dot grid, covering all rows and dots!", "success");
+    this.showToast("️ Complete Road Deck laid over the whole dot grid, covering all rows and dots!", "success");
     this.renderToolbox();
     this.saveCurrentState();
     this.redrawCanvas();
@@ -7757,7 +7757,7 @@ getNodeCanvasPos(dot) {
       ctx.fillStyle = "#38bdf8";
       ctx.font = "bold 11px Inter, sans-serif";
       ctx.textAlign = "center";
-      ctx.fillText("🌉 CANYON SPAN OPEN — NO MATERIALS PLACED YET", pMid.x, pMid.y - 25);
+      ctx.fillText(" CANYON SPAN OPEN — NO MATERIALS PLACED YET", pMid.x, pMid.y - 25);
 
       ctx.fillStyle = "#94a3b8";
       ctx.font = "10px Inter, sans-serif";
@@ -7938,7 +7938,7 @@ getNodeCanvasPos(dot) {
       ctx.font = "bold 9.5px sans-serif";
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
-      const bText = isLeft ? "⚓ ANCHOR A" : "⚓ ANCHOR B";
+      const bText = isLeft ? "ANCHOR A" : "ANCHOR B";
       ctx.fillText(bText, isLeft ? badgeX - bW * 0.5 + 14 : badgeX + bW * 0.5 - 14, badgeY + bH * 0.5);
       ctx.restore();
     };
@@ -8457,9 +8457,9 @@ getNodeCanvasPos(dot) {
     const badgeY = (vehicle.id === "transport" || vehicle.id === "truck" || vehicle.id === "bus") ? -80 : -66;
     const defMm = (this.currentDeflection || 0).toFixed(1);
     const isMidPause = (this.vehicleAnimState === "center_pause");
-    let badgeText = `${vehicle.icon} ${vehicle.name} (${vehicle.simulationLoad}g) • ↓ ${defMm}mm`;
+    let badgeText = `${vehicle.name} (${vehicle.simulationLoad}g) • ↓ ${defMm}mm`;
     if (isBreaking) {
-      badgeText = `💥 ${vehicle.name} Overload Collapse!`;
+      badgeText = ` ${vehicle.name} Overload Collapse!`;
     }
 
     ctx.font = "bold 11px sans-serif";
@@ -8513,7 +8513,7 @@ getNodeCanvasPos(dot) {
     };
 
     if (vehicle.id === "scooter") {
-      // 🛵 Delivery Scooter
+      //  Delivery Scooter
       ctx.fillStyle = "#06b6d4"; // Cyan
       ctx.fillRect(-10, -10, 20, 5); // Footboard
       ctx.fillStyle = "#0891b2";
@@ -8531,7 +8531,7 @@ getNodeCanvasPos(dot) {
       drawWheel(9, -2, 4);
 
     } else if (vehicle.id === "motorcycle") {
-      // 🏍️ Sport Motorcycle
+      // ️ Sport Motorcycle
       ctx.fillStyle = "#ef4444"; // Red
       ctx.beginPath();
       ctx.moveTo(-12, -8); ctx.lineTo(10, -8); ctx.lineTo(14, -20); ctx.lineTo(-4, -18);
@@ -8548,7 +8548,7 @@ getNodeCanvasPos(dot) {
       drawWheel(12, -2, 5);
 
     } else if (vehicle.id === "car") {
-      // 🚗 Commuter Car (Sleek Sedan)
+      //  Commuter Car (Sleek Sedan)
       ctx.fillStyle = "#2563eb"; // Sapphire Blue Body
       ctx.beginPath();
       ctx.roundRect(-22, -14, 44, 9, [3, 5, 2, 2]);
@@ -8569,7 +8569,7 @@ getNodeCanvasPos(dot) {
       drawWheel(12, -3, 5.5);
 
     } else if (vehicle.id === "suv") {
-      // 🚙 Heavy SUV
+      //  Heavy SUV
       ctx.fillStyle = "#059669"; // Emerald Green
       ctx.beginPath();
       ctx.roundRect(-24, -17, 48, 12, [3, 4, 2, 2]);
@@ -8590,7 +8590,7 @@ getNodeCanvasPos(dot) {
       drawWheel(13, -3, 6.5);
 
     } else if (vehicle.id === "bus") {
-      // 🚌 School Bus (Yellow)
+      //  School Bus (Yellow)
       ctx.fillStyle = "#eab308"; // Golden Yellow
       ctx.beginPath();
       ctx.roundRect(-32, -26, 64, 20, [4, 5, 2, 2]);
@@ -8609,7 +8609,7 @@ getNodeCanvasPos(dot) {
       drawWheel(20, -4, 6.5);
 
     } else if (vehicle.id === "truck") {
-      // 🚚 Heavy Cargo Truck
+      //  Heavy Cargo Truck
       // Red Cab
       ctx.fillStyle = "#dc2626";
       ctx.beginPath();
@@ -8632,7 +8632,7 @@ getNodeCanvasPos(dot) {
       drawWheel(22, -4, 6.5);
 
     } else {
-      // 🚛 Heavy Transport (18-Wheeler Multi-Axle)
+      //  Heavy Transport (18-Wheeler Multi-Axle)
       // Purple Sleeper Cab
       ctx.fillStyle = "#7c3aed";
       ctx.beginPath();
@@ -8737,7 +8737,7 @@ getNodeCanvasPos(dot) {
 
     ctx.fillStyle = "#38bdf8";
     ctx.font = "bold 10px sans-serif";
-    ctx.fillText("🚁 TOP AERIAL 3D PERSPECTIVE", hudX + 12, hudY + 18);
+    ctx.fillText(" TOP AERIAL 3D PERSPECTIVE", hudX + 12, hudY + 18);
 
     if (this.isTestingActive && this.activeTestType === "vehicle") {
       const vehicle = SIMULATION_CONFIG.vehicles[this.activeVehicleIndex] || SIMULATION_CONFIG.vehicles[0];
@@ -8752,7 +8752,7 @@ getNodeCanvasPos(dot) {
       ctx.font = "bold 11px sans-serif";
       const statusText = totalPlaced === 0 
         ? "Canyon Open • Build in Left, Right & Front Views"
-        : `Built: ${totalPlaced} parts • Deck: ${hasRoadDeck ? "Installed ✓" : "Unpaved ⚠️"}`;
+        : `Built: ${totalPlaced} parts • Deck: ${hasRoadDeck ? "Installed ✓" : "Unpaved ️"}`;
       ctx.fillText(statusText, hudX + 12, hudY + 38);
     }
 
@@ -9135,7 +9135,7 @@ getNodeCanvasPos(dot) {
         ctx.font = "bold 10px JetBrains Mono, monospace";
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
-        ctx.fillText(`💥 FAILED (${Math.round((fail.stressRatio || 1.2) * 100)}% STRESS)`, midX, midY - 1);
+        ctx.fillText(` FAILED (${Math.round((fail.stressRatio || 1.2) * 100)}% STRESS)`, midX, midY - 1);
       }
     } else if (fail.col !== undefined && fail.row !== undefined) {
       const dot = this.gridDots.find(d => d.row === fail.row && d.col === fail.col);
@@ -9160,7 +9160,7 @@ getNodeCanvasPos(dot) {
         ctx.font = "bold 9.5px JetBrains Mono, monospace";
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
-        ctx.fillText(`💥 FAILED JOINT (${Math.round((fail.stressRatio || 1.2) * 100)}%)`, dot.x, dot.y - 26);
+        ctx.fillText(` FAILED JOINT (${Math.round((fail.stressRatio || 1.2) * 100)}%)`, dot.x, dot.y - 26);
       }
     }
     ctx.restore();
@@ -9232,7 +9232,7 @@ getNodeCanvasPos(dot) {
       ctx.fillStyle = "#ffffff";
       ctx.font = "bold 11px sans-serif";
       ctx.textAlign = "center";
-      ctx.fillText("✕ DISMANTLE", len * 0.5, 3.5);
+      ctx.fillText("&times; DISMANTLE", len * 0.5, 3.5);
     }
 
     ctx.restore();
@@ -9310,7 +9310,7 @@ getNodeCanvasPos(dot) {
       ctx.fillStyle = "#ffffff";
       ctx.font = "bold 11px sans-serif";
       ctx.textAlign = "center";
-      ctx.fillText("✕ DISMANTLE CHORD", len * 0.5, 4);
+      ctx.fillText("&times; DISMANTLE CHORD", len * 0.5, 4);
     }
 
     ctx.restore();
@@ -9701,7 +9701,7 @@ getNodeCanvasPos(dot) {
       ctx.fillStyle = "#34d399";
       ctx.font = "bold 11px sans-serif";
       ctx.textAlign = "center";
-      ctx.fillText("🛣️ COMPLETE ROAD DECK — ALL 10 ROWS COVERED", centerX, roadTop + 38);
+      ctx.fillText("️ COMPLETE ROAD DECK — ALL 10 ROWS COVERED", centerX, roadTop + 38);
     } else {
       ctx.fillStyle = "rgba(0, 0, 0, 0.85)";
       ctx.strokeStyle = "#ef4444";
@@ -9714,7 +9714,7 @@ getNodeCanvasPos(dot) {
       ctx.fillStyle = "#ffffff";
       ctx.font = "bold 13px sans-serif";
       ctx.textAlign = "center";
-      ctx.fillText("✕ CLICK TO DISMANTLE ROAD DECK (REFUND ₹30)", centerX, (roadTop + roadBottom) * 0.5 + 5);
+      ctx.fillText("&times; CLICK TO DISMANTLE ROAD DECK (REFUND ₹30)", centerX, (roadTop + roadBottom) * 0.5 + 5);
     }
 
     ctx.restore();

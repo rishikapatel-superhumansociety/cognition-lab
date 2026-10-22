@@ -44,9 +44,9 @@ export class UrbanHeatSimulation {
 
             <!-- Era Toggle Toolbar -->
             <div style="position:absolute; top:15px; left:15px; display:flex; gap:0.5rem; background:rgba(15,23,42,0.85); backdrop-filter:blur(8px); padding:0.4rem; border-radius:8px; border:1px solid var(--border-subtle); z-index:10;">
-              <button id="era-1950-btn" class="filter-chip">⏳ 1950s Historical City</button>
-              <button id="era-2020-btn" class="filter-chip active">🏙️ 2020s Modern Concrete</button>
-              <button id="heatmap-toggle-btn" class="filter-chip" style="color:var(--accent-amber);">🌡️ Toggle Thermal IR</button>
+              <button id="era-1950-btn" class="filter-chip">1950s Historical City</button>
+              <button id="era-2020-btn" class="filter-chip active">2020s Modern Concrete</button>
+              <button id="heatmap-toggle-btn" class="filter-chip" style="color:var(--accent-amber);">️ Toggle Thermal IR</button>
             </div>
 
             <!-- Real-Time Microclimate Telemetry HUD -->
@@ -160,7 +160,7 @@ export class UrbanHeatSimulation {
       <!-- Green Canopy Slider -->
       <div class="control-group">
         <div class="control-header">
-          <span class="control-title">🌳 Green Canopy Cover</span>
+          <span class="control-title">Green Canopy Cover</span>
           <span class="control-value" id="val-green">${this.greenCover}%</span>
         </div>
         <input type="range" class="slider-range" id="slider-green" min="5" max="65" value="${this.greenCover}">
@@ -174,7 +174,7 @@ export class UrbanHeatSimulation {
       <!-- Building Density Slider -->
       <div class="control-group">
         <div class="control-header">
-          <span class="control-title">🏢 Building Surface Density</span>
+          <span class="control-title">Building Surface Density</span>
           <span class="control-value" id="val-density">${this.buildingDensity}%</span>
         </div>
         <input type="range" class="slider-range" id="slider-density" min="10" max="90" value="${this.buildingDensity}">
@@ -188,7 +188,7 @@ export class UrbanHeatSimulation {
       <!-- Surface Albedo Slider -->
       <div class="control-group">
         <div class="control-header">
-          <span class="control-title">☀️ Surface Albedo (Reflectivity α)</span>
+          <span class="control-title">Surface Albedo (Reflectivity α)</span>
           <span class="control-value" id="val-albedo">${this.albedo.toFixed(2)}</span>
         </div>
         <input type="range" class="slider-range" id="slider-albedo" min="0.10" max="0.75" step="0.05" value="${this.albedo}">
@@ -201,7 +201,7 @@ export class UrbanHeatSimulation {
 
       <!-- Action Button -->
       <button id="scenario-action-btn" class="btn btn-primary" style="width:100%; justify-content:center; padding:0.8rem; margin-top:0.5rem;">
-        📊 Record Scenario 1 Temperature Delta
+        Record Scenario 1 Temperature Delta
       </button>
 
       <div id="heat-feedback" style="font-size:0.8rem; text-align:center; margin-top:0.75rem; min-height:1.2rem;"></div>
@@ -303,7 +303,7 @@ export class UrbanHeatSimulation {
       Modern 2020s city is suffering heat strokes at 42°C. Propose an engineering intervention:
       increase <strong>Albedo (&ge; 0.55 via reflective cool roofs)</strong> and <strong>Canopy (&ge; 45%)</strong> to bring surface temp <strong>below 33.5°C</strong>!
     `;
-    document.getElementById("scenario-action-btn").textContent = "🧪 Test Mitigation Efficacy";
+    document.getElementById("scenario-action-btn").textContent = "Test Mitigation Efficacy";
   }
 
   advanceToScenario3Ethical() {
@@ -320,18 +320,18 @@ export class UrbanHeatSimulation {
       </div>
 
       <div style="background:rgba(244,63,94,0.08); border:1px solid rgba(244,63,94,0.3); border-radius:8px; padding:0.85rem; margin-bottom:1.25rem; font-size:0.82rem; color:#fca5a5;">
-        ⚖️ <strong>Ethical Question:</strong> <em>"Should municipal governments mandate compulsory 40% cool-roof taxes on private factories, or subsidize urban forestry through city-wide tax hikes?"</em>
+        <strong>Ethical Question:</strong> <em>"Should municipal governments mandate compulsory 40% cool-roof taxes on private factories, or subsidize urban forestry through city-wide tax hikes?"</em>
       </div>
 
       <div class="ethical-deck" style="grid-template-columns:1fr; gap:0.75rem;">
         <div class="ethical-card" id="policy-tax-factory">
-          <div class="ethical-card-icon">🏭</div>
+          <div class="ethical-card-icon">1</div>
           <h3>Policy A: Polluter-Pays Mandate</h3>
           <p>Compel industrial warehouse owners to paint all roofs white and install sedum trays at their own expense.</p>
         </div>
 
         <div class="ethical-card" id="policy-city-subsidy">
-          <div class="ethical-card-icon">🌳</div>
+          <div class="ethical-card-icon">2</div>
           <h3>Policy B: Universal Municipal Forestry</h3>
           <p>Fund public street canopy corridors and biophilic cooling parks across all neighborhoods through civic bond funding.</p>
         </div>
@@ -373,7 +373,7 @@ export class UrbanHeatSimulation {
     modalArea.innerHTML = `
       <div class="value-card-modal" style="max-width:580px; width:100%;">
         <div style="text-align:center; margin-bottom:1.5rem;">
-          <div style="font-size:2.5rem; margin-bottom:0.25rem;">🏙️🏆</div>
+          <div style="font-size:2.5rem; margin-bottom:0.25rem;"></div>
           <h2 style="font-size:1.5rem; color:#fff;">Mission 3: Urban Heat Island Mastered</h2>
           <p style="font-size:0.85rem; color:var(--accent-cyan);">Domain 3: Earth, Society & Human Progress Loop Cleared</p>
         </div>
@@ -395,14 +395,14 @@ export class UrbanHeatSimulation {
 
         <div class="physical-brief-box" style="margin-bottom:1.5rem;">
           <div class="physical-brief-header">
-            <span>🔬</span>
+            
             <span>NEXT 50%: Classroom Physical Build Project</span>
           </div>
           <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.6rem;">
             Execute the <strong>Multi-Surface Albedo & Microclimate Calorimeter Chamber</strong> build using miniature roofs (black tar vs cool white vs living moss) tested under infrared heat lamps!
           </p>
           <button id="view-urban-lab-brief-btn" class="btn btn-subtle" style="font-size:0.75rem; padding:0.4rem 0.8rem;">
-            Open Classroom Physical Lab Brief 📋
+            Open Classroom Physical Lab Brief
           </button>
         </div>
 
